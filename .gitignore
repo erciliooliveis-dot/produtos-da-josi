@@ -1,0 +1,12 @@
+node_modules/
+*.pdf
+produtos_data.json
+produtos_compact.json
+produtos_limpeza_5000_registros.pdf
+fetch-images.js
+fetch-brand-images.js
+package-lock.json
+.claude/
+*.log
+.env
+.env.local

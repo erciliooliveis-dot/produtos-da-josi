@@ -1,0 +1,12 @@
+{
+  "name": "produtos-da-jose",
+  "version": "1.0.0",
+  "description": "Distribuidora de Produtos de Higiene e Limpeza",
+  "scripts": {
+    "dev": "npx http-server . -p 8080 -c-1 --cors",
+    "start": "npx http-server . -p 8080 -c-1 --cors"
+  },
+  "keywords": ["limpeza", "higiene", "distribuidora"],
+  "author": "Produtos da Jose",
+  "license": "ISC"
+}
