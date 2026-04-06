@@ -213,7 +213,7 @@ function renderProducts() {
             return `<div class="product-price">A partir de R$ ${precoMenor}</div><div class="product-price-label">${p.tamanhos.length} tamanhos dispon\u00edveis</div>`;
           }
           const pr = p.tamanhos ? (p.tamanhos[0].preco * MARGEM).toFixed(2) : getPrecoRevenda(p);
-          return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">pre\u00e7o revenda/un</div>` : `<div class="product-price-tag">Consulte pre\u00e7o</div>`;
+          return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">pre\u00e7o/un</div>` : `<div class="product-price-tag">Consulte pre\u00e7o</div>`;
         })()}
         <button class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})">+ Adicionar ao Carrinho</button>
       </div>
@@ -335,7 +335,7 @@ function selectSize(productId, idx) {
   const valorEl = document.getElementById('modalPrecoValor');
   const labelEl = document.getElementById('modalPrecoLabel');
   if (valorEl) valorEl.textContent = 'R$ ' + precoRevenda;
-  if (labelEl) labelEl.textContent = 'Pre\u00e7o revenda / ' + size.label;
+  if (labelEl) labelEl.textContent = 'Pre\u00e7o /' + size.label;
   document.querySelectorAll('.size-chip').forEach(function(btn, i) {
     btn.classList.toggle('active', i === idx);
   });
@@ -456,7 +456,7 @@ function finalizarWhatsApp() {
 // ============ CONSULTAR PREÇO VIA WHATSAPP ============
 function consultarPreco(nome, marca) {
   const msg = encodeURIComponent(
-    `Ol\u00e1! Gostaria de saber o pre\u00e7o para revenda do produto:\n\n` +
+    `Ol\u00e1! Gostaria de saber o pre\u00e7o do produto:\n\n` +
     `\uD83D\uDCE6 ${nome}\n` +
     `\uD83C\uDFF7\uFE0F Marca: ${marca}\n\n` +
     `Aguardo retorno. Obrigado(a)!`
@@ -501,14 +501,14 @@ function abrirModal(id) {
     const precoRevenda = (selectedSize.preco * MARGEM).toFixed(2).replace('.', ',');
     precoHtml = `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,165,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:12px;text-align:center">
         <div id="modalPrecoValor" style="font-size:28px;font-weight:900;color:#FFD700">R$ ${precoRevenda}</div>
-        <div id="modalPrecoLabel" style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o revenda / ${selectedSize.label}</div>
+        <div id="modalPrecoLabel" style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o /${selectedSize.label}</div>
       </div>`;
   } else {
     const preco = getPrecoRevenda(p);
     precoHtml = preco
       ? `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,165,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:12px;text-align:center">
           <div style="font-size:28px;font-weight:900;color:#FFD700">R$ ${preco.replace('.', ',')}</div>
-          <div style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o revenda / unidade</div>
+          <div style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o /unidade</div>
         </div>`
       : '';
   }
@@ -520,7 +520,7 @@ function abrirModal(id) {
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
       <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">${icon} ${p.categoria}</span>
       <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">\uD83C\uDFF7\uFE0F ${p.marca}</span>
-      <span style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:5px 14px;border-radius:20px;font-size:13px;color:#FFD700">Revenda</span>
+      <span style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:5px 14px;border-radius:20px;font-size:13px;color:#FFD700">Distribuidora</span>
     </div>`;
 
   // Store current product for size selection
