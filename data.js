@@ -399,14 +399,14 @@ const catalogProducts = [
   { nome: 'Brilhante Lava Roupas em Pó Profissional 4kg', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1154126/p.jpg' },
 
   // ──────────── CASA KM ────────────
-  { nome: 'Casa KM Casa & Perfume Multiuso Agradable 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso' },
-  { nome: 'Casa KM Casa & Perfume Multiuso Agradable 1L', marca: 'Casa KM', categoria: 'Limpador multiuso' },
-  { nome: 'Casa KM Casa & Perfume Multiuso Envolvente 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso' },
-  { nome: 'Casa KM Casa & Perfume Multiuso Sensações 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso' },
-  { nome: 'Casa KM Casa & Cuidado Desinfetante Brisa Serena 500ml', marca: 'Casa KM', categoria: 'Desinfetante' },
-  { nome: 'Casa KM Casa & Cuidado Desinfetante Flores do Campo 500ml', marca: 'Casa KM', categoria: 'Desinfetante' },
-  { nome: 'Casa KM Casa & Cuidado Desinfetante Original 500ml', marca: 'Casa KM', categoria: 'Desinfetante' },
-  { nome: 'Casa KM Limpador Perfumado Concentrado 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso' },
+  { nome: 'Casa KM Casa & Perfume Multiuso Agradable 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141679/p.jpg' },
+  { nome: 'Casa KM Casa & Perfume Multiuso Agradable 1L', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142781/g.jpg' },
+  { nome: 'Casa KM Casa & Perfume Multiuso Envolvente 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1143808/g.jpg' },
+  { nome: 'Casa KM Casa & Perfume Multiuso Sensações 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153468/p.jpg' },
+  { nome: 'Casa KM Casa & Cuidado Desinfetante Brisa Serena 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989841/p.jpg' },
+  { nome: 'Casa KM Casa & Cuidado Desinfetante Flores do Campo 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1273172/g.jpg.jpg' },
+  { nome: 'Casa KM Casa & Cuidado Desinfetante Original 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989841/p.jpg' },
+  { nome: 'Casa KM Limpador Perfumado Concentrado 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141680/g.jpg' },
 
   // ──────────── CIF ────────────
   { nome: 'Cif Cremoso Original 250ml', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/985110/m.jpg' },
