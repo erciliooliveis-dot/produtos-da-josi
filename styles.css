@@ -237,6 +237,21 @@ body > * {
 }
 .btn-whatsapp-checkout:hover { transform: scale(1.02); box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
 .btn-whatsapp-checkout:disabled { background: #444; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-pix-checkout {
+  width: 100%;
+  padding: 13px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #00C853, #00695C);
+  border: none;
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: var(--transition);
+}
+.btn-pix-checkout:hover { transform: scale(1.02); box-shadow: 0 4px 20px rgba(0,200,83,0.4); }
 .pix-info { margin-top: 10px; font-size: 11px; color: var(--cinza); text-align: center; }
 .btn-add-cart {
   width: 100%;

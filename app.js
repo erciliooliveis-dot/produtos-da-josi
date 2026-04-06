@@ -453,6 +453,56 @@ function finalizarWhatsApp() {
   window.open(url, '_blank');
 }
 
+// ============ PIX ============
+function mostrarPix() {
+  const count = cart.reduce((s, x) => s + x.qty, 0);
+  if (count === 0) return;
+
+  let totalVal = 0;
+  cart.forEach(x => {
+    const prod = allProducts.find(p => p.id === x.id);
+    const preco = x.sizePreco ? (x.sizePreco * MARGEM).toFixed(2) : (prod ? getPrecoRevenda(prod) : null);
+    if (preco) totalVal += parseFloat(preco) * x.qty;
+  });
+
+  const box = document.getElementById('pixDataBox');
+  const totalStr = totalVal > 0 ? `R$ ${totalVal.toFixed(2).replace('.', ',')}` : 'A combinar';
+
+  box.style.display = 'block';
+  box.innerHTML = `
+    <div style="background:linear-gradient(135deg,rgba(0,200,83,0.1),rgba(0,105,92,0.1));border:1px solid rgba(0,200,83,0.3);border-radius:12px;padding:16px;margin-top:12px;text-align:center">
+      <div style="font-size:14px;font-weight:800;color:#00C853;margin-bottom:12px">Dados PIX</div>
+      <div style="background:rgba(0,0,0,0.3);border-radius:8px;padding:12px;margin-bottom:10px">
+        <div style="font-size:11px;color:#999;margin-bottom:4px">Chave PIX (${STORE_CONFIG.pixTipo})</div>
+        <div style="font-size:18px;font-weight:900;color:#fff;letter-spacing:1px" id="pixChaveText">${STORE_CONFIG.pixChave}</div>
+      </div>
+      <div style="font-size:12px;color:#ccc;margin-bottom:6px">Nome: <strong style="color:#fff">${STORE_CONFIG.pixNome}</strong></div>
+      <div style="font-size:12px;color:#ccc;margin-bottom:12px">Valor: <strong style="color:#FFD700;font-size:16px">${totalStr}</strong></div>
+      <button onclick="copiarPix()" style="width:100%;padding:10px;background:#00C853;border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Copiar Chave PIX</button>
+      <p style="font-size:10px;color:#999;margin-top:8px">Apos pagar, envie o comprovante pelo WhatsApp</p>
+    </div>`;
+}
+
+function copiarPix() {
+  const chave = STORE_CONFIG.pixChave;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(chave).then(() => {
+      const btn = event.target;
+      btn.textContent = 'Chave Copiada!';
+      btn.style.background = '#00695C';
+      setTimeout(() => { btn.textContent = 'Copiar Chave PIX'; btn.style.background = '#00C853'; }, 2000);
+    });
+  } else {
+    const input = document.createElement('input');
+    input.value = chave;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+    alert('Chave PIX copiada: ' + chave);
+  }
+}
+
 // ============ CONSULTAR PREÇO VIA WHATSAPP ============
 function consultarPreco(nome, marca) {
   const msg = encodeURIComponent(
