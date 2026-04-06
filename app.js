@@ -206,7 +206,15 @@ function renderProducts() {
         <div class="product-name">${p.nome}</div>
         <div class="product-marca">${p.marca}</div>
         <div class="product-categoria">${p.categoria}</div>
-        ${(() => { const pr = getPrecoRevenda(p); return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">pre\u00e7o revenda/un</div>` : `<div class="product-price-tag">Consulte pre\u00e7o</div>`; })()}
+        ${(() => {
+          if (p.tamanhos && p.tamanhos.length > 1) {
+            const menor = Math.min(...p.tamanhos.map(t => t.preco));
+            const precoMenor = (menor * MARGEM).toFixed(2).replace('.', ',');
+            return `<div class="product-price">A partir de R$ ${precoMenor}</div><div class="product-price-label">${p.tamanhos.length} tamanhos dispon\u00edveis</div>`;
+          }
+          const pr = p.tamanhos ? (p.tamanhos[0].preco * MARGEM).toFixed(2) : getPrecoRevenda(p);
+          return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">pre\u00e7o revenda/un</div>` : `<div class="product-price-tag">Consulte pre\u00e7o</div>`;
+        })()}
         <button class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})">+ Adicionar ao Carrinho</button>
       </div>
     </div>`;
@@ -318,14 +326,35 @@ function saveCartToStorage() {
   } catch (e) {}
 }
 
-function addToCart(id) {
+function selectSize(productId, idx) {
+  const p = allProducts.find(x => x.id === productId);
+  if (!p || !p.tamanhos) return;
+  window._modalSelectedSize = idx;
+  const size = p.tamanhos[idx];
+  const precoRevenda = (size.preco * MARGEM).toFixed(2).replace('.', ',');
+  const valorEl = document.getElementById('modalPrecoValor');
+  const labelEl = document.getElementById('modalPrecoLabel');
+  if (valorEl) valorEl.textContent = 'R$ ' + precoRevenda;
+  if (labelEl) labelEl.textContent = 'Pre\u00e7o revenda / ' + size.label;
+  document.querySelectorAll('.size-chip').forEach(function(btn, i) {
+    btn.classList.toggle('active', i === idx);
+  });
+}
+
+function addToCart(id, sizeLabel, sizePreco) {
   const p = allProducts.find(x => x.id === id);
   if (!p) return;
-  const existing = cart.find(x => x.id === id);
+  // Se tem tamanhos e nenhum foi passado, usar o primeiro
+  if (p.tamanhos && !sizeLabel) {
+    sizeLabel = p.tamanhos[0].label;
+    sizePreco = p.tamanhos[0].preco;
+  }
+  const cartKey = sizeLabel ? id + '_' + sizeLabel : id;
+  const existing = cart.find(x => x.cartKey === cartKey);
   if (existing) {
     existing.qty++;
   } else {
-    cart.push({ id: p.id, nome: p.nome, marca: p.marca, categoria: p.categoria, qty: 1 });
+    cart.push({ id: p.id, cartKey: cartKey, nome: p.nome, marca: p.marca, categoria: p.categoria, qty: 1, size: sizeLabel || null, sizePreco: sizePreco || null });
   }
   saveCartToStorage();
   renderCart();
@@ -363,14 +392,14 @@ function renderCart() {
   list.innerHTML = cart.map(item => {
     const icon = catIcons[item.categoria] || '\uD83E\uDDF4';
     const prod = allProducts.find(x => x.id === item.id);
-    const preco = prod ? getPrecoRevenda(prod) : null;
+    const preco = item.sizePreco ? (item.sizePreco * MARGEM).toFixed(2) : (prod ? getPrecoRevenda(prod) : null);
     const subtotal = preco ? (parseFloat(preco) * item.qty) : 0;
     totalValue += subtotal;
     return `
     <div class="cart-item-card">
       <div class="cart-item-icon">${icon}</div>
       <div class="cart-item-info">
-        <div class="cart-item-name">${item.nome}</div>
+        <div class="cart-item-name">${item.nome}${item.size ? ' <span style="color:#FFD700;font-weight:800"> ' + item.size + '</span>' : ''}</div>
         <div class="cart-item-marca">${item.marca}${preco ? ` \u2014 R$ ${preco.replace('.', ',')}` : ''}</div>
         <div class="cart-item-qty">
           <button class="qty-btn" onclick="changeQty(${item.id},-1)">\u2212</button>
@@ -411,7 +440,8 @@ function finalizarWhatsApp() {
     const sub = preco ? (parseFloat(preco) * x.qty) : 0;
     totalVal += sub;
     const precoStr = preco ? ` - R$ ${preco.replace('.', ',')} un` : '';
-    return `\u2022 ${x.qty}x ${x.nome} (${x.marca})${precoStr}`;
+    const sizeStr = x.size ? ' ' + x.size : '';
+    return `\u2022 ${x.qty}x ${x.nome}${sizeStr} (${x.marca})${precoStr}`;
   }).join('\n');
   const totalStr = totalVal > 0 ? `\nTotal estimado: R$ ${totalVal.toFixed(2).replace('.', ',')}` : '';
   const msg = encodeURIComponent(
@@ -454,14 +484,37 @@ function abrirModal(id) {
     ? `<img src="${realImg}" style="max-width:80%;max-height:180px;object-fit:contain" onerror="this.parentNode.innerHTML='<span style=font-size:80px>${icon}</span>'">`
     : `<span style="font-size:80px">${icon}</span>`;
 
-  const preco = getPrecoRevenda(p);
-  const precoHtml = preco
-    ? `<div style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,165,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:12px;text-align:center">
-        <div style="font-size:28px;font-weight:900;color:#FFD700">R$ ${preco.replace('.', ',')}</div>
-        <div style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o revenda / unidade</div>
-      </div>`
-    : '';
+  // Tamanhos e preço
+  let selectedSize = null;
+  let tamanhosHtml = '';
+  let precoHtml = '';
+
+  if (p.tamanhos && p.tamanhos.length > 0) {
+    selectedSize = p.tamanhos[0];
+    tamanhosHtml = `
+      <div style="margin-bottom:14px">
+        <div style="font-size:12px;color:#ccc;margin-bottom:8px;font-weight:600">Escolha o tamanho:</div>
+        <div class="size-chips" id="modalSizeChips">
+          ${p.tamanhos.map((t, i) => `<button class="size-chip ${i === 0 ? 'active' : ''}" onclick="selectSize(${id},${i})" data-idx="${i}">${t.label}</button>`).join('')}
+        </div>
+      </div>`;
+    const precoRevenda = (selectedSize.preco * MARGEM).toFixed(2).replace('.', ',');
+    precoHtml = `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,165,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:12px;text-align:center">
+        <div id="modalPrecoValor" style="font-size:28px;font-weight:900;color:#FFD700">R$ ${precoRevenda}</div>
+        <div id="modalPrecoLabel" style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o revenda / ${selectedSize.label}</div>
+      </div>`;
+  } else {
+    const preco = getPrecoRevenda(p);
+    precoHtml = preco
+      ? `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,165,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:12px;text-align:center">
+          <div style="font-size:28px;font-weight:900;color:#FFD700">R$ ${preco.replace('.', ',')}</div>
+          <div style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o revenda / unidade</div>
+        </div>`
+      : '';
+  }
+
   document.getElementById('modalDesc').innerHTML = `
+    ${tamanhosHtml}
     ${precoHtml}
     <p style="color:#ccc;line-height:1.7;margin-bottom:12px">${p.marca} \u2014 produto de higiene e limpeza de alta qualidade. Ideal para uso dom\u00e9stico e profissional.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
@@ -470,13 +523,21 @@ function abrirModal(id) {
       <span style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:5px 14px;border-radius:20px;font-size:13px;color:#FFD700">Revenda</span>
     </div>`;
 
+  // Store current product for size selection
+  window._modalProduct = p;
+  window._modalSelectedSize = 0;
+
   document.getElementById('modalAddCart').onclick = function() {
-    addToCart(id);
+    const sizeIdx = window._modalSelectedSize || 0;
+    const size = p.tamanhos ? p.tamanhos[sizeIdx] : null;
+    addToCart(id, size ? size.label : null, size ? size.preco : null);
     fecharModal();
   };
 
   document.getElementById('modalConsultarPreco').onclick = function() {
-    consultarPreco(p.nome, p.marca);
+    const sizeIdx = window._modalSelectedSize || 0;
+    const size = p.tamanhos ? p.tamanhos[sizeIdx] : null;
+    consultarPreco(p.nome + (size ? ' ' + size.label : ''), p.marca);
   };
 
   const modal = document.getElementById('produtoModal');
