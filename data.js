@@ -13,7 +13,7 @@ const STORE_CONFIG = {
   regiao: 'Campinas e Região',
   horario: 'Seg a Sex: 8h às 18h | Sáb: 8h às 13h',
   endereco: 'Campinas - SP',
-  pixChave: '595485509',
+  pixChave: '00397092300',
   pixTipo: 'CPF',
   pixNome: 'Produtos da Josi',
 };
