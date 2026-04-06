@@ -59,17 +59,16 @@ const realCatImages = {
 
 // ============ IMAGENS POR MARCA+CATEGORIA ============
 const realProductImages = {
-  'Ajax:Limpador banheiro':  'https://cdn.awsli.com.br/300x300/1358/1358824/produto/62828895/esqu-0036-1-o3wf3kd2qs.jpg',
+  // Ajax:Limpador banheiro - usa fallback categoria
   'Ajax:Desengordurante':    'https://carrefourbrfood.vtexassets.com/arquivos/ids/111833989/Limpador-Desengordurante-para-Cozinha-Ajax-Squeeze-500ml.jpg?v=638189068002700000',
   'Ajax:Limpa vidro':        'https://carrefourbrfood.vtexassets.com/arquivos/ids/14577092/limpador-diluivel-ajax-fresh-500-ml-1.jpg?v=637510831727100000',
-  'Ajax:Limpador cozinha':   'https://carrefourbrfood.vtexassets.com/arquivos/ids/210423/5463017_1.jpg?v=637272511535870000',
+  // Ajax:Limpador cozinha - usa fallback categoria
   'Ajax:Limpador multiuso':  'https://carrefourbrfood.vtexassets.com/arquivos/ids/56603706/limpador-multiuso-ajax-eucalipto-e-maca-verde-500ml-1.jpg?v=637895359479470000',
   'Veja:Limpador multiuso':  'https://carrefourbrfood.vtexassets.com/arquivos/ids/207568100/181226_1.jpg?v=639011556601400000',
   'Veja:Desinfetante':       'https://carrefourbrfood.vtexassets.com/arquivos/ids/207568471/6507360_1.jpg?v=639011619809600000',
   'Veja:Limpa vidro':        'https://carrefourbrfood.vtexassets.com/arquivos/ids/207571716/180777_1.jpg?v=639011664487430000',
   'Veja:Limpador banheiro':  'https://carrefourbrfood.vtexassets.com/arquivos/ids/207568545/8339368_1.jpg?v=639011627148700000',
-  'Veja:Desengordurante':    'https://carrefourbrfood.vtexassets.com/arquivos/ids/133083040/5921058_1.jpg?v=638336630139470000',
-  'Veja:Limpador cozinha':   'https://carrefourbrfood.vtexassets.com/arquivos/ids/210423/5463017_1.jpg?v=637272511535870000',
+  // Veja:Desengordurante e Limpador cozinha - usa fallback categoria
   'Ypê:Detergente':          'https://carrefourbrfood.vtexassets.com/arquivos/ids/193970445/detergente-ype-neutro-500ml-1.jpg?v=638882679119930000',
   'Ypê:Desinfetante':        'https://carrefourbrfood.vtexassets.com/arquivos/ids/202691285/desinfetante-ype-bak-lavanda-5l-1.jpg?v=638937277059400000',
   'Ypê:Limpador multiuso':   'https://carrefourbrfood.vtexassets.com/arquivos/ids/205985825/6571042_1.jpg?v=638978493179100000',
@@ -95,7 +94,7 @@ const realProductImages = {
   'Cif:Limpador banheiro':   'https://carrefourbrfood.vtexassets.com/arquivos/ids/213517847/6004148_1.jpg?v=639096269688700000',
   'Cif:Limpador cozinha':    'https://carrefourbrfood.vtexassets.com/arquivos/ids/213517840/6004415_1.jpg?v=639096269043600000',
   'Cif:Limpador multiuso':   'https://carrefourbrfood.vtexassets.com/arquivos/ids/129032587/limpador-especialista-cif-banheiro-sem-cloro-500-ml-1.jpg?v=638289275299130000',
-  'Cif:Desengordurante':     'https://carrefourbrfood.vtexassets.com/arquivos/ids/133083040/5921058_1.jpg?v=638336630139470000',
+  // Cif:Desengordurante - usa fallback categoria
   'Urca:Lava roupas':        'https://atacadosaopaulo.vtexassets.com/arquivos/ids/934840/69418.jpg',
   'Minuano:Detergente':      'https://atacadaobr.vtexassets.com/arquivos/ids/1140558/m.jpg?v=639076960345230000',
   'Minuano:Desinfetante':    'https://atacadaobr.vtexassets.com/arquivos/ids/969168/g.jpg?v=639047105542030000',
@@ -103,11 +102,11 @@ const realProductImages = {
   'Minuano:Sabão em pó':     'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/944650-1-01-11-2024-16-09-08-833.jpg',
   'Mr. Músculo:Desengordurante':   'https://carrefourbrfood.vtexassets.com/arquivos/ids/32425986/limpador-desengordurante-mr-musculo-cozinha-squeeze-500-ml-1.jpg?v=637781191038700000',
   'Mr. Músculo:Limpador banheiro': 'https://carrefourbrfood.vtexassets.com/arquivos/ids/32434454/limpador-mr.jpg?v=637781248206900000',
-  'Mr. Músculo:Limpador cozinha':  'https://carrefourbrfood.vtexassets.com/arquivos/ids/133083040/5921058_1.jpg?v=638336630139470000',
+  // Mr. Músculo:Limpador cozinha - usa fallback categoria
   'Mr. Músculo:Limpa vidro':       'https://carrefourbrfood.vtexassets.com/arquivos/ids/133096728/8757429_1.jpg?v=638336864814130000',
-  'Mr. Músculo:Limpador multiuso': 'https://cdn.awsli.com.br/600x1000/446/446822/produto/41444220/shopping---2023-07-07t102511-922-3kejqlkxcj.jpg',
+  // Mr. Músculo:Limpador multiuso - usa fallback categoria
   // Ajax
-  'Ajax:Desinfetante':             'https://carrefourbrfood.vtexassets.com/arquivos/ids/13691708/7891035001345_1_1_1200_72_RGB.jpg?v=637490371621400000',
+  // Ajax:Desinfetante - usa fallback categoria
   // Bombril (Limpol, Mon Bijou, Pinho Bril)
   'Bombril:Esponja':               'https://atacadaobr.vtexassets.com/arquivos/ids/1145746/m.jpg?v=639076987281130000',
   'Bombril:Desinfetante':          'https://atacadaobr.vtexassets.com/arquivos/ids/1141540/m.jpg?v=639076965848500000',
@@ -142,11 +141,11 @@ const realProductImages = {
   'Urca:Alvejante':                'https://atacadaobr.vtexassets.com/arquivos/ids/1144655/m.jpg?v=639076981683570000',
   // Ype extras
   'Ypê:Limpa vidro':               'https://carrefourbrfood.vtexassets.com/arquivos/ids/213649/5561701_1.jpg?v=637272517399930000',
-  'Ypê:Limpador banheiro':         'https://cdn.awsli.com.br/300x300/1358/1358824/produto/62828895/esqu-0036-1-o3wf3kd2qs.jpg',
+  // Ypê:Limpador banheiro - usa fallback categoria
   // Pinho Sol extras
-  'Pinho Sol:Aromatizador':        'https://carrefourbrfood.vtexassets.com/arquivos/ids/56596955/desinfetante-pinho-sol-original-500ml-1.jpg?v=637895349222400000',
+  // Pinho Sol:Aromatizador - usa fallback categoria
   // Ypê extras
-  'Ypê:Esponja':                   'https://atacadaobr.vtexassets.com/arquivos/ids/1145746/m.jpg?v=639076987281130000',
+  // Ypê:Esponja - usa fallback categoria
   'Ypê:Saponáceo':                 'https://carrefourbrfood.vtexassets.com/arquivos/ids/213517718/9263969_1.jpg?v=639096254386130000',
   'Ypê:Desengordurante':           'https://carrefourbrfood.vtexassets.com/arquivos/ids/205985825/6571042_1.jpg?v=638978493179100000',
   'Ypê:Aromatizador':              'https://carrefourbrfood.vtexassets.com/arquivos/ids/205954402/6327079_1.jpg?v=638977956305070000',
