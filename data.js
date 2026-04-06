@@ -39,6 +39,25 @@ const catIcons = {
   'Produto profissional': '\u2699\uFE0F'
 };
 
+// Nomes amigáveis das categorias para exibição no menu
+const catDisplayNames = {
+  'Limpador multiuso': 'Multiuso',
+  'Sabão em pó': 'Sabão em Pó',
+  'Detergente': 'Detergente',
+  'Amaciante': 'Amaciante',
+  'Desinfetante': 'Desinfetante',
+  'Desengordurante': 'Desengordurante',
+  'Limpa vidro': 'Limpa Vidros',
+  'Alvejante': 'Alvejante',
+  'Saponáceo': 'Saponáceo',
+  'Lava roupas': 'Lava Roupas',
+  'Limpador banheiro': 'Banheiro',
+  'Limpador cozinha': 'Cozinha',
+  'Aromatizador': 'Aromatizador',
+  'Esponja': 'Esponja',
+  'Produto profissional': 'Profissional'
+};
+
 // ============ IMAGENS POR CATEGORIA ============
 // Imagens de categoria REMOVIDAS - produtos sem foto própria mostram ícone da categoria
 const realCatImages = {
@@ -229,7 +248,7 @@ const combos = [
 // ============ PRODUTOS ZUPP (ESPECÍFICOS) ============
 const _base = 'https://www.zuppani.ind.br/static/arquivos/';
 const specificProducts = [
-  { id:9001, nome:'Esponja Dupla Face Zupp',          marca:'Zupp', categoria:'Saponáceo',          img:_base+'destaque-esponja-dupla-face-18916103.png' },
+  { id:9001, nome:'Esponja Dupla Face Zupp',          marca:'Zupp', categoria:'Esponja',          img:_base+'destaque-esponja-dupla-face-18916103.png' },
   { id:9002, nome:'Óleos e Essências Zupp 120ml',     marca:'Zupp', categoria:'Aromatizador',        img:_base+'essencia-floral-003714.png' },
   { id:9003, nome:'Desinfetante Zupp 500ml',          marca:'Zupp', categoria:'Desinfetante',        img:_base+'desinfetante-500ml-destaque-1915525.png' },
   { id:9004, nome:'Álcool Limpador Pesado Zupp',      marca:'Zupp', categoria:'Limpador multiuso',   img:_base+'alcool-191112114-1-214294.png' },
@@ -240,7 +259,7 @@ const specificProducts = [
   { id:9009, nome:'Detergente Zupp 500ml',            marca:'Zupp', categoria:'Detergente',          img:_base+'detergente-clear-10113145.png' },
   { id:9010, nome:'Água Sanitária Zupp 1L',           marca:'Zupp', categoria:'Alvejante',           img:_base+'agua-sanitaria-1l-10771919.png' },
   { id:9011, nome:'Alvejante Zupp 1L',                marca:'Zupp', categoria:'Alvejante',           img:_base+'mockup-alvejante-floral-zuppani-1l-1411552.png' },
-  { id:9012, nome:'Esponja de Aço Inox Zupp',         marca:'Zupp', categoria:'Saponáceo',          img:_base+'esponja-de-aco-final-1-compressed-40151319.jpg' },
+  { id:9012, nome:'Esponja de Aço Inox Zupp',         marca:'Zupp', categoria:'Esponja',          img:_base+'esponja-de-aco-final-1-compressed-40151319.jpg' },
   { id:9013, nome:'Detergente Zupplin 1L',            marca:'Zupp', categoria:'Detergente',          img:_base+'produto-zuppani-detergente-zupplin-1l-112312.png' },
   { id:9014, nome:'Sabão em Barra Zupp 1kg',          marca:'Zupp', categoria:'Sabão em pó',         img:_base+'sabao-zupp-em-barra-glicerinado-1-kg-785121.jpg' },
   { id:9015, nome:'Limpa Inox Zupp',                  marca:'Zupp', categoria:'Limpador multiuso',   img:_base+'produto-zuppani-limpa-inox-71491512.png' },
@@ -249,18 +268,18 @@ const specificProducts = [
   { id:9018, nome:'Amaciante Zupp 5L',                marca:'Zupp', categoria:'Amaciante',           img:_base+'amaciante-conforto5l-copy-181261718.jpg' },
   { id:9019, nome:'Detergente Zupplin 5L',            marca:'Zupp', categoria:'Detergente',          img:_base+'zupplin-5l-14210814.png' },
   { id:9020, nome:'Água Sanitária Zupp 2L',           marca:'Zupp', categoria:'Alvejante',           img:_base+'agua-sanitaria-2l-31017815.png' },
-  { id:9021, nome:'Esponja Antiaderente Zupp',        marca:'Zupp', categoria:'Saponáceo',          img:_base+'destaque-zuppani-esponja-antiaderente-15311415.png' },
+  { id:9021, nome:'Esponja Antiaderente Zupp',        marca:'Zupp', categoria:'Esponja',          img:_base+'destaque-zuppani-esponja-antiaderente-15311415.png' },
   { id:9022, nome:'Limpador Perfumes e Encanto Zupp 1L', marca:'Zupp', categoria:'Limpador multiuso', img:_base+'bem-estar-lavanda-1l-1051942.png' },
   { id:9023, nome:'Lava Louças em Pasta Zupp 200g',   marca:'Zupp', categoria:'Detergente',          img:_base+'lava-louca200g-031429.jpg' },
   { id:9024, nome:'Detergente Zupp 5L',               marca:'Zupp', categoria:'Detergente',          img:_base+'detergente-neutro-561819.jpg' },
   { id:9025, nome:'Desinfetante Zupp 1L',             marca:'Zupp', categoria:'Desinfetante',        img:_base+'destaque-1l-16171610.png' },
   { id:9026, nome:'Água Sanitária Zupp 5L',           marca:'Zupp', categoria:'Alvejante',           img:_base+'agua-sanitaria-zupp-5l-19619141.png' },
-  { id:9027, nome:'Esponja Lã de Aço Zupp',           marca:'Zupp', categoria:'Saponáceo',          img:_base+'mockup-esponja-la-aco-15901510.png' },
+  { id:9027, nome:'Esponja Lã de Aço Zupp',           marca:'Zupp', categoria:'Esponja',          img:_base+'mockup-esponja-la-aco-15901510.png' },
   { id:9028, nome:'Desinfetante Zupp 2L',             marca:'Zupp', categoria:'Desinfetante',        img:_base+'desinfetante-2l-destaque-101113194.png' },
 ];
 
-// ============ PREÇOS DE REVENDA (varejo + 10%) ============
-const MARGEM = 1.10;
+// ============ PREÇOS (varejo + 25%) ============
+const MARGEM = 1.25;
 
 const precosBase = {
   "Veja:Limpador multiuso": 7.99, "Veja:Desinfetante": 8.49, "Veja:Limpa vidro": 8.99,

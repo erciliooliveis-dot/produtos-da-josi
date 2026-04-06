@@ -115,7 +115,7 @@ function renderCategoryTabs() {
   const cats = [...new Set(allProducts.map(p => p.categoria))];
   const tabs = document.getElementById('categoryTabs');
   tabs.innerHTML = `<button class="tab active" onclick="filterByCategory(null, this)">Todas</button>` +
-    cats.map(c => `<button class="tab" onclick="filterByCategory('${c}', this)">${catIcons[c] || ''} ${c}</button>`).join('');
+    cats.map(c => `<button class="tab" onclick="filterByCategory('${c}', this)">${catIcons[c] || ''} ${(typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c}</button>`).join('');
 }
 
 // ============ FILTROS ============
@@ -173,6 +173,24 @@ function applyFilters() {
 // ============ SEARCH ============
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('searchInput').addEventListener('input', () => {
+    const val = document.getElementById('searchInput').value;
+    // Se pesquisou algo, resetar filtros e mostrar produtos
+    if (val.length > 0) {
+      showingFavorites = false;
+      currentBrand = null;
+      currentCategory = null;
+      currentView = 'all';
+      document.getElementById('combosSection').style.display = 'none';
+      const best = document.getElementById('bestsellersSection');
+      if (best) best.style.display = 'none';
+      document.getElementById('productsSection').style.display = 'block';
+      document.querySelectorAll('.nav-bar .filter-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    } else {
+      document.getElementById('combosSection').style.display = 'block';
+      const best = document.getElementById('bestsellersSection');
+      if (best) best.style.display = 'block';
+    }
     currentPage = 1;
     applyFilters();
   });
