@@ -338,14 +338,14 @@ const catalogProducts = [
   { nome: 'Ariel Sabão em Pó Expert 1,6kg', marca: 'Ariel', categoria: 'Sabão em pó' },
 
   // ──────────── BOMBRIL ────────────
-  { nome: 'Mon Bijou Amaciante Concentrado 500ml', marca: 'Bombril', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/973529/g.jpg?v=639047129259330000' },
-  { nome: 'Pinho Bril Desinfetante Original 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141540/m.jpg?v=639076965848500000' },
-  { nome: 'Limpol Detergente Neutro 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971405/p.jpg?v=639047117531800000' },
-  { nome: 'Limpol Detergente Coco 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142530/p.jpg?v=639076970856500000' },
-  { nome: 'Esponja de Lã de Aço Bombril 60g', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971114/m.jpg?v=639047115978930000' },
-  { nome: 'Esponja Multiuso Amarela Bombril', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145746/m.jpg?v=639076987281130000' },
-  { nome: 'Sapólio Radium Cremoso Original 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146568/m.jpg?v=639076991389370000' },
-  { nome: 'Sapólio Radium Cremoso Limão 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/988444/m.jpg?v=639047213543870000' },
+  { nome: 'Mon Bijou Amaciante Concentrado 500ml', marca: 'Bombril', categoria: 'Amaciante' },
+  { nome: 'Pinho Bril Desinfetante Original 500ml', marca: 'Bombril', categoria: 'Desinfetante' },
+  { nome: 'Limpol Detergente Neutro 500ml', marca: 'Bombril', categoria: 'Detergente' },
+  { nome: 'Limpol Detergente Coco 500ml', marca: 'Bombril', categoria: 'Detergente' },
+  { nome: 'Esponja de Lã de Aço Bombril 60g', marca: 'Bombril', categoria: 'Esponja' },
+  { nome: 'Esponja Multiuso Amarela Bombril', marca: 'Bombril', categoria: 'Esponja' },
+  { nome: 'Sapólio Radium Cremoso Original 250ml', marca: 'Bombril', categoria: 'Saponáceo' },
+  { nome: 'Sapólio Radium Cremoso Limão 250ml', marca: 'Bombril', categoria: 'Saponáceo' },
 
   // ──────────── BRILHANTE ────────────
   { nome: 'Brilhante Tira Manchas Utile Antibac Líquido 2L', marca: 'Brilhante', categoria: 'Alvejante' },
@@ -382,9 +382,9 @@ const catalogProducts = [
   // ──────────── GIRANDO SOL ────────────
   { nome: 'Girando Sol Água Sanitária 1L', marca: 'Girando Sol', categoria: 'Alvejante' },
   { nome: 'Girando Sol Amaciante Concentrado Coco e Baunilha 1L', marca: 'Girando Sol', categoria: 'Amaciante' },
-  { nome: 'Girando Sol Desinfetante Jasmim 5L', marca: 'Girando Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148977/m.jpg?v=639077003928570000' },
+  { nome: 'Girando Sol Desinfetante Jasmim 5L', marca: 'Girando Sol', categoria: 'Desinfetante' },
   { nome: 'Girando Sol Detergente Neutro 500ml', marca: 'Girando Sol', categoria: 'Detergente' },
-  { nome: 'Girando Sol Lava Roupas Líquido Ação Total 1L', marca: 'Girando Sol', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148914/g.jpg?v=639077003626530000' },
+  { nome: 'Girando Sol Lava Roupas Líquido Ação Total 1L', marca: 'Girando Sol', categoria: 'Lava roupas' },
   { nome: 'Girando Sol Limpador Tira Limo Cloro Ativo 500ml', marca: 'Girando Sol', categoria: 'Limpador banheiro' },
   { nome: 'Girando Sol Limpador Limpeza Pesada Original 500ml', marca: 'Girando Sol', categoria: 'Limpador multiuso' },
   { nome: 'Girando Sol Sabão em Pó Coco e Baunilha 1,6kg', marca: 'Girando Sol', categoria: 'Sabão em pó' },
@@ -395,8 +395,8 @@ const catalogProducts = [
   { nome: 'Lysol Limpador Banheiro Power 500ml', marca: 'Lysol', categoria: 'Limpador banheiro' },
 
   // ──────────── MINUANO ────────────
-  { nome: 'Minuano Amaciante Concentrado Noite de Luar 500ml', marca: 'Minuano', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1140556/g.jpg?v=639076960345100000' },
-  { nome: 'Minuano Desinfetante Aerossol Lavanda 300ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969168/g.jpg?v=639047105542030000' },
+  { nome: 'Minuano Amaciante Concentrado Noite de Luar 500ml', marca: 'Minuano', categoria: 'Amaciante' },
+  { nome: 'Minuano Desinfetante Aerossol Lavanda 300ml', marca: 'Minuano', categoria: 'Desinfetante' },
   { nome: 'Minuano Detergente Lava-Louças Neutro 500ml', marca: 'Minuano', categoria: 'Detergente' },
   { nome: 'Minuano Limpa Vidros 500ml', marca: 'Minuano', categoria: 'Limpa vidro' },
   { nome: 'Minuano Multiuso 500ml', marca: 'Minuano', categoria: 'Limpador multiuso' },
@@ -404,12 +404,12 @@ const catalogProducts = [
 
   // ──────────── MR. MUSCULO ────────────
   { nome: 'Mr. Músculo Cozinha Desengordurante Laranja 500ml', marca: 'Mr. Músculo', categoria: 'Desengordurante' },
-  { nome: 'Mr. Músculo Limpa Vidros 500ml', marca: 'Mr. Músculo', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153399/m.jpg?v=639077026841630000' },
-  { nome: 'Mr. Músculo Banheiro Total 500ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153311/m.jpg?v=639077026389970000' },
+  { nome: 'Mr. Músculo Limpa Vidros 500ml', marca: 'Mr. Músculo', categoria: 'Limpa vidro' },
+  { nome: 'Mr. Músculo Banheiro Total 500ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro' },
   { nome: 'Mr. Músculo Cremoso Multiuso Desinfetante 450ml', marca: 'Mr. Músculo', categoria: 'Limpador multiuso' },
 
   // ──────────── OMO ────────────
-  { nome: 'Omo Tira Manchas Líquido 1L', marca: 'Omo', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/980026/p.jpg?v=639047166072030000' },
+  { nome: 'Omo Tira Manchas Líquido 1L', marca: 'Omo', categoria: 'Alvejante' },
   { nome: 'Omo Sabão Líquido Lavagem Perfeita 1L', marca: 'Omo', categoria: 'Lava roupas' },
   { nome: 'Omo Sabão em Pó Lavagem Perfeita 800g', marca: 'Omo', categoria: 'Sabão em pó' },
 
@@ -442,9 +442,9 @@ const catalogProducts = [
   { nome: 'Start Azulim Saponáceo Cremoso 300ml', marca: 'Start', categoria: 'Saponáceo' },
 
   // ──────────── URCA ────────────
-  { nome: 'Urca Água Sanitária 1L', marca: 'Urca', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144655/m.jpg?v=639076981683570000' },
-  { nome: 'Urca Amaciante Concentrado 500ml', marca: 'Urca', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/992052/g.jpg?v=639047233622200000' },
-  { nome: 'Urca Amaciante Diluído 2L', marca: 'Urca', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146663/p.jpg?v=639076991871330000' },
+  { nome: 'Urca Água Sanitária 1L', marca: 'Urca', categoria: 'Alvejante' },
+  { nome: 'Urca Amaciante Concentrado 500ml', marca: 'Urca', categoria: 'Amaciante' },
+  { nome: 'Urca Amaciante Diluído 2L', marca: 'Urca', categoria: 'Amaciante' },
   { nome: 'Urca Desinfetante 500ml', marca: 'Urca', categoria: 'Desinfetante' },
   { nome: 'Urca Lava Louças Clear 5L', marca: 'Urca', categoria: 'Detergente' },
   { nome: 'Urca Lava Roupas Líquido 1L', marca: 'Urca', categoria: 'Lava roupas' },
@@ -455,9 +455,9 @@ const catalogProducts = [
 
   // ──────────── VEJA ────────────
   { nome: 'Veja Cozinha Desengordurante Original 500ml', marca: 'Veja', categoria: 'Desengordurante' },
-  { nome: 'Veja Vidrex Limpa Vidros Squeeze 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/980864/p.jpg?v=639047170895430000' },
-  { nome: 'Veja Vidrex Limpa Vidros Cristal Pulverizador 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/975040/p.jpg?v=639047137376130000' },
-  { nome: 'Veja Banheiro X14 Tira Limo 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1149133/g.jpg?v=639077004745770000' },
+  { nome: 'Veja Vidrex Limpa Vidros Squeeze 500ml', marca: 'Veja', categoria: 'Limpa vidro' },
+  { nome: 'Veja Vidrex Limpa Vidros Cristal Pulverizador 500ml', marca: 'Veja', categoria: 'Limpa vidro' },
+  { nome: 'Veja Banheiro X14 Tira Limo 500ml', marca: 'Veja', categoria: 'Limpador banheiro' },
   { nome: 'Veja Multiuso Original 500ml', marca: 'Veja', categoria: 'Limpador multiuso' },
 
   // ──────────── YPE ────────────
