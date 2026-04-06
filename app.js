@@ -494,9 +494,14 @@ function gerarPixPayload(chave, nome, valor) {
     const len = val.length.toString().padStart(2, '0');
     return id + len + val;
   }
+  // Formatar CPF com 11 dígitos (zeros à esquerda)
+  let chaveFormatada = chave;
+  if (/^\d+$/.test(chave) && chave.length <= 11) {
+    chaveFormatada = chave.padStart(11, '0');
+  }
   // Merchant Account Information (chave PIX)
   const gui = tlv('00', 'br.gov.bcb.pix');
-  const key = tlv('01', chave);
+  const key = tlv('01', chaveFormatada);
   const mai = tlv('26', gui + key);
   // Campos obrigatórios
   let payload = '';
@@ -505,12 +510,17 @@ function gerarPixPayload(chave, nome, valor) {
   payload += tlv('52', '0000'); // Merchant Category Code
   payload += tlv('53', '986'); // Transaction Currency (BRL)
   if (valor && parseFloat(valor) > 0) {
-    payload += tlv('54', valor); // Transaction Amount
+    // Valor com 2 casas decimais
+    const valorStr = parseFloat(valor).toFixed(2);
+    payload += tlv('54', valorStr); // Transaction Amount
   }
   payload += tlv('58', 'BR'); // Country Code
   const nomeClean = nome.substring(0, 25).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase();
   payload += tlv('59', nomeClean); // Merchant Name
   payload += tlv('60', 'CAMPINAS'); // Merchant City
+  // Additional Data Field (txid)
+  const addData = tlv('05', '***');
+  payload += tlv('62', addData);
   // CRC16 placeholder
   payload += '6304';
   // Calcular CRC16
