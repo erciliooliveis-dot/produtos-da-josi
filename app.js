@@ -160,10 +160,13 @@ function applyFilters() {
   filteredProducts = allProducts.filter(p => {
     const matchBrand = !currentBrand || p.marca === currentBrand;
     const matchCat = !currentCategory || p.categoria === currentCategory;
+    // Se a busca bate exatamente com uma marca, filtrar SÓ por marca
+    const isExactBrand = allProducts.some(x => x.marca.toLowerCase() === search);
     const matchSearch = !search ||
-      p.nome.toLowerCase().includes(search) ||
-      p.marca.toLowerCase().includes(search) ||
-      p.categoria.toLowerCase().includes(search);
+      (isExactBrand ? p.marca.toLowerCase() === search : (
+        p.nome.toLowerCase().includes(search) ||
+        p.marca.toLowerCase().includes(search)
+      ));
     return matchBrand && matchCat && matchSearch;
   });
   renderProducts();
