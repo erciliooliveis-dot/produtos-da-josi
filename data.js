@@ -348,131 +348,131 @@ function getPrecoRevenda(produto) {
 // ============ CATÁLOGO COMPLETO DE PRODUTOS ============
 const catalogProducts = [
   // ──────────── AJAX ────────────
-  { nome: 'Ajax Multiuso Original 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/992318/m.jpg' },
-  { nome: 'Ajax Multiuso Lavanda com Álcool 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279578/p.jpg.jpg' },
-  { nome: 'Ajax Fresh Original 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907043/g.jpg' },
-  { nome: 'Ajax Fresh Limão 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907047/p.jpg' },
-  { nome: 'Ajax Fresh Poder 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907043/g.jpg' },
-  { nome: 'Ajax Festa das Flores Bouquet de Flores 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279441/m.jpg.jpg' },
-  { nome: 'Ajax Festa das Flores Flores do Campo 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/908025/p.jpg' },
-  { nome: 'Ajax Festa das Flores Flores de Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279578/p.jpg.jpg' },
-  { nome: 'Ajax Festa das Flores Mar de Flores 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279441/m.jpg.jpg' },
-  { nome: 'Ajax Limpeza Pura Menta e Orquídea 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279441/m.jpg.jpg' },
-  { nome: 'Ajax Natural Essentials Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279578/p.jpg.jpg' },
-  { nome: 'Ajax Natural Essentials Eucalipto e Citrus 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907043/g.jpg' },
-  { nome: 'Ajax Alternativa ao Cloro Floral 500ml', marca: 'Ajax', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279441/m.jpg.jpg' },
-  { nome: 'Ajax Desengordurante Cozinha 500ml', marca: 'Ajax', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907047/p.jpg' },
-  { nome: 'Ajax Limpador Banheiro 500ml', marca: 'Ajax', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907043/g.jpg' },
-  { nome: 'Ajax Limpador Cozinha 500ml', marca: 'Ajax', categoria: 'Limpador cozinha', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907043/g.jpg' },
-  { nome: 'Ajax Limpa Vidros 500ml', marca: 'Ajax', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/907043/g.jpg' },
+  { nome: 'Ajax Multiuso Original 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/992318/m.jpg' },
+  { nome: 'Ajax Multiuso Lavanda com Álcool 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279578/p.jpg.jpg' },
+  { nome: 'Ajax Fresh Original 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907043/g.jpg' },
+  { nome: 'Ajax Fresh Limão 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907047/p.jpg' },
+  { nome: 'Ajax Fresh Poder 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907043/g.jpg' },
+  { nome: 'Ajax Festa das Flores Bouquet de Flores 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279441/m.jpg.jpg' },
+  { nome: 'Ajax Festa das Flores Flores do Campo 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/908025/p.jpg' },
+  { nome: 'Ajax Festa das Flores Flores de Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279578/p.jpg.jpg' },
+  { nome: 'Ajax Festa das Flores Mar de Flores 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279441/m.jpg.jpg' },
+  { nome: 'Ajax Limpeza Pura Menta e Orquídea 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279441/m.jpg.jpg' },
+  { nome: 'Ajax Natural Essentials Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279578/p.jpg.jpg' },
+  { nome: 'Ajax Natural Essentials Eucalipto e Citrus 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907043/g.jpg' },
+  { nome: 'Ajax Alternativa ao Cloro Floral 500ml', marca: 'Ajax', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279441/m.jpg.jpg' },
+  { nome: 'Ajax Desengordurante Cozinha 500ml', marca: 'Ajax', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907047/p.jpg' },
+  { nome: 'Ajax Limpador Banheiro 500ml', marca: 'Ajax', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907043/g.jpg' },
+  { nome: 'Ajax Limpador Cozinha 500ml', marca: 'Ajax', categoria: 'Limpador cozinha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907043/g.jpg' },
+  { nome: 'Ajax Limpa Vidros 500ml', marca: 'Ajax', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/907043/g.jpg' },
   // ──────────── ARIEL ────────────
-  { nome: 'Ariel Sabão Líquido Expert Concentrado', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151370/g.jpg', tamanhos: [
+  { nome: 'Ariel Sabão Líquido Expert Concentrado', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151370/g.jpg', tamanhos: [
     { label: '1,2L', preco: 22.90 },
     { label: '2L', preco: 35.32 },
     { label: '3L', preco: 49.81 }
   ] },
-  { nome: 'Ariel Sabão Líquido 3 em 1 1,2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151370/g.jpg' },
-  { nome: 'Ariel Sabão Líquido Toque de Downy 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1148575/p.jpg' },
-  { nome: 'Ariel Sabão Líquido Cores Radiantes 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1146388/g.jpg' },
-  { nome: 'Ariel Sabão Líquido Cores Radiantes Toque de Downy 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1148575/p.jpg' },
-  { nome: 'Ariel Sabão Líquido Hipoalergênico Suave e Gentil 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1158502/p.jpg' },
-  { nome: 'Ariel Sabão em Pó Expert', marca: 'Ariel', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/979613/p.jpg', tamanhos: [
+  { nome: 'Ariel Sabão Líquido 3 em 1 1,2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151370/g.jpg' },
+  { nome: 'Ariel Sabão Líquido Toque de Downy 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148575/p.jpg' },
+  { nome: 'Ariel Sabão Líquido Cores Radiantes 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146388/g.jpg' },
+  { nome: 'Ariel Sabão Líquido Cores Radiantes Toque de Downy 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148575/p.jpg' },
+  { nome: 'Ariel Sabão Líquido Hipoalergênico Suave e Gentil 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158502/p.jpg' },
+  { nome: 'Ariel Sabão em Pó Expert', marca: 'Ariel', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/979613/p.jpg', tamanhos: [
     { label: '800g', preco: 16.90 },
     { label: '1,6kg', preco: 30.42 }
   ] },
-  { nome: 'Ariel Power Pods 3 em 1 Cápsulas', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151370/g.jpg' },
+  { nome: 'Ariel Power Pods 3 em 1 Cápsulas', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151370/g.jpg' },
   // ──────────── BOMBRIL ────────────
-  { nome: 'Esponja de Lã de Aço Bombril 60g', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/971114/m.jpg' },
-  { nome: 'Esponja Multiuso Amarela Bombril', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1145746/m.jpg' },
-  { nome: 'Esponja Sintética Bombril', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1145746/m.jpg' },
-  { nome: 'Sapólio Radium Cremoso Original 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156985/m.jpg' },
-  { nome: 'Sapólio Radium Cremoso Cloro 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142013/m.jpg' },
-  { nome: 'Sapólio Radium Cremoso Limão 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156985/m.jpg' },
-  { nome: 'Sapólio Radium Cremoso Laranja 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156985/m.jpg' },
-  { nome: 'Sapólio Radium Cremoso Limpa Inox 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156985/m.jpg' },
-  { nome: 'Sapólio Radium Cremoso Multiuso Clássico 450ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156985/m.jpg' },
-  { nome: 'Sapólio Radium em Pó Clássico 300g', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142013/m.jpg' },
-  { nome: 'Sapólio Radium em Pó Limão 300g', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142013/m.jpg' },
-  { nome: 'Pinho Bril Desinfetante Original 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141540/m.jpg' },
-  { nome: 'Pinho Bril Desinfetante Lavanda 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139196/m.jpg' },
-  { nome: 'Pinho Bril Desinfetante Brisa do Mar 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/998309/m.jpg' },
-  { nome: 'Pinho Bril Desinfetante Floral 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/971455/m.jpg' },
-  { nome: 'Limpol Detergente Neutro 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/971405/p.jpg' },
-  { nome: 'Limpol Detergente Limão 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1140757/g.jpg' },
-  { nome: 'Limpol Detergente Coco 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/973375/g.jpg' },
-  { nome: 'Mon Bijou Amaciante Concentrado 500ml', marca: 'Bombril', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156988/m.jpg' },
-  { nome: 'Mon Bijou Amaciante Diluído 2L', marca: 'Bombril', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1158253/m.jpg' },
+  { nome: 'Esponja de Lã de Aço Bombril 60g', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971114/m.jpg' },
+  { nome: 'Esponja Multiuso Amarela Bombril', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145746/m.jpg' },
+  { nome: 'Esponja Sintética Bombril', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145746/m.jpg' },
+  { nome: 'Sapólio Radium Cremoso Original 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156985/m.jpg' },
+  { nome: 'Sapólio Radium Cremoso Cloro 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142013/m.jpg' },
+  { nome: 'Sapólio Radium Cremoso Limão 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156985/m.jpg' },
+  { nome: 'Sapólio Radium Cremoso Laranja 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156985/m.jpg' },
+  { nome: 'Sapólio Radium Cremoso Limpa Inox 250ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156985/m.jpg' },
+  { nome: 'Sapólio Radium Cremoso Multiuso Clássico 450ml', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156985/m.jpg' },
+  { nome: 'Sapólio Radium em Pó Clássico 300g', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142013/m.jpg' },
+  { nome: 'Sapólio Radium em Pó Limão 300g', marca: 'Bombril', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142013/m.jpg' },
+  { nome: 'Pinho Bril Desinfetante Original 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141540/m.jpg' },
+  { nome: 'Pinho Bril Desinfetante Lavanda 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139196/m.jpg' },
+  { nome: 'Pinho Bril Desinfetante Brisa do Mar 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/998309/m.jpg' },
+  { nome: 'Pinho Bril Desinfetante Floral 500ml', marca: 'Bombril', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971455/m.jpg' },
+  { nome: 'Limpol Detergente Neutro 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971405/p.jpg' },
+  { nome: 'Limpol Detergente Limão 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1140757/g.jpg' },
+  { nome: 'Limpol Detergente Coco 500ml', marca: 'Bombril', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/973375/g.jpg' },
+  { nome: 'Mon Bijou Amaciante Concentrado 500ml', marca: 'Bombril', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156988/m.jpg' },
+  { nome: 'Mon Bijou Amaciante Diluído 2L', marca: 'Bombril', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158253/m.jpg' },
   // ──────────── BRILHANTE ────────────
-  { nome: 'Brilhante Sabão em Pó Limpeza Total', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1158183/g.jpg', tamanhos: [
+  { nome: 'Brilhante Sabão em Pó Limpeza Total', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158183/g.jpg', tamanhos: [
     { label: '800g', preco: 9.90 },
     { label: '1,6kg', preco: 17.82 }
   ] },
-  { nome: 'Brilhante Sabão em Pó Cuidado Total', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156226/m.jpg', tamanhos: [
+  { nome: 'Brilhante Sabão em Pó Cuidado Total', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156226/m.jpg', tamanhos: [
     { label: '800g', preco: 9.90 },
     { label: '1,6kg', preco: 17.82 }
   ] },
-  { nome: 'Brilhante Sabão em Pó Sem Perfume Ação Total 800g', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1154402/g.jpg' },
-  { nome: 'Brilhante Sabão em Pó Higiene Total 800g', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1157252/p.jpg' },
-  { nome: 'Brilhante Sabão Líquido Limpeza Total', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1157253/g.jpg', tamanhos: [
+  { nome: 'Brilhante Sabão em Pó Sem Perfume Ação Total 800g', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1154402/g.jpg' },
+  { nome: 'Brilhante Sabão em Pó Higiene Total 800g', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1157252/p.jpg' },
+  { nome: 'Brilhante Sabão Líquido Limpeza Total', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1157253/g.jpg', tamanhos: [
     { label: '1L', preco: 13.90 },
     { label: '3L', preco: 35.29 }
   ] },
-  { nome: 'Brilhante Sabão Líquido Ação Total Sem Perfume 1L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139033/m.jpg' },
-  { nome: 'Brilhante Sanitizante Higiene Total 1L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1154402/g.jpg' },
-  { nome: 'Brilhante Tira Manchas Utile Antibac Líquido 2L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/983306/p.jpg' },
-  { nome: 'Brilhante Tira Manchas Utile Fresh Líquido 2L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/983306/p.jpg' },
-  { nome: 'Brilhante Tira Manchas Utile Floral Líquido 2L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/983306/p.jpg' },
-  { nome: 'Brilhante Tira Manchas Utile Fresh em Pó 380g', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147642/g.jpg' },
-  { nome: 'Brilhante Tira Manchas Utile Floral em Pó 380g', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/982954/m.jpg' },
-  { nome: 'Brilhante Alvejante Cloro Ativo Fresh 1L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/982954/m.jpg' },
-  { nome: 'Brilhante Lava Roupas em Pó Profissional 4kg', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1154126/p.jpg' },
+  { nome: 'Brilhante Sabão Líquido Ação Total Sem Perfume 1L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139033/m.jpg' },
+  { nome: 'Brilhante Sanitizante Higiene Total 1L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1154402/g.jpg' },
+  { nome: 'Brilhante Tira Manchas Utile Antibac Líquido 2L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/983306/p.jpg' },
+  { nome: 'Brilhante Tira Manchas Utile Fresh Líquido 2L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/983306/p.jpg' },
+  { nome: 'Brilhante Tira Manchas Utile Floral Líquido 2L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/983306/p.jpg' },
+  { nome: 'Brilhante Tira Manchas Utile Fresh em Pó 380g', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147642/g.jpg' },
+  { nome: 'Brilhante Tira Manchas Utile Floral em Pó 380g', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/982954/m.jpg' },
+  { nome: 'Brilhante Alvejante Cloro Ativo Fresh 1L', marca: 'Brilhante', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/982954/m.jpg' },
+  { nome: 'Brilhante Lava Roupas em Pó Profissional 4kg', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1154126/p.jpg' },
   // ──────────── CASA KM ────────────
-  { nome: 'Casa KM Casa & Perfume Multiuso Agradable', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141679/p.jpg', tamanhos: [
+  { nome: 'Casa KM Casa & Perfume Multiuso Agradable', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141679/p.jpg', tamanhos: [
     { label: '500ml', preco: 5.99 },
     { label: '1L', preco: 10.78 }
   ] },
-  { nome: 'Casa KM Casa & Perfume Multiuso Envolvente 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1143808/g.jpg' },
-  { nome: 'Casa KM Casa & Perfume Multiuso Sensações 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153468/p.jpg' },
-  { nome: 'Casa KM Casa & Cuidado Desinfetante Brisa Serena 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989841/p.jpg' },
-  { nome: 'Casa KM Casa & Cuidado Desinfetante Flores do Campo 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1273172/g.jpg.jpg' },
-  { nome: 'Casa KM Casa & Cuidado Desinfetante Original 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989841/p.jpg' },
-  { nome: 'Casa KM Limpador Perfumado Concentrado 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141680/g.jpg' },
+  { nome: 'Casa KM Casa & Perfume Multiuso Envolvente 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1143808/g.jpg' },
+  { nome: 'Casa KM Casa & Perfume Multiuso Sensações 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153468/p.jpg' },
+  { nome: 'Casa KM Casa & Cuidado Desinfetante Brisa Serena 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/989841/p.jpg' },
+  { nome: 'Casa KM Casa & Cuidado Desinfetante Flores do Campo 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273172/g.jpg.jpg' },
+  { nome: 'Casa KM Casa & Cuidado Desinfetante Original 500ml', marca: 'Casa KM', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/989841/p.jpg' },
+  { nome: 'Casa KM Limpador Perfumado Concentrado 500ml', marca: 'Casa KM', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141680/g.jpg' },
   // ──────────── CIF ────────────
-  { nome: 'Cif Cremoso Original', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/985110/m.jpg', tamanhos: [
+  { nome: 'Cif Cremoso Original', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985110/m.jpg', tamanhos: [
     { label: '250ml', preco: 8.99 },
     { label: '450ml', preco: 14.80 }
   ] },
-  { nome: 'Cif Cremoso Limão', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156231/p.jpg', tamanhos: [
+  { nome: 'Cif Cremoso Limão', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156231/p.jpg', tamanhos: [
     { label: '250ml', preco: 8.99 },
     { label: '450ml', preco: 14.80 }
   ] },
-  { nome: 'Cif Cremoso Laranja 250ml', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1158152/g.jpg' },
-  { nome: 'Cif Cremoso Limpa Inox 250ml', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/985110/m.jpg' },
-  { nome: 'Cif Ultra Rápido Banheiro Sem Cloro 500ml', marca: 'Cif', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147797/g.jpg' },
-  { nome: 'Cif Ultra Rápido Banheiro com Cloro 500ml', marca: 'Cif', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147797/g.jpg' },
-  { nome: 'Cif Ultra Rápido Cozinha Desengordurante 500ml', marca: 'Cif', categoria: 'Limpador cozinha', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156233/p.jpg' },
-  { nome: 'Cif Ultra Rápido Limpa Vidros Gatilho 500ml', marca: 'Cif', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989735/m.jpg' },
-  { nome: 'Cif Ultra Rápido Limpa Vidros Squeeze 500ml', marca: 'Cif', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989735/m.jpg' },
-  { nome: 'Cif Ultra Rápido Limpa Vidros Refil 450ml', marca: 'Cif', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989735/m.jpg' },
-  { nome: 'Cif Tira Limo com Cloro 500ml', marca: 'Cif', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139808/p.jpg' },
-  { nome: 'Cif Desengordurante Cozinha 500ml', marca: 'Cif', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156233/p.jpg' },
+  { nome: 'Cif Cremoso Laranja 250ml', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158152/g.jpg' },
+  { nome: 'Cif Cremoso Limpa Inox 250ml', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985110/m.jpg' },
+  { nome: 'Cif Ultra Rápido Banheiro Sem Cloro 500ml', marca: 'Cif', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147797/g.jpg' },
+  { nome: 'Cif Ultra Rápido Banheiro com Cloro 500ml', marca: 'Cif', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147797/g.jpg' },
+  { nome: 'Cif Ultra Rápido Cozinha Desengordurante 500ml', marca: 'Cif', categoria: 'Limpador cozinha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156233/p.jpg' },
+  { nome: 'Cif Ultra Rápido Limpa Vidros Gatilho 500ml', marca: 'Cif', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/989735/m.jpg' },
+  { nome: 'Cif Ultra Rápido Limpa Vidros Squeeze 500ml', marca: 'Cif', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/989735/m.jpg' },
+  { nome: 'Cif Ultra Rápido Limpa Vidros Refil 450ml', marca: 'Cif', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/989735/m.jpg' },
+  { nome: 'Cif Tira Limo com Cloro 500ml', marca: 'Cif', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139808/p.jpg' },
+  { nome: 'Cif Desengordurante Cozinha 500ml', marca: 'Cif', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156233/p.jpg' },
   // ──────────── COMFORT ────────────
-  { nome: 'Comfort Concentrado Puro Cuidado', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1105804/p.jpg', tamanhos: [
+  { nome: 'Comfort Concentrado Puro Cuidado', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1105804/p.jpg', tamanhos: [
     { label: '500ml', preco: 12.90 },
     { label: '1L', preco: 23.22 }
   ] },
-  { nome: 'Comfort Concentrado Frescor Intenso', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1138795/g.jpg', tamanhos: [
+  { nome: 'Comfort Concentrado Frescor Intenso', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1138795/g.jpg', tamanhos: [
     { label: '500ml', preco: 12.90 },
     { label: '1L', preco: 23.22 },
     { label: '1,5L', preco: 32.75 }
   ] },
-  { nome: 'Comfort Concentrado Segredos 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1138795/g.jpg' },
-  { nome: 'Comfort Concentrado Proteção Antiodor 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1105804/p.jpg' },
-  { nome: 'Comfort Concentrado Proteção Micelar 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1105804/p.jpg' },
-  { nome: 'Comfort Concentrado Detox Lavanda 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1105804/p.jpg' },
-  { nome: 'Comfort Concentrado Original 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1105804/p.jpg' },
-  { nome: 'Comfort Concentrado Profissional 5L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1138795/g.jpg' },
-  { nome: 'Comfort Intense Perfumador para Roupas', marca: 'Comfort', categoria: 'Aromatizador', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139338/p.jpg' },
+  { nome: 'Comfort Concentrado Segredos 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1138795/g.jpg' },
+  { nome: 'Comfort Concentrado Proteção Antiodor 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1105804/p.jpg' },
+  { nome: 'Comfort Concentrado Proteção Micelar 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1105804/p.jpg' },
+  { nome: 'Comfort Concentrado Detox Lavanda 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1105804/p.jpg' },
+  { nome: 'Comfort Concentrado Original 500ml', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1105804/p.jpg' },
+  { nome: 'Comfort Concentrado Profissional 5L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1138795/g.jpg' },
+  { nome: 'Comfort Intense Perfumador para Roupas', marca: 'Comfort', categoria: 'Aromatizador', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139338/p.jpg' },
   // ──────────── DIVERSEY ────────────
   { nome: 'Diversey Detergente Vero Clean 5L', marca: 'Diversey', categoria: 'Detergente', img: 'https://www.dialever.com.br/conteudos/fot_124p.jpg' },
   { nome: 'Diversey Detergente Vero Plus 5L', marca: 'Diversey', categoria: 'Detergente', img: 'https://www.dialever.com.br/conteudos/fot_121p.jpg' },
@@ -490,175 +490,175 @@ const catalogProducts = [
   { nome: 'Diversey Breltak Plus Limpador Alcalino CIP 20L', marca: 'Diversey', categoria: 'Produto profissional', img: 'https://www.dialever.com.br/conteudos/fot_133p.jpg' },
   { nome: 'Diversey Clorocide Desinfetante Hospitalar 5L', marca: 'Diversey', categoria: 'Desinfetante', img: 'https://www.dialever.com.br/conteudos/fot_134p.jpg' },
   // ──────────── DOWNY ────────────
-  { nome: 'Downy Amaciante Concentrado Brisa de Verão 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139602/g.jpg' },
-  { nome: 'Downy Amaciante Concentrado Lírios do Campo', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1143933/g.jpg', tamanhos: [
+  { nome: 'Downy Amaciante Concentrado Brisa de Verão 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139602/g.jpg' },
+  { nome: 'Downy Amaciante Concentrado Lírios do Campo', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1143933/g.jpg', tamanhos: [
     { label: '500ml', preco: 14.90 },
     { label: '3L', preco: 68.09 }
   ] },
-  { nome: 'Downy Amaciante Concentrado Frescor da Primavera', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969021/g.jpg', tamanhos: [
+  { nome: 'Downy Amaciante Concentrado Frescor da Primavera', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969021/g.jpg', tamanhos: [
     { label: '500ml', preco: 14.90 },
     { label: '1L', preco: 26.82 }
   ] },
-  { nome: 'Downy Amaciante Concentrado Água Fresca 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969021/g.jpg' },
-  { nome: 'Downy Amaciante Concentrado Brisa Intenso', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139605/p.jpg', tamanhos: [
+  { nome: 'Downy Amaciante Concentrado Água Fresca 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969021/g.jpg' },
+  { nome: 'Downy Amaciante Concentrado Brisa Intenso', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139605/p.jpg', tamanhos: [
     { label: '500ml', preco: 14.90 },
     { label: '1L', preco: 26.82 }
   ] },
-  { nome: 'Downy Amaciante Concentrado Brisa Suave 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969021/g.jpg' },
-  { nome: 'Downy Amaciante Concentrado Verão Tropical', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139602/g.jpg', tamanhos: [
+  { nome: 'Downy Amaciante Concentrado Brisa Suave 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969021/g.jpg' },
+  { nome: 'Downy Amaciante Concentrado Verão Tropical', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139602/g.jpg', tamanhos: [
     { label: '500ml', preco: 14.90 },
     { label: '1,5L', preco: 37.83 }
   ] },
-  { nome: 'Downy Amaciante Concentrado Lavanda Seiva de Alfazema 1,5L', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969017/p.jpg' },
-  { nome: 'Downy Amaciante Concentrado Sensitive 450ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969021/g.jpg' },
-  { nome: 'Downy Perfumador para Roupas', marca: 'Downy', categoria: 'Aromatizador', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1157851/g.jpg' },
+  { nome: 'Downy Amaciante Concentrado Lavanda Seiva de Alfazema 1,5L', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969017/p.jpg' },
+  { nome: 'Downy Amaciante Concentrado Sensitive 450ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969021/g.jpg' },
+  { nome: 'Downy Perfumador para Roupas', marca: 'Downy', categoria: 'Aromatizador', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1157851/g.jpg' },
   // ──────────── GIRANDO SOL ────────────
-  { nome: 'Girando Sol Sabão em Pó Coco e Baunilha', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1148916/p.jpg', tamanhos: [
+  { nome: 'Girando Sol Sabão em Pó Coco e Baunilha', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148916/p.jpg', tamanhos: [
     { label: '1,6kg', preco: 5.99 },
     { label: '4kg', preco: 13.03 }
   ] },
-  { nome: 'Girando Sol Sabão em Pó Floral Paris 1,6kg', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1148908/p.jpg' },
-  { nome: 'Girando Sol Sabão em Pó Rosa Floral 4kg', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1148908/p.jpg' },
-  { nome: 'Girando Sol Detergente Neutro 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142481/p.jpg' },
-  { nome: 'Girando Sol Detergente Natural', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142481/p.jpg', tamanhos: [
+  { nome: 'Girando Sol Sabão em Pó Floral Paris 1,6kg', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148908/p.jpg' },
+  { nome: 'Girando Sol Sabão em Pó Rosa Floral 4kg', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148908/p.jpg' },
+  { nome: 'Girando Sol Detergente Neutro 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142481/p.jpg' },
+  { nome: 'Girando Sol Detergente Natural', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142481/p.jpg', tamanhos: [
     { label: '500ml', preco: 2.49 },
     { label: '2L', preco: 8.07 }
   ] },
-  { nome: 'Girando Sol Detergente Coco 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142481/p.jpg' },
-  { nome: 'Girando Sol Detergente Maçã 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142482/m.jpg' },
-  { nome: 'Girando Sol Detergente Glicerina 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1142485/p.jpg' },
-  { nome: 'Girando Sol Amaciante Concentrado Coco e Baunilha 1L', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099799/g.jpg' },
-  { nome: 'Girando Sol Amaciante Rosas e Lavanda', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099799/g.jpg', tamanhos: [
+  { nome: 'Girando Sol Detergente Coco 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142481/p.jpg' },
+  { nome: 'Girando Sol Detergente Maçã 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142482/m.jpg' },
+  { nome: 'Girando Sol Detergente Glicerina 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142485/p.jpg' },
+  { nome: 'Girando Sol Amaciante Concentrado Coco e Baunilha 1L', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg' },
+  { nome: 'Girando Sol Amaciante Rosas e Lavanda', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg', tamanhos: [
     { label: '2L', preco: 6.90 },
     { label: '5L', preco: 15.01 }
   ] },
-  { nome: 'Girando Sol Amaciante Floral Paris', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099799/g.jpg', tamanhos: [
+  { nome: 'Girando Sol Amaciante Floral Paris', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg', tamanhos: [
     { label: '2L', preco: 6.90 },
     { label: '5L', preco: 15.01 }
   ] },
-  { nome: 'Girando Sol Amaciante Paixão Secreta', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099799/g.jpg', tamanhos: [
+  { nome: 'Girando Sol Amaciante Paixão Secreta', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg', tamanhos: [
     { label: '2L', preco: 6.90 },
     { label: '5L', preco: 15.01 }
   ] },
-  { nome: 'Girando Sol Amaciante Hipoalergênico', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099799/g.jpg', tamanhos: [
+  { nome: 'Girando Sol Amaciante Hipoalergênico', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg', tamanhos: [
     { label: '2L', preco: 6.90 },
     { label: '5L', preco: 15.01 }
   ] },
-  { nome: 'Girando Sol Amaciante Hipoalergênico Talco Delicado 2L', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099799/g.jpg' },
-  { nome: 'Girando Sol Lava Roupas Líquido Ação Total', marca: 'Girando Sol', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153031/p.jpg', tamanhos: [
+  { nome: 'Girando Sol Amaciante Hipoalergênico Talco Delicado 2L', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg' },
+  { nome: 'Girando Sol Lava Roupas Líquido Ação Total', marca: 'Girando Sol', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153031/p.jpg', tamanhos: [
     { label: '1L', preco: 8.90 },
     { label: '5L', preco: 34.84 }
   ] },
-  { nome: 'Girando Sol Lava Roupas Líquido Hipoalergênico 2L', marca: 'Girando Sol', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1109869/p.jpg' },
-  { nome: 'Girando Sol Desinfetante Jasmim 5L', marca: 'Girando Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1148977/m.jpg' },
-  { nome: 'Girando Sol Água Sanitária', marca: 'Girando Sol', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1148977/m.jpg', tamanhos: [
+  { nome: 'Girando Sol Lava Roupas Líquido Hipoalergênico 2L', marca: 'Girando Sol', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1109869/p.jpg' },
+  { nome: 'Girando Sol Desinfetante Jasmim 5L', marca: 'Girando Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148977/m.jpg' },
+  { nome: 'Girando Sol Água Sanitária', marca: 'Girando Sol', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148977/m.jpg', tamanhos: [
     { label: '1L', preco: 4.99 },
     { label: '2L', preco: 8.98 },
     { label: '5L', preco: 19.54 }
   ] },
-  { nome: 'Girando Sol Tira Manchas em Pó Sem Cloro 400g', marca: 'Girando Sol', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099801/m.jpg' },
-  { nome: 'Girando Sol Tira Manchas Líquido Sem Cloro 2L', marca: 'Girando Sol', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099801/m.jpg' },
-  { nome: 'Girando Sol Limpador Tira Limo Cloro Ativo 500ml', marca: 'Girando Sol', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099801/m.jpg' },
-  { nome: 'Girando Sol Limpador Limpeza Pesada Original 500ml', marca: 'Girando Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099800/g.jpg' },
-  { nome: 'Girando Sol Saponáceo Cremoso Limão 300ml', marca: 'Girando Sol', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1269345/g.jpg.jpg' },
-  { nome: 'Girando Sol Sabão em Barra Coco', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099825/g.jpg', tamanhos: [
+  { nome: 'Girando Sol Tira Manchas em Pó Sem Cloro 400g', marca: 'Girando Sol', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099801/m.jpg' },
+  { nome: 'Girando Sol Tira Manchas Líquido Sem Cloro 2L', marca: 'Girando Sol', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099801/m.jpg' },
+  { nome: 'Girando Sol Limpador Tira Limo Cloro Ativo 500ml', marca: 'Girando Sol', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099801/m.jpg' },
+  { nome: 'Girando Sol Limpador Limpeza Pesada Original 500ml', marca: 'Girando Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099800/g.jpg' },
+  { nome: 'Girando Sol Saponáceo Cremoso Limão 300ml', marca: 'Girando Sol', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269345/g.jpg.jpg' },
+  { nome: 'Girando Sol Sabão em Barra Coco', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099825/g.jpg', tamanhos: [
     { label: '200g', preco: 5.99 },
     { label: '400g', preco: 10.78 }
   ] },
-  { nome: 'Girando Sol Sabão em Barra Glicerinado Neutro 200g', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099825/g.jpg' },
-  { nome: 'Girando Sol Sabão em Barra Tradicional 180g', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1099825/g.jpg' },
+  { nome: 'Girando Sol Sabão em Barra Glicerinado Neutro 200g', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099825/g.jpg' },
+  { nome: 'Girando Sol Sabão em Barra Tradicional 180g', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099825/g.jpg' },
   // ──────────── LYSOL ────────────
-  { nome: 'Lysol Desinfetante Aerossol Pureza do Algodão 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147805/p.jpg' },
-  { nome: 'Lysol Desinfetante Aerossol Brisa da Manhã 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/991551/p.jpg' },
-  { nome: 'Lysol Desinfetante Aerossol Flores de Lima e Limão 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/989706/p.jpg' },
-  { nome: 'Lysol Toalhetes Desinfetantes Brisa da Manhã 36un', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/991551/p.jpg' },
-  { nome: 'Lysol Toalhetes Desinfetantes Frescor Marinho 36un', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/991555/g.jpg' },
-  { nome: 'Lysol Limpador Banheiro Power 500ml', marca: 'Lysol', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/991551/p.jpg' },
+  { nome: 'Lysol Desinfetante Aerossol Pureza do Algodão 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147805/p.jpg' },
+  { nome: 'Lysol Desinfetante Aerossol Brisa da Manhã 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991551/p.jpg' },
+  { nome: 'Lysol Desinfetante Aerossol Flores de Lima e Limão 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/989706/p.jpg' },
+  { nome: 'Lysol Toalhetes Desinfetantes Brisa da Manhã 36un', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991551/p.jpg' },
+  { nome: 'Lysol Toalhetes Desinfetantes Frescor Marinho 36un', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991555/g.jpg' },
+  { nome: 'Lysol Limpador Banheiro Power 500ml', marca: 'Lysol', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991551/p.jpg' },
   // ──────────── MINUANO ────────────
-  { nome: 'Minuano Detergente Lava-Louças Neutro 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1140558/m.jpg' },
-  { nome: 'Minuano Detergente Lava-Louças Coco 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141575/g.jpg' },
-  { nome: 'Minuano Detergente Lava-Louças Marine 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970701/g.jpg' },
-  { nome: 'Minuano Detergente Lava-Louças Micelar 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/975285/g.jpg' },
-  { nome: 'Minuano Sabão em Pó Máximo Cuidado', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156164/g.jpg', tamanhos: [
+  { nome: 'Minuano Detergente Lava-Louças Neutro 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1140558/m.jpg' },
+  { nome: 'Minuano Detergente Lava-Louças Coco 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141575/g.jpg' },
+  { nome: 'Minuano Detergente Lava-Louças Marine 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970701/g.jpg' },
+  { nome: 'Minuano Detergente Lava-Louças Micelar 500ml', marca: 'Minuano', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/975285/g.jpg' },
+  { nome: 'Minuano Sabão em Pó Máximo Cuidado', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156164/g.jpg', tamanhos: [
     { label: '800g', preco: 5.49 },
     { label: '4kg', preco: 21.49 }
   ] },
-  { nome: 'Minuano Sabão em Pó Máxima Limpeza 800g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156164/g.jpg' },
-  { nome: 'Minuano Sabão em Pó Máxima Perfumação 800g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156164/g.jpg' },
-  { nome: 'Minuano Sabão Glicerinado Neutro 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1270351/p.jpg.jpg' },
-  { nome: 'Minuano Sabão Glicerinado Controle de Odor 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156409/p.jpg' },
-  { nome: 'Minuano Sabão Glicerinado Tira-Manchas 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156409/p.jpg' },
-  { nome: 'Minuano Sabão Glicerinado Limpeza Perfumada 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156405/p.jpg' },
-  { nome: 'Minuano Amaciante Concentrado Noite de Luar', marca: 'Minuano', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970117/p.jpg', tamanhos: [
+  { nome: 'Minuano Sabão em Pó Máxima Limpeza 800g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156164/g.jpg' },
+  { nome: 'Minuano Sabão em Pó Máxima Perfumação 800g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156164/g.jpg' },
+  { nome: 'Minuano Sabão Glicerinado Neutro 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270351/p.jpg.jpg' },
+  { nome: 'Minuano Sabão Glicerinado Controle de Odor 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156409/p.jpg' },
+  { nome: 'Minuano Sabão Glicerinado Tira-Manchas 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156409/p.jpg' },
+  { nome: 'Minuano Sabão Glicerinado Limpeza Perfumada 5un', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156405/p.jpg' },
+  { nome: 'Minuano Amaciante Concentrado Noite de Luar', marca: 'Minuano', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970117/p.jpg', tamanhos: [
     { label: '500ml', preco: 6.99 },
     { label: '1L', preco: 12.58 }
   ] },
-  { nome: 'Minuano Amaciante Diluído 2L', marca: 'Minuano', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1144138/p.jpg' },
-  { nome: 'Minuano Desinfetante Aerossol Lavanda 300ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/912197/g.jpg' },
-  { nome: 'Minuano Desinfetante Aerossol Sem Fragrância 300ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/912197/g.jpg' },
-  { nome: 'Minuano Desinfetante Aerossol Cítrico 300ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/912197/g.jpg' },
-  { nome: 'Minuano Desinfetante Líquido Lavanda 500ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156304/p.jpg' },
-  { nome: 'Minuano Multiuso 500ml', marca: 'Minuano', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1140558/m.jpg' },
-  { nome: 'Minuano Limpa Vidros 500ml', marca: 'Minuano', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970701/g.jpg' },
-  { nome: 'Minuano Sabão em Barra Coco 200g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970114/m.jpg' },
-  { nome: 'Minuano Lava Roupas em Pó Linha Coco 800g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156164/g.jpg' },
+  { nome: 'Minuano Amaciante Diluído 2L', marca: 'Minuano', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144138/p.jpg' },
+  { nome: 'Minuano Desinfetante Aerossol Lavanda 300ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/912197/g.jpg' },
+  { nome: 'Minuano Desinfetante Aerossol Sem Fragrância 300ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/912197/g.jpg' },
+  { nome: 'Minuano Desinfetante Aerossol Cítrico 300ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/912197/g.jpg' },
+  { nome: 'Minuano Desinfetante Líquido Lavanda 500ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156304/p.jpg' },
+  { nome: 'Minuano Multiuso 500ml', marca: 'Minuano', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1140558/m.jpg' },
+  { nome: 'Minuano Limpa Vidros 500ml', marca: 'Minuano', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970701/g.jpg' },
+  { nome: 'Minuano Sabão em Barra Coco 200g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970114/m.jpg' },
+  { nome: 'Minuano Lava Roupas em Pó Linha Coco 800g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156164/g.jpg' },
   // ──────────── MR. MÚSCULO ────────────
-  { nome: 'Mr. Músculo Cozinha Desengordurante Laranja 500ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153338/g.jpg' },
-  { nome: 'Mr. Músculo Cozinha Desengordurante Limão 500ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151183/g.jpg' },
-  { nome: 'Mr. Músculo Cozinha Desengordurante Limão Refil 400ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151183/g.jpg' },
-  { nome: 'Mr. Músculo Cozinha Desengordurante Laranja Refil 400ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153400/m.jpg' },
-  { nome: 'Mr. Músculo Banheiro Total 500ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153311/m.jpg' },
-  { nome: 'Mr. Músculo Banheiro Total Refil 400ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153311/m.jpg' },
-  { nome: 'Mr. Músculo Limpa Vidros 500ml', marca: 'Mr. Músculo', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153399/m.jpg' },
-  { nome: 'Mr. Músculo Limpa Vidros Refil 400ml', marca: 'Mr. Músculo', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1153399/m.jpg' },
-  { nome: 'Mr. Músculo Cremoso Multiuso Desinfetante 450ml', marca: 'Mr. Músculo', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1001040/m.jpg' },
-  { nome: 'Mr. Músculo Limpa Limo Refil 400ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/996967/g.jpg' },
-  { nome: 'Mr. Músculo Uso Geral Perfumado by Glade Lavanda 5L', marca: 'Mr. Músculo', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/981665/g.jpg' },
+  { nome: 'Mr. Músculo Cozinha Desengordurante Laranja 500ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153338/g.jpg' },
+  { nome: 'Mr. Músculo Cozinha Desengordurante Limão 500ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151183/g.jpg' },
+  { nome: 'Mr. Músculo Cozinha Desengordurante Limão Refil 400ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151183/g.jpg' },
+  { nome: 'Mr. Músculo Cozinha Desengordurante Laranja Refil 400ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153400/m.jpg' },
+  { nome: 'Mr. Músculo Banheiro Total 500ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153311/m.jpg' },
+  { nome: 'Mr. Músculo Banheiro Total Refil 400ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153311/m.jpg' },
+  { nome: 'Mr. Músculo Limpa Vidros 500ml', marca: 'Mr. Músculo', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153399/m.jpg' },
+  { nome: 'Mr. Músculo Limpa Vidros Refil 400ml', marca: 'Mr. Músculo', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153399/m.jpg' },
+  { nome: 'Mr. Músculo Cremoso Multiuso Desinfetante 450ml', marca: 'Mr. Músculo', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1001040/m.jpg' },
+  { nome: 'Mr. Músculo Limpa Limo Refil 400ml', marca: 'Mr. Músculo', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/996967/g.jpg' },
+  { nome: 'Mr. Músculo Uso Geral Perfumado by Glade Lavanda 5L', marca: 'Mr. Músculo', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/981665/g.jpg' },
   // ──────────── OMO ────────────
-  { nome: 'Omo Sabão em Pó Lavagem Perfeita', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147839/p.jpg', tamanhos: [
+  { nome: 'Omo Sabão em Pó Lavagem Perfeita', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147839/p.jpg', tamanhos: [
     { label: '800g', preco: 14.90 },
     { label: '1,6kg', preco: 26.82 },
     { label: '2,2kg', preco: 35.13 }
   ] },
-  { nome: 'Omo Sabão em Pó Lavagem Perfeita Sanitiza & Higieniza', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147839/p.jpg', tamanhos: [
+  { nome: 'Omo Sabão em Pó Lavagem Perfeita Sanitiza & Higieniza', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147839/p.jpg', tamanhos: [
     { label: '800g', preco: 14.90 },
     { label: '1,6kg', preco: 26.82 }
   ] },
-  { nome: 'Omo Sabão em Pó Puro Cuidado', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147839/p.jpg', tamanhos: [
+  { nome: 'Omo Sabão em Pó Puro Cuidado', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147839/p.jpg', tamanhos: [
     { label: '800g', preco: 14.90 },
     { label: '1,6kg', preco: 26.82 }
   ] },
-  { nome: 'Omo Sabão em Pó Lavanda 800g', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1147839/p.jpg' },
-  { nome: 'Omo Sabão Líquido Lavagem Perfeita', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/972014/p.jpg', tamanhos: [
+  { nome: 'Omo Sabão em Pó Lavanda 800g', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147839/p.jpg' },
+  { nome: 'Omo Sabão Líquido Lavagem Perfeita', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972014/p.jpg', tamanhos: [
     { label: '1L', preco: 18.90 },
     { label: '3L', preco: 47.98 }
   ] },
-  { nome: 'Omo Sabão Líquido Puro Cuidado 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/972016/g.jpg' },
-  { nome: 'Omo Sabão Líquido Puro Cuidado Refil 900ml', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/972016/g.jpg' },
-  { nome: 'Omo Sabão Líquido Sanitiza & Higieniza 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1089036/07451.png' },
-  { nome: 'Omo Sabão Líquido Roupas Finas e Delicadas 900ml', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151240/g.jpg' },
-  { nome: 'Omo Sabão Líquido Peças Íntimas e Biquínis 900ml', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151240/g.jpg' },
-  { nome: 'Omo Sabão Líquido Branco Absoluto 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/972014/p.jpg' },
-  { nome: 'Omo Sabão Líquido Lavanda 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/972014/p.jpg' },
-  { nome: 'Omo Tira Manchas Líquido 1L', marca: 'Omo', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/980026/p.jpg' },
-  { nome: 'Omo Tira Manchas em Pó 380g', marca: 'Omo', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1146185/m.jpg' },
-  { nome: 'Omo Cápsulas 3 em 1 Lavagem Perfeita', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1151865/p.jpg' },
+  { nome: 'Omo Sabão Líquido Puro Cuidado 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972016/g.jpg' },
+  { nome: 'Omo Sabão Líquido Puro Cuidado Refil 900ml', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972016/g.jpg' },
+  { nome: 'Omo Sabão Líquido Sanitiza & Higieniza 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1089036/07451.png' },
+  { nome: 'Omo Sabão Líquido Roupas Finas e Delicadas 900ml', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151240/g.jpg' },
+  { nome: 'Omo Sabão Líquido Peças Íntimas e Biquínis 900ml', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151240/g.jpg' },
+  { nome: 'Omo Sabão Líquido Branco Absoluto 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972014/p.jpg' },
+  { nome: 'Omo Sabão Líquido Lavanda 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972014/p.jpg' },
+  { nome: 'Omo Tira Manchas Líquido 1L', marca: 'Omo', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/980026/p.jpg' },
+  { nome: 'Omo Tira Manchas em Pó 380g', marca: 'Omo', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146185/m.jpg' },
+  { nome: 'Omo Cápsulas 3 em 1 Lavagem Perfeita', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151865/p.jpg' },
   // ──────────── PINHO SOL ────────────
-  { nome: 'Pinho Sol Desinfetante Original', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968385/m.jpg', tamanhos: [
+  { nome: 'Pinho Sol Desinfetante Original', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968385/m.jpg', tamanhos: [
     { label: '500ml', preco: 6.90 },
     { label: '1L', preco: 12.42 },
     { label: '3,8L', preco: 38.53 }
   ] },
-  { nome: 'Pinho Sol Desinfetante Lavanda', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279516/g.jpg.jpg', tamanhos: [
+  { nome: 'Pinho Sol Desinfetante Lavanda', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279516/g.jpg.jpg', tamanhos: [
     { label: '500ml', preco: 6.90 },
     { label: '1L', preco: 12.42 },
     { label: '3,8L', preco: 38.53 }
   ] },
-  { nome: 'Pinho Sol Desinfetante Eucalipto 500ml', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968385/m.jpg' },
-  { nome: 'Pinho Sol Desinfetante Citronela 500ml', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/971361/g.jpg' },
-  { nome: 'Pinho Sol Desinfetante Naturals 500ml', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968385/m.jpg' },
-  { nome: 'Pinho Sol Limpador Multiuso Original 500ml', marca: 'Pinho Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968385/m.jpg' },
-  { nome: 'Pinho Sol Limpador Multiuso Lavanda 500ml', marca: 'Pinho Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279516/g.jpg.jpg' },
+  { nome: 'Pinho Sol Desinfetante Eucalipto 500ml', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968385/m.jpg' },
+  { nome: 'Pinho Sol Desinfetante Citronela 500ml', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971361/g.jpg' },
+  { nome: 'Pinho Sol Desinfetante Naturals 500ml', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968385/m.jpg' },
+  { nome: 'Pinho Sol Limpador Multiuso Original 500ml', marca: 'Pinho Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968385/m.jpg' },
+  { nome: 'Pinho Sol Limpador Multiuso Lavanda 500ml', marca: 'Pinho Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279516/g.jpg.jpg' },
   // ──────────── RENKO ────────────
   { nome: 'Renko Klyo Limpa Vidros', marca: 'Renko', categoria: 'Limpa vidro', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpa_vidros_klyo_1l_renko_4748_1_255f5d77958d0fb5f2cd167b543cdf24.jpg', tamanhos: [
     { label: '1L', preco: 29.90 },
@@ -703,154 +703,154 @@ const catalogProducts = [
   { nome: 'Start Tuff Amaciante Concentrado Winter 1,5L', marca: 'Start', categoria: 'Amaciante', img: 'https://www.startquimica.com.br/storage/PIM_c3aba9b0-ad6c-4537-a78a-1aca0535f6a9.webp' },
   { nome: 'Start Azulim Água Sanitária 1L', marca: 'Start', categoria: 'Alvejante', img: 'https://www.startquimica.com.br/storage/PIM_1439ae35-0f92-4fb4-9980-35aaab7096a5.webp' },
   // ──────────── URCA ────────────
-  { nome: 'Urca Lava Roupas em Pó 800g', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152906/p.jpg' },
-  { nome: 'Urca Lava Roupas em Pó Concentrado 2,2kg', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156968/g.jpg' },
-  { nome: 'Urca Lava Roupas em Pó Sachê', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152906/p.jpg', tamanhos: [
+  { nome: 'Urca Lava Roupas em Pó 800g', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152906/p.jpg' },
+  { nome: 'Urca Lava Roupas em Pó Concentrado 2,2kg', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156968/g.jpg' },
+  { nome: 'Urca Lava Roupas em Pó Sachê', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152906/p.jpg', tamanhos: [
     { label: '400g', preco: 5.49 },
     { label: '2,4kg', preco: 25.09 },
     { label: '4kg', preco: 38.69 }
   ] },
-  { nome: 'Urca Lava Roupas em Pó PRO 8kg', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152905/m.jpg' },
-  { nome: 'Urca Lava Roupas Líquido', marca: 'Urca', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156345/m.jpg', tamanhos: [
+  { nome: 'Urca Lava Roupas em Pó PRO 8kg', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152905/m.jpg' },
+  { nome: 'Urca Lava Roupas Líquido', marca: 'Urca', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156345/m.jpg', tamanhos: [
     { label: '1L', preco: 7.90 },
     { label: '3L', preco: 20.06 },
     { label: '5L', preco: 30.93 }
   ] },
-  { nome: 'Urca Lava Roupas Líquido Coco', marca: 'Urca', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1156345/m.jpg', tamanhos: [
+  { nome: 'Urca Lava Roupas Líquido Coco', marca: 'Urca', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156345/m.jpg', tamanhos: [
     { label: '500ml', preco: 7.90 },
     { label: '3L', preco: 36.10 }
   ] },
-  { nome: 'Urca Amaciante Concentrado', marca: 'Urca', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/992052/g.jpg', tamanhos: [
+  { nome: 'Urca Amaciante Concentrado', marca: 'Urca', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/992052/g.jpg', tamanhos: [
     { label: '500ml', preco: 5.99 },
     { label: '1,5L', preco: 15.21 }
   ] },
-  { nome: 'Urca Amaciante Diluído', marca: 'Urca', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141364/p.jpg', tamanhos: [
+  { nome: 'Urca Amaciante Diluído', marca: 'Urca', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141364/p.jpg', tamanhos: [
     { label: '2L', preco: 5.99 },
     { label: '3L', preco: 8.45 },
     { label: '5L', preco: 13.03 }
   ] },
-  { nome: 'Urca Desinfetante', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141365/m.jpg', tamanhos: [
+  { nome: 'Urca Desinfetante', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141365/m.jpg', tamanhos: [
     { label: '500ml', preco: 4.90 },
     { label: '2L', preco: 15.88 },
     { label: '5L', preco: 34.53 }
   ] },
-  { nome: 'Urca Lava Louças Clear 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1276941/m.jpg.jpg' },
-  { nome: 'Urca Lava Louças Neutro 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1276941/m.jpg.jpg' },
-  { nome: 'Urca Multiuso com Álcool 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1145154/p.jpg' },
-  { nome: 'Urca Multiuso Lavanda 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1145154/p.jpg' },
-  { nome: 'Urca Multiuso Hortelã 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1145154/p.jpg' },
-  { nome: 'Urca Limpa Vidros 500ml', marca: 'Urca', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1145154/p.jpg' },
-  { nome: 'Urca Limpador Perfumado', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1145154/p.jpg', tamanhos: [
+  { nome: 'Urca Lava Louças Clear 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1276941/m.jpg.jpg' },
+  { nome: 'Urca Lava Louças Neutro 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1276941/m.jpg.jpg' },
+  { nome: 'Urca Multiuso com Álcool 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145154/p.jpg' },
+  { nome: 'Urca Multiuso Lavanda 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145154/p.jpg' },
+  { nome: 'Urca Multiuso Hortelã 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145154/p.jpg' },
+  { nome: 'Urca Limpa Vidros 500ml', marca: 'Urca', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145154/p.jpg' },
+  { nome: 'Urca Limpador Perfumado', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145154/p.jpg', tamanhos: [
     { label: '500ml', preco: 5.49 },
     { label: '1L', preco: 9.88 }
   ] },
-  { nome: 'Urca Água Sanitária', marca: 'Urca', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1144655/m.jpg', tamanhos: [
+  { nome: 'Urca Água Sanitária', marca: 'Urca', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144655/m.jpg', tamanhos: [
     { label: '1L', preco: 4.49 },
     { label: '2L', preco: 8.08 },
     { label: '5L', preco: 17.58 }
   ] },
-  { nome: 'Urca Tira Manchas', marca: 'Urca', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1144655/m.jpg', tamanhos: [
+  { nome: 'Urca Tira Manchas', marca: 'Urca', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144655/m.jpg', tamanhos: [
     { label: '500ml', preco: 4.49 },
     { label: '1,5L', preco: 11.40 },
     { label: '5L', preco: 31.64 }
   ] },
-  { nome: 'Urca Sabão em Pedra Coco', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152904/p.jpg', tamanhos: [
+  { nome: 'Urca Sabão em Pedra Coco', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152904/p.jpg', tamanhos: [
     { label: '180g', preco: 5.49 },
     { label: '450g', preco: 11.94 },
     { label: '900g', preco: 21.49 }
   ] },
-  { nome: 'Urca Sabão de Coco em Pasta', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152904/p.jpg' },
-  { nome: 'Urca Sabão em Pasta Tradicional', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152906/p.jpg', tamanhos: [
+  { nome: 'Urca Sabão de Coco em Pasta', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152904/p.jpg' },
+  { nome: 'Urca Sabão em Pasta Tradicional', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152906/p.jpg', tamanhos: [
     { label: '200g', preco: 5.49 },
     { label: '500g', preco: 11.94 }
   ] },
-  { nome: 'Urca Saponáceo em Pasta Cristal', marca: 'Urca', categoria: 'Saponáceo', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152905/m.jpg' },
-  { nome: 'Urca Sabão em Pó Coco', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1152904/p.jpg' },
-  { nome: 'Urca Pedra Sanitária Lavanda', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141365/m.jpg' },
-  { nome: 'Urca Pedra Sanitária Floral', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141365/m.jpg' },
+  { nome: 'Urca Saponáceo em Pasta Cristal', marca: 'Urca', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152905/m.jpg' },
+  { nome: 'Urca Sabão em Pó Coco', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152904/p.jpg' },
+  { nome: 'Urca Pedra Sanitária Lavanda', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141365/m.jpg' },
+  { nome: 'Urca Pedra Sanitária Floral', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141365/m.jpg' },
   // ──────────── VEJA ────────────
-  { nome: 'Veja Multiuso Original', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970784/m.jpg', tamanhos: [
+  { nome: 'Veja Multiuso Original', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970784/m.jpg', tamanhos: [
     { label: '500ml', preco: 7.99 },
     { label: '5L', preco: 56.30 }
   ] },
-  { nome: 'Veja Multiuso Lavanda com Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970793/p.jpg' },
-  { nome: 'Veja Multiuso Campestre 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970784/m.jpg' },
-  { nome: 'Veja Multiuso Bio Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970784/m.jpg' },
-  { nome: 'Veja Multiuso Power Fusion Limão 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970794/g.jpg' },
-  { nome: 'Veja Multiuso Power Fusion Coco 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970794/g.jpg' },
-  { nome: 'Veja Uso Direto Original 900ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970784/m.jpg' },
-  { nome: 'Veja Uso Direto Floral 900ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970793/p.jpg' },
-  { nome: 'Veja Limpeza Pesada Original com Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970798/m.jpg' },
-  { nome: 'Veja Limpeza Pesada X14 Cloro Ativo 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970798/m.jpg' },
-  { nome: 'Veja Limpeza Pesada Pro Line 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970784/m.jpg' },
-  { nome: 'Veja Banheiro X14 Tira Limo 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970798/m.jpg' },
-  { nome: 'Veja Banheiro Oxi Antibac Ativo 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970798/m.jpg' },
-  { nome: 'Veja Banheiro X14 Sem Cloro 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970784/m.jpg' },
-  { nome: 'Veja Cozinha Desengordurante Original 500ml', marca: 'Veja', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970794/g.jpg' },
-  { nome: 'Veja Cozinha Desengordurante Laranja 500ml', marca: 'Veja', categoria: 'Desengordurante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970794/g.jpg' },
-  { nome: 'Veja Vidrex Limpa Vidros Squeeze 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968399/m.jpg' },
-  { nome: 'Veja Vidrex Limpa Vidros Cristal Pulverizador 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968399/m.jpg' },
-  { nome: 'Veja Vidrex Limpa Vidros Refil 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968399/m.jpg' },
-  { nome: 'Veja Vidrex Cristal Pro Line 5L', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/968399/m.jpg' },
-  { nome: 'Veja Perfumes Flores do Mediterrâneo 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/973437/g.jpg' },
-  { nome: 'Veja Perfumes Lavanda da França 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970793/p.jpg' },
-  { nome: 'Veja Perfumes Tulipa da Holanda 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/973437/g.jpg' },
-  { nome: 'Veja Perfumes Jasmim do Caribe 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/973437/g.jpg' },
+  { nome: 'Veja Multiuso Lavanda com Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970793/p.jpg' },
+  { nome: 'Veja Multiuso Campestre 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970784/m.jpg' },
+  { nome: 'Veja Multiuso Bio Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970784/m.jpg' },
+  { nome: 'Veja Multiuso Power Fusion Limão 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970794/g.jpg' },
+  { nome: 'Veja Multiuso Power Fusion Coco 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970794/g.jpg' },
+  { nome: 'Veja Uso Direto Original 900ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970784/m.jpg' },
+  { nome: 'Veja Uso Direto Floral 900ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970793/p.jpg' },
+  { nome: 'Veja Limpeza Pesada Original com Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970798/m.jpg' },
+  { nome: 'Veja Limpeza Pesada X14 Cloro Ativo 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970798/m.jpg' },
+  { nome: 'Veja Limpeza Pesada Pro Line 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970784/m.jpg' },
+  { nome: 'Veja Banheiro X14 Tira Limo 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970798/m.jpg' },
+  { nome: 'Veja Banheiro Oxi Antibac Ativo 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970798/m.jpg' },
+  { nome: 'Veja Banheiro X14 Sem Cloro 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970784/m.jpg' },
+  { nome: 'Veja Cozinha Desengordurante Original 500ml', marca: 'Veja', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970794/g.jpg' },
+  { nome: 'Veja Cozinha Desengordurante Laranja 500ml', marca: 'Veja', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970794/g.jpg' },
+  { nome: 'Veja Vidrex Limpa Vidros Squeeze 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968399/m.jpg' },
+  { nome: 'Veja Vidrex Limpa Vidros Cristal Pulverizador 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968399/m.jpg' },
+  { nome: 'Veja Vidrex Limpa Vidros Refil 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968399/m.jpg' },
+  { nome: 'Veja Vidrex Cristal Pro Line 5L', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968399/m.jpg' },
+  { nome: 'Veja Perfumes Flores do Mediterrâneo 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/973437/g.jpg' },
+  { nome: 'Veja Perfumes Lavanda da França 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970793/p.jpg' },
+  { nome: 'Veja Perfumes Tulipa da Holanda 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/973437/g.jpg' },
+  { nome: 'Veja Perfumes Jasmim do Caribe 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/973437/g.jpg' },
   // ──────────── YPÊ ────────────
-  { nome: 'Ypê Detergente Neutro 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139623/g.jpg' },
-  { nome: 'Ypê Detergente Limão 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1140167/g.jpg' },
-  { nome: 'Ypê Detergente Coco 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1140870/m.jpg' },
-  { nome: 'Ypê Detergente Maçã 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1140176/m.jpg' },
-  { nome: 'Ypê Detergente Clear 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1141014/g.jpg' },
-  { nome: 'Ypê Detergente Antibac 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1273786/p.jpg.jpg' },
-  { nome: 'Ypê Detergente Green 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1139623/g.jpg' },
-  { nome: 'Ypê Detergente Concentrado Antibac 416ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1273786/p.jpg.jpg' },
-  { nome: 'Ypê Detergente Pro 7L', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1272478/p.jpg.jpg' },
-  { nome: 'Ypê Sabão em Pó Power Act', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279670/p.jpg.jpg', tamanhos: [
+  { nome: 'Ypê Detergente Neutro 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139623/g.jpg' },
+  { nome: 'Ypê Detergente Limão 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1140167/g.jpg' },
+  { nome: 'Ypê Detergente Coco 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1140870/m.jpg' },
+  { nome: 'Ypê Detergente Maçã 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1140176/m.jpg' },
+  { nome: 'Ypê Detergente Clear 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141014/g.jpg' },
+  { nome: 'Ypê Detergente Antibac 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273786/p.jpg.jpg' },
+  { nome: 'Ypê Detergente Green 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139623/g.jpg' },
+  { nome: 'Ypê Detergente Concentrado Antibac 416ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273786/p.jpg.jpg' },
+  { nome: 'Ypê Detergente Pro 7L', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1272478/p.jpg.jpg' },
+  { nome: 'Ypê Sabão em Pó Power Act', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279670/p.jpg.jpg', tamanhos: [
     { label: '800g', preco: 8.90 },
     { label: '1,6kg', preco: 16.02 }
   ] },
-  { nome: 'Ypê Sabão em Pó Antibac 800g', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/984439/g.jpg' },
-  { nome: 'Ypê Sabão em Pó Premium 800g', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/984439/g.jpg' },
-  { nome: 'Ypê Sabão em Pó Pro 8kg', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279670/p.jpg.jpg' },
-  { nome: 'Ypê Lava Roupas Líquido Power Act 1L', marca: 'Ypê', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279670/p.jpg.jpg' },
-  { nome: 'Ypê Lava Roupas Líquido Power Act Refil 900ml', marca: 'Ypê', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279670/p.jpg.jpg' },
-  { nome: 'Ypê Lava Roupas Líquido Antibac 1L', marca: 'Ypê', categoria: 'Lava roupas', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1279670/p.jpg.jpg' },
-  { nome: 'Ypê Amaciante Concentrado', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970914/m.jpg', tamanhos: [
+  { nome: 'Ypê Sabão em Pó Antibac 800g', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/984439/g.jpg' },
+  { nome: 'Ypê Sabão em Pó Premium 800g', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/984439/g.jpg' },
+  { nome: 'Ypê Sabão em Pó Pro 8kg', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279670/p.jpg.jpg' },
+  { nome: 'Ypê Lava Roupas Líquido Power Act 1L', marca: 'Ypê', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279670/p.jpg.jpg' },
+  { nome: 'Ypê Lava Roupas Líquido Power Act Refil 900ml', marca: 'Ypê', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279670/p.jpg.jpg' },
+  { nome: 'Ypê Lava Roupas Líquido Antibac 1L', marca: 'Ypê', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279670/p.jpg.jpg' },
+  { nome: 'Ypê Amaciante Concentrado', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970914/m.jpg', tamanhos: [
     { label: '500ml', preco: 7.49 },
     { label: '1L', preco: 13.48 }
   ] },
-  { nome: 'Ypê Amaciante Concentrado Antibac 500ml', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970914/m.jpg' },
-  { nome: 'Ypê Amaciante Diluído 2L', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1268834/p.jpg.jpg' },
-  { nome: 'Ypê Amaciante Pro 5L', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1268834/p.jpg.jpg' },
-  { nome: 'Ypê Desinfetante Pinho Tradição 500ml', marca: 'Ypê', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1270451/m.jpg.jpg' },
-  { nome: 'Ypê Desinfetante Pinho Citrus 500ml', marca: 'Ypê', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/993709/g.jpg' },
-  { nome: 'Ypê Desinfetante Bak Lavanda', marca: 'Ypê', categoria: 'Desinfetante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1270901/p.jpg.jpg', tamanhos: [
+  { nome: 'Ypê Amaciante Concentrado Antibac 500ml', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970914/m.jpg' },
+  { nome: 'Ypê Amaciante Diluído 2L', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1268834/p.jpg.jpg' },
+  { nome: 'Ypê Amaciante Pro 5L', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1268834/p.jpg.jpg' },
+  { nome: 'Ypê Desinfetante Pinho Tradição 500ml', marca: 'Ypê', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270451/m.jpg.jpg' },
+  { nome: 'Ypê Desinfetante Pinho Citrus 500ml', marca: 'Ypê', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/993709/g.jpg' },
+  { nome: 'Ypê Desinfetante Bak Lavanda', marca: 'Ypê', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270901/p.jpg.jpg', tamanhos: [
     { label: '1L', preco: 5.49 },
     { label: '5L', preco: 21.49 }
   ] },
-  { nome: 'Ypê Alvejante Sem Cloro', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1268834/p.jpg.jpg', tamanhos: [
+  { nome: 'Ypê Alvejante Sem Cloro', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1268834/p.jpg.jpg', tamanhos: [
     { label: '1L', preco: 5.99 },
     { label: '2L', preco: 10.78 }
   ] },
-  { nome: 'Ypê Água Sanitária', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1268834/p.jpg.jpg', tamanhos: [
+  { nome: 'Ypê Água Sanitária', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1268834/p.jpg.jpg', tamanhos: [
     { label: '1L', preco: 5.99 },
     { label: '2L', preco: 10.78 }
   ] },
-  { nome: 'Ypê Água Sanitária Pro 5L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1268834/p.jpg.jpg' },
-  { nome: 'Ypê Multiuso Antibac 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969951/p.jpg' },
-  { nome: 'Ypê Multiuso Original 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969951/p.jpg' },
-  { nome: 'Ypê Limpador Perfumado 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969951/p.jpg' },
-  { nome: 'Ypê Limpador Perfumado Pro 5L', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969951/p.jpg' },
-  { nome: 'Ypê Limpa Vidros 500ml', marca: 'Ypê', categoria: 'Limpa vidro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/969951/p.jpg' },
-  { nome: 'Ypê Tira Manchas em Pó 450g', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1273786/p.jpg.jpg' },
-  { nome: 'Ypê Tira Manchas Líquido 1L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1273786/p.jpg.jpg' },
-  { nome: 'Ypê Tira Limo 500ml', marca: 'Ypê', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1273786/p.jpg.jpg' },
-  { nome: 'Ypê Sabão em Barra Neutro 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1269076/m.jpg.jpg' },
-  { nome: 'Ypê Sabão em Barra Multiativo Azul 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1269076/m.jpg.jpg' },
-  { nome: 'Ypê Sabão em Barra Coco 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1269076/m.jpg.jpg' },
-  { nome: 'Ypê Sabão em Barra Aloe Vera 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/1269076/m.jpg.jpg' },
-  { nome: 'Ypê Lustra Móveis Lavanda 200ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vteximg.com.br/arquivos/ids/970912/m.jpg' },
+  { nome: 'Ypê Água Sanitária Pro 5L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1268834/p.jpg.jpg' },
+  { nome: 'Ypê Multiuso Antibac 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969951/p.jpg' },
+  { nome: 'Ypê Multiuso Original 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969951/p.jpg' },
+  { nome: 'Ypê Limpador Perfumado 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969951/p.jpg' },
+  { nome: 'Ypê Limpador Perfumado Pro 5L', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969951/p.jpg' },
+  { nome: 'Ypê Limpa Vidros 500ml', marca: 'Ypê', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969951/p.jpg' },
+  { nome: 'Ypê Tira Manchas em Pó 450g', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273786/p.jpg.jpg' },
+  { nome: 'Ypê Tira Manchas Líquido 1L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273786/p.jpg.jpg' },
+  { nome: 'Ypê Tira Limo 500ml', marca: 'Ypê', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273786/p.jpg.jpg' },
+  { nome: 'Ypê Sabão em Barra Neutro 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269076/m.jpg.jpg' },
+  { nome: 'Ypê Sabão em Barra Multiativo Azul 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269076/m.jpg.jpg' },
+  { nome: 'Ypê Sabão em Barra Coco 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269076/m.jpg.jpg' },
+  { nome: 'Ypê Sabão em Barra Aloe Vera 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269076/m.jpg.jpg' },
+  { nome: 'Ypê Lustra Móveis Lavanda 200ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970912/m.jpg' },
   // ──────────── SPARTAN ────────────
   { nome: 'Spartan Detergente Desengordurante Alcalino 5L', marca: 'Spartan', categoria: 'Desengordurante', img: 'https://images.tcdn.com.br/img/img_prod/435415/marine_fresh_5_litros_spartan_1444_1_29d5ba901ce6bb8e12e9374a3bd755af.jpg' },
   { nome: 'Spartan Desinfetante Hospitalar 5L', marca: 'Spartan', categoria: 'Desinfetante', img: 'https://images.tcdn.com.br/img/img_prod/435415/desinfetante_para_roupas_hospitalares_chlorofresh_5l_spartan_4057_1_ff59f13ff9eec9f8e642d01515bbf8ed.jpg' },
