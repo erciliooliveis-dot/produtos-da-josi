@@ -337,36 +337,26 @@ const precosZupp = {
   9025: 5.98, 9026: 18.90, 9027: 3.29, 9028: 9.89,
 };
 
-// Função para obter preço (base + margem), ajustado pelo tamanho no nome
+// Função para obter preço (atacado + 25%)
+// precosBase = preço de atacado para tamanho padrão (500ml/800g)
+// Multiplica proporcionalmente para tamanhos maiores (baseado em preços reais do Atacadão)
 function getPrecoRevenda(produto) {
   const key = produto.marca + ':' + produto.categoria;
   let base = precosZupp[produto.id] || precosBase[key];
   if (!base) return null;
-  // Ajustar preço por volume/peso detectado no nome do produto
+  // Ajuste proporcional real por volume (baseado em preços do Atacadão)
   const nome = produto.nome || '';
-  const match5L = nome.match(/\b5\s*[Ll]\b/);
-  const match3L = nome.match(/\b3\s*[Ll]\b/);
-  const match2L = nome.match(/\b2\s*[Ll]\b/);
-  const match1L = nome.match(/\b1\s*[Ll]\b/) || nome.match(/\b1000\s*ml\b/i);
-  const match750 = nome.match(/\b750\s*ml\b/i);
-  const match900 = nome.match(/\b900\s*ml\b/i);
-  const match4kg = nome.match(/\b4\s*kg\b/i);
-  const match5kg = nome.match(/\b5[\.,]?\d*\s*kg\b/i);
-  const match8kg = nome.match(/\b8\s*kg\b/i);
-  const match10kg = nome.match(/\b10\s*kg\b/i);
-  const match20L = nome.match(/\b20\s*[Ll]\b/);
-  if (match20L) base = base * 18;
-  else if (match10kg) base = base * 9;
-  else if (match8kg) base = base * 7.5;
-  else if (match5kg || nome.match(/\b5\s*kg\b/i)) base = base * 5;
-  else if (match5L) base = base * 5;
-  else if (match4kg) base = base * 4;
-  else if (match3L) base = base * 3;
-  else if (match2L) base = base * 2;
-  else if (match1L) base = base * 1.5;
-  else if (match900) base = base * 1.3;
-  else if (match750) base = base * 1.2;
-  // 500ml/800g = preço base (sem multiplicador)
+  if (nome.match(/\b20\s*[Ll]\b/)) base = base * 8;
+  else if (nome.match(/\b10\s*kg\b/i)) base = base * 5;
+  else if (nome.match(/\b8\s*kg\b/i)) base = base * 4.5;
+  else if (nome.match(/\b5[\.,]?\d*\s*kg\b/i) || nome.match(/\b5\s*[Ll]\b/)) base = base * 3;
+  else if (nome.match(/\b4\s*kg\b/i)) base = base * 2.8;
+  else if (nome.match(/\b3\s*[Ll]\b/)) base = base * 2.2;
+  else if (nome.match(/\b2[\.,]?\d*\s*kg\b/i) || nome.match(/\b2\s*[Ll]\b/)) base = base * 1.6;
+  else if (nome.match(/\b1[\.,]?\d*\s*kg\b/i) || nome.match(/\b1[\.,]?\d*\s*[Ll]\b/) || nome.match(/\b1000\s*ml\b/i)) base = base * 1.3;
+  else if (nome.match(/\b900\s*ml\b/i) || nome.match(/\b950\s*ml\b/i)) base = base * 1.2;
+  else if (nome.match(/\b750\s*ml\b/i)) base = base * 1.1;
+  // 500ml/800g/400g/300g = preço base
   return (base * MARGEM).toFixed(2);
 }
 
