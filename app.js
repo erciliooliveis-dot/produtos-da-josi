@@ -651,8 +651,7 @@ function abrirModal(id) {
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
       <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">${icon} ${p.categoria}</span>
       <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">\uD83C\uDFF7\uFE0F ${p.marca}</span>
-      <span style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:5px 14px;border-radius:20px;font-size:13px;color:#FFD700">Distribuidora</span>
-    </div>`;
+      <span style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:5px 14px;border-radius:20px;font-size:13px    </div>`;
 
   // Store current product for size selection
   window._modalProduct = p;
