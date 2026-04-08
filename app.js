@@ -664,11 +664,6 @@ function abrirModal(id) {
     fecharModal();
   };
 
-  document.getElementById('modalConsultarPreco').onclick = function() {
-    const sizeIdx = window._modalSelectedSize || 0;
-    const size = p.tamanhos ? p.tamanhos[sizeIdx] : null;
-    consultarPreco(p.nome + (size ? ' ' + size.label : ''), p.marca);
-  };
 
   const modal = document.getElementById('produtoModal');
   modal.classList.add('open');
