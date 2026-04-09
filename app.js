@@ -503,7 +503,7 @@ function mostrarPix() {
       <div style="font-size:12px;color:#ccc;margin-bottom:4px">Nome: <strong style="color:#fff">${STORE_CONFIG.pixNome}</strong></div>
       <div style="font-size:12px;color:#ccc;margin-bottom:12px">Valor: <strong style="color:#FFD700;font-size:18px">${totalStr}</strong></div>
       <button onclick="copiarPixCopiaECola()" id="btnCopiarPix" style="width:100%;padding:10px;background:#00C853;border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Copiar Pix Copia e Cola</button>
-      <p style="font-size:10px;color:#999;margin-top:8px">Escaneie o QR Code ou copie o codigo. Apos pagar, envie o comprovante pelo WhatsApp.</p>
+      <p style="font-size:13px;color:#fff;margin-top:12px;padding:10px;background:rgba(37,211,102,0.2);border:1px solid rgba(37,211,102,0.4);border-radius:8px;font-weight:700;text-align:center">Envie o comprovante pelo WhatsApp apos o pagamento!</p>
     </div>`;
   // Salvar payload para copiar
   window._pixPayload = pixPayload;
