@@ -84,9 +84,16 @@ function addComboToCart(idx) {
     const p = allProducts.find(x => x.marca === marca && x.categoria === item.categoria)
             || allProducts.find(x => x.categoria === item.categoria);
     if (!p) return;
-    const existing = cart.find(x => x.id === p.id);
+    // Se tem tamanhos, usa o primeiro; caso contrário cartKey é o id
+    let sizeLabel = null, sizePreco = null;
+    if (p.tamanhos && p.tamanhos.length > 0) {
+      sizeLabel = p.tamanhos[0].label;
+      sizePreco = p.tamanhos[0].preco;
+    }
+    const cartKey = sizeLabel ? p.id + '_' + sizeLabel : String(p.id);
+    const existing = cart.find(x => x.cartKey === cartKey);
     if (existing) { existing.qty++; }
-    else { cart.push({ id: p.id, nome: p.nome, marca: p.marca, categoria: p.categoria, qty: 1 }); }
+    else { cart.push({ id: p.id, cartKey: cartKey, nome: p.nome, marca: p.marca, categoria: p.categoria, qty: 1, size: sizeLabel, sizePreco: sizePreco }); }
     added++;
   });
   saveCartToStorage();
@@ -335,9 +342,15 @@ function loadCartFromStorage() {
     if (saved) {
       const loaded = JSON.parse(saved);
       // Validar: remove itens cujo produto não existe mais no catálogo
+      // E adiciona cartKey em itens antigos que não têm
       cart = loaded.filter(item => {
         const prod = allProducts.find(p => p.id === item.id);
         return !!prod;
+      }).map(item => {
+        if (!item.cartKey) {
+          item.cartKey = item.size ? item.id + '_' + item.size : String(item.id);
+        }
+        return item;
       });
       saveCartToStorage();
       renderCart();
@@ -388,7 +401,7 @@ function addToCart(id, sizeLabel, sizePreco) {
     sizeLabel = p.tamanhos[0].label;
     sizePreco = p.tamanhos[0].preco;
   }
-  const cartKey = sizeLabel ? id + '_' + sizeLabel : id;
+  const cartKey = sizeLabel ? id + '_' + sizeLabel : String(id);
   const existing = cart.find(x => x.cartKey === cartKey);
   if (existing) {
     existing.qty++;
@@ -400,17 +413,17 @@ function addToCart(id, sizeLabel, sizePreco) {
   openCart();
 }
 
-function changeQty(id, delta) {
-  const item = cart.find(x => x.id === id);
+function changeQty(cartKey, delta) {
+  const item = cart.find(x => x.cartKey === cartKey);
   if (!item) return;
   item.qty += delta;
-  if (item.qty <= 0) cart = cart.filter(x => x.id !== id);
+  if (item.qty <= 0) cart = cart.filter(x => x.cartKey !== cartKey);
   saveCartToStorage();
   renderCart();
 }
 
-function removeFromCart(id) {
-  cart = cart.filter(x => x.id !== id);
+function removeFromCart(cartKey) {
+  cart = cart.filter(x => x.cartKey !== cartKey);
   saveCartToStorage();
   renderCart();
 }
@@ -440,13 +453,13 @@ function renderCart() {
         <div class="cart-item-name">${item.nome}${item.size ? ' <span style="color:#FFD700;font-weight:800"> ' + item.size + '</span>' : ''}</div>
         <div class="cart-item-marca">${item.marca}${preco ? ` \u2014 R$ ${preco.replace('.', ',')}` : ''}</div>
         <div class="cart-item-qty">
-          <button class="qty-btn" onclick="changeQty(${item.id},-1)">\u2212</button>
+          <button class="qty-btn" onclick="changeQty('${item.cartKey}',-1)">\u2212</button>
           <span class="qty-num">${item.qty}</span>
-          <button class="qty-btn" onclick="changeQty(${item.id},1)">+</button>
+          <button class="qty-btn" onclick="changeQty('${item.cartKey}',1)">+</button>
         </div>
         ${subtotal > 0 ? `<div style="font-size:12px;color:#FFD700;font-weight:700;margin-top:4px">Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}</div>` : ''}
       </div>
-      <button class="cart-item-remove" onclick="removeFromCart(${item.id})">\uD83D\uDDD1</button>
+      <button class="cart-item-remove" onclick="removeFromCart('${item.cartKey}')">\uD83D\uDDD1</button>
     </div>`;
   }).join('');
 
@@ -628,7 +641,7 @@ function copiarPixCopiaECola() {
     input.select();
     document.execCommand('copy');
     document.body.removeChild(input);
-    alert('Codigo PIX copiado!');
+    alert('C\u00f3digo PIX copiado!');
   }
 }
 
@@ -697,9 +710,9 @@ function abrirModal(id) {
     ${precoHtml}
     <p style="color:#ccc;line-height:1.7;margin-bottom:12px">${p.marca} \u2014 produto de higiene e limpeza de alta qualidade. Ideal para uso dom\u00e9stico e profissional.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-      <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">${icon} ${p.categoria}</span>
+      <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">${icon} ${(typeof catDisplayNames !== 'undefined' && catDisplayNames[p.categoria]) || p.categoria}</span>
       <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">\uD83C\uDFF7\uFE0F ${p.marca}</span>
-      <span style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:5px 14px;border-radius:20px;font-size:13px    </div>`;
+    </div>`;
 
   // Store current product for size selection
   window._modalProduct = p;

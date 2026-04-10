@@ -416,73 +416,6 @@ body > * {
   margin-bottom: 30px;
 }
 
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-.hero-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.hero-stat-number {
-  font-size: 28px;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--roxo-claro), var(--dourado));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-stat-label {
-  font-size: 11px;
-  color: var(--cinza);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.hero-btn {
-  padding: 14px 32px;
-  border-radius: var(--radius-full);
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: var(--transition);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-}
-
-.hero-btn-primary {
-  background: linear-gradient(135deg, var(--roxo-medio), var(--roxo-claro));
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(109,40,217,0.4);
-}
-.hero-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(109,40,217,0.5); }
-
-.hero-btn-whatsapp {
-  background: linear-gradient(135deg, var(--verde-whatsapp), #128C7E);
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.3);
-}
-.hero-btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(37,211,102,0.4); }
-
 .hero-wave {
   position: absolute;
   bottom: -2px; left: 0; width: 100%;
@@ -1387,10 +1320,6 @@ body > * {
   .hero-banner { padding: 50px 20px 80px; }
   .hero-title { font-size: 24px; letter-spacing: 1px; }
   .hero-subtitle { font-size: 13px; letter-spacing: 2px; }
-  .hero-stats { gap: 20px; }
-  .hero-stat-number { font-size: 22px; }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .hero-btn { width: 100%; max-width: 280px; justify-content: center; }
   .combo-grid { grid-template-columns: 1fr; }
   .product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
   .tabs { padding: 15px 15px 0; overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; }
