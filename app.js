@@ -48,11 +48,13 @@ function getProductImg(marca, categoria) {
 // ============ RENDER COMBOS ============
 function renderCombos() {
   const grid = document.getElementById('comboGrid');
-  grid.innerHTML = combos.map((combo, idx) => `
+  grid.innerHTML = combos.map((combo, idx) => {
+    const svgIcon = (typeof comboIcons !== 'undefined' && comboIcons[combo.title]) || combo.icon;
+    return `
     <div class="combo-card animate-on-scroll">
       <div class="combo-header">
         <div class="combo-title">${combo.title}</div>
-        <div class="combo-icon">${combo.icon}</div>
+        <div class="combo-icon">${svgIcon}</div>
       </div>
       <div class="combo-desc">${combo.desc}</div>
       <div class="combo-products">
@@ -62,18 +64,20 @@ function renderCombos() {
               ${getProductImg(item.marcas[0], item.categoria)}
             </div>
             <div class="combo-item-info">
-              <div class="combo-item-name">${item.categoria} — <strong>${item.marcas[0]}</strong></div>
-              <div class="combo-item-cat" style="font-size:11px;color:#999;margin-top:2px">Marcas: ${item.marcas.join(' · ')}</div>
+              <div class="combo-item-name">${(typeof catDisplayNames !== 'undefined' && catDisplayNames[item.categoria]) || item.categoria} \u2014 <strong>${item.marcas[0]}</strong></div>
+              <div class="combo-item-cat" style="font-size:11px;color:#999;margin-top:2px">Marcas: ${item.marcas.join(' \u00b7 ')}</div>
             </div>
           </div>
         `).join('')}
       </div>
       <span class="combo-tag tag-${combo.tag}">${combo.tagText}</span>
       <button class="combo-add-btn" onclick="addComboToCart(${idx})">
-        \uD83D\uDED2 Adicionar Combo ao Carrinho
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Adicionar Combo ao Carrinho
       </button>
     </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 function addComboToCart(idx) {
@@ -122,7 +126,7 @@ function renderCategoryTabs() {
   const cats = [...new Set(allProducts.map(p => p.categoria))];
   const tabs = document.getElementById('categoryTabs');
   tabs.innerHTML = `<button class="tab active" onclick="filterByCategory(null, this)">Todas</button>` +
-    cats.map(c => `<button class="tab" onclick="filterByCategory('${c}', this)">${catIcons[c] || ''} ${(typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c}</button>`).join('');
+    cats.map(c => `<button class="tab" onclick="filterByCategory('${c}', this)">${(typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c}</button>`).join('');
 }
 
 // ============ FILTROS ============

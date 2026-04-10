@@ -662,7 +662,22 @@ body > * {
 }
 
 .combo-title { font-size: 18px; font-weight: 800; color: var(--branco); }
-.combo-icon { font-size: 35px; }
+.combo-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--roxo-medio), var(--roxo-claro));
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(109,40,217,0.3);
+  flex-shrink: 0;
+}
+.combo-icon svg {
+  width: 26px;
+  height: 26px;
+}
 
 .combo-desc {
   font-size: 12px;
