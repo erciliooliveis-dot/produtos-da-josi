@@ -33,22 +33,29 @@
         <div class="logo-inner">
           <div class="logo-icon">
             <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-              <!-- Bolhas de fundo -->
-              <circle cx="14" cy="16" r="3" fill="#fff" opacity="0.6"/>
-              <circle cx="50" cy="14" r="2.5" fill="#fff" opacity="0.5"/>
-              <circle cx="52" cy="24" r="1.8" fill="#fff" opacity="0.7"/>
-              <circle cx="12" cy="28" r="1.5" fill="#fff" opacity="0.5"/>
-              <!-- Frasco spray -->
-              <rect x="22" y="18" width="20" height="32" rx="3" fill="#fff"/>
-              <!-- Tampa -->
-              <rect x="26" y="12" width="12" height="8" rx="2" fill="#fff"/>
-              <!-- Gatilho -->
-              <path d="M 42 22 L 50 22 L 50 28 L 42 28 Z" fill="#fff"/>
-              <!-- Etiqueta -->
-              <rect x="25" y="28" width="14" height="14" rx="1" fill="#A855F7"/>
-              <!-- Símbolo limpeza na etiqueta -->
-              <circle cx="32" cy="35" r="3" fill="none" stroke="#fff" stroke-width="1.5"/>
-              <path d="M 30 35 L 31.5 36.5 L 34 33.5" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <radialGradient id="bubble" cx="35%" cy="35%">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+                  <stop offset="40%" stop-color="#E0BBFF" stop-opacity="0.7"/>
+                  <stop offset="80%" stop-color="#A855F7" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#6D28D9" stop-opacity="0.8"/>
+                </radialGradient>
+                <radialGradient id="shine" cx="50%" cy="50%">
+                  <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <!-- Bolhas pequenas decorativas -->
+              <circle cx="10" cy="14" r="2" fill="#fff" opacity="0.5"/>
+              <circle cx="54" cy="12" r="1.5" fill="#fff" opacity="0.6"/>
+              <circle cx="56" cy="50" r="2" fill="#fff" opacity="0.5"/>
+              <circle cx="8" cy="48" r="1.5" fill="#fff" opacity="0.6"/>
+              <!-- Bolha principal -->
+              <circle cx="32" cy="32" r="22" fill="url(#bubble)" stroke="#fff" stroke-width="1.5" opacity="0.95"/>
+              <!-- Brilho grande -->
+              <ellipse cx="24" cy="22" rx="8" ry="6" fill="url(#shine)"/>
+              <!-- Brilho pequeno -->
+              <circle cx="38" cy="42" r="2" fill="#fff" opacity="0.8"/>
             </svg>
           </div>
           <div class="logo-text">

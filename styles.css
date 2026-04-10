@@ -94,14 +94,11 @@ body > * {
 .logo-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--roxo-claro), var(--roxo-medio));
-  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--branco);
-  box-shadow: 0 4px 15px rgba(91, 44, 142, 0.5);
-  padding: 6px;
+  filter: drop-shadow(0 4px 12px rgba(168, 85, 247, 0.5));
 }
 .logo-icon svg {
   width: 100%;
