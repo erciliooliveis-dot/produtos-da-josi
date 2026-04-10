@@ -333,12 +333,30 @@ function loadCartFromStorage() {
   try {
     const saved = localStorage.getItem('produtosDaJosi_cart');
     if (saved) {
-      cart = JSON.parse(saved);
+      const loaded = JSON.parse(saved);
+      // Validar: remove itens cujo produto não existe mais no catálogo
+      cart = loaded.filter(item => {
+        const prod = allProducts.find(p => p.id === item.id);
+        return !!prod;
+      });
+      saveCartToStorage();
       renderCart();
     }
   } catch (e) {
     cart = [];
   }
+}
+
+// Função única para calcular o preço de um item do carrinho (já com margem)
+function getItemPrice(item) {
+  const prod = allProducts.find(p => p.id === item.id);
+  if (!prod) return null;
+  // Se tem tamanho selecionado, usar o preço desse tamanho
+  if (item.sizePreco != null) {
+    return (item.sizePreco * MARGEM).toFixed(2);
+  }
+  // Caso contrário, usar getPrecoRevenda (que já aplica margem e volume)
+  return getPrecoRevenda(prod);
 }
 
 function saveCartToStorage() {
@@ -412,8 +430,7 @@ function renderCart() {
   let totalValue = 0;
   list.innerHTML = cart.map(item => {
     const icon = catIcons[item.categoria] || '\uD83E\uDDF4';
-    const prod = allProducts.find(x => x.id === item.id);
-    const preco = item.sizePreco ? (item.sizePreco * MARGEM).toFixed(2) : (prod ? getPrecoRevenda(prod) : null);
+    const preco = getItemPrice(item);
     const subtotal = preco ? (parseFloat(preco) * item.qty) : 0;
     totalValue += subtotal;
     return `
@@ -456,8 +473,7 @@ function enviarComprovante() {
 
   let totalVal = 0;
   const lista = cart.map(x => {
-    const prod = allProducts.find(p => p.id === x.id);
-    const preco = x.sizePreco ? (x.sizePreco * MARGEM).toFixed(2) : (prod ? getPrecoRevenda(prod) : null);
+    const preco = getItemPrice(x);
     const sub = preco ? (parseFloat(preco) * x.qty) : 0;
     totalVal += sub;
     const precoStr = preco ? ` - R$ ${preco.replace('.', ',')} un` : '';
@@ -482,8 +498,7 @@ function finalizarWhatsApp() {
 
   let totalVal = 0;
   const lista = cart.map(x => {
-    const prod = allProducts.find(p => p.id === x.id);
-    const preco = prod ? getPrecoRevenda(prod) : null;
+    const preco = getItemPrice(x);
     const sub = preco ? (parseFloat(preco) * x.qty) : 0;
     totalVal += sub;
     const precoStr = preco ? ` - R$ ${preco.replace('.', ',')} un` : '';
@@ -507,8 +522,7 @@ function mostrarPix() {
 
   let totalVal = 0;
   cart.forEach(x => {
-    const prod = allProducts.find(p => p.id === x.id);
-    const preco = x.sizePreco ? (x.sizePreco * MARGEM).toFixed(2) : (prod ? getPrecoRevenda(prod) : null);
+    const preco = getItemPrice(x);
     if (preco) totalVal += parseFloat(preco) * x.qty;
   });
 
