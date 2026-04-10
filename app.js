@@ -454,6 +454,11 @@ function renderCart() {
   document.getElementById('cartTotalLabel').textContent = totalStr;
   footer.style.display = 'block';
   updateBottomNavBadges();
+  // Se o PIX estiver aberto, atualizar o QR Code com novo valor
+  const pixBox = document.getElementById('pixDataBox');
+  if (pixBox && pixBox.style.display === 'block') {
+    mostrarPix();
+  }
 }
 
 function openCart() {
