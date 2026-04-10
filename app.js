@@ -173,18 +173,33 @@ function filterByCategory(cat, btn) {
 }
 
 function applyFilters() {
-  const search = document.getElementById('searchInput').value.toLowerCase();
+  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+
+  // Se há busca e ela bate com uma marca exata, filtrar SOMENTE por marca
+  // (ignora currentBrand/currentCategory para evitar que filtros antigos zerem o resultado)
+  if (search) {
+    const isExactBrand = allProducts.some(x => x.marca.toLowerCase() === search);
+    if (isExactBrand) {
+      filteredProducts = allProducts.filter(p => p.marca.toLowerCase() === search);
+      renderProducts();
+      updateResultsInfo();
+      return;
+    }
+    // Busca textual: procura em nome e marca, ignora outros filtros
+    filteredProducts = allProducts.filter(p =>
+      p.nome.toLowerCase().includes(search) ||
+      p.marca.toLowerCase().includes(search)
+    );
+    renderProducts();
+    updateResultsInfo();
+    return;
+  }
+
+  // Sem busca: aplica filtros de marca/categoria normalmente
   filteredProducts = allProducts.filter(p => {
     const matchBrand = !currentBrand || p.marca === currentBrand;
     const matchCat = !currentCategory || p.categoria === currentCategory;
-    // Se a busca bate exatamente com uma marca, filtrar SÓ por marca
-    const isExactBrand = allProducts.some(x => x.marca.toLowerCase() === search);
-    const matchSearch = !search ||
-      (isExactBrand ? p.marca.toLowerCase() === search : (
-        p.nome.toLowerCase().includes(search) ||
-        p.marca.toLowerCase().includes(search)
-      ));
-    return matchBrand && matchCat && matchSearch;
+    return matchBrand && matchCat;
   });
   renderProducts();
   updateResultsInfo();
