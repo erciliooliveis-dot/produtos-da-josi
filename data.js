@@ -8,7 +8,7 @@ const STORE_CONFIG = {
   name: 'Produtos da Josi',
   slogan: 'Distribuidora de Produtos de Higiene e Limpeza',
   whatsapp: '5519953212247',
-  email: 'contato@produtosdajosi.com.br',
+  email: 'produtos.da.josi1@gmail.com',
   telefone: '(19) 95321-2247',
   regiao: 'Campinas e Região',
   horario: 'Seg a Sex: 8h às 18h | Sáb: 8h às 13h',
