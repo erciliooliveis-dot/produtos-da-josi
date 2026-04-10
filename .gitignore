@@ -11,3 +11,5 @@ package-lock.json
 .env
 .env.local
 .vercel
+atacadao_images.json
+atacadao_images2.json
