@@ -36,21 +36,18 @@ function init() {
 
 // ============ IMAGEM DO PRODUTO ============
 function getProductImg(marca, categoria) {
-  // 1. Tentar encontrar a imagem de um produto REAL do catálogo com essa marca+categoria
   if (typeof allProducts !== 'undefined' && allProducts.length > 0) {
-    const prod = allProducts.find(p => p.marca === marca && p.categoria === categoria && p.img);
-    if (prod && prod.img) {
-      return `<img src="${prod.img}" alt="${marca}" style="max-width:100%;max-height:100%;object-fit:contain" loading="lazy">`;
-    }
+    // 1. Produto com marca+categoria exatas
+    let prod = allProducts.find(p => p.marca === marca && p.categoria === categoria && p.img);
+    if (prod) return `<img src="${prod.img}" alt="${marca}" style="max-width:100%;max-height:100%;object-fit:contain" loading="lazy">`;
+    // 2. Qualquer produto da mesma categoria (qualquer marca)
+    prod = allProducts.find(p => p.categoria === categoria && p.img);
+    if (prod) return `<img src="${prod.img}" alt="${marca}" style="max-width:100%;max-height:100%;object-fit:contain" loading="lazy">`;
+    // 3. Qualquer produto da mesma marca (qualquer categoria)
+    prod = allProducts.find(p => p.marca === marca && p.img);
+    if (prod) return `<img src="${prod.img}" alt="${marca}" style="max-width:100%;max-height:100%;object-fit:contain" loading="lazy">`;
   }
-  // 2. Fallback: mapas legados
-  const img = (typeof realProductImages !== 'undefined' && realProductImages[marca + ':' + categoria]) ||
-              (typeof realBrandImages !== 'undefined' && realBrandImages[marca]) ||
-              (typeof realCatImages !== 'undefined' && realCatImages[categoria]);
-  if (img) {
-    return `<img src="${img}" alt="${marca}" style="max-width:100%;max-height:100%;object-fit:contain" loading="lazy">`;
-  }
-  // 3. Ultimo fallback: icone SVG generico de frasco
+  // 4. Último fallback: ícone SVG genérico de frasco
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:70%;height:70%;color:#A855F7"><path d="M 10 2 L 14 2 L 14 5 L 10 5 Z"/><path d="M 8 5 L 16 5 L 16 8 L 18 10 L 18 20 Q 18 22 16 22 L 8 22 Q 6 22 6 20 L 6 10 L 8 8 Z"/></svg>`;
 }
 
