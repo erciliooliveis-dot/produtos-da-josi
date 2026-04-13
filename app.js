@@ -439,16 +439,17 @@ function addToCart(id, sizeLabel, sizePreco) {
 }
 
 function changeQty(cartKey, delta) {
-  const item = cart.find(x => x.cartKey === cartKey);
+  const item = cart.find(x => x.cartKey == cartKey || String(x.id) == cartKey);
   if (!item) return;
   item.qty += delta;
-  if (item.qty <= 0) cart = cart.filter(x => x.cartKey !== cartKey);
+  if (item.qty <= 0) cart = cart.filter(x => x !== item);
   saveCartToStorage();
   renderCart();
 }
 
 function removeFromCart(cartKey) {
-  cart = cart.filter(x => x.cartKey !== cartKey);
+  const idx = cart.findIndex(x => x.cartKey == cartKey || String(x.id) == cartKey);
+  if (idx > -1) cart.splice(idx, 1);
   saveCartToStorage();
   renderCart();
 }
