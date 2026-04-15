@@ -71,7 +71,7 @@ function getProductImg(marca, categoria) {
     if (prod) return `<img src="${prod.img}" alt="${marca}" style="max-width:100%;max-height:100%;object-fit:contain" loading="lazy">`;
   }
   // 4. Último fallback: ícone SVG genérico de frasco
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:70%;height:70%;color:#A855F7"><path d="M 10 2 L 14 2 L 14 5 L 10 5 Z"/><path d="M 8 5 L 16 5 L 16 8 L 18 10 L 18 20 Q 18 22 16 22 L 8 22 Q 6 22 6 20 L 6 10 L 8 8 Z"/></svg>`;
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:70%;height:70%;color:#7C3AED"><path d="M 10 2 L 14 2 L 14 5 L 10 5 Z"/><path d="M 8 5 L 16 5 L 16 8 L 18 10 L 18 20 Q 18 22 16 22 L 8 22 Q 6 22 6 20 L 6 10 L 8 8 Z"/></svg>`;
 }
 
 // ============ RENDER COMBOS ============
@@ -94,7 +94,7 @@ function renderCombos() {
             </div>
             <div class="combo-item-info">
               <div class="combo-item-name">${(typeof catDisplayNames !== 'undefined' && catDisplayNames[item.categoria]) || item.categoria} \u2014 <strong>${item.marcas[0]}</strong></div>
-              <div class="combo-item-cat" style="font-size:11px;color:#999;margin-top:2px">Marcas: ${item.marcas.join(' \u00b7 ')}</div>
+              <div class="combo-item-cat" style="font-size:11px;color:#6B7280;margin-top:2px">Marcas: ${item.marcas.join(' \u00b7 ')}</div>
             </div>
           </div>
         `).join('')}
@@ -314,11 +314,11 @@ function renderProducts() {
     const catEsc = escapeHtml(p.categoria);
     const imgContent = realImg
       ? `<img src="${escapeHtml(realImg)}" alt="${nomeEsc}" width="200" height="200" style="max-width:85%;max-height:85%;object-fit:contain" loading="lazy" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-      + `<div style="display:none;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px" aria-hidden="true">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:8px">${marcaEsc}</span></div>`
-      : `<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px" aria-hidden="true">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:8px">${marcaEsc}</span></div>`;
+      + `<div style="display:none;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px" aria-hidden="true">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(124,58,237,0.06);padding:3px 10px;border-radius:8px">${marcaEsc}</span></div>`
+      : `<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px" aria-hidden="true">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(124,58,237,0.06);padding:3px 10px;border-radius:8px">${marcaEsc}</span></div>`;
     return `
     <article class="product-card animate-on-scroll" onclick="abrirModal(${p.id})" tabindex="0" role="button" aria-label="Ver detalhes de ${nomeEsc}" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirModal(${p.id})}">
-      <div class="product-img" style="background:linear-gradient(135deg, #${color}22, #1a1a2e)">
+      <div class="product-img" style="background:linear-gradient(135deg, #${color}22, #EDE9FE)">
         ${imgContent}
         <span class="product-badge badge-marca">${marcaEsc}</span>
         <button type="button" class="fav-btn ${favorites.includes(p.id) ? 'active' : ''}" onclick="event.stopPropagation();toggleFavorite(${p.id})" title="Favoritar" aria-label="Favoritar ${nomeEsc}" aria-pressed="${favorites.includes(p.id)}">
@@ -577,14 +577,14 @@ function renderCart() {
     <div class="cart-item-card">
       <div class="cart-item-icon" aria-hidden="true">${imgHtml}</div>
       <div class="cart-item-info">
-        <div class="cart-item-name">${nomeEsc}${item.size ? ' <span style="color:#FFD700;font-weight:800"> ' + escapeHtml(item.size) + '</span>' : ''}</div>
+        <div class="cart-item-name">${nomeEsc}${item.size ? ' <span style="color:#D97706;font-weight:800"> ' + escapeHtml(item.size) + '</span>' : ''}</div>
         <div class="cart-item-marca">${marcaEsc}${preco ? ` \u2014 R$ ${preco.replace('.', ',')}` : ''}</div>
         <div class="cart-item-qty">
           <button type="button" class="qty-btn" onclick="changeQty('${item.cartKey}',-1)" aria-label="Diminuir quantidade">\u2212</button>
           <span class="qty-num">${item.qty}</span>
           <button type="button" class="qty-btn" onclick="changeQty('${item.cartKey}',1)" aria-label="Aumentar quantidade">+</button>
         </div>
-        ${subtotal > 0 ? `<div style="font-size:12px;color:#FFD700;font-weight:700;margin-top:4px">Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}</div>` : ''}
+        ${subtotal > 0 ? `<div style="font-size:12px;color:#D97706;font-weight:700;margin-top:4px">Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}</div>` : ''}
       </div>
       <button type="button" class="cart-item-remove" onclick="removeFromCart('${item.cartKey}')" aria-label="Remover ${nomeEsc}">\uD83D\uDDD1</button>
     </div>`;
@@ -691,14 +691,14 @@ function mostrarPix() {
   box.style.display = 'block';
   box.innerHTML = `
     <div style="background:linear-gradient(135deg,rgba(0,200,83,0.1),rgba(0,105,92,0.1));border:1px solid rgba(0,200,83,0.3);border-radius:12px;padding:16px;margin-top:12px;text-align:center">
-      <div style="font-size:14px;font-weight:800;color:#00C853;margin-bottom:12px">Pagar com PIX</div>
+      <div style="font-size:14px;font-weight:800;color:#059669;margin-bottom:12px">Pagar com PIX</div>
       <div style="background:#fff;border-radius:12px;padding:12px;display:inline-block;margin-bottom:12px">
         <img src="${qrUrl}" alt="QR Code PIX" width="180" height="180" style="display:block">
       </div>
-      <div style="font-size:12px;color:#ccc;margin-bottom:4px">Nome: <strong style="color:#fff">${STORE_CONFIG.pixNome}</strong></div>
-      <div style="font-size:12px;color:#ccc;margin-bottom:12px">Valor: <strong style="color:#FFD700;font-size:18px">${totalStr}</strong></div>
-      <button onclick="copiarPixCopiaECola()" id="btnCopiarPix" style="width:100%;padding:10px;background:#00C853;border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Copiar Pix Copia e Cola</button>
-      <button onclick="enviarComprovante()" style="width:100%;margin-top:12px;padding:14px;background:linear-gradient(135deg,#25D366,#128C7E);border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px">
+      <div style="font-size:12px;color:#6B7280;margin-bottom:4px">Nome: <strong style="color:#1E1B4B">${STORE_CONFIG.pixNome}</strong></div>
+      <div style="font-size:12px;color:#6B7280;margin-bottom:12px">Valor: <strong style="color:#D97706;font-size:18px">${totalStr}</strong></div>
+      <button onclick="copiarPixCopiaECola()" id="btnCopiarPix" style="width:100%;padding:10px;background:#059669;border:none;border-radius:8px;color:#1E1B4B;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Copiar Pix Copia e Cola</button>
+      <button onclick="enviarComprovante()" style="width:100%;margin-top:12px;padding:14px;background:linear-gradient(135deg,#25D366,#128C7E);border:none;border-radius:8px;color:#1E1B4B;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
         Já paguei! Enviar comprovante
       </button>
@@ -767,7 +767,7 @@ function copiarPixCopiaECola() {
       const btn = document.getElementById('btnCopiarPix');
       if (btn) {
         btn.textContent = 'Copiado!';
-        btn.style.background = '#00695C';
+        btn.style.background = '#047857';
         setTimeout(() => { btn.textContent = 'Copiar Pix Copia e Cola'; btn.style.background = '#00C853'; }, 2000);
       }
     });
@@ -808,7 +808,7 @@ function abrirModal(id) {
   document.getElementById('modalCategoria').textContent = icon + ' ' + p.categoria;
 
   const imgEl = document.getElementById('modalImg');
-  imgEl.style.background = `linear-gradient(135deg, #${color}33, #1a1a2e)`;
+  imgEl.style.background = `linear-gradient(135deg, #${color}33, #EDE9FE)`;
   const iconEscModal = escapeHtml(icon);
   imgEl.innerHTML = realImg
     ? `<img src="${escapeHtml(realImg)}" style="max-width:80%;max-height:180px;object-fit:contain" onerror="this.parentNode.innerHTML='<span style=font-size:80px>${iconEscModal}</span>'">`
@@ -823,22 +823,22 @@ function abrirModal(id) {
     selectedSize = p.tamanhos[0];
     tamanhosHtml = `
       <div style="margin-bottom:14px">
-        <div style="font-size:12px;color:#ccc;margin-bottom:8px;font-weight:600">Escolha o tamanho:</div>
+        <div style="font-size:12px;color:#6B7280;margin-bottom:8px;font-weight:600">Escolha o tamanho:</div>
         <div class="size-chips" id="modalSizeChips">
           ${p.tamanhos.map((t, i) => `<button class="size-chip ${i === 0 ? 'active' : ''}" onclick="selectSize(${id},${i})" data-idx="${i}">${t.label}</button>`).join('')}
         </div>
       </div>`;
     const precoRevenda = (selectedSize.preco * MARGEM).toFixed(2).replace('.', ',');
-    precoHtml = `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,165,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:12px;text-align:center">
-        <div id="modalPrecoValor" style="font-size:28px;font-weight:900;color:#FFD700">R$ ${precoRevenda}</div>
-        <div id="modalPrecoLabel" style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o /${selectedSize.label}</div>
+    precoHtml = `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(217,119,6,0.08),rgba(245,158,11,0.05));border:1px solid rgba(217,119,6,0.15);border-radius:12px;text-align:center">
+        <div id="modalPrecoValor" style="font-size:28px;font-weight:900;color:#D97706">R$ ${precoRevenda}</div>
+        <div id="modalPrecoLabel" style="font-size:11px;color:#6B7280;margin-top:4px">Pre\u00e7o /${selectedSize.label}</div>
       </div>`;
   } else {
     const preco = getPrecoRevenda(p);
     precoHtml = preco
-      ? `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(255,215,0,0.12),rgba(255,165,0,0.08));border:1px solid rgba(255,215,0,0.3);border-radius:12px;text-align:center">
-          <div style="font-size:28px;font-weight:900;color:#FFD700">R$ ${preco.replace('.', ',')}</div>
-          <div style="font-size:11px;color:#ccc;margin-top:4px">Pre\u00e7o /unidade</div>
+      ? `<div id="modalPrecoBox" style="margin-bottom:16px;padding:14px;background:linear-gradient(135deg,rgba(217,119,6,0.08),rgba(245,158,11,0.05));border:1px solid rgba(217,119,6,0.15);border-radius:12px;text-align:center">
+          <div style="font-size:28px;font-weight:900;color:#D97706">R$ ${preco.replace('.', ',')}</div>
+          <div style="font-size:11px;color:#6B7280;margin-top:4px">Pre\u00e7o /unidade</div>
         </div>`
       : '';
   }
@@ -846,10 +846,10 @@ function abrirModal(id) {
   document.getElementById('modalDesc').innerHTML = `
     ${tamanhosHtml}
     ${precoHtml}
-    <p style="color:#ccc;line-height:1.7;margin-bottom:12px">${p.marca} \u2014 produto de higiene e limpeza de alta qualidade. Ideal para uso dom\u00e9stico e profissional.</p>
+    <p style="color:#6B7280;line-height:1.7;margin-bottom:12px">${p.marca} \u2014 produto de higiene e limpeza de alta qualidade. Ideal para uso dom\u00e9stico e profissional.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-      <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">${icon} ${(typeof catDisplayNames !== 'undefined' && catDisplayNames[p.categoria]) || p.categoria}</span>
-      <span style="background:rgba(139,95,191,0.2);border:1px solid #8B5FBF;padding:5px 14px;border-radius:20px;font-size:13px">\uD83C\uDFF7\uFE0F ${p.marca}</span>
+      <span style="background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.3);padding:5px 14px;border-radius:20px;font-size:13px">${icon} ${(typeof catDisplayNames !== 'undefined' && catDisplayNames[p.categoria]) || p.categoria}</span>
+      <span style="background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.3);padding:5px 14px;border-radius:20px;font-size:13px">\uD83C\uDFF7\uFE0F ${p.marca}</span>
     </div>`;
 
   // Store current product for size selection
@@ -1013,7 +1013,7 @@ function renderBestsellers() {
       : `<div style="display:flex;flex-direction:column;align-items:center"><span style="font-size:40px">${icon}</span></div>`;
     return `
     <div class="product-card animate-on-scroll" onclick="abrirModal(${p.id})" style="cursor:pointer">
-      <div class="product-img" style="background:linear-gradient(135deg, #${color}22, #1a1a2e);height:150px">
+      <div class="product-img" style="background:linear-gradient(135deg, #${color}22, #EDE9FE);height:150px">
         ${imgHtml}
         <span class="product-badge badge-marca">${p.marca}</span>
       </div>
