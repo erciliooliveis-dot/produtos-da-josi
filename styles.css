@@ -571,9 +571,6 @@ body > * {
   font-weight: 400;
   margin-bottom: 20px;
   color: var(--preto);
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .section-title span { color: var(--roxo-medio); }
