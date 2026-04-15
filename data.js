@@ -72,30 +72,30 @@ const realProductImages = {};
 const perProductImages = {};
 
 // ============ IMAGENS POR MARCA (fallback) ============
-// NOTA: Marcas sem entrada aqui usam fallback por CATEGORIA (realCatImages)
-// o que é melhor pois mostra imagens diferentes por tipo de produto
+// Fallback usado quando img do produto retorna 404. Cada URL foi validada como 200 OK.
+// Evita emoji genérico aparecendo no catálogo quando o Atacadão faz migração VTex.
 const realBrandImages = {
-  'Veja':        '',
-  'Omo':         '',
-  'Ypê':         '',
-  'Ype':         '',
-  'Bombril':     '',
-  'Minuano':     '',
-  'Brilhante':   '',
-  'Pinho Sol':   '',
-  'Ajax':        '',
-  'Ariel':       '',
-  'Downy':       '',
-  'Cif':         '',
-  'Mr. Musculo': '',
-  'Mr. Músculo': '',
-  'Lysol':       '',
-  'Comfort':     '',
+  'Veja':        'https://atacadaobr.vtexassets.com/arquivos/ids/991559/g.jpg',     // Veja Multiuso Original
+  'Omo':         'https://atacadaobr.vtexassets.com/arquivos/ids/984439/g.jpg',     // Omo referência
+  'Ypê':         'https://atacadaobr.vtexassets.com/arquivos/ids/1139623/g.jpg',    // Ypê Detergente Neutro
+  'Ype':         'https://atacadaobr.vtexassets.com/arquivos/ids/1139623/g.jpg',
+  'Bombril':     'https://atacadaobr.vtexassets.com/arquivos/ids/969435/m.jpg',
+  'Minuano':     'https://atacadaobr.vtexassets.com/arquivos/ids/1270351/p.jpg',
+  'Brilhante':   'https://atacadaobr.vtexassets.com/arquivos/ids/1139278/m.jpg',
+  'Pinho Sol':   'https://atacadaobr.vtexassets.com/arquivos/ids/993709/g.jpg',
+  'Ajax':        'https://atacadaobr.vtexassets.com/arquivos/ids/992318/m.jpg',
+  'Ariel':       'https://atacadaobr.vtexassets.com/arquivos/ids/982841/m.jpg',
+  'Downy':       'https://atacadaobr.vtexassets.com/arquivos/ids/969017/p.jpg',
+  'Cif':         'https://atacadaobr.vtexassets.com/arquivos/ids/1156527/p.jpg',
+  'Mr. Musculo': 'https://atacadaobr.vtexassets.com/arquivos/ids/1156408/g.jpg',
+  'Mr. Músculo': 'https://atacadaobr.vtexassets.com/arquivos/ids/1156408/g.jpg',
+  'Lysol':       'https://atacadaobr.vtexassets.com/arquivos/ids/977526/p.jpg',
+  'Comfort':     'https://atacadaobr.vtexassets.com/arquivos/ids/970914/m.jpg',
   'Diversey':    '',
-  'Urca':        '',
+  'Urca':        'https://atacadaobr.vtexassets.com/arquivos/ids/1156968/g.jpg',
   'Zupp':        '',
   'Renko':       '',
-  'Girando Sol': '',
+  'Girando Sol': 'https://atacadaobr.vtexassets.com/arquivos/ids/1148908/p.jpg',
   'Spartan':     '',
   'Casa KM':     '',
   'Start':       ''
@@ -353,25 +353,78 @@ const precosZupp = {
 
 // Função para obter preço (atacado + 25%)
 // precosBase = preço de atacado para tamanho padrão (500ml/800g)
-// Multiplica proporcionalmente para tamanhos maiores (baseado em preços reais do Atacadão)
+// Parser robusto extrai volume real do nome e aplica multiplicador tabelado.
+// Evita bugs como "1,8L" casar com regra de 8L, ou "1,6kg" casar com regra de 6kg.
+function extractVolumeMl(nome) {
+  // Procura primeiro padrão <numero><unidade>. Ordem importa: kg antes de g, L antes de ml.
+  // Aceita vírgula ou ponto como separador decimal.
+  const patterns = [
+    { re: /(\d+(?:[.,]\d+)?)\s*kg\b/i,   factor: 1000 },
+    { re: /(\d+(?:[.,]\d+)?)\s*[Ll]\b/,  factor: 1000 },
+    { re: /(\d+(?:[.,]\d+)?)\s*ml\b/i,   factor: 1    },
+    { re: /(\d+(?:[.,]\d+)?)\s*g\b/i,    factor: 1    },
+  ];
+  for (const p of patterns) {
+    const m = nome.match(p.re);
+    if (m) return parseFloat(m[1].replace(',', '.')) * p.factor;
+  }
+  return null;
+}
+
+// Multiplicador de volume baseado em mL (1g ≈ 1ml para fins de preço).
+// Calibrado empiricamente pela curva de atacado do Atacadão — referência 500ml = 1.0x.
+function volumeMultiplier(ml) {
+  if (ml <= 350)   return 0.85;  // 300g/ml
+  if (ml <= 450)   return 0.95;  // 400g/ml
+  if (ml <= 550)   return 1.00;  // 500ml = base
+  if (ml <= 670)   return 1.05;  // 600ml
+  if (ml <= 770)   return 1.10;  // 700-750ml
+  if (ml <= 870)   return 1.15;  // 800g/ml
+  if (ml <= 970)   return 1.20;  // 900-950ml
+  if (ml <= 1100)  return 1.30;  // 1L/1kg/1000ml
+  if (ml <= 1350)  return 1.40;  // 1,2L / 1,3L
+  if (ml <= 1550)  return 1.50;  // 1,5L
+  if (ml <= 1750)  return 1.55;  // 1,6-1,7kg
+  if (ml <= 1950)  return 1.60;  // 1,8-1,9L
+  if (ml <= 2100)  return 1.65;  // 2L
+  if (ml <= 2350)  return 1.80;  // 2,2-2,3kg
+  if (ml <= 2700)  return 1.95;  // 2,4-2,6L/kg
+  if (ml <= 3300)  return 2.20;  // 3L/kg
+  if (ml <= 4100)  return 2.80;  // 3,5-4L/kg
+  if (ml <= 5500)  return 3.20;  // 5L/kg
+  if (ml <= 6500)  return 3.70;  // 6L
+  if (ml <= 7500)  return 4.20;  // 7L
+  if (ml <= 9500)  return 4.80;  // 8-9L/kg
+  if (ml <= 11000) return 5.50;  // 10L/kg
+  if (ml <= 16000) return 7.50;  // 15L
+  if (ml <= 21000) return 9.50;  // 20L
+  // > 20L: extrapolação linear (cada 5L = +1.5x)
+  return 9.5 + ((ml - 20000) / 5000) * 1.5;
+}
+
+// Detecta pack ("5un", "4x") — só aplica desconto suave quando há volume líquido definido
+// (evita overpricing em sabão em barra cuja base compartilha preço com sabão em pó).
+function packMultiplier(nome, ml) {
+  // Sabão em barra não tem base própria; skip pack pra não inflar
+  if (/barra/i.test(nome)) return 1;
+  // Sem volume líquido extraído, não sabemos o ref — skip pack
+  if (ml == null) return 1;
+  const m = nome.match(/(\d+)\s*(?:un|unidades?)\b/i) || nome.match(/\b(\d+)\s*x\b/i);
+  if (!m) return 1;
+  const n = parseInt(m[1], 10);
+  if (!isFinite(n) || n <= 1 || n > 24) return 1;
+  // Desconto de pack (atacado): 3un→2.5x, 5un→3.7x, 10un→6.3x
+  return Math.pow(n, 0.8);
+}
+
 function getPrecoRevenda(produto) {
   const key = produto.marca + ':' + produto.categoria;
   let base = precosZupp[produto.id] || precosBase[key];
   if (!base) return null;
-  // Ajuste proporcional real por volume (baseado em preços do Atacadão)
   const nome = produto.nome || '';
-  if (nome.match(/\b20\s*[Ll]\b/)) base = base * 8;
-  else if (nome.match(/\b10\s*kg\b/i)) base = base * 5;
-  else if (nome.match(/\b8\s*kg\b/i)) base = base * 4.5;
-  else if (nome.match(/\b[6-9]\s*[Ll]\b/) || nome.match(/\b[6-7]\s*kg\b/i)) base = base * 4.5;
-  else if (nome.match(/\b5[\.,]?\d*\s*kg\b/i) || nome.match(/\b5\s*[Ll]\b/)) base = base * 3;
-  else if (nome.match(/\b4\s*kg\b/i)) base = base * 2.8;
-  else if (nome.match(/\b3\s*[Ll]\b/)) base = base * 2.2;
-  else if (nome.match(/\b2[\.,]?\d*\s*kg\b/i) || nome.match(/\b2\s*[Ll]\b/)) base = base * 1.6;
-  else if (nome.match(/\b1[\.,]?\d*\s*kg\b/i) || nome.match(/\b1[\.,]?\d*\s*[Ll]\b/) || nome.match(/\b1000\s*ml\b/i)) base = base * 1.3;
-  else if (nome.match(/\b900\s*ml\b/i) || nome.match(/\b950\s*ml\b/i)) base = base * 1.2;
-  else if (nome.match(/\b750\s*ml\b/i)) base = base * 1.1;
-  // 500ml/800g/400g/300g = preço base
+  const ml = extractVolumeMl(nome);
+  if (ml != null) base = base * volumeMultiplier(ml);
+  base = base * packMultiplier(nome, ml);
   return (base * MARGEM).toFixed(2);
 }
 
@@ -385,7 +438,7 @@ const catalogProducts = [
   { nome: 'Ajax Fresh Poder 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141768/m.jpg' },
   { nome: 'Ajax Festa das Flores Bouquet de Flores 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279441/m.jpg.jpg' },
   { nome: 'Ajax Festa das Flores Flores do Campo 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/908025/p.jpg' },
-  { nome: 'Ajax Festa das Flores Flores de Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279601/m.jpg.jpg' },
+  { nome: 'Ajax Festa das Flores Flores de Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279601/m.jpg' },
   { nome: 'Ajax Festa das Flores Mar de Flores 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/986679/p.jpg' },
   { nome: 'Ajax Limpeza Pura Menta e Orquídea 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985128/m.jpg' },
   { nome: 'Ajax Natural Essentials Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279578/p.jpg.jpg' },
@@ -807,22 +860,22 @@ const catalogProducts = [
   { nome: 'Veja Multiuso Campestre 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985118/m.jpg' },
   { nome: 'Veja Multiuso Bio Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/975043/m.jpg' },
   { nome: 'Veja Multiuso Power Fusion Limão 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/980864/p.jpg' },
-  { nome: 'Veja Multiuso Power Fusion Coco 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283407/m.jpg' },
-  { nome: 'Veja Multiuso Power Fusion Laranja 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283331/p.jpg' },
+  { nome: 'Veja Multiuso Power Fusion Coco 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283791/m.jpg' },
+  { nome: 'Veja Multiuso Power Fusion Laranja 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283716/p.jpg' },
   { nome: 'Veja Uso Direto Original 900ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/982484/g.jpg' },
   { nome: 'Veja Uso Direto Floral 900ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/981328/p.jpg' },
   { nome: 'Veja Limpeza Pesada Original com Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971257/p.jpg' },
   { nome: 'Veja Limpeza Pesada X14 Cloro Ativo 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/965938/m.jpg' },
-  { nome: 'Veja Limpeza Pesada Pro Line 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283403/m.jpg' },
-  { nome: 'Veja Multiuso Pro Line Original 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283405/p.jpg' },
+  { nome: 'Veja Limpeza Pesada Pro Line 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283786/m.jpg' },
+  { nome: 'Veja Multiuso Pro Line Original 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283782/p.jpg' },
   { nome: 'Veja Banheiro X14 Tira Limo 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/976258/g.jpg' },
   { nome: 'Veja Banheiro Oxi Antibac Ativo 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/989923/g.jpg' },
   { nome: 'Veja Banheiro X14 Sem Cloro 500ml', marca: 'Veja', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/982485/p.jpg' },
   { nome: 'Veja Cozinha Desengordurante Original 500ml', marca: 'Veja', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/980175/g.jpg' },
-  { nome: 'Veja Cozinha Desengordurante Laranja 500ml', marca: 'Veja', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283330/g.jpg' },
-  { nome: 'Veja Vidrex Limpa Vidros Squeeze 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283327/p.jpg' },
+  { nome: 'Veja Cozinha Desengordurante Laranja 500ml', marca: 'Veja', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283711/g.jpg' },
+  { nome: 'Veja Vidrex Limpa Vidros Squeeze 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283709/p.jpg' },
   { nome: 'Veja Vidrex Limpa Vidros Cristal Pulverizador 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/975040/p.jpg' },
-  { nome: 'Veja Vidrex Limpa Vidros Refil 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283181/g.jpg' },
+  { nome: 'Veja Vidrex Limpa Vidros Refil 500ml', marca: 'Veja', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283562/g.jpg' },
   { nome: 'Veja Perfumes Flores do Mediterrâneo 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985231/p.jpg' },
   { nome: 'Veja Perfumes Lavanda da França 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/986652/g.jpg' },
   { nome: 'Veja Perfumes Tulipa da Holanda 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148417/m.jpg' },
@@ -860,7 +913,7 @@ const catalogProducts = [
     { label: '1L', preco: 5.49 },
     { label: '5L', preco: 21.49 }
   ] },
-  { nome: 'Ypê Alvejante Sem Cloro', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/982124/p.jpg', tamanhos: [
+  { nome: 'Ypê Alvejante Sem Cloro', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/929119/g.jpg', tamanhos: [
     { label: '1L', preco: 5.99 },
     { label: '2L', preco: 10.78 }
   ] },
@@ -875,7 +928,7 @@ const catalogProducts = [
   { nome: 'Ypê Limpador Perfumado Pro 5L', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269298/g.jpg.jpg', tamanhos: [{ label: '5L', preco: 22.90 }] },
   { nome: 'Ypê Limpa Vidros 500ml', marca: 'Ypê', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269300/p.jpg.jpg' },
   { nome: 'Ypê Tira Manchas em Pó 450g', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/929119/g.jpg' },
-  { nome: 'Ypê Tira Manchas Líquido 1L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150872/p.jpg' },
+  { nome: 'Ypê Tira Manchas Líquido 1L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/929119/g.jpg' },
   { nome: 'Ypê Tira Limo 500ml', marca: 'Ypê', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141812/m.jpg' },
   { nome: 'Ypê Sabão em Barra Neutro 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269076/m.jpg.jpg' },
   { nome: 'Ypê Sabão em Barra Multiativo Azul 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273904/p.jpg.jpg' },

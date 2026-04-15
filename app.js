@@ -14,11 +14,34 @@ let cart = [];
 let favorites = [];
 let showingFavorites = false;
 
+// ============ IDS ESTÁVEIS ============
+// Hash determinístico a partir de marca+nome do produto. Substitui IDs baseados
+// em índice (que quebravam carrinhos/favoritos quando adicionávamos/reordenávamos
+// itens). Algoritmo: variante do djb2 (base 5381, fator 33) truncado a int32 positivo.
+// Colisões resolvidas com probing: se bater, soma 1 e tenta de novo.
+function stableProductId(produto) {
+  const key = (produto.marca || '') + '|' + (produto.nome || '');
+  let hash = 5381;
+  for (let i = 0; i < key.length; i++) {
+    hash = ((hash << 5) + hash + key.charCodeAt(i)) | 0; // hash * 33 + char
+  }
+  // int32 positivo, mantém IDs acima de 10000 pra não colidir com IDs Zupp (9001-9028)
+  return (Math.abs(hash) % 900000) + 100000;
+}
+
 // ============ INICIALIZAÇÃO ============
 function init() {
-  // Combinar catalogProducts + specificProducts e atribuir IDs
+  // Combinar catalogProducts + specificProducts
+  // IDs: Zupp já tem IDs fixos 9001-9028 (em data.js). Catálogo recebe hash estável.
   const combined = [...catalogProducts, ...specificProducts];
-  combined.forEach((p, i) => { if (!p.id) p.id = i + 1; });
+  const usedIds = new Set(specificProducts.map(p => p.id).filter(Boolean));
+  combined.forEach(p => {
+    if (p.id) { usedIds.add(p.id); return; }
+    let id = stableProductId(p);
+    while (usedIds.has(id)) id++; // probing em caso de colisão
+    p.id = id;
+    usedIds.add(id);
+  });
   allProducts = combined;
   filteredProducts = [...allProducts];
 
@@ -173,22 +196,24 @@ function filterByCategory(cat, btn) {
 }
 
 function applyFilters() {
-  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+  const rawSearch = document.getElementById('searchInput').value.trim();
+  const search = normalize(rawSearch);
 
-  // Se há busca e ela bate com uma marca exata, filtrar SOMENTE por marca
+  // Se ha busca e ela bate com uma marca exata, filtrar SOMENTE por marca
   // (ignora currentBrand/currentCategory para evitar que filtros antigos zerem o resultado)
   if (search) {
-    const isExactBrand = allProducts.some(x => x.marca.toLowerCase() === search);
+    const isExactBrand = allProducts.some(x => normalize(x.marca) === search);
     if (isExactBrand) {
-      filteredProducts = allProducts.filter(p => p.marca.toLowerCase() === search);
+      filteredProducts = allProducts.filter(p => normalize(p.marca) === search);
       renderProducts();
       updateResultsInfo();
       return;
     }
-    // Busca textual: procura em nome e marca, ignora outros filtros
+    // Busca textual com acentos normalizados
     filteredProducts = allProducts.filter(p =>
-      p.nome.toLowerCase().includes(search) ||
-      p.marca.toLowerCase().includes(search)
+      normalize(p.nome).includes(search) ||
+      normalize(p.marca).includes(search) ||
+      normalize(p.categoria).includes(search)
     );
     renderProducts();
     updateResultsInfo();
@@ -205,11 +230,37 @@ function applyFilters() {
   updateResultsInfo();
 }
 
+// ============ UTILITARIOS ============
+// Previne XSS em textos injetados via innerHTML (nomes de produtos externos).
+function escapeHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Debounce para eventos frequentes (search input). Evita re-render a cada tecla.
+function debounce(fn, wait) {
+  let t;
+  return function debounced(...args) {
+    clearTimeout(t);
+    t = setTimeout(() => fn.apply(this, args), wait);
+  };
+}
+
+// Normaliza acentos na busca: "acucar" casa com "acucar" E "acucar" (acento).
+function normalize(str) {
+  return String(str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 // ============ SEARCH ============
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('searchInput').addEventListener('input', () => {
-    const val = document.getElementById('searchInput').value;
-    // Se pesquisou algo, resetar filtros e mostrar produtos
+  const searchInput = document.getElementById('searchInput');
+  const handleSearch = debounce(() => {
+    const val = searchInput.value;
     if (val.length > 0) {
       showingFavorites = false;
       currentBrand = null;
@@ -228,7 +279,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     currentPage = 1;
     applyFilters();
+  }, 180);
+  searchInput.addEventListener('input', handleSearch);
+
+  // ESC fecha modal e carrinho
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const modal = document.getElementById('produtoModal');
+    if (modal && modal.classList.contains('active')) { fecharModal(); return; }
+    const drawer = document.getElementById('cartDrawer');
+    if (drawer && drawer.classList.contains('active')) { toggleCart(); return; }
   });
+
+  // Ano dinamico no footer
+  const yearEl = document.getElementById('footerYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
 // ============ RENDER PRODUCTS ============
@@ -242,35 +307,38 @@ function renderProducts() {
     const color = brandColors[p.marca] || '5B2C8E';
     const icon = catIcons[p.categoria] || '\uD83E\uDDF4';
     const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]) || realProductImages[p.marca + ':' + p.categoria] || realBrandImages[p.marca] || realCatImages[p.categoria];
+    const marcaEsc = escapeHtml(p.marca);
+    const nomeEsc = escapeHtml(p.nome);
+    const catEsc = escapeHtml(p.categoria);
     const imgContent = realImg
-      ? `<img src="${realImg}" alt="${p.marca}" style="max-width:85%;max-height:85%;object-fit:contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-      + `<div style="display:none;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:8px">${p.marca}</span></div>`
-      : `<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:8px">${p.marca}</span></div>`;
+      ? `<img src="${escapeHtml(realImg)}" alt="${nomeEsc}" width="200" height="200" style="max-width:85%;max-height:85%;object-fit:contain" loading="lazy" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+      + `<div style="display:none;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px" aria-hidden="true">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:8px">${marcaEsc}</span></div>`
+      : `<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:48px" aria-hidden="true">${icon}</span><span style="font-size:14px;font-weight:800;color:#${color};background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:8px">${marcaEsc}</span></div>`;
     return `
-    <div class="product-card animate-on-scroll" onclick="abrirModal(${p.id})">
+    <article class="product-card animate-on-scroll" onclick="abrirModal(${p.id})" tabindex="0" role="button" aria-label="Ver detalhes de ${nomeEsc}" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();abrirModal(${p.id})}">
       <div class="product-img" style="background:linear-gradient(135deg, #${color}22, #1a1a2e)">
         ${imgContent}
-        <span class="product-badge badge-marca">${p.marca}</span>
-        <button class="fav-btn ${favorites.includes(p.id) ? 'active' : ''}" onclick="event.stopPropagation();toggleFavorite(${p.id})" title="Favoritar">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="product-badge badge-marca">${marcaEsc}</span>
+        <button type="button" class="fav-btn ${favorites.includes(p.id) ? 'active' : ''}" onclick="event.stopPropagation();toggleFavorite(${p.id})" title="Favoritar" aria-label="Favoritar ${nomeEsc}" aria-pressed="${favorites.includes(p.id)}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
       </div>
       <div class="product-info">
-        <div class="product-name">${p.nome}</div>
-        <div class="product-marca">${p.marca}</div>
-        <div class="product-categoria">${p.categoria}</div>
+        <div class="product-name">${nomeEsc}</div>
+        <div class="product-marca">${marcaEsc}</div>
+        <div class="product-categoria">${catEsc}</div>
         ${(() => {
           if (p.tamanhos && p.tamanhos.length > 1) {
             const menor = Math.min(...p.tamanhos.map(t => t.preco));
             const precoMenor = (menor * MARGEM).toFixed(2).replace('.', ',');
-            return `<div class="product-price">A partir de R$ ${precoMenor}</div><div class="product-price-label">${p.tamanhos.length} tamanhos dispon\u00edveis</div>`;
+            return `<div class="product-price">A partir de R$ ${precoMenor}</div><div class="product-price-label">${p.tamanhos.length} tamanhos disponiveis</div>`;
           }
           const pr = p.tamanhos ? (p.tamanhos[0].preco * MARGEM).toFixed(2) : getPrecoRevenda(p);
-          return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">pre\u00e7o/un</div>` : `<div class="product-price-tag">Consulte pre\u00e7o</div>`;
+          return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">preco/un</div>` : `<div class="product-price-tag">Consulte preco</div>`;
         })()}
-        <button class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})">+ Adicionar ao Carrinho</button>
+        <button type="button" class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${nomeEsc} ao carrinho">+ Adicionar ao Carrinho</button>
       </div>
-    </div>`;
+    </article>`;
   }).join('');
 
   renderPagination();
@@ -361,22 +429,38 @@ function updateResultsInfo() {
 }
 
 // ============ CARRINHO COM LOCALSTORAGE ============
+// Migração: carrinhos antigos tinham IDs baseados em índice (1, 2, 3...) que
+// mudavam a cada alteração do catálogo. Agora matchamos por nome+marca para
+// reencontrar o produto e atualizar pro novo ID estável.
+function migrateCartItem(item) {
+  // Match direto pelo ID novo (carrinho já migrado)
+  let prod = allProducts.find(p => p.id === item.id);
+  if (prod) return { item, prod };
+  // Fallback 1: match por nome+marca (carrinho antigo)
+  if (item.nome && item.marca) {
+    prod = allProducts.find(p => p.nome === item.nome && p.marca === item.marca);
+    if (prod) { item.id = prod.id; return { item, prod }; }
+  }
+  // Fallback 2: match só por nome (último recurso)
+  if (item.nome) {
+    prod = allProducts.find(p => p.nome === item.nome);
+    if (prod) { item.id = prod.id; return { item, prod }; }
+  }
+  return null;
+}
+
 function loadCartFromStorage() {
   try {
     const saved = localStorage.getItem('produtosDaJosi_cart');
     if (saved) {
       const loaded = JSON.parse(saved);
-      // Validar: remove itens cujo produto não existe mais no catálogo
-      // E adiciona cartKey em itens antigos que não têm
-      cart = loaded.filter(item => {
-        const prod = allProducts.find(p => p.id === item.id);
-        return !!prod;
-      }).map(item => {
-        if (!item.cartKey) {
-          item.cartKey = item.size ? item.id + '_' + item.size : String(item.id);
-        }
-        return item;
-      });
+      cart = loaded.map(migrateCartItem)
+                   .filter(Boolean)
+                   .map(({ item }) => {
+                     // cartKey também precisa ser reconstruído com ID novo
+                     item.cartKey = item.size ? item.id + '_' + item.size : String(item.id);
+                     return item;
+                   });
       saveCartToStorage();
       renderCart();
     }
@@ -501,13 +585,23 @@ function renderCart() {
 }
 
 function openCart() {
-  document.getElementById('cartDrawer').classList.add('open');
-  document.getElementById('cartOverlay').classList.add('open');
+  const drawer = document.getElementById('cartDrawer');
+  const overlay = document.getElementById('cartOverlay');
+  drawer.classList.add('open', 'active');
+  overlay.classList.add('open');
+  drawer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
 }
 
 function toggleCart() {
-  document.getElementById('cartDrawer').classList.toggle('open');
-  document.getElementById('cartOverlay').classList.toggle('open');
+  const drawer = document.getElementById('cartDrawer');
+  const overlay = document.getElementById('cartOverlay');
+  const wasOpen = drawer.classList.contains('open');
+  drawer.classList.toggle('open');
+  drawer.classList.toggle('active');
+  overlay.classList.toggle('open');
+  drawer.setAttribute('aria-hidden', wasOpen ? 'true' : 'false');
+  document.body.style.overflow = wasOpen ? '' : 'hidden';
 }
 
 // ============ ENVIAR COMPROVANTE PIX VIA WHATSAPP ============
@@ -753,12 +847,18 @@ function abrirModal(id) {
 
 
   const modal = document.getElementById('produtoModal');
-  modal.classList.add('open');
+  modal.classList.add('open', 'active');
+  modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  // Foco no botao de fechar para acessibilidade por teclado
+  const closeBtn = modal.querySelector('.modal-close');
+  if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
 }
 
 function fecharModal() {
-  document.getElementById('produtoModal').classList.remove('open');
+  const modal = document.getElementById('produtoModal');
+  modal.classList.remove('open', 'active');
+  modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 
@@ -794,7 +894,12 @@ function setupScrollAnimations() {
 function loadFavoritesFromStorage() {
   try {
     const saved = localStorage.getItem('produtosDaJosi_favorites');
-    if (saved) favorites = JSON.parse(saved);
+    if (saved) {
+      const loaded = JSON.parse(saved);
+      // Purga IDs inválidos (mudança de hash, produto removido, etc.)
+      favorites = loaded.filter(id => allProducts.some(p => p.id === id));
+      if (favorites.length !== loaded.length) saveFavoritesToStorage();
+    }
   } catch (e) { favorites = []; }
 }
 
