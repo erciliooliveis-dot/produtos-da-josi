@@ -1007,22 +1007,25 @@ function renderBestsellers() {
     const icon = catIcons[p.categoria] || '\uD83E\uDDF4';
     const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]) || realProductImages[p.marca + ':' + p.categoria] || realBrandImages[p.marca] || realCatImages[p.categoria];
     const preco = getPrecoRevenda(p);
+    const nomeEsc = escapeHtml(p.nome);
+    const marcaEsc = escapeHtml(p.marca);
     const imgHtml = realImg
-      ? `<img src="${realImg}" alt="${p.marca}" style="max-width:85%;max-height:85%;object-fit:contain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-      + `<div style="display:none;flex-direction:column;align-items:center;gap:4px"><span style="font-size:40px">${icon}</span></div>`
-      : `<div style="display:flex;flex-direction:column;align-items:center"><span style="font-size:40px">${icon}</span></div>`;
+      ? `<img src="${escapeHtml(realImg)}" alt="${marcaEsc}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+      + `<div class="best-fallback">${icon}</div>`
+      : `<div class="best-fallback" style="display:flex">${icon}</div>`;
     return `
-    <div class="product-card animate-on-scroll" onclick="abrirModal(${p.id})" style="cursor:pointer">
-      <div class="product-img" style="background:linear-gradient(135deg, #${color}22, #EDE9FE);height:150px">
+    <div class="best-card animate-on-scroll" onclick="abrirModal(${p.id})">
+      <div class="best-img" style="background:linear-gradient(135deg, #${color}15, #EDE9FE)">
         ${imgHtml}
-        <span class="product-badge badge-marca">${p.marca}</span>
       </div>
-      <div class="product-info" style="padding:12px">
-        <div class="product-name" style="font-size:13px">${p.nome}</div>
-        <div class="product-marca">${p.marca}</div>
-        ${preco ? `<div class="product-price" style="font-size:18px">R$ ${preco.replace('.', ',')}</div>` : ''}
-        <button class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})" style="font-size:11px;padding:7px">+ Carrinho</button>
+      <div class="best-info">
+        <span class="best-brand" style="color:#${color}">${marcaEsc}</span>
+        <span class="best-name">${nomeEsc}</span>
+        ${preco ? `<span class="best-price">R$ ${preco.replace('.', ',')}</span>` : ''}
       </div>
+      <button class="best-add" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${marcaEsc}">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
     </div>`;
   }).join('');
 }
