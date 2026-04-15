@@ -196,7 +196,8 @@ function filterByCategory(cat, btn) {
 }
 
 function applyFilters() {
-  const rawSearch = document.getElementById('searchInput').value.trim();
+  const searchEl = document.getElementById('searchInput');
+  const rawSearch = searchEl ? searchEl.value.trim() : '';
   const search = normalize(rawSearch);
 
   // Se ha busca e ela bate com uma marca exata, filtrar SOMENTE por marca
@@ -259,6 +260,7 @@ function normalize(str) {
 // ============ SEARCH ============
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
+  if (!searchInput) return;
   const handleSearch = debounce(() => {
     const val = searchInput.value;
     if (val.length > 0) {
@@ -523,7 +525,7 @@ function addToCart(id, sizeLabel, sizePreco) {
 }
 
 function changeQty(cartKey, delta) {
-  const item = cart.find(x => x.cartKey == cartKey || String(x.id) == cartKey);
+  const item = cart.find(x => x.cartKey === cartKey || String(x.id) === cartKey);
   if (!item) return;
   item.qty += delta;
   if (item.qty <= 0) cart = cart.filter(x => x !== item);
@@ -532,7 +534,7 @@ function changeQty(cartKey, delta) {
 }
 
 function removeFromCart(cartKey) {
-  const idx = cart.findIndex(x => x.cartKey == cartKey || String(x.id) == cartKey);
+  const idx = cart.findIndex(x => x.cartKey === cartKey || String(x.id) === cartKey);
   if (idx > -1) cart.splice(idx, 1);
   saveCartToStorage();
   renderCart();
@@ -564,8 +566,9 @@ function renderCart() {
       || null;
     const nomeEsc = escapeHtml(item.nome);
     const marcaEsc = escapeHtml(item.marca);
+    const iconEsc = escapeHtml(icon);
     const imgHtml = realImg
-      ? `<img src="${escapeHtml(realImg)}" alt="${marcaEsc}" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${icon}'}))">`
+      ? `<img src="${escapeHtml(realImg)}" alt="${marcaEsc}" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${iconEsc}'}))">`
       : icon;
     const preco = getItemPrice(item);
     const subtotal = preco ? (parseFloat(preco) * item.qty) : 0;
@@ -806,8 +809,9 @@ function abrirModal(id) {
 
   const imgEl = document.getElementById('modalImg');
   imgEl.style.background = `linear-gradient(135deg, #${color}33, #1a1a2e)`;
+  const iconEscModal = escapeHtml(icon);
   imgEl.innerHTML = realImg
-    ? `<img src="${realImg}" style="max-width:80%;max-height:180px;object-fit:contain" onerror="this.parentNode.innerHTML='<span style=font-size:80px>${icon}</span>'">`
+    ? `<img src="${escapeHtml(realImg)}" style="max-width:80%;max-height:180px;object-fit:contain" onerror="this.parentNode.innerHTML='<span style=font-size:80px>${iconEscModal}</span>'">`
     : `<span style="font-size:80px">${icon}</span>`;
 
   // Tamanhos e preço

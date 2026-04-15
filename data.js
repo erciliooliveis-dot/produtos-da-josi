@@ -425,7 +425,9 @@ function getPrecoRevenda(produto) {
   const ml = extractVolumeMl(nome);
   if (ml != null) base = base * volumeMultiplier(ml);
   base = base * packMultiplier(nome, ml);
-  return (base * MARGEM).toFixed(2);
+  const result = base * MARGEM;
+  if (!isFinite(result) || result <= 0) return null;
+  return result.toFixed(2);
 }
 
 // ============ CATÁLOGO COMPLETO DE PRODUTOS ============
