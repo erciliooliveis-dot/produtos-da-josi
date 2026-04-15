@@ -1239,7 +1239,7 @@ body > * {
 .bestsellers-section { margin-bottom: 40px; }
 .bestsellers-scroll {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   overflow-x: auto;
   padding-bottom: 12px;
   scroll-snap-type: x mandatory;
@@ -1250,11 +1250,9 @@ body > * {
 
 .best-card {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 280px;
-  max-width: 320px;
-  padding: 10px 14px;
+  flex-direction: column;
+  min-width: 155px;
+  max-width: 155px;
   background: var(--branco);
   border: 1px solid rgba(167,139,250,0.12);
   border-radius: var(--radius-lg);
@@ -1262,64 +1260,78 @@ body > * {
   cursor: pointer;
   scroll-snap-align: start;
   flex-shrink: 0;
-  transition: all 0.3s var(--ease-expo);
+  transition: all 0.35s var(--ease-expo);
+  overflow: hidden;
+  position: relative;
 }
 .best-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
   border-color: var(--roxo-light);
 }
 .best-img {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+  width: 100%;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   overflow: hidden;
 }
 .best-img img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
+  transition: transform 0.35s var(--ease-expo);
 }
+.best-card:hover .best-img img { transform: scale(1.08); }
 .best-fallback {
   display: none;
-  font-size: 28px;
+  font-size: 36px;
   align-items: center;
   justify-content: center;
 }
-.best-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  min-width: 0;
-}
 .best-brand {
-  font-size: 10px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.best-body {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 .best-name {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--preto);
-  white-space: nowrap;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+}
+.best-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
 }
 .best-price {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 900;
   color: var(--dourado);
 }
 .best-add {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   border: none;
   background: linear-gradient(135deg, var(--roxo-medio), var(--roxo-claro));
   color: #fff;
@@ -1529,7 +1541,11 @@ body > * {
   .about-section { padding: 25px 15px; margin: 30px 0; }
   .about-features { flex-direction: column; }
   .products-header { flex-direction: column; align-items: flex-start; }
-  .best-card { min-width: 240px; max-width: 280px; }
+  .best-card { min-width: 140px; max-width: 140px; }
+  .best-img { height: 100px; }
+  .best-body { padding: 8px 10px 10px; }
+  .best-name { font-size: 11px; }
+  .best-price { font-size: 14px; }
 }
 
 /* === SIZE CHIPS === */

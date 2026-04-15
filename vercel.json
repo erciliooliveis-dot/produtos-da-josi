@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "*.html", "use": "@vercel/static" },
-    { "src": "*.js", "use": "@vercel/static" },
-    { "src": "*.css", "use": "@vercel/static" },
-    { "src": "*.json", "use": "@vercel/static" }
+  "redirects": [
+    { "source": "/catalogo.html", "destination": "/", "permanent": false },
+    { "source": "/catalogo", "destination": "/", "permanent": false }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

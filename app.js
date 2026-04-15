@@ -1015,17 +1015,19 @@ function renderBestsellers() {
       : `<div class="best-fallback" style="display:flex">${icon}</div>`;
     return `
     <div class="best-card animate-on-scroll" onclick="abrirModal(${p.id})">
-      <div class="best-img" style="background:linear-gradient(135deg, #${color}15, #EDE9FE)">
+      <div class="best-img" style="background:linear-gradient(135deg, #${color}18, #EDE9FE)">
         ${imgHtml}
       </div>
-      <div class="best-info">
-        <span class="best-brand" style="color:#${color}">${marcaEsc}</span>
+      <span class="best-brand" style="background:#${color};color:#fff">${marcaEsc}</span>
+      <div class="best-body">
         <span class="best-name">${nomeEsc}</span>
-        ${preco ? `<span class="best-price">R$ ${preco.replace('.', ',')}</span>` : ''}
+        <div class="best-bottom">
+          ${preco ? `<span class="best-price">R$ ${preco.replace('.', ',')}</span>` : ''}
+          <button class="best-add" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${marcaEsc}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </button>
+        </div>
       </div>
-      <button class="best-add" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${marcaEsc}">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-      </button>
     </div>`;
   }).join('');
 }
