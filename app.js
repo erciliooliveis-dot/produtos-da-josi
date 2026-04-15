@@ -173,7 +173,7 @@ function filterByCategory(cat, btn) {
     currentPage = 1;
     applyFilters();
     document.querySelectorAll('.tab, .filter-btn').forEach(t => t.classList.remove('active'));
-    document.getElementById('combosSection').style.display = 'block';
+    document.getElementById('combosSection').style.display = 'none';
     document.getElementById('productsSection').style.display = 'block';
     return;
   }
@@ -189,7 +189,7 @@ function filterByCategory(cat, btn) {
     productsSection.style.display = 'block';
     productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } else {
-    combosSection.style.display = 'block';
+    combosSection.style.display = 'none';
     productsSection.style.display = 'block';
   }
 }
@@ -274,9 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.nav-bar .filter-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     } else {
-      document.getElementById('combosSection').style.display = 'block';
-      const best = document.getElementById('bestsellersSection');
-      if (best) best.style.display = 'block';
+      document.getElementById('combosSection').style.display = 'none';
     }
     currentPage = 1;
     applyFilters();
@@ -403,7 +401,7 @@ function setView(view, btn) {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     const todaTab = document.querySelector('.tab');
     if (todaTab) todaTab.classList.add('active');
-    combosSection.style.display = 'block';
+    combosSection.style.display = 'none';
     brandsSection.style.display = 'none';
     productsSection.style.display = 'block';
   } else if (view === 'combos') {
@@ -946,8 +944,7 @@ function toggleFavoritesView() {
     currentCategory = null;
     currentBrand = null;
     applyFilters();
-    document.getElementById('combosSection').style.display = 'block';
-    document.getElementById('bestsellersSection').style.display = 'block';
+    document.getElementById('combosSection').style.display = 'none';
     const about = document.getElementById('aboutSection');
     if (about) about.style.display = 'block';
   }
