@@ -7,7 +7,6 @@
     { "src": "*.json", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/", "dest": "/catalogo.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
