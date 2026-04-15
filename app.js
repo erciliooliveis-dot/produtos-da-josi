@@ -47,7 +47,6 @@ function init() {
 
   loadCartFromStorage();
   loadFavoritesFromStorage();
-  renderBestsellers();
   renderCombos();
   renderBrands();
   renderCategoryTabs();
