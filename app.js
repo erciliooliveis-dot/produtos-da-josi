@@ -553,23 +553,37 @@ function renderCart() {
   let totalValue = 0;
   list.innerHTML = cart.map(item => {
     const icon = catIcons[item.categoria] || '\uD83E\uDDF4';
+    // Resolve a imagem especifica do produto pelo id no carrinho
+    // (mesma cadeia de fallbacks do renderProducts).
+    const prod = allProducts.find(p => p.id === item.id);
+    const realImg = (prod && prod.img)
+      || (typeof perProductImages !== 'undefined' && perProductImages[item.nome])
+      || (typeof realProductImages !== 'undefined' && realProductImages[item.marca + ':' + item.categoria])
+      || (typeof realBrandImages !== 'undefined' && realBrandImages[item.marca])
+      || (typeof realCatImages !== 'undefined' && realCatImages[item.categoria])
+      || null;
+    const nomeEsc = escapeHtml(item.nome);
+    const marcaEsc = escapeHtml(item.marca);
+    const imgHtml = realImg
+      ? `<img src="${escapeHtml(realImg)}" alt="${marcaEsc}" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${icon}'}))">`
+      : icon;
     const preco = getItemPrice(item);
     const subtotal = preco ? (parseFloat(preco) * item.qty) : 0;
     totalValue += subtotal;
     return `
     <div class="cart-item-card">
-      <div class="cart-item-icon">${icon}</div>
+      <div class="cart-item-icon" aria-hidden="true">${imgHtml}</div>
       <div class="cart-item-info">
-        <div class="cart-item-name">${item.nome}${item.size ? ' <span style="color:#FFD700;font-weight:800"> ' + item.size + '</span>' : ''}</div>
-        <div class="cart-item-marca">${item.marca}${preco ? ` \u2014 R$ ${preco.replace('.', ',')}` : ''}</div>
+        <div class="cart-item-name">${nomeEsc}${item.size ? ' <span style="color:#FFD700;font-weight:800"> ' + escapeHtml(item.size) + '</span>' : ''}</div>
+        <div class="cart-item-marca">${marcaEsc}${preco ? ` \u2014 R$ ${preco.replace('.', ',')}` : ''}</div>
         <div class="cart-item-qty">
-          <button class="qty-btn" onclick="changeQty('${item.cartKey}',-1)">\u2212</button>
+          <button type="button" class="qty-btn" onclick="changeQty('${item.cartKey}',-1)" aria-label="Diminuir quantidade">\u2212</button>
           <span class="qty-num">${item.qty}</span>
-          <button class="qty-btn" onclick="changeQty('${item.cartKey}',1)">+</button>
+          <button type="button" class="qty-btn" onclick="changeQty('${item.cartKey}',1)" aria-label="Aumentar quantidade">+</button>
         </div>
         ${subtotal > 0 ? `<div style="font-size:12px;color:#FFD700;font-weight:700;margin-top:4px">Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}</div>` : ''}
       </div>
-      <button class="cart-item-remove" onclick="removeFromCart('${item.cartKey}')">\uD83D\uDDD1</button>
+      <button type="button" class="cart-item-remove" onclick="removeFromCart('${item.cartKey}')" aria-label="Remover ${nomeEsc}">\uD83D\uDDD1</button>
     </div>`;
   }).join('');
 
