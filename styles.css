@@ -1559,6 +1559,7 @@ body > * {
   .search-box { flex: 1; min-width: 0; }
   .search-box input { padding: 8px 15px 8px 38px; font-size: 13px; }
   .filter-btn { padding: 6px 12px; font-size: 11px; white-space: nowrap; }
+  .section-title { font-size: 20px; }
   .main { padding: 15px; }
   .hero-banner { padding: 50px 20px 80px; }
   .hero-title { font-size: 28px; letter-spacing: 1px; }
