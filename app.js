@@ -1002,7 +1002,7 @@ function renderBestsellers() {
     if (p) bestsellers.push(p);
   });
 
-  grid.innerHTML = bestsellers.map(p => {
+  grid.innerHTML = bestsellers.map((p, i) => {
     const color = brandColors[p.marca] || '5B2C8E';
     const icon = catIcons[p.categoria] || '\uD83E\uDDF4';
     const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]) || realProductImages[p.marca + ':' + p.categoria] || realBrandImages[p.marca] || realCatImages[p.categoria];
@@ -1013,20 +1013,22 @@ function renderBestsellers() {
       ? `<img src="${escapeHtml(realImg)}" alt="${marcaEsc}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
       + `<div class="best-fallback">${icon}</div>`
       : `<div class="best-fallback" style="display:flex">${icon}</div>`;
+    const rank = i + 1;
+    const isTop3 = rank <= 3;
     return `
-    <div class="best-card animate-on-scroll" onclick="abrirModal(${p.id})">
-      <div class="best-img" style="background:linear-gradient(135deg, #${color}18, #EDE9FE)">
+    <div class="best-card ${isTop3 ? 'best-top3' : ''} animate-on-scroll" onclick="abrirModal(${p.id})" style="animation-delay:${i * 80}ms">
+      <div class="best-rank ${isTop3 ? 'best-rank-gold' : ''}">${rank}</div>
+      <div class="best-img">
         ${imgHtml}
       </div>
-      <span class="best-brand" style="background:#${color};color:#fff">${marcaEsc}</span>
       <div class="best-body">
+        <span class="best-brand-tag" style="color:#${color}">${marcaEsc}</span>
         <span class="best-name">${nomeEsc}</span>
-        <div class="best-bottom">
-          ${preco ? `<span class="best-price">R$ ${preco.replace('.', ',')}</span>` : ''}
-          <button class="best-add" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${marcaEsc}">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          </button>
-        </div>
+        ${preco ? `<span class="best-price">R$ ${preco.replace('.', ',')}</span>` : '<span class="best-price-consult">Consulte</span>'}
+        <button class="best-add" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${marcaEsc}">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Adicionar
+        </button>
       </div>
     </div>`;
   }).join('');
