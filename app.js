@@ -385,9 +385,13 @@ function goToPage(page) {
 
 // ============ VIEW TOGGLE ============
 function setView(view, btn) {
+  // Toggle: se ja esta na mesma view, volta pra 'all'
+  if (currentView === view && view !== 'all') {
+    return setView('all', null);
+  }
   currentView = view;
   document.querySelectorAll('.nav-bar .filter-btn').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
+  if (btn && view !== 'all') btn.classList.add('active');
 
   const combosSection = document.getElementById('combosSection');
   const brandsSection = document.getElementById('brandsSection');
