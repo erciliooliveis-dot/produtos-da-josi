@@ -172,7 +172,7 @@ function renderCategoryTabs() {
         <option value="brand">Marca</option>
       </select>
     </label>
-    <span class="catalog-count" id="catCount">${allProducts.length} produtos</span>`;
+    `;
 }
 
 // ============ FILTROS ============
