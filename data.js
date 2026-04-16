@@ -36,7 +36,10 @@ const catIcons = {
   'Limpador cozinha': '\uD83C\uDF73',
   'Aromatizador': '\uD83C\uDF3A',
   'Esponja': '\uD83E\uDDFD',
-  'Produto profissional': '\u2699\uFE0F'
+  'Produto profissional': '\u2699\uFE0F',
+  'Sabão em barra': '\uD83E\uDDFC',
+  'Pedra sanitária': '\uD83E\uDEA8',
+  'Cápsulas de lavar': '\uD83D\uDC8A'
 };
 
 // Nomes amigáveis das categorias para exibição no menu
@@ -55,7 +58,10 @@ const catDisplayNames = {
   'Limpador cozinha': 'Cozinha',
   'Aromatizador': 'Aromatizador',
   'Esponja': 'Esponja',
-  'Produto profissional': 'Profissional'
+  'Produto profissional': 'Profissional',
+  'Sabão em barra': 'Sabão em Barra',
+  'Pedra sanitária': 'Pedra Sanitária',
+  'Cápsulas de lavar': 'Cápsulas'
 };
 
 // ============ IMAGENS POR CATEGORIA ============
@@ -275,7 +281,7 @@ const specificProducts = [
   { id:9011, nome:'Alvejante Zupp 1L',                marca:'Zupp', categoria:'Alvejante',           img:_base+'mockup-alvejante-floral-zuppani-1l-1411552.png' },
   { id:9012, nome:'Esponja de Aço Inox Zupp',         marca:'Zupp', categoria:'Esponja',          img:_base+'esponja-de-aco-final-1-compressed-40151319.jpg' },
   { id:9013, nome:'Detergente Zupplin 1L',            marca:'Zupp', categoria:'Detergente',          img:_base+'produto-zuppani-detergente-zupplin-1l-112312.png' },
-  { id:9014, nome:'Sabão em Barra Zupp 1kg',          marca:'Zupp', categoria:'Sabão em pó',         img:_base+'sabao-zupp-em-barra-glicerinado-1-kg-785121.jpg' },
+  { id:9014, nome:'Sabão em Barra Zupp 1kg',          marca:'Zupp', categoria:'Sabão em barra',         img:_base+'sabao-zupp-em-barra-glicerinado-1-kg-785121.jpg' },
   { id:9015, nome:'Limpa Inox Zupp',                  marca:'Zupp', categoria:'Limpador multiuso',   img:_base+'produto-zuppani-limpa-inox-71491512.png' },
   { id:9016, nome:'Amaciante Zupp 1,8L',              marca:'Zupp', categoria:'Amaciante',           img:_base+'romantico-318674-1273109.jpg' },
   { id:9017, nome:'Lava Louças em Pasta Zupp 500g',   marca:'Zupp', categoria:'Detergente',          img:_base+'lava-louca-500g-31116103.jpg' },
@@ -340,6 +346,8 @@ const precosBase = {
   "Start:Lava roupas": 9.90, "Start:Amaciante": 7.90, "Start:Alvejante": 4.49,
   "Diversey:Detergente": 24.90, "Diversey:Limpador multiuso": 28.90, "Diversey:Amaciante": 34.90, "Diversey:Alvejante": 32.90,
   "Spartan:Limpador multiuso": 26.90,
+  "Zupp:Sabão em barra": 6.49, "Girando Sol:Sabão em barra": 3.49, "Minuano:Sabão em barra": 2.99,
+  "Ypê:Sabão em barra": 3.49, "Urca:Pedra sanitária": 3.49, "Ariel:Cápsulas de lavar": 29.90,
 };
 
 // Preços específicos Zupp (id: preço)
@@ -465,7 +473,7 @@ const catalogProducts = [
     { label: '800g', preco: 16.90 },
     { label: '1,6kg', preco: 30.42 }
   ] },
-  { nome: 'Ariel Power Pods 3 em 1 Cápsulas', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144554/p.jpg' },
+  { nome: 'Ariel Power Pods 3 em 1 Cápsulas', marca: 'Ariel', categoria: 'Cápsulas de lavar', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144554/p.jpg' },
   // ──────────── BOMBRIL ────────────
   { nome: 'Esponja de Lã de Aço Bombril 60g', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971114/m.jpg' },
   { nome: 'Esponja Multiuso Amarela Bombril', marca: 'Bombril', categoria: 'Esponja', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145746/m.jpg' },
@@ -646,12 +654,12 @@ const catalogProducts = [
   { nome: 'Girando Sol Limpador Tira Limo Cloro Ativo 500ml', marca: 'Girando Sol', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269339/m.jpg' },
   { nome: 'Girando Sol Limpador Limpeza Pesada Original 500ml', marca: 'Girando Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099800/g.jpg' },
   { nome: 'Girando Sol Saponáceo Cremoso Limão 300ml', marca: 'Girando Sol', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269345/g.jpg' },
-  { nome: 'Girando Sol Sabão em Barra Coco', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099825/g.jpg', tamanhos: [
+  { nome: 'Girando Sol Sabão em Barra Coco', marca: 'Girando Sol', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099825/g.jpg', tamanhos: [
     { label: '200g', preco: 5.99 },
     { label: '400g', preco: 10.78 }
   ] },
-  { nome: 'Girando Sol Sabão em Barra Glicerinado Neutro 200g', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269250/p.jpg' },
-  { nome: 'Girando Sol Sabão em Barra Tradicional 180g', marca: 'Girando Sol', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148912/g.jpg' },
+  { nome: 'Girando Sol Sabão em Barra Glicerinado Neutro 200g', marca: 'Girando Sol', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269250/p.jpg' },
+  { nome: 'Girando Sol Sabão em Barra Tradicional 180g', marca: 'Girando Sol', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148912/g.jpg' },
   // ──────────── LYSOL ────────────
   { nome: 'Lysol Desinfetante Aerossol Pureza do Algodão 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147805/p.jpg' },
   { nome: 'Lysol Desinfetante Aerossol Brisa da Manhã 360ml', marca: 'Lysol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991551/p.jpg' },
@@ -685,7 +693,7 @@ const catalogProducts = [
   { nome: 'Minuano Desinfetante Líquido Lavanda 500ml', marca: 'Minuano', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156304/p.jpg' },
   { nome: 'Minuano Multiuso 500ml', marca: 'Minuano', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156297/m.jpg' },
   { nome: 'Minuano Limpa Vidros 500ml', marca: 'Minuano', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141566/p.jpg' },
-  { nome: 'Minuano Sabão em Barra Coco 200g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970114/m.jpg' },
+  { nome: 'Minuano Sabão em Barra Coco 200g', marca: 'Minuano', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970114/m.jpg' },
   { nome: 'Minuano Lava Roupas em Pó Linha Coco 800g', marca: 'Minuano', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/987929/g.jpg' },
   // ──────────── MR. MÚSCULO ────────────
   { nome: 'Mr. Músculo Cozinha Desengordurante Laranja 500ml', marca: 'Mr. Músculo', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153338/g.jpg' },
@@ -851,8 +859,8 @@ const catalogProducts = [
   ] },
   { nome: 'Urca Saponáceo em Pasta Cristal', marca: 'Urca', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1001188/m.jpg' },
   { nome: 'Urca Sabão em Pó Coco', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/977363/p.jpg' },
-  { nome: 'Urca Pedra Sanitária Lavanda', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152798/p.jpg' },
-  { nome: 'Urca Pedra Sanitária Floral', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1001937/g.jpg' },
+  { nome: 'Urca Pedra Sanitária Lavanda', marca: 'Urca', categoria: 'Pedra sanitária', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152798/p.jpg' },
+  { nome: 'Urca Pedra Sanitária Floral', marca: 'Urca', categoria: 'Pedra sanitária', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1001937/g.jpg' },
   // ──────────── VEJA ────────────
   { nome: 'Veja Multiuso Original', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991559/g.jpg', tamanhos: [
     { label: '500ml', preco: 7.99 },
@@ -932,10 +940,10 @@ const catalogProducts = [
   { nome: 'Ypê Tira Manchas em Pó 450g', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/929119/g.jpg' },
   { nome: 'Ypê Tira Manchas Líquido 1L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/929119/g.jpg' },
   { nome: 'Ypê Tira Limo 500ml', marca: 'Ypê', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141812/m.jpg' },
-  { nome: 'Ypê Sabão em Barra Neutro 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269076/m.jpg' },
-  { nome: 'Ypê Sabão em Barra Multiativo Azul 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273904/p.jpg' },
-  { nome: 'Ypê Sabão em Barra Coco 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273917/p.jpg' },
-  { nome: 'Ypê Sabão em Barra Aloe Vera 180g 5un', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273915/m.jpg' },
+  { nome: 'Ypê Sabão em Barra Neutro 180g 5un', marca: 'Ypê', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269076/m.jpg' },
+  { nome: 'Ypê Sabão em Barra Multiativo Azul 180g 5un', marca: 'Ypê', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273904/p.jpg' },
+  { nome: 'Ypê Sabão em Barra Coco 180g 5un', marca: 'Ypê', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273917/p.jpg' },
+  { nome: 'Ypê Sabão em Barra Aloe Vera 180g 5un', marca: 'Ypê', categoria: 'Sabão em barra', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273915/m.jpg' },
   { nome: 'Ypê Lustra Móveis Lavanda 200ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970912/m.jpg' },
   // ──────────── SPARTAN ────────────
   { nome: 'Spartan Detergente Desengordurante Alcalino 5L', marca: 'Spartan', categoria: 'Desengordurante', img: 'https://images.tcdn.com.br/img/img_prod/435415/marine_fresh_5_litros_spartan_1444_1_29d5ba901ce6bb8e12e9374a3bd755af.jpg' },
@@ -943,6 +951,13 @@ const catalogProducts = [
   { nome: 'Spartan Limpador Multiuso Profissional 5L', marca: 'Spartan', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpador_de_uso_geral_clean_by_peroxy_2l_1214_1_0cde68388740fecb664154a5bcbcdd70.jpg' },
   { nome: 'Spartan Detergente Neutro Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://images.tcdn.com.br/img/img_prod/435415/detergente_para_lavar_roupas_com_braqueador_optico_brightenfresh_5l_spartan_3145_1_19f32d61ed7cb8fba066a2c30427bd9d.jpg' },
   { nome: 'Spartan Limpador de Pisos Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://www.lojadoprofissional.com.br/cdn/imagens/produtos/det/cj-24-limpador-desincrustante-de-pisos-5-litros-spartan-98489d056897f19677d5eeffb9ab9db3.jpg' },
+  // ──────────── PRODUTOS 5L (ECONÔMICOS) ────────────
+  { nome: 'Omo Lava Roupas Líquido Lavagem Perfeita 5L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156232/p.jpg', tamanhos: [{ label: '5L', preco: 63.90 }] },
+  { nome: 'Brilhante Lava Roupas Líquido Limpeza Total 5L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145004/g.jpg', tamanhos: [{ label: '5L', preco: 45.80 }] },
+  { nome: 'Ypê Detergente Neutro 5L', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972247/m.jpg', tamanhos: [{ label: '5L', preco: 20.95 }] },
+  { nome: 'Comfort Amaciante Azul 5L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145003/g.jpg', tamanhos: [{ label: '5L', preco: 44.90 }] },
+  { nome: 'Ypê Amaciante Aconchego Azul 5L', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270469/g.jpg', tamanhos: [{ label: '5L', preco: 19.99 }] },
+  { nome: 'Veja Multiuso Original Pro Line 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283521/g.jpg', tamanhos: [{ label: '5L', preco: 39.55 }] },
 ];
 
 // ============ MATRIZ DE MARCAS X CATEGORIAS (gerada automaticamente) ============
