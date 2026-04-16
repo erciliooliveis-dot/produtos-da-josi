@@ -149,12 +149,20 @@ function renderBrands() {
   }).join('');
 }
 
-// ============ RENDER CATEGORY TABS ============
+// ============ RENDER CATEGORY DROPDOWN ============
 function renderCategoryTabs() {
   const cats = [...new Set(allProducts.map(p => p.categoria))];
-  const tabs = document.getElementById('categoryTabs');
-  tabs.innerHTML = `<button class="tab active" onclick="filterByCategory(null, this)">Todas</button>` +
-    cats.map(c => `<button class="tab" onclick="filterByCategory('${c}', this)">${(typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c}</button>`).join('');
+  const container = document.getElementById('categoryTabs');
+  const icon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>`;
+  container.innerHTML = `
+    <div class="cat-dropdown-wrap">
+      ${icon}
+      <select id="catDropdown" onchange="filterByCategory(this.value || null, this)" class="cat-dropdown">
+        <option value="">Todas as categorias</option>
+        ${cats.map(c => `<option value="${c}">${(typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c}</option>`).join('')}
+      </select>
+    </div>
+    <span class="cat-count" id="catCount">${allProducts.length} produtos</span>`;
 }
 
 // ============ FILTROS ============
@@ -168,29 +176,16 @@ function filterByBrand(brand) {
 }
 
 function filterByCategory(cat, btn) {
-  if (currentCategory === cat) {
-    currentCategory = null;
-    currentPage = 1;
-    applyFilters();
-    document.querySelectorAll('.tab, .filter-btn').forEach(t => t.classList.remove('active'));
-    document.getElementById('combosSection').style.display = 'none';
-    document.getElementById('productsSection').style.display = 'block';
-    return;
-  }
-  currentCategory = cat;
+  currentCategory = cat || null;
   currentPage = 1;
   applyFilters();
-  document.querySelectorAll('.tab, .filter-btn').forEach(t => t.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  const combosSection = document.getElementById('combosSection');
-  const productsSection = document.getElementById('productsSection');
+  document.getElementById('combosSection').style.display = 'none';
+  document.getElementById('productsSection').style.display = 'block';
+  // Atualizar contador
+  const countEl = document.getElementById('catCount');
+  if (countEl) countEl.textContent = filteredProducts.length + ' produtos';
   if (cat) {
-    combosSection.style.display = 'none';
-    productsSection.style.display = 'block';
-    productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } else {
-    combosSection.style.display = 'none';
-    productsSection.style.display = 'block';
+    document.getElementById('productsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
