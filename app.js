@@ -428,11 +428,8 @@ function setView(view, btn) {
 function updateResultsInfo() {
   const info = document.getElementById('resultsInfo');
   const label = document.getElementById('filterLabel');
-  let text = `Exibindo ${filteredProducts.length.toLocaleString('pt-BR')} produtos`;
-  if (currentBrand) text += ` da marca ${currentBrand}`;
-  if (currentCategory) text += ` na categoria ${currentCategory}`;
-  info.textContent = text;
-  label.textContent = currentBrand ? `- ${currentBrand}` : currentCategory ? `- ${currentCategory}` : '';
+  info.textContent = '';
+  label.textContent = currentBrand ? currentBrand : currentCategory ? (catDisplayNames[currentCategory] || currentCategory) : 'Completo';
 }
 
 // ============ CARRINHO COM LOCALSTORAGE ============
