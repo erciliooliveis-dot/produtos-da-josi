@@ -970,11 +970,11 @@ const catalogProducts = [
   // ──────────── PRODUTOS 7L / 10L / 20L (PROFISSIONAIS - GRANDE VOLUME) ────────────
   { nome: 'Omo Lavagem Perfeita PRO 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148340/g.jpg', tamanhos: [{ label: '7L', preco: 76.99 }] },
   { nome: 'Omo Perfect White PRO 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151512/m.jpg', tamanhos: [{ label: '7L', preco: 76.99 }] },
-  { nome: 'Omo PRO Lavanderia Concentrado Original 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://tb0932.vtexassets.com/arquivos/ids/174505-800-auto', tamanhos: [{ label: '7L', preco: 74.90 }] },
+  { nome: 'Omo PRO Lavanderia Concentrado Original 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://tb0932.vtexassets.com/arquivos/ids/174505-800-auto', tamanhos: [{ label: '7L', preco: 152.00 }] },
   { nome: 'Brilhante Alta Performance PRO 7L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152683/g.jpg', tamanhos: [{ label: '7L', preco: 55.90 }] },
   { nome: 'Comfort PRO Original 7L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '7L', preco: 57.90 }] },
-  { nome: 'Comfort Profissional Classic 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 72.36 }] },
-  { nome: 'Comfort Lavanderia Concentrado 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 89.90 }] },
+  { nome: 'Comfort Profissional Classic 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 45.00 }] },
+  { nome: 'Comfort Lavanderia Concentrado 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 185.00 }] },
   { nome: 'Comfort Super Concentrado PRO 20L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://tb0932.vtexassets.com/arquivos/ids/169104/Amaciante-Roupas-Perfumadas-20L-105358.png', tamanhos: [{ label: '20L', preco: 796.33 }] },
 ];
 
