@@ -104,7 +104,8 @@ const realBrandImages = {
   'Girando Sol': 'https://atacadaobr.vtexassets.com/arquivos/ids/1148908/p.jpg',
   'Spartan':     '',
   'Casa KM':     '',
-  'Start':       ''
+  'Start':       '',
+  'Branquinho':  ''
 };
 
 // ============ CORES DAS MARCAS ============
@@ -116,7 +117,7 @@ const brandColors = {
   'Cif': '4CAF50', 'Mr. Musculo': 'FF8C00', 'Mr. Músculo': 'FF8C00',
   'Start': '333399', 'Urca': '009688', 'Zupp': '4A90D9',
   'Girando Sol': 'FF5722', 'Casa KM': '795548', 'Spartan': '1565C0',
-  'Diversey': '00695C', 'Renko': '283593'
+  'Diversey': '00695C', 'Renko': '283593', 'Branquinho': '4A90D9'
 };
 
 // ============ ÍCONES SVG DOS COMBOS ============
@@ -951,6 +952,14 @@ const catalogProducts = [
   { nome: 'Spartan Limpador Multiuso Profissional 5L', marca: 'Spartan', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpador_de_uso_geral_clean_by_peroxy_2l_1214_1_0cde68388740fecb664154a5bcbcdd70.jpg' },
   { nome: 'Spartan Detergente Neutro Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://images.tcdn.com.br/img/img_prod/435415/detergente_para_lavar_roupas_com_braqueador_optico_brightenfresh_5l_spartan_3145_1_19f32d61ed7cb8fba066a2c30427bd9d.jpg' },
   { nome: 'Spartan Limpador de Pisos Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://www.lojadoprofissional.com.br/cdn/imagens/produtos/det/cj-24-limpador-desincrustante-de-pisos-5-litros-spartan-98489d056897f19677d5eeffb9ab9db3.jpg' },
+  // ──────────── BRANQUINHO ────────────
+  { nome: 'Branquinho Sabão Querosene 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
+  { nome: 'Branquinho Limpador Multiuso 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
+  { nome: 'Branquinho Limpeza Pesada 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 18.90 }] },
+  { nome: 'Branquinho Limpeza Pesada 2L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '2L', preco: 6.40 }] },
+  { nome: 'Branquinho Desengordurante 1L', marca: 'Branquinho', categoria: 'Desengordurante', img: 'https://valescaind.com.br/wp-content/uploads/2021/05/Untitled-1.jpg', tamanhos: [{ label: '1L', preco: 8.90 }] },
+  { nome: 'Branquinho Desengordurante 2L', marca: 'Branquinho', categoria: 'Desengordurante', img: 'https://valescaind.com.br/wp-content/uploads/2021/05/branquinho-2.jpg', tamanhos: [{ label: '2L', preco: 14.90 }] },
+  { nome: 'Branquinho Sabão Líquido 2L', marca: 'Branquinho', categoria: 'Lava roupas', img: 'https://www.atacadaocriativa.com.br/storage/uploads/imagens/produtos/2/404/ae8b4ca1b5623b33f5aa745716f1d882.webp', tamanhos: [{ label: '2L', preco: 24.90 }] },
   // ──────────── PRODUTOS 5L (ECONÔMICOS) ────────────
   { nome: 'Omo Lava Roupas Líquido Lavagem Perfeita 5L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156232/p.jpg', tamanhos: [{ label: '5L', preco: 63.90 }] },
   { nome: 'Brilhante Lava Roupas Líquido Limpeza Total 5L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145004/g.jpg', tamanhos: [{ label: '5L', preco: 45.80 }] },
