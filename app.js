@@ -149,20 +149,30 @@ function renderBrands() {
   }).join('');
 }
 
-// ============ RENDER CATEGORY DROPDOWN ============
+// ============ RENDER CATEGORY CONTROLS ============
 function renderCategoryTabs() {
   const cats = [...new Set(allProducts.map(p => p.categoria))];
   const container = document.getElementById('categoryTabs');
-  const icon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>`;
   container.innerHTML = `
-    <div class="cat-dropdown-wrap">
-      ${icon}
-      <select id="catDropdown" onchange="filterByCategory(this.value || null, this)" class="cat-dropdown">
-        <option value="">Todas as categorias</option>
+    <label class="catalog-select-label">
+      <span class="catalog-select-title">Categoria</span>
+      <select id="catDropdown" onchange="filterByCategory(this.value || null, this)" class="catalog-select">
+        <option value="">Todas</option>
         ${cats.map(c => `<option value="${c}">${(typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c}</option>`).join('')}
       </select>
-    </div>
-    <span class="cat-count" id="catCount">${allProducts.length} produtos</span>`;
+    </label>
+    <label class="catalog-select-label">
+      <span class="catalog-select-title">Ordenar</span>
+      <select id="sortSelect" onchange="applySort()" class="catalog-select">
+        <option value="">Relevância</option>
+        <option value="az">Nome A-Z</option>
+        <option value="za">Nome Z-A</option>
+        <option value="price-asc">Menor Preço</option>
+        <option value="price-desc">Maior Preço</option>
+        <option value="brand">Marca</option>
+      </select>
+    </label>
+    <span class="catalog-count" id="catCount">${allProducts.length} produtos</span>`;
 }
 
 // ============ FILTROS ============

@@ -206,8 +206,7 @@
     </div>
   </section>
 
-  <!-- ========== CATEGORY DROPDOWN ========== -->
-  <div class="cat-filter-bar" id="categoryTabs"></div>
+  <!-- categoryTabs renderizado dentro do products-header pelo JS -->
 
   <!-- ========== MAIN ========== -->
   <main class="main" id="mainContent">
@@ -226,17 +225,10 @@
     <!-- PRODUCTS -->
     <section id="productsSection">
       <div class="products-header">
-        <h2 class="section-title">Catálogo Completo <span id="filterLabel"></span></h2>
-        <div class="sort-controls">
-          <select id="sortSelect" onchange="applySort()">
-            <option value="">Ordenar por</option>
-            <option value="az">Nome A-Z</option>
-            <option value="za">Nome Z-A</option>
-            <option value="price-asc">Menor Preço</option>
-            <option value="price-desc">Maior Preço</option>
-            <option value="brand">Marca</option>
-          </select>
-        </div>
+        <h2 class="section-title">Catálogo <span id="filterLabel">Completo</span></h2>
+      </div>
+      <div class="catalog-controls" id="categoryTabs">
+        <!-- Dropdown de categoria renderizado pelo JS aqui -->
       </div>
       <p class="results-info" id="resultsInfo"></p>
       <div class="product-grid" id="productGrid"></div>
