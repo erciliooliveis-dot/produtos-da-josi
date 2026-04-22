@@ -107,7 +107,7 @@ const realBrandImages = {
   'Start':       '',
   'Branquinho':  '',
   'UAU':         'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg',
-  'Castelo':     'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg'
+  'Castelo':     'https://t76496.vtexassets.com/arquivos/ids/155438-800-auto?v=637516767918600000'
 };
 
 // ============ CORES DAS MARCAS ============
@@ -974,12 +974,12 @@ const catalogProducts = [
   { nome: 'Lava Roupas Líquido UAU Active', marca: 'UAU', categoria: 'Lava roupas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/962032-1-22-11-2024-15-00-45-51.jpg', tamanhos: [{ label: '3L', preco: 24.90 }, { label: '5L', preco: 34.90 }] },
   { nome: 'Amaciante UAU Rosas e Sedução', marca: 'UAU', categoria: 'Amaciante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/959339-1-22-11-2024-16-13-36-134.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }, { label: '2L', preco: 12.90 }] },
   // ──────────── CASTELO (VINAGRE DE LIMPEZA) ────────────
-  { nome: 'Vinagre de Álcool Castelo 750ml', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '750ml', preco: 4.49 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Limpeza 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '2L', preco: 12.90 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Maçã Verde 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '2L', preco: 13.90 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Citrus 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '2L', preco: 13.90 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Limpeza e Bactericida 5L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '5L', preco: 24.20 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Limpeza 10L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '10L', preco: 55.00 }] },
+  { nome: 'Vinagre de Álcool Castelo 750ml', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155438-800-auto?v=637516767918600000', tamanhos: [{ label: '750ml', preco: 4.49 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155508-800-auto?v=637539134473730000', tamanhos: [{ label: '2L', preco: 12.90 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Maçã Verde 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155510-800-auto?v=637539134489070000', tamanhos: [{ label: '2L', preco: 13.90 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Citrus 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/156134-800-auto?v=638731539749500000', tamanhos: [{ label: '2L', preco: 13.90 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza e Bactericida 5L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155509-800-auto?v=637539134482800000', tamanhos: [{ label: '5L', preco: 24.20 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza 10L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155509-800-auto?v=637539134482800000', tamanhos: [{ label: '10L', preco: 55.00 }] },
   // ──────────── BRANQUINHO ────────────
   { nome: 'Branquinho Sabão Querosene 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
   { nome: 'Branquinho Limpador Multiuso 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
