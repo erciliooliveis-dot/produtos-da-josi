@@ -105,7 +105,9 @@ const realBrandImages = {
   'Spartan':     '',
   'Casa KM':     '',
   'Start':       '',
-  'Branquinho':  ''
+  'Branquinho':  '',
+  'UAU':         'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg',
+  'Castelo':     'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg'
 };
 
 // ============ CORES DAS MARCAS ============
@@ -117,7 +119,8 @@ const brandColors = {
   'Cif': '4CAF50', 'Mr. Musculo': 'FF8C00', 'Mr. Músculo': 'FF8C00',
   'Start': '333399', 'Urca': '009688', 'Zupp': '4A90D9',
   'Girando Sol': 'FF5722', 'Casa KM': '795548', 'Spartan': '1565C0',
-  'Diversey': '00695C', 'Renko': '283593', 'Branquinho': '4A90D9'
+  'Diversey': '00695C', 'Renko': '283593', 'Branquinho': '4A90D9',
+  'UAU': 'E91E63', 'Castelo': 'D32F2F'
 };
 
 // ============ ÍCONES SVG DOS COMBOS ============
@@ -952,6 +955,34 @@ const catalogProducts = [
   { nome: 'Spartan Limpador Multiuso Profissional 5L', marca: 'Spartan', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpador_de_uso_geral_clean_by_peroxy_2l_1214_1_0cde68388740fecb664154a5bcbcdd70.jpg' },
   { nome: 'Spartan Detergente Neutro Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://images.tcdn.com.br/img/img_prod/435415/detergente_para_lavar_roupas_com_braqueador_optico_brightenfresh_5l_spartan_3145_1_19f32d61ed7cb8fba066a2c30427bd9d.jpg' },
   { nome: 'Spartan Limpador de Pisos Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://www.lojadoprofissional.com.br/cdn/imagens/produtos/det/cj-24-limpador-desincrustante-de-pisos-5-litros-spartan-98489d056897f19677d5eeffb9ab9db3.jpg' },
+  // ──────────── UAU ────────────
+  { nome: 'Limpador UAU Multiuso Lavanda 500ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '500ml', preco: 4.12 }] },
+  { nome: 'Limpador UAU Multiuso Lavanda 1L', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '1L', preco: 7.99 }] },
+  { nome: 'Limpador Perfumado UAU Lavanda 2L', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/950193-31-10-2023-17-41-49-540.jpg', tamanhos: [{ label: '2L', preco: 11.50 }] },
+  { nome: 'Limpador UAU Multiuso Flores Vermelhas e Sedução 500ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6839.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }] },
+  { nome: 'Limpador Perfumado UAU Flores Vermelhas 1,8L', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/limpador_perfumado_uau_1_8l_flor_vermelha_e_sedu_ao_d30feeb3-b2ad-43f3-8601-a79168790b6d-23-12-2025-13-38-30-494.png', tamanhos: [{ label: '1,8L', preco: 11.90 }] },
+  { nome: 'Limpador UAU Multiuso Flores e Frescor 500ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/990649-31-10-2023-17-06-26-47.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }] },
+  { nome: 'Limpador UAU Multiuso Chá Branco 480ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7891242811263-04-02-2026-16-31-03-461.jpg', tamanhos: [{ label: '480ml', preco: 6.99 }] },
+  { nome: 'Limpador UAU Multiuso Limão Siciliano 500ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/960858-31-10-2023-17-20-11-930.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }] },
+  { nome: 'Limpador UAU Desengordurante Limão 500ml', marca: 'UAU', categoria: 'Desengordurante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5983.jpg', tamanhos: [{ label: '500ml', preco: 7.90 }] },
+  { nome: 'UAU Cloro Ativo 4 em 1 500ml', marca: 'UAU', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '500ml', preco: 6.29 }] },
+  { nome: 'UAU Banheiro 7 em 1 Gatilho 500ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '500ml', preco: 12.90 }] },
+  { nome: 'UAU Banheiro 7 em 1 Squeeze 500ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }] },
+  { nome: 'Limpa Vidros UAU Blindex Gatilho 500ml', marca: 'UAU', categoria: 'Limpa vidro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '500ml', preco: 10.23 }] },
+  { nome: 'Limpa Box UAU 200ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/986985-limp-uau-box-200ml.jpg', tamanhos: [{ label: '200ml', preco: 9.90 }] },
+  { nome: 'Limpador UAU Pisos Laminados 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/994434-1.jpg', tamanhos: [{ label: '750ml', preco: 12.90 }] },
+  { nome: 'Limpa Pisos UAU Porcelanato 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/994435.jpg', tamanhos: [{ label: '750ml', preco: 12.90 }] },
+  { nome: 'Limpador UAU Pisos de Madeira 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7390.jpg', tamanhos: [{ label: '750ml', preco: 12.90 }] },
+  { nome: 'Lava Roupas Líquido UAU Active', marca: 'UAU', categoria: 'Lava roupas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/962032-1-22-11-2024-15-00-45-51.jpg', tamanhos: [{ label: '3L', preco: 24.90 }, { label: '5L', preco: 34.90 }] },
+  { nome: 'Amaciante UAU Rosas e Sedução 500ml', marca: 'UAU', categoria: 'Amaciante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/959339-1-22-11-2024-16-13-36-134.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }] },
+  { nome: 'Amaciante UAU Elegance 2L', marca: 'UAU', categoria: 'Amaciante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/959339-1-22-11-2024-16-13-36-134.jpg', tamanhos: [{ label: '2L', preco: 12.90 }] },
+  // ──────────── CASTELO (VINAGRE DE LIMPEZA) ────────────
+  { nome: 'Vinagre de Álcool Castelo 750ml', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '750ml', preco: 4.49 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '2L', preco: 12.90 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Maçã Verde 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '2L', preco: 13.90 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Citrus 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '2L', preco: 13.90 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza e Bactericida 5L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '5L', preco: 24.20 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza 10L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://carrefourbr.vtexassets.com/arquivos/ids/128759874/2e3a8a25ff8d49aabf5140e4b8ccdc8a.jpg', tamanhos: [{ label: '10L', preco: 55.00 }] },
   // ──────────── BRANQUINHO ────────────
   { nome: 'Branquinho Sabão Querosene 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
   { nome: 'Branquinho Limpador Multiuso 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
