@@ -1108,7 +1108,7 @@ const catalogProducts = [
   // ──────────── CANDURA ────────────
   { nome: 'Candura Água Sanitária', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/244676-800-800?v=638660637358230000', tamanhos: [{ label: '2L', preco: 8.49 }, { label: '5L', preco: 18.90 }] },
   { nome: 'Candura Cloro Gel', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/238712-800-800?v=638514737780530000', tamanhos: [{ label: '1L', preco: 9.49 }, { label: '2L', preco: 16.90 }] },
-  { nome: 'Candura Lava Louças', marca: 'Candura', categoria: 'Detergente', img: 'https://www.candura.com.br/img/slides/cozinha2.jpg', tamanhos: [{ label: '500ml', preco: 3.49 }] },
+  { nome: 'Candura Lava Louças', marca: 'Candura', categoria: 'Detergente', img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000', tamanhos: [{ label: '500ml', preco: 3.49 }] },
   { nome: 'Candura Amaciante Concentrado', marca: 'Candura', categoria: 'Amaciante', img: 'https://coopsp.vtexassets.com/arquivos/ids/232753-800-800?v=638252158367800000', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '2L', preco: 14.90 }, { label: '5L', preco: 28.99 }] },
   { nome: 'Candura Desinfetante Lavanda', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/160270-1000-1000/294063.jpg?v=637210537243300000', tamanhos: [{ label: '2L', preco: 9.90 }, { label: '5L', preco: 19.90 }] },
   { nome: 'Candura Desinfetante Pinho', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/162752-1000-1000/294250.jpg?v=637210598793000000', tamanhos: [{ label: '2L', preco: 9.90 }] },
