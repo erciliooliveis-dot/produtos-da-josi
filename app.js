@@ -272,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
       currentCategory = null;
       currentView = 'all';
       document.getElementById('combosSection').style.display = 'none';
-      const best = document.getElementById('bestsellersSection');
       if (best) best.style.display = 'none';
       document.getElementById('productsSection').style.display = 'block';
       document.querySelectorAll('.nav-bar .filter-btn').forEach(b => b.classList.remove('active'));
@@ -1006,7 +1005,6 @@ function toggleFavoritesView() {
     filteredProducts = allProducts.filter(p => favorites.includes(p.id));
     document.getElementById('filterLabel').textContent = '- Favoritos';
     document.getElementById('combosSection').style.display = 'none';
-    document.getElementById('bestsellersSection').style.display = 'none';
     const about = document.getElementById('aboutSection');
     if (about) about.style.display = 'none';
   } else {
@@ -1056,49 +1054,6 @@ function applySort() {
   renderProducts();
 }
 
-// ============ MAIS VENDIDOS ============
-function renderBestsellers() {
-  const grid = document.getElementById('bestsellersGrid');
-  if (!grid) return;
-  const topBrands = ['Omo', 'Veja', 'Ypê', 'Ariel', 'Downy', 'Mr. Músculo', 'Pinho Sol', 'Cif'];
-  const bestsellers = [];
-  topBrands.forEach(marca => {
-    const p = allProducts.find(x => x.marca === marca);
-    if (p) bestsellers.push(p);
-  });
-
-  grid.innerHTML = bestsellers.map((p, i) => {
-    const color = brandColors[p.marca] || '5B2C8E';
-    const icon = catIcons[p.categoria] || '\uD83E\uDDF4';
-    const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]) || realProductImages[p.marca + ':' + p.categoria] || realBrandImages[p.marca] || realCatImages[p.categoria];
-    const preco = getPrecoRevenda(p);
-    const nomeEsc = escapeHtml(p.nome);
-    const marcaEsc = escapeHtml(p.marca);
-    const imgHtml = realImg
-      ? `<img src="${escapeHtml(realImg)}" alt="${marcaEsc}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-      + `<div class="best-fallback">${icon}</div>`
-      : `<div class="best-fallback" style="display:flex">${icon}</div>`;
-    const rank = i + 1;
-    return `
-    <article class="best-card animate-on-scroll" onclick="abrirModal(${p.id})">
-      <div class="best-img">
-        ${imgHtml}
-        <span class="best-rank">${rank}°</span>
-        <span class="best-badge" style="background:#${color}">${marcaEsc}</span>
-      </div>
-      <div class="best-body">
-        <p class="best-name">${nomeEsc}</p>
-        ${preco
-          ? `<div class="best-price-row"><span class="best-price">R$ ${preco.replace('.', ',')}</span><span class="best-unit">un.</span></div>`
-          : '<span class="best-consult">Consulte</span>'}
-        <button class="best-add" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${marcaEsc}">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          Adicionar
-        </button>
-      </div>
-    </article>`;
-  }).join('');
-}
 
 // ============ BOTTOM NAV ============
 function updateBottomNavBadges() {

@@ -7,6 +7,16 @@
     { "src": "*.json", "use": "@vercel/static" }
   ],
   "routes": [
+    {
+      "src": "/(.*\\.(css|js))",
+      "dest": "/$1",
+      "headers": { "Cache-Control": "public, max-age=86400, must-revalidate" }
+    },
+    {
+      "src": "/(.*\\.(jpg|jpeg|png|gif|webp|svg|ico))",
+      "dest": "/$1",
+      "headers": { "Cache-Control": "public, max-age=604800, immutable" }
+    },
     { "src": "/", "dest": "/catalogo.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ]

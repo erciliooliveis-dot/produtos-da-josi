@@ -31,6 +31,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
+  <!-- Preconnect aos CDNs de imagens dos produtos (acelera primeira carga) -->
+  <link rel="dns-prefetch" href="https://atacadaobr.vtexassets.com">
+  <link rel="dns-prefetch" href="https://coopsp.vtexassets.com">
+  <link rel="dns-prefetch" href="https://d3gdr9n5lqb5z7.cloudfront.net">
+  <link rel="dns-prefetch" href="https://t76496.vtexassets.com">
+  <link rel="dns-prefetch" href="https://comper.vteximg.com.br">
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 
@@ -332,8 +339,8 @@
   </div>
 
   <!-- ========== SCRIPTS ========== -->
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
 
 </body>
 </html>
