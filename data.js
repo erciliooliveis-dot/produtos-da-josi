@@ -127,7 +127,7 @@ const realBrandImages = {
   'Búfalo':      'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4163.jpg',
   'Tupi':        'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2137.jpg',
   'Coperalcool': 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/alcool_liquido_1l_classico.jpg',
-  'Candura':     'https://www.candura.com.br/img/slides/Candura-Home-AS_002_2021.jpg',
+  'Candura':     'https://coopsp.vtexassets.com/arquivos/ids/244676-800-800?v=638660637358230000',
   'Luar':        'https://www.luarmagico.com.br/wp-content/uploads/2021/12/gel_70_500ml_227.gif'
 };
 
@@ -1106,13 +1106,14 @@ const catalogProducts = [
   { nome: 'Coperalcool Balde Panos Umedecidos Bacfree 150un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/974770.jpg', tamanhos: [{ label: '150un', preco: 49.90 }] },
   { nome: 'Coperalcool Limpador Perfumado Chá Branco 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000948337-un-15-12-2025-14-27-54-898.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }] },
   // ──────────── CANDURA ────────────
-  { nome: 'Candura Água Sanitária', marca: 'Candura', categoria: 'Alvejante', img: 'https://www.candura.com.br/img/slides/Candura-Home-AS_002_2021.jpg', tamanhos: [{ label: '2L', preco: 8.49 }, { label: '5L', preco: 18.90 }] },
-  { nome: 'Candura Cloro Gel', marca: 'Candura', categoria: 'Alvejante', img: 'https://www.candura.com.br/img/slides/Banner_003c.jpg', tamanhos: [{ label: '1L', preco: 9.49 }, { label: '2L', preco: 16.90 }] },
+  { nome: 'Candura Água Sanitária', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/244676-800-800?v=638660637358230000', tamanhos: [{ label: '2L', preco: 8.49 }, { label: '5L', preco: 18.90 }] },
+  { nome: 'Candura Cloro Gel', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/238712-800-800?v=638514737780530000', tamanhos: [{ label: '1L', preco: 9.49 }, { label: '2L', preco: 16.90 }] },
   { nome: 'Candura Lava Louças', marca: 'Candura', categoria: 'Detergente', img: 'https://www.candura.com.br/img/slides/cozinha2.jpg', tamanhos: [{ label: '500ml', preco: 3.49 }] },
-  { nome: 'Candura Amaciante Concentrado', marca: 'Candura', categoria: 'Amaciante', img: 'https://www.candura.com.br/img/slides/amaciante_sabaoempo.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '2L', preco: 14.90 }, { label: '5L', preco: 28.99 }] },
-  { nome: 'Candura Desinfetante', marca: 'Candura', categoria: 'Desinfetante', img: 'https://www.candura.com.br/img/slides/Candura%20Home%20Banner_001.jpg', tamanhos: [{ label: '2L', preco: 9.90 }, { label: '5L', preco: 19.90 }] },
-  { nome: 'Candura Multiuso', marca: 'Candura', categoria: 'Limpador multiuso', img: 'https://www.candura.com.br/img/categorias/Candura_multiuso.jpg', tamanhos: [{ label: '500ml', preco: 5.49 }] },
-  { nome: 'Candura Tira Manchas Sem Cloro', marca: 'Candura', categoria: 'Tira manchas', img: 'https://www.candura.com.br/img/categorias/Candura_banner_006.jpg', tamanhos: [{ label: '1L', preco: 12.90 }] },
+  { nome: 'Candura Amaciante Concentrado', marca: 'Candura', categoria: 'Amaciante', img: 'https://coopsp.vtexassets.com/arquivos/ids/232753-800-800?v=638252158367800000', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '2L', preco: 14.90 }, { label: '5L', preco: 28.99 }] },
+  { nome: 'Candura Desinfetante Lavanda', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/160270-1000-1000/294063.jpg?v=637210537243300000', tamanhos: [{ label: '2L', preco: 9.90 }, { label: '5L', preco: 19.90 }] },
+  { nome: 'Candura Desinfetante Pinho', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/162752-1000-1000/294250.jpg?v=637210598793000000', tamanhos: [{ label: '2L', preco: 9.90 }] },
+  { nome: 'Candura Multiuso', marca: 'Candura', categoria: 'Limpador multiuso', img: 'https://coopsp.vtexassets.com/arquivos/ids/247099-800-800?v=638821523008500000', tamanhos: [{ label: '500ml', preco: 5.49 }] },
+  { nome: 'Candura Tira Manchas Sem Cloro', marca: 'Candura', categoria: 'Tira manchas', img: 'https://comper.vteximg.com.br/arquivos/ids/179853-1000-1000/610810-Tira-Manchas-Candura-sem-Cloro-Roupas-Brancas-e-Coloridas-2-Litros.jpg?v=637388200285770000', tamanhos: [{ label: '1L', preco: 12.90 }] },
   // ──────────── LUAR (Luar Mágico) ────────────
   { nome: 'Luar Álcool Gel Bactericida 70%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/gel_70_500ml_227.gif', tamanhos: [{ label: '500ml', preco: 11.90 }, { label: '1L', preco: 19.90 }] },
   { nome: 'Luar Álcool Gel Acendedor', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2017/02/mini-alcool-gel-acendedor-300g.png', tamanhos: [{ label: '300g', preco: 6.90 }, { label: '5kg', preco: 39.90 }, { label: '10kg', preco: 69.90 }, { label: '13kg', preco: 89.90 }] },
