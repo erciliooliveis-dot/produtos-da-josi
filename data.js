@@ -39,7 +39,12 @@ const catIcons = {
   'Produto profissional': '\u2699\uFE0F',
   'Sabão em barra': '\uD83E\uDDFC',
   'Pedra sanitária': '\uD83E\uDEA8',
-  'Cápsulas de lavar': '\uD83D\uDC8A'
+  'Cápsulas de lavar': '\uD83D\uDC8A',
+  'Saco de lixo': '\uD83D\uDDD1',
+  'Álcool': '\uD83E\uDDF4',
+  'Removedor': '\uD83E\uDDFD',
+  'Tira manchas': '\u2728',
+  'Brilha móveis': '\u2728'
 };
 
 // Nomes amigáveis das categorias para exibição no menu
@@ -61,7 +66,12 @@ const catDisplayNames = {
   'Produto profissional': 'Profissional',
   'Sabão em barra': 'Sabão em Barra',
   'Pedra sanitária': 'Pedra Sanitária',
-  'Cápsulas de lavar': 'Cápsulas'
+  'Cápsulas de lavar': 'Cápsulas',
+  'Saco de lixo': 'Saco de Lixo',
+  'Álcool': 'Álcool',
+  'Removedor': 'Removedor',
+  'Tira manchas': 'Tira Manchas',
+  'Brilha móveis': 'Brilha Móveis'
 };
 
 // ============ IMAGENS POR CATEGORIA ============
@@ -107,7 +117,16 @@ const realBrandImages = {
   'Start':       '',
   'Branquinho':  '',
   'UAU':         'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg',
-  'Castelo':     'https://t76496.vtexassets.com/arquivos/ids/155438-800-auto?v=637516767918600000'
+  'Castelo':     'https://t76496.vtexassets.com/arquivos/ids/155438-800-auto?v=637516767918600000',
+  'Pato':        'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7894650016084-29-01-2026-14-59-30-574.jpg',
+  'Lysoform':    'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/3700-19-02-2024-13-10-19-06.jpg',
+  'Embalixo':    'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6585.jpg',
+  'Tixan':       'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/938413-1-11-11-2025-13-14-42-975.jpg',
+  'Vim':         'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/969210-1-19-09-2024-13-58-44-431.jpg',
+  'Destac':      'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/87602-1-08-11-2023-14-27-44-935.jpg',
+  'Búfalo':      'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4163.jpg',
+  'Tupi':        'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2137.jpg',
+  'Coperalcool': 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/alcool_liquido_1l_classico.jpg'
 };
 
 // ============ CORES DAS MARCAS ============
@@ -120,7 +139,10 @@ const brandColors = {
   'Start': '333399', 'Urca': '009688', 'Zupp': '4A90D9',
   'Girando Sol': 'FF5722', 'Casa KM': '795548', 'Spartan': '1565C0',
   'Diversey': '00695C', 'Renko': '283593', 'Branquinho': '4A90D9',
-  'UAU': 'E91E63', 'Castelo': 'D32F2F'
+  'UAU': 'E91E63', 'Castelo': 'D32F2F',
+  'Pato': '1976D2', 'Lysoform': 'C62828', 'Embalixo': '2E7D32',
+  'Tixan': 'F57C00', 'Vim': '0277BD', 'Destac': '6A1B9A',
+  'Búfalo': '424242', 'Tupi': '00796B', 'Coperalcool': '4527A0'
 };
 
 // ============ ÍCONES SVG DOS COMBOS ============
@@ -302,8 +324,8 @@ const specificProducts = [
   { id:9028, nome:'Desinfetante Zupp 2L',             marca:'Zupp', categoria:'Desinfetante',        img:_base+'desinfetante-2l-destaque-101113194.png' },
 ];
 
-// ============ PREÇOS (varejo + 25%) ============
-const MARGEM = 1.25;
+// ============ PREÇOS (varejo + 62.5% — atacado +25% +30% extra) ============
+const MARGEM = 1.625;
 
 const precosBase = {
   "Veja:Limpador multiuso": 7.99, "Veja:Desinfetante": 8.49, "Veja:Limpa vidro": 8.99,
@@ -1004,6 +1026,82 @@ const catalogProducts = [
   { nome: 'Comfort Profissional Classic 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 45.00 }] },
   { nome: 'Comfort Lavanderia Concentrado 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 185.00 }] },
   { nome: 'Comfort Super Concentrado PRO 20L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://tb0932.vtexassets.com/arquivos/ids/169104/Amaciante-Roupas-Perfumadas-20L-105358.png', tamanhos: [{ label: '20L', preco: 796.33 }] },
+  // ──────────── PATO ────────────
+  { nome: 'Pato Desinfetante Violeta Virt 750ml', marca: 'Pato', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7894650016084-29-01-2026-14-59-30-574.jpg', tamanhos: [{ label: '750ml', preco: 7.99 }] },
+  { nome: 'Pato Desodorante Block Lavanda 60ml', marca: 'Pato', categoria: 'Pedra sanitária', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7894650015773_1-09-03-2026-10-17-03-280.jpg', tamanhos: [{ label: '60ml', preco: 9.49 }] },
+  { nome: 'Pato Gel Adesivo Marine', marca: 'Pato', categoria: 'Pedra sanitária', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/995989-30-11-2023-17-00-58-528.jpg', tamanhos: [{ label: 'Refil 38g', preco: 9.99 }] },
+  { nome: 'Pato Pastilha Adesiva Floral', marca: 'Pato', categoria: 'Pedra sanitária', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937403-07-12-2023-15-22-03-769.jpeg', tamanhos: [{ label: 'Refil', preco: 10.49 }] },
+  { nome: 'Pato Gel Adesivo Citrus', marca: 'Pato', categoria: 'Pedra sanitária', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7894650009147_1-09-03-2026-10-25-11-184.jpg', tamanhos: [{ label: 'Refil 38g', preco: 9.99 }] },
+  // ──────────── LYSOFORM ────────────
+  { nome: 'Lysoform Desinfetante Bruto Original', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/3700-19-02-2024-13-10-19-06.jpg', tamanhos: [{ label: '500ml', preco: 11.90 }, { label: '1L', preco: 18.90 }, { label: '5L', preco: 46.90 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Lavanda', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/942357-19-02-2024-11-26-52-213.jpg', tamanhos: [{ label: '1L', preco: 12.90 }, { label: '2L', preco: 22.90 }, { label: '5L', preco: 49.90 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Citrus', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937685-02-03-2023-17-11-03-767.jpg', tamanhos: [{ label: '1L', preco: 12.90 }, { label: '2L', preco: 22.90 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Suave Odor', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936807-29-09-2022-18-06-38-876.jpg', tamanhos: [{ label: '1L', preco: 12.90 }, { label: '2L', preco: 22.90 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Original 2L', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936808-29-09-2022-18-01-51-776.jpg', tamanhos: [{ label: '2L', preco: 22.90 }] },
+  { nome: 'Lysoform Desinfetante Aerossol Original 432ml', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937687-21-03-2023-19-01-44-103.jpg', tamanhos: [{ label: '432ml', preco: 24.90 }] },
+  { nome: 'Lysoform Tira Limo Trigga 500ml', marca: 'Lysoform', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/imagem-provisoria-28-04-2026-15-59-34-363.jpeg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  // ──────────── EMBALIXO (SACO DE LIXO) ────────────
+  { nome: 'Embalixo Saco Lixo Resistente 50L 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947132-13-08-2025-14-48-14-423.jpg', tamanhos: [{ label: '50L 20un', preco: 14.90 }] },
+  { nome: 'Embalixo Saco Lixo Alça Bloqueadora de Odores 50L 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/946210-27-05-2025-10-31-12-417.jpg', tamanhos: [{ label: '50L 20un', preco: 16.90 }] },
+  { nome: 'Embalixo Saco Lixo Alça Rolo Preto 100L 15un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/939963-23-05-2023-11-51-53-701.jpg', tamanhos: [{ label: '100L 15un', preco: 18.90 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 50L 50un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6585.jpg', tamanhos: [{ label: '50L 50un', preco: 22.90 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto Oceano 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/942219-25-01-2024-10-02-45-176.jpg', tamanhos: [{ label: '100L 25un', preco: 28.90 }] },
+  { nome: 'Embalixo Saco Lixo Reciclado Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936358-04-11-2022-10-17-21-629.jpg', tamanhos: [{ label: '50L 30un', preco: 17.90 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Fecha Fácil Azul 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5700.jpg', tamanhos: [{ label: '50L 30un', preco: 19.90 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Fecha Fácil Azul 100L 15un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5702.jpg', tamanhos: [{ label: '100L 15un', preco: 22.90 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 30L 80un + 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6935.jpg', tamanhos: [{ label: '30L 100un', preco: 26.90 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936353-07-06-2023-14-44-28-404.jpg', tamanhos: [{ label: '50L 30un', preco: 17.90 }] },
+  { nome: 'Embalixo Saco Lixo Alça Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/939962-23-05-2023-11-50-59-160.jpg', tamanhos: [{ label: '50L 30un', preco: 18.90 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 110L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1732.jpg', tamanhos: [{ label: '110L 25un', preco: 32.90 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 50L 80un + 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6934.jpg', tamanhos: [{ label: '50L 100un', preco: 32.90 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 30L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7316.jpg', tamanhos: [{ label: '30L 30un', preco: 12.90 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Azul 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/9533.jpg', tamanhos: [{ label: '100L 25un', preco: 25.90 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1368.jpg', tamanhos: [{ label: '100L 25un', preco: 25.90 }] },
+  { nome: 'Embalixo Saco Lixo Extra Forte Almofada Preto 110L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/950248.jpg', tamanhos: [{ label: '110L 25un', preco: 38.90 }] },
+  // ──────────── TIXAN (Ypê) ────────────
+  { nome: 'Tixan Sabão em Pó Maciez', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/938413-1-11-11-2025-13-14-42-975.jpg', tamanhos: [{ label: '800g', preco: 12.90 }, { label: '2,4kg', preco: 32.90 }] },
+  { nome: 'Tixan Sabão em Pó Primavera', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/935093-1-18-06-2025-17-46-34-632.jpg', tamanhos: [{ label: '800g', preco: 12.90 }, { label: '2,4kg', preco: 32.90 }] },
+  { nome: 'Tixan Tira Manchas Pó Roupas Color 420g', marca: 'Tixan', categoria: 'Tira manchas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/23698.jpg', tamanhos: [{ label: '420g', preco: 9.90 }] },
+  // ──────────── VIM ────────────
+  { nome: 'Vim Cloro Gel Floral 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7022.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
+  { nome: 'Vim Cloro Gel Lavanda 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7021.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
+  { nome: 'Vim Cloro Gel Original 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/969210-1-19-09-2024-13-58-44-431.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
+  { nome: 'Vim Desinfetante Original Espuma Poderosa 450ml', marca: 'Vim', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947719-1-05-09-2025-16-45-52-536.jpg', tamanhos: [{ label: '450ml', preco: 13.90 }] },
+  { nome: 'Vim Desinfetante Espuma Poderosa Refil 450ml', marca: 'Vim', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947720-1-05-09-2025-16-53-00-840.jpg', tamanhos: [{ label: 'Refil 450ml', preco: 11.90 }] },
+  // ──────────── DESTAC ────────────
+  { nome: 'Destac Brilha Móveis Lavanda', marca: 'Destac', categoria: 'Brilha móveis', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/87602-1-08-11-2023-14-27-44-935.jpg', tamanhos: [{ label: '200ml', preco: 6.90 }, { label: '500ml', preco: 12.90 }] },
+  { nome: 'Destac Limpa Piso Laminados Flores e Lavanda 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/904921-1-01-04-2024-19-44-49-213.jpg', tamanhos: [{ label: '750ml', preco: 13.90 }] },
+  { nome: 'Destac Limpa Piso Madeira Lavanda e Vanilla 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/909144-1-01-04-2024-19-42-36-801.jpg', tamanhos: [{ label: '750ml', preco: 13.90 }] },
+  { nome: 'Destac Limpa Piso Porcelanato Lavanda e Alfazema 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/965283-1-03-11-2023-17-16-08-273.jpg', tamanhos: [{ label: '750ml', preco: 13.90 }] },
+  // ──────────── BÚFALO ────────────
+  { nome: 'Búfalo Querosene Perfumado Lavanda 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2082.jpg', tamanhos: [{ label: '500ml', preco: 7.49 }] },
+  { nome: 'Búfalo Querosene PVC', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2610.jpg', tamanhos: [{ label: '500ml', preco: 7.49 }, { label: '1L', preco: 13.90 }] },
+  { nome: 'Búfalo Removedor PVC', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4163.jpg', tamanhos: [{ label: '500ml', preco: 7.99 }, { label: '1L', preco: 14.90 }] },
+  { nome: 'Búfalo Removedor Perfumado Jasmim 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/989795.jpg', tamanhos: [{ label: '500ml', preco: 7.99 }] },
+  { nome: 'Búfalo Removedor Perfumado Lavanda 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2084.jpg', tamanhos: [{ label: '500ml', preco: 7.99 }] },
+  { nome: 'Búfalo Removedor Multiuso Eco 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/968939.jpg', tamanhos: [{ label: '500ml', preco: 8.49 }] },
+  { nome: 'Búfalo Limpador Perfumado Chá Branco 500ml', marca: 'Búfalo', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947736-08-09-2025-11-19-01-430.jpg', tamanhos: [{ label: '500ml', preco: 8.49 }] },
+  { nome: 'Búfalo Desinfetante Eucalipto', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1150.jpg', tamanhos: [{ label: '2L', preco: 11.90 }, { label: '6L', preco: 28.90 }] },
+  { nome: 'Búfalo Desinfetante Lavanda 2L', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1268.jpg', tamanhos: [{ label: '2L', preco: 11.90 }] },
+  { nome: 'Búfalo Desinfetante Tradicional Pinho 2L', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4838.jpg', tamanhos: [{ label: '2L', preco: 11.90 }] },
+  { nome: 'Búfalo Tira Manchas Pó Multiuso Eco 500g', marca: 'Búfalo', categoria: 'Tira manchas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947737-08-09-2025-11-29-32-737.jpg', tamanhos: [{ label: '500g', preco: 11.90 }] },
+  // ──────────── TUPI ────────────
+  { nome: 'Tupi Álcool Líquido 46% Neutro 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2137.jpg', tamanhos: [{ label: '1L', preco: 9.90 }] },
+  { nome: 'Tupi Álcool Líquido 46% Lavanda 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4207.jpg', tamanhos: [{ label: '1L', preco: 10.49 }] },
+  { nome: 'Tupi Álcool com Bicarbonato 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/943021-14-05-2024-10-08-10-314.jpg', tamanhos: [{ label: '1L', preco: 11.49 }] },
+  { nome: 'Tupi Álcool com Bicarbonato e Limão 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/944258-01-10-2024-10-51-37-543.jpg', tamanhos: [{ label: '1L', preco: 11.49 }] },
+  { nome: 'Tupi Álcool Líquido Zerobac 46% 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936773-10-11-2022-15-57-57-316.jpg', tamanhos: [{ label: '1L', preco: 10.49 }] },
+  { nome: 'Tupi Álcool em Gel 70% 500g', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936801-14-11-2022-16-45-17-798.jpg', tamanhos: [{ label: '500g', preco: 9.90 }] },
+  { nome: 'Tupi Álcool Acendedor Gel 5kg', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2869.jpg', tamanhos: [{ label: '5kg', preco: 35.90 }] },
+  // ──────────── COPERALCOOL ────────────
+  { nome: 'Coperalcool Álcool Tradicional 46% 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/alcool_liquido_1l_classico.jpg', tamanhos: [{ label: '1L', preco: 11.90 }] },
+  { nome: 'Coperalcool Álcool Líquido Chá Branco 46% 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/948188-03-10-2025-12-19-17-763.jpg', tamanhos: [{ label: '1L', preco: 12.90 }] },
+  { nome: 'Coperalcool Álcool Gel 500g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/987052.jpg', tamanhos: [{ label: '500g', preco: 11.90 }] },
+  { nome: 'Coperalcool Álcool Gel Antisséptico Bacfree 400g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000953220-un-27-01-2026-10-45-56-970.jpg', tamanhos: [{ label: '400g', preco: 10.90 }] },
+  { nome: 'Coperalcool Álcool Gel Chá Branco Bacfree 400g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947107-04-08-2025-17-49-42-677.jpg', tamanhos: [{ label: '400g', preco: 11.90 }] },
+  { nome: 'Coperalcool Panos Umedecidos Bacfree 35un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/plu-964934.jpg', tamanhos: [{ label: '35un', preco: 14.90 }, { label: 'Refil 35un', preco: 12.90 }] },
+  { nome: 'Coperalcool Balde Panos Umedecidos Bacfree 150un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/974770.jpg', tamanhos: [{ label: '150un', preco: 49.90 }] },
+  { nome: 'Coperalcool Limpador Perfumado Chá Branco 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000948337-un-15-12-2025-14-27-54-898.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }] },
 ];
 
 // ============ MATRIZ DE MARCAS X CATEGORIAS (gerada automaticamente) ============
