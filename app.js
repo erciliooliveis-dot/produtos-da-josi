@@ -284,6 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
     applyFilters();
   }, 180);
   searchInput.addEventListener('input', handleSearch);
+  searchInput.addEventListener('input', () => renderSuggestions(searchInput.value));
+  searchInput.addEventListener('focus', () => renderSuggestions(searchInput.value));
+  searchInput.addEventListener('blur', () => setTimeout(() => hideSuggestions(), 200));
 
   // ESC fecha modal e carrinho
   document.addEventListener('keydown', (e) => {
@@ -298,6 +301,59 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('footerYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
+
+// ============ AUTOCOMPLETE SUGGESTIONS ============
+function getOrCreateSuggestionsBox() {
+  let box = document.getElementById('searchSuggestions');
+  if (box) return box;
+  const searchBox = document.querySelector('.search-box');
+  if (!searchBox) return null;
+  searchBox.style.position = 'relative';
+  box = document.createElement('div');
+  box.id = 'searchSuggestions';
+  box.className = 'search-suggestions';
+  searchBox.appendChild(box);
+  return box;
+}
+
+function hideSuggestions() {
+  const box = document.getElementById('searchSuggestions');
+  if (box) box.style.display = 'none';
+}
+
+function renderSuggestions(query) {
+  const box = getOrCreateSuggestionsBox();
+  if (!box) return;
+  const q = normalize((query || '').trim());
+  if (q.length < 1) { box.style.display = 'none'; return; }
+
+  // Buscar produtos que combinam com a query
+  const matches = allProducts.filter(p =>
+    normalize(p.nome).includes(q) ||
+    normalize(p.marca).includes(q)
+  ).slice(0, 8);
+
+  if (matches.length === 0) { box.style.display = 'none'; return; }
+
+  box.innerHTML = matches.map(p => {
+    const nomeEsc = escapeHtml(p.nome);
+    const marcaEsc = escapeHtml(p.marca);
+    return `<div class="search-suggestion" onmousedown="selectSuggestion('${nomeEsc.replace(/'/g, '&#39;')}')">
+      <span class="suggestion-name">${nomeEsc}</span>
+      <span class="suggestion-brand">${marcaEsc}</span>
+    </div>`;
+  }).join('');
+  box.style.display = 'block';
+}
+
+function selectSuggestion(nome) {
+  const input = document.getElementById('searchInput');
+  if (input) {
+    input.value = nome;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  hideSuggestions();
+}
 
 // ============ RENDER PRODUCTS ============
 function renderProducts() {
