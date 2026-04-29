@@ -327,8 +327,8 @@ const specificProducts = [
   { id:9028, nome:'Desinfetante Zupp 2L',             marca:'Zupp', categoria:'Desinfetante',        img:_base+'desinfetante-2l-destaque-101113194.png' },
 ];
 
-// ============ PREÇOS (atacado + 35%) ============
-const MARGEM = 1.35;
+// ============ PREÇOS (atacado + 70%) ============
+const MARGEM = 1.70;
 
 const precosBase = {
   "Veja:Limpador multiuso": 7.99, "Veja:Desinfetante": 8.49, "Veja:Limpa vidro": 8.99,
