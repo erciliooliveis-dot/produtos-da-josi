@@ -560,6 +560,14 @@ function selectSize(productId, idx) {
   document.querySelectorAll('.size-chip').forEach(function(btn, i) {
     btn.classList.toggle('active', i === idx);
   });
+  // Trocar imagem do modal se o tamanho tiver img propria
+  if (size.img) {
+    const imgEl = document.getElementById('modalImg');
+    if (imgEl) {
+      const imgTag = imgEl.querySelector('img');
+      if (imgTag) imgTag.src = size.img;
+    }
+  }
 }
 
 function addToCart(id, sizeLabel, sizePreco) {
