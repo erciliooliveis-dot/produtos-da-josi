@@ -126,7 +126,9 @@ const realBrandImages = {
   'Destac':      'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/87602-1-08-11-2023-14-27-44-935.jpg',
   'Búfalo':      'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4163.jpg',
   'Tupi':        'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2137.jpg',
-  'Coperalcool': 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/alcool_liquido_1l_classico.jpg'
+  'Coperalcool': 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/alcool_liquido_1l_classico.jpg',
+  'Candura':     'https://www.candura.com.br/img/slides/Candura-Home-AS_002_2021.jpg',
+  'Luar':        'https://www.luarmagico.com.br/wp-content/uploads/2021/12/gel_70_500ml_227.gif'
 };
 
 // ============ CORES DAS MARCAS ============
@@ -142,7 +144,8 @@ const brandColors = {
   'UAU': 'E91E63', 'Castelo': 'D32F2F',
   'Pato': '1976D2', 'Lysoform': 'C62828', 'Embalixo': '2E7D32',
   'Tixan': 'F57C00', 'Vim': '0277BD', 'Destac': '6A1B9A',
-  'Búfalo': '424242', 'Tupi': '00796B', 'Coperalcool': '4527A0'
+  'Búfalo': '424242', 'Tupi': '00796B', 'Coperalcool': '4527A0',
+  'Candura': '00ACC1', 'Luar': '5E35B1'
 };
 
 // ============ ÍCONES SVG DOS COMBOS ============
@@ -1102,6 +1105,41 @@ const catalogProducts = [
   { nome: 'Coperalcool Panos Umedecidos Bacfree 35un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/plu-964934.jpg', tamanhos: [{ label: '35un', preco: 14.90 }, { label: 'Refil 35un', preco: 12.90 }] },
   { nome: 'Coperalcool Balde Panos Umedecidos Bacfree 150un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/974770.jpg', tamanhos: [{ label: '150un', preco: 49.90 }] },
   { nome: 'Coperalcool Limpador Perfumado Chá Branco 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000948337-un-15-12-2025-14-27-54-898.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }] },
+  // ──────────── CANDURA ────────────
+  { nome: 'Candura Água Sanitária', marca: 'Candura', categoria: 'Alvejante', img: 'https://www.candura.com.br/img/slides/Candura-Home-AS_002_2021.jpg', tamanhos: [{ label: '2L', preco: 8.49 }, { label: '5L', preco: 18.90 }] },
+  { nome: 'Candura Cloro Gel', marca: 'Candura', categoria: 'Alvejante', img: 'https://www.candura.com.br/img/slides/Banner_003c.jpg', tamanhos: [{ label: '1L', preco: 9.49 }, { label: '2L', preco: 16.90 }] },
+  { nome: 'Candura Lava Louças', marca: 'Candura', categoria: 'Detergente', img: 'https://www.candura.com.br/img/slides/cozinha2.jpg', tamanhos: [{ label: '500ml', preco: 3.49 }] },
+  { nome: 'Candura Amaciante Concentrado', marca: 'Candura', categoria: 'Amaciante', img: 'https://www.candura.com.br/img/slides/amaciante_sabaoempo.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '2L', preco: 14.90 }, { label: '5L', preco: 28.99 }] },
+  { nome: 'Candura Desinfetante', marca: 'Candura', categoria: 'Desinfetante', img: 'https://www.candura.com.br/img/slides/Candura%20Home%20Banner_001.jpg', tamanhos: [{ label: '2L', preco: 9.90 }, { label: '5L', preco: 19.90 }] },
+  { nome: 'Candura Multiuso', marca: 'Candura', categoria: 'Limpador multiuso', img: 'https://www.candura.com.br/img/categorias/Candura_multiuso.jpg', tamanhos: [{ label: '500ml', preco: 5.49 }] },
+  { nome: 'Candura Tira Manchas Sem Cloro', marca: 'Candura', categoria: 'Tira manchas', img: 'https://www.candura.com.br/img/categorias/Candura_banner_006.jpg', tamanhos: [{ label: '1L', preco: 12.90 }] },
+  // ──────────── LUAR (Luar Mágico) ────────────
+  { nome: 'Luar Álcool Gel Bactericida 70%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/gel_70_500ml_227.gif', tamanhos: [{ label: '500ml', preco: 11.90 }, { label: '1L', preco: 19.90 }] },
+  { nome: 'Luar Álcool Gel Acendedor', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2017/02/mini-alcool-gel-acendedor-300g.png', tamanhos: [{ label: '300g', preco: 6.90 }, { label: '5kg', preco: 39.90 }, { label: '10kg', preco: 69.90 }, { label: '13kg', preco: 89.90 }] },
+  { nome: 'Luar Álcool Líquido Bactericida 70%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/balcao_500ml_227.gif', tamanhos: [{ label: '500ml', preco: 9.90 }, { label: '1L', preco: 16.90 }, { label: '5L', preco: 49.90 }] },
+  { nome: 'Luar Álcool Líquido 96%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/05/ALCOOL-LIQUIDO-96-PROIBIDO-1-LITRO.png', tamanhos: [{ label: '1L', preco: 17.90 }] },
+  { nome: 'Luar Álcool Líquido 46% Tradicional', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 7.90 }, { label: '1L', preco: 13.90 }] },
+  { nome: 'Luar Álcool Líquido 46% Lavanda', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-LAVANDA-500-ML.png', tamanhos: [{ label: '500ml', preco: 8.49 }, { label: '1L', preco: 14.90 }] },
+  { nome: 'Luar Álcool Líquido 46% Eucalipto', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-EUCALIPTO-500-ML.png', tamanhos: [{ label: '500ml', preco: 8.49 }, { label: '1L', preco: 14.90 }] },
+  { nome: 'Luar Multiuso Tradicional 500ml', marca: 'Luar', categoria: 'Limpador multiuso', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/MULTIUSO-TRADICIONAL-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 5.49 }] },
+  { nome: 'Luar Multiuso Campestre 500ml', marca: 'Luar', categoria: 'Limpador multiuso', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/MULTIUSO-CAMPESTRE-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 5.49 }] },
+  { nome: 'Luar Limpa Vidros 500ml', marca: 'Luar', categoria: 'Limpa vidro', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/LIMPA-VIDROS-LUAR-500ML.png', tamanhos: [{ label: '500ml', preco: 6.49 }] },
+  { nome: 'Luar Limpa Limo 500ml', marca: 'Luar', categoria: 'Limpador banheiro', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/LIMPA-LIMO-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 7.49 }] },
+  { nome: 'Luar Limpa Alumínio', marca: 'Luar', categoria: 'Removedor', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/LIMPA-ALUMINIO-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 6.90 }, { label: '5L', preco: 39.90 }] },
+  { nome: 'Luar Removedor Ecológico 1L', marca: 'Luar', categoria: 'Removedor', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/removedor_1L_227.gif', tamanhos: [{ label: '1L', preco: 11.90 }] },
+  { nome: 'Luar Puri Lar', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/purilar_227.gif', tamanhos: [{ label: '500ml', preco: 7.90 }] },
+  { nome: 'Luar Cheirinho Citronela', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_citronela_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
+  { nome: 'Luar Cheirinho Talco', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_talco_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
+  { nome: 'Luar Cheirinho Eucalipto', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_eucalipto_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
+  { nome: 'Luar Cheirinho Lavanda', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_lavanda_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
+  // ──────────── COPERALCOOL EXTRA (Companhia Nacional de Álcool) ────────────
+  { nome: 'Coperalcool Bacfree Segredos Frescor das Águas Oceano 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_frescor_das_aguas_137_1_20faa80552a4c0d9968a0fa28e34799b.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  { nome: 'Coperalcool Bacfree Segredos Energia do Campo Capim-Limão 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_energia_do_campo_131_1_fe4573cdf8426ee6cf5c165e338d18a1.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  { nome: 'Coperalcool Bacfree Segredos Refúgio da Mente Lavanda 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_refugio_da_mente_129_1_26f0a4b2d6c3468d607c220bd6910afa.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  { nome: 'Coperalcool Bacfree Segredos Bosque do Aconchego Jasmim 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_bosque_do_aconchego_133_1_6d76591ebe6936091690e1ff0271a058.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  { nome: 'Coperalcool Bacfree Segredos Jardim da Harmonia Flores Brancas 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_jardim_da_harmonia_135_1_8dd0d800ff069767ee3f9fbb65459d4d.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  { nome: 'Coperalcool Bacfree Lavanda Oriental 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_46_inpm_lavanda_oriental_1_1_20251017113953_4c73f6969549.jpg', tamanhos: [{ label: '1L', preco: 14.99 }] },
+  { nome: 'Coperalcool Spray Higienizador de Mãos 60ml', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/spray_higienizador_de_maos_coperalcool_bacfree_60ml_113_1_8380c78f0f6b210309c39b07b121bfd0.jpg', tamanhos: [{ label: '60ml', preco: 7.40 }] },
 ];
 
 // ============ MATRIZ DE MARCAS X CATEGORIAS (gerada automaticamente) ============
