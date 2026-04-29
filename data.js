@@ -331,61 +331,61 @@ const specificProducts = [
 const MARGEM = 1.70;
 
 const precosBase = {
-  "Veja:Limpador multiuso": 7.99, "Veja:Desinfetante": 8.49, "Veja:Limpa vidro": 8.99,
-  "Veja:Limpador banheiro": 12.90, "Veja:Desengordurante": 10.90, "Veja:Limpador cozinha": 10.90,
-  "Omo:Sabão em pó": 14.90, "Omo:Lava roupas": 18.90,
-  "Ypê:Detergente": 2.99, "Ypê:Desinfetante": 5.49, "Ypê:Limpador multiuso": 4.99,
-  "Ypê:Lava roupas": 9.90, "Ypê:Sabão em pó": 8.90, "Ypê:Alvejante": 5.99, "Ypê:Amaciante": 7.49,
-  "Bombril:Saponáceo": 4.99, "Bombril:Limpador multiuso": 5.49,
-  "Minuano:Detergente": 1.99, "Minuano:Sabão em pó": 5.49, "Minuano:Amaciante": 6.99, "Minuano:Desinfetante": 4.49,
-  "Brilhante:Sabão em pó": 9.90, "Brilhante:Lava roupas": 13.90, "Brilhante:Amaciante": 8.90, "Brilhante:Alvejante": 6.90,
-  "Ariel:Sabão em pó": 16.90, "Ariel:Lava roupas": 22.90,
-  "Downy:Amaciante": 14.90,
-  "Comfort:Amaciante": 12.90, "Comfort:Aromatizador": 14.90,
-  "Pinho Sol:Desinfetante": 6.90, "Pinho Sol:Limpador multiuso": 7.49, "Pinho Sol:Aromatizador": 8.90,
-  "Lysol:Desinfetante": 14.90, "Lysol:Limpador banheiro": 16.90, "Lysol:Aromatizador": 15.90,
-  "Ajax:Limpador multiuso": 8.75, "Ajax:Desengordurante": 10.99, "Ajax:Limpa vidro": 8.50,
-  "Ajax:Limpador banheiro": 9.90, "Ajax:Limpador cozinha": 10.90,
-  "Cif:Saponáceo": 8.99, "Cif:Limpador multiuso": 7.49, "Cif:Desengordurante": 12.90,
-  "Cif:Limpador banheiro": 12.90, "Cif:Limpador cozinha": 12.90,
-  "Mr. Músculo:Desengordurante": 13.99, "Mr. Músculo:Limpador banheiro": 14.90,
-  "Mr. Músculo:Limpador cozinha": 13.99, "Mr. Músculo:Limpa vidro": 12.90,
-  "Start:Detergente": 2.49, "Start:Desinfetante": 4.49, "Start:Limpador multiuso": 4.99,
-  "Urca:Sabão em pó": 5.49, "Urca:Lava roupas": 7.90, "Urca:Amaciante": 5.99,
-  "Urca:Desinfetante": 4.90, "Urca:Detergente": 3.99, "Urca:Limpador multiuso": 5.49,
-  "Urca:Limpa vidro": 5.99, "Urca:Alvejante": 4.49, "Urca:Saponáceo": 4.49,
-  "Girando Sol:Detergente": 2.49, "Girando Sol:Lava roupas": 8.90, "Girando Sol:Amaciante": 6.90, "Girando Sol:Sabão em pó": 5.99,
-  "Girando Sol:Desinfetante": 5.49, "Girando Sol:Alvejante": 4.99, "Girando Sol:Limpador multiuso": 5.49,
-  "Girando Sol:Limpador banheiro": 6.49, "Girando Sol:Saponáceo": 4.49,
-  "Casa KM:Desinfetante": 5.49, "Casa KM:Limpador multiuso": 5.99,
-  "Spartan:Produto profissional": 32.90, "Spartan:Desengordurante": 32.30, "Spartan:Desinfetante": 28.90, "Spartan:Limpador multiuso": 26.90,
-  "Diversey:Produto profissional": 35.90, "Diversey:Desengordurante": 34.90, "Diversey:Desinfetante": 32.90,
-  "Renko:Limpa vidro": 29.90, "Renko:Desinfetante": 28.90, "Renko:Limpador multiuso": 26.90, "Renko:Produto profissional": 32.90,
-  "Renko:Desengordurante": 28.90, "Renko:Aromatizador": 24.90,
-  "Omo:Alvejante": 9.90,
-  "Bombril:Desinfetante": 4.99, "Bombril:Detergente": 2.99, "Bombril:Amaciante": 7.99, "Bombril:Esponja": 3.49,
-  "Ajax:Desinfetante": 8.50,
-  "Cif:Limpa vidro": 9.90, "Cif:Desengordurante": 12.90,
-  "Mr. Músculo:Limpador multiuso": 13.99,
-  "Minuano:Limpador multiuso": 4.99, "Minuano:Limpa vidro": 5.49, "Minuano:Sabão em pó": 5.49,
-  "Ypê:Limpa vidro": 5.99, "Ypê:Limpador banheiro": 6.90,
-  "Lysol:Limpador banheiro": 16.90,
-  "Downy:Aromatizador": 14.90,
-  "Start:Desengordurante": 5.49, "Start:Saponáceo": 4.49, "Start:Limpador banheiro": 5.99,
-  "Start:Lava roupas": 9.90, "Start:Amaciante": 7.90, "Start:Alvejante": 4.49,
-  "Diversey:Detergente": 24.90, "Diversey:Limpador multiuso": 28.90, "Diversey:Amaciante": 34.90, "Diversey:Alvejante": 32.90,
-  "Spartan:Limpador multiuso": 26.90,
-  "Zupp:Sabão em barra": 6.49, "Girando Sol:Sabão em barra": 3.49, "Minuano:Sabão em barra": 2.99,
-  "Ypê:Sabão em barra": 3.49, "Urca:Pedra sanitária": 3.49, "Ariel:Cápsulas de lavar": 29.90,
+  "Veja:Limpador multiuso": 11.19, "Veja:Desinfetante": 11.89, "Veja:Limpa vidro": 12.59,
+  "Veja:Limpador banheiro": 18.06, "Veja:Desengordurante": 15.26, "Veja:Limpador cozinha": 15.26,
+  "Omo:Sabão em pó": 20.86, "Omo:Lava roupas": 26.46,
+  "Ypê:Detergente": 4.19, "Ypê:Desinfetante": 7.69, "Ypê:Limpador multiuso": 6.99,
+  "Ypê:Lava roupas": 13.86, "Ypê:Sabão em pó": 12.46, "Ypê:Alvejante": 8.39, "Ypê:Amaciante": 10.49,
+  "Bombril:Saponáceo": 6.99, "Bombril:Limpador multiuso": 7.69,
+  "Minuano:Detergente": 2.79, "Minuano:Sabão em pó": 7.69, "Minuano:Amaciante": 9.79, "Minuano:Desinfetante": 6.29,
+  "Brilhante:Sabão em pó": 13.86, "Brilhante:Lava roupas": 19.46, "Brilhante:Amaciante": 12.46, "Brilhante:Alvejante": 9.66,
+  "Ariel:Sabão em pó": 23.66, "Ariel:Lava roupas": 32.06,
+  "Downy:Amaciante": 20.86,
+  "Comfort:Amaciante": 18.06, "Comfort:Aromatizador": 20.86,
+  "Pinho Sol:Desinfetante": 9.66, "Pinho Sol:Limpador multiuso": 10.49, "Pinho Sol:Aromatizador": 12.46,
+  "Lysol:Desinfetante": 20.86, "Lysol:Limpador banheiro": 23.66, "Lysol:Aromatizador": 22.26,
+  "Ajax:Limpador multiuso": 8.75, "Ajax:Desengordurante": 15.39, "Ajax:Limpa vidro": 8.5,
+  "Ajax:Limpador banheiro": 13.86, "Ajax:Limpador cozinha": 15.26,
+  "Cif:Saponáceo": 12.59, "Cif:Limpador multiuso": 10.49, "Cif:Desengordurante": 18.06,
+  "Cif:Limpador banheiro": 18.06, "Cif:Limpador cozinha": 18.06,
+  "Mr. Músculo:Desengordurante": 19.59, "Mr. Músculo:Limpador banheiro": 20.86,
+  "Mr. Músculo:Limpador cozinha": 19.59, "Mr. Músculo:Limpa vidro": 18.06,
+  "Start:Detergente": 3.49, "Start:Desinfetante": 6.29, "Start:Limpador multiuso": 6.99,
+  "Urca:Sabão em pó": 7.69, "Urca:Lava roupas": 11.06, "Urca:Amaciante": 8.39,
+  "Urca:Desinfetante": 6.86, "Urca:Detergente": 5.59, "Urca:Limpador multiuso": 7.69,
+  "Urca:Limpa vidro": 8.39, "Urca:Alvejante": 6.29, "Urca:Saponáceo": 6.29,
+  "Girando Sol:Detergente": 3.49, "Girando Sol:Lava roupas": 12.46, "Girando Sol:Amaciante": 9.66, "Girando Sol:Sabão em pó": 8.39,
+  "Girando Sol:Desinfetante": 7.69, "Girando Sol:Alvejante": 6.99, "Girando Sol:Limpador multiuso": 7.69,
+  "Girando Sol:Limpador banheiro": 9.09, "Girando Sol:Saponáceo": 6.29,
+  "Casa KM:Desinfetante": 7.69, "Casa KM:Limpador multiuso": 8.39,
+  "Spartan:Produto profissional": 46.06, "Spartan:Desengordurante": 45.22, "Spartan:Desinfetante": 40.46, "Spartan:Limpador multiuso": 37.66,
+  "Diversey:Produto profissional": 50.26, "Diversey:Desengordurante": 48.86, "Diversey:Desinfetante": 46.06,
+  "Renko:Limpa vidro": 41.86, "Renko:Desinfetante": 40.46, "Renko:Limpador multiuso": 37.66, "Renko:Produto profissional": 46.06,
+  "Renko:Desengordurante": 40.46, "Renko:Aromatizador": 34.86,
+  "Omo:Alvejante": 13.86,
+  "Bombril:Desinfetante": 6.99, "Bombril:Detergente": 4.19, "Bombril:Amaciante": 11.19, "Bombril:Esponja": 4.89,
+  "Ajax:Desinfetante": 8.5,
+  "Cif:Limpa vidro": 13.86, "Cif:Desengordurante": 18.06,
+  "Mr. Músculo:Limpador multiuso": 19.59,
+  "Minuano:Limpador multiuso": 6.99, "Minuano:Limpa vidro": 7.69, "Minuano:Sabão em pó": 7.69,
+  "Ypê:Limpa vidro": 8.39, "Ypê:Limpador banheiro": 9.66,
+  "Lysol:Limpador banheiro": 23.66,
+  "Downy:Aromatizador": 20.86,
+  "Start:Desengordurante": 7.69, "Start:Saponáceo": 6.29, "Start:Limpador banheiro": 8.39,
+  "Start:Lava roupas": 13.86, "Start:Amaciante": 11.06, "Start:Alvejante": 6.29,
+  "Diversey:Detergente": 34.86, "Diversey:Limpador multiuso": 40.46, "Diversey:Amaciante": 48.86, "Diversey:Alvejante": 46.06,
+  "Spartan:Limpador multiuso": 37.66,
+  "Zupp:Sabão em barra": 9.09, "Girando Sol:Sabão em barra": 4.89, "Minuano:Sabão em barra": 4.19,
+  "Ypê:Sabão em barra": 4.89, "Urca:Pedra sanitária": 4.89, "Ariel:Cápsulas de lavar": 41.86,
 };
 
 // Preços específicos Zupp (id: preço)
 const precosZupp = {
-  9001: 3.49, 9002: 10.44, 9003: 4.95, 9004: 6.99, 9005: 7.69, 9006: 5.29,
-  9007: 10.69, 9008: 9.49, 9009: 2.89, 9010: 5.99, 9011: 7.49, 9012: 3.99,
-  9013: 8.90, 9014: 6.49, 9015: 9.19, 9016: 15.90, 9017: 13.69, 9018: 34.90,
-  9019: 29.90, 9020: 9.49, 9021: 7.19, 9022: 12.29, 9023: 7.59, 9024: 14.90,
-  9025: 5.98, 9026: 18.90, 9027: 3.29, 9028: 9.89,
+  9001: 4.89, 9002: 14.62, 9003: 6.93, 9004: 9.79, 9005: 10.77, 9006: 7.41,
+  9007: 14.97, 9008: 13.29, 9009: 4.05, 9010: 8.39, 9011: 10.49, 9012: 5.59,
+  9013: 12.46, 9014: 9.09, 9015: 12.87, 9016: 22.26, 9017: 19.17, 9018: 48.86,
+  9019: 41.86, 9020: 13.29, 9021: 10.07, 9022: 17.21, 9023: 10.63, 9024: 20.86,
+  9025: 8.37, 9026: 26.46, 9027: 4.61, 9028: 13.85,
 };
 
 // Função para obter preço (atacado + 25%)
@@ -489,7 +489,7 @@ const catalogProducts = [
   { nome: 'Ajax Limpa Vidros 500ml', marca: 'Ajax', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280506/g.jpg' },
   // ──────────── ARIEL ────────────
   { nome: 'Ariel Sabão Líquido Expert Concentrado', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151370/g.jpg', tamanhos: [
-    { label: '1,2L', preco: 22.90 },
+    { label: '1,2L', preco: 22.9 },
     { label: '2L', preco: 35.32 },
     { label: '3L', preco: 49.81 }
   ] },
@@ -499,7 +499,7 @@ const catalogProducts = [
   { nome: 'Ariel Sabão Líquido Cores Radiantes Toque de Downy 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144721/g.jpg' },
   { nome: 'Ariel Sabão Líquido Hipoalergênico Suave e Gentil 2L', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158502/p.jpg' },
   { nome: 'Ariel Sabão em Pó Expert', marca: 'Ariel', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/979613/p.jpg', tamanhos: [
-    { label: '800g', preco: 16.90 },
+    { label: '800g', preco: 16.9 },
     { label: '1,6kg', preco: 30.42 }
   ] },
   { nome: 'Ariel Power Pods 3 em 1 Cápsulas', marca: 'Ariel', categoria: 'Cápsulas de lavar', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144554/p.jpg' },
@@ -526,17 +526,17 @@ const catalogProducts = [
   { nome: 'Mon Bijou Amaciante Diluído 2L', marca: 'Bombril', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158253/m.jpg' },
   // ──────────── BRILHANTE ────────────
   { nome: 'Brilhante Sabão em Pó Limpeza Total', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158183/g.jpg', tamanhos: [
-    { label: '800g', preco: 9.90 },
+    { label: '800g', preco: 9.9 },
     { label: '1,6kg', preco: 17.82 }
   ] },
   { nome: 'Brilhante Sabão em Pó Cuidado Total', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156226/m.jpg', tamanhos: [
-    { label: '800g', preco: 9.90 },
+    { label: '800g', preco: 9.9 },
     { label: '1,6kg', preco: 17.82 }
   ] },
   { nome: 'Brilhante Sabão em Pó Sem Perfume Ação Total 800g', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1154402/g.jpg' },
   { nome: 'Brilhante Sabão em Pó Higiene Total 800g', marca: 'Brilhante', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1157252/p.jpg' },
   { nome: 'Brilhante Sabão Líquido Limpeza Total', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1157253/g.jpg', tamanhos: [
-    { label: '1L', preco: 13.90 },
+    { label: '1L', preco: 13.9 },
     { label: '3L', preco: 35.29 }
   ] },
   { nome: 'Brilhante Sabão Líquido Ação Total Sem Perfume 1L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139033/m.jpg' },
@@ -562,11 +562,11 @@ const catalogProducts = [
   // ──────────── CIF ────────────
   { nome: 'Cif Cremoso Original', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985110/m.jpg', tamanhos: [
     { label: '250ml', preco: 8.99 },
-    { label: '450ml', preco: 14.80 }
+    { label: '450ml', preco: 14.8 }
   ] },
   { nome: 'Cif Cremoso Limão', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156231/p.jpg', tamanhos: [
     { label: '250ml', preco: 8.99 },
-    { label: '450ml', preco: 14.80 }
+    { label: '450ml', preco: 14.8 }
   ] },
   { nome: 'Cif Cremoso Laranja 250ml', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158152/g.jpg' },
   { nome: 'Cif Cremoso Limpa Inox 250ml', marca: 'Cif', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1158152/g.jpg' },
@@ -580,11 +580,11 @@ const catalogProducts = [
   { nome: 'Cif Desengordurante Cozinha 500ml', marca: 'Cif', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144587/g.jpg' },
   // ──────────── COMFORT ────────────
   { nome: 'Comfort Concentrado Puro Cuidado', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1105804/p.jpg', tamanhos: [
-    { label: '500ml', preco: 12.90 },
+    { label: '500ml', preco: 12.9 },
     { label: '1L', preco: 23.22 }
   ] },
   { nome: 'Comfort Concentrado Frescor Intenso', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1138795/g.jpg', tamanhos: [
-    { label: '500ml', preco: 12.90 },
+    { label: '500ml', preco: 12.9 },
     { label: '1L', preco: 23.22 },
     { label: '1,5L', preco: 32.75 }
   ] },
@@ -614,21 +614,21 @@ const catalogProducts = [
   // ──────────── DOWNY ────────────
   { nome: 'Downy Amaciante Concentrado Brisa de Verão 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139602/g.jpg' },
   { nome: 'Downy Amaciante Concentrado Lírios do Campo', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1143933/g.jpg', tamanhos: [
-    { label: '500ml', preco: 14.90 },
+    { label: '500ml', preco: 14.9 },
     { label: '3L', preco: 68.09 }
   ] },
   { nome: 'Downy Amaciante Concentrado Frescor da Primavera', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1272779/g.jpg', tamanhos: [
-    { label: '500ml', preco: 14.90 },
+    { label: '500ml', preco: 14.9 },
     { label: '1L', preco: 26.82 }
   ] },
   { nome: 'Downy Amaciante Concentrado Água Fresca 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270958/p.jpg' },
   { nome: 'Downy Amaciante Concentrado Brisa Intenso', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139602/g.jpg', tamanhos: [
-    { label: '500ml', preco: 14.90 },
+    { label: '500ml', preco: 14.9 },
     { label: '1L', preco: 26.82 }
   ] },
   { nome: 'Downy Amaciante Concentrado Brisa Suave 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1003769/m.jpg' },
   { nome: 'Downy Amaciante Concentrado Verão Tropical', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139604/g.jpg', tamanhos: [
-    { label: '500ml', preco: 14.90 },
+    { label: '500ml', preco: 14.9 },
     { label: '1,5L', preco: 37.83 }
   ] },
   { nome: 'Downy Amaciante Concentrado Lavanda Seiva de Alfazema 1,5L', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969017/p.jpg' },
@@ -651,24 +651,24 @@ const catalogProducts = [
   { nome: 'Girando Sol Detergente Glicerina 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142485/p.jpg' },
   { nome: 'Girando Sol Amaciante Concentrado Coco e Baunilha 1L', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg' },
   { nome: 'Girando Sol Amaciante Rosas e Lavanda', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141454/m.jpg', tamanhos: [
-    { label: '2L', preco: 6.90 },
+    { label: '2L', preco: 6.9 },
     { label: '5L', preco: 15.01 }
   ] },
   { nome: 'Girando Sol Amaciante Floral Paris', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1149254/g.jpg', tamanhos: [
-    { label: '2L', preco: 6.90 },
+    { label: '2L', preco: 6.9 },
     { label: '5L', preco: 15.01 }
   ] },
   { nome: 'Girando Sol Amaciante Paixão Secreta', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146579/m.jpg', tamanhos: [
-    { label: '2L', preco: 6.90 },
+    { label: '2L', preco: 6.9 },
     { label: '5L', preco: 15.01 }
   ] },
   { nome: 'Girando Sol Amaciante Hipoalergênico', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153030/m.jpg', tamanhos: [
-    { label: '2L', preco: 6.90 },
+    { label: '2L', preco: 6.9 },
     { label: '5L', preco: 15.01 }
   ] },
   { nome: 'Girando Sol Amaciante Hipoalergênico Talco Delicado 2L', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142498/p.jpg' },
   { nome: 'Girando Sol Lava Roupas Líquido Ação Total', marca: 'Girando Sol', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1153031/p.jpg', tamanhos: [
-    { label: '1L', preco: 8.90 },
+    { label: '1L', preco: 8.9 },
     { label: '5L', preco: 34.84 }
   ] },
   { nome: 'Girando Sol Lava Roupas Líquido Hipoalergênico 2L', marca: 'Girando Sol', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1109869/p.jpg' },
@@ -738,21 +738,21 @@ const catalogProducts = [
   { nome: 'Mr. Músculo Uso Geral Perfumado by Glade Lavanda 5L', marca: 'Mr. Músculo', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/981665/g.jpg' },
   // ──────────── OMO ────────────
   { nome: 'Omo Sabão em Pó Lavagem Perfeita', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1147839/p.jpg', tamanhos: [
-    { label: '800g', preco: 14.90 },
+    { label: '800g', preco: 14.9 },
     { label: '1,6kg', preco: 26.82 },
     { label: '2,2kg', preco: 35.13 }
   ] },
   { nome: 'Omo Sabão em Pó Lavagem Perfeita Sanitiza & Higieniza', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148338/p.jpg', tamanhos: [
-    { label: '800g', preco: 14.90 },
+    { label: '800g', preco: 14.9 },
     { label: '1,6kg', preco: 26.82 }
   ] },
   { nome: 'Omo Sabão em Pó Puro Cuidado', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146471/p.jpg', tamanhos: [
-    { label: '800g', preco: 14.90 },
+    { label: '800g', preco: 14.9 },
     { label: '1,6kg', preco: 26.82 }
   ] },
   { nome: 'Omo Sabão em Pó Lavanda 800g', marca: 'Omo', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152859/g.jpg' },
   { nome: 'Omo Sabão Líquido Lavagem Perfeita', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972014/p.jpg', tamanhos: [
-    { label: '1L', preco: 18.90 },
+    { label: '1L', preco: 18.9 },
     { label: '3L', preco: 47.98 }
   ] },
   { nome: 'Omo Sabão Líquido Puro Cuidado 1L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/972016/g.jpg' },
@@ -767,12 +767,12 @@ const catalogProducts = [
   { nome: 'Omo Cápsulas 3 em 1 Lavagem Perfeita', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151865/p.jpg' },
   // ──────────── PINHO SOL ────────────
   { nome: 'Pinho Sol Desinfetante Original', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/968385/m.jpg', tamanhos: [
-    { label: '500ml', preco: 6.90 },
+    { label: '500ml', preco: 6.9 },
     { label: '1L', preco: 12.42 },
     { label: '3,8L', preco: 38.53 }
   ] },
   { nome: 'Pinho Sol Desinfetante Lavanda', marca: 'Pinho Sol', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279516/g.jpg', tamanhos: [
-    { label: '500ml', preco: 6.90 },
+    { label: '500ml', preco: 6.9 },
     { label: '1L', preco: 12.42 },
     { label: '3,8L', preco: 38.53 }
   ] },
@@ -783,12 +783,12 @@ const catalogProducts = [
   { nome: 'Pinho Sol Limpador Multiuso Lavanda 500ml', marca: 'Pinho Sol', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/987720/m.jpg' },
   // ──────────── RENKO ────────────
   { nome: 'Renko Klyo Limpa Vidros', marca: 'Renko', categoria: 'Limpa vidro', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpa_vidros_klyo_1l_renko_4748_1_255f5d77958d0fb5f2cd167b543cdf24.jpg', tamanhos: [
-    { label: '1L', preco: 29.90 },
+    { label: '1L', preco: 29.9 },
     { label: '5L', preco: 117.06 }
   ] },
   { nome: 'Renko Klyo Limpa Inox 1L', marca: 'Renko', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/klyo_limpa_inox_1l_renko_4744_1_c18ebb07104822708aa781322c3cec1a.jpg' },
   { nome: 'Renko Klyo Oxy Limpador de Uso Geral', marca: 'Renko', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpador_de_uso_geral_a_base_de_peroxido_klyo_oxy_1l_renko_2842_1_fd4db715a201b0a5b8746a5739ad7f92.jpg', tamanhos: [
-    { label: '1L', preco: 26.90 },
+    { label: '1L', preco: 26.9 },
     { label: '5L', preco: 105.31 }
   ] },
   { nome: 'Renko Klyo Oxy Floral Limpador de Uso Geral 5L', marca: 'Renko', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpador_de_uso_geral_a_base_de_peroxido_klyo_oxy_floral_1l_renko_3515_1_d410bd1864a34e193e4fc64ebaedb4b9.jpg' },
@@ -796,15 +796,15 @@ const catalogProducts = [
   { nome: 'Renko Chef Detergente Desengordurante Alcalino 1L', marca: 'Renko', categoria: 'Desengordurante', img: 'https://images.tcdn.com.br/img/img_prod/435415/detergente_desengordurante_alcalino_chef_1l_renko_2941_1_5d8e5571ce8db1b0a7ed874aff65ff4d.jpg' },
   { nome: 'Renko Chef Clor Detergente Desinfetante Clorado 1L', marca: 'Renko', categoria: 'Desinfetante', img: 'https://images.tcdn.com.br/img/img_prod/435415/desinfetante_uso_geral_mirax_floral_bouquet_concentrado_5l_renko_2258_1_20231229112924.png' },
   { nome: 'Renko Magic Flot Limpador por Flotação', marca: 'Renko', categoria: 'Produto profissional', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpador_por_flotacao_magic_flot_1l_renko_3331_1_ab1b7ea19b5ef345a288045842338b18_20231229112836.jpg', tamanhos: [
-    { label: '1L', preco: 32.90 },
-    { label: '5L', preco: 128.80 }
+    { label: '1L', preco: 32.9 },
+    { label: '5L', preco: 128.8 }
   ] },
   { nome: 'Renko Mirax Air Neutralizador de Odor 1L', marca: 'Renko', categoria: 'Aromatizador', img: 'https://images.tcdn.com.br/img/img_prod/435415/mirax_air_odorizador_de_ambiente_limao_siciliano_500ml_renko_4742_1_7f2b1ec069163cce466e427e2652ff9b.jpg' },
   { nome: 'Renko Mirax Tecido e Ar Neutralizador de Odor 5L', marca: 'Renko', categoria: 'Aromatizador', img: 'https://images.tcdn.com.br/img/img_prod/435415/neutralizador_de_odor_mirax_tecido_e_ar_5l_renko_2284_1_169004f25a6a106d4b3f5bc38f5187c1.jpg' },
   { nome: 'Renko Eco Orange Removedor Desengraxante 1L', marca: 'Renko', categoria: 'Desengordurante', img: 'https://images.tcdn.com.br/img/img_prod/435415/removedor_desengraxante_a_base_de_d_limoneno_eco_orange_1l_1472_1_a03fd6dded3f1be71b011f1235751f25.jpg' },
   { nome: 'Renko Nixx Flot Removedor de Manchas em Tecidos', marca: 'Renko', categoria: 'Produto profissional', img: 'https://images.tcdn.com.br/img/img_prod/435415/removedor_de_manchas_em_tecidos_nixx_flot_1l_renko_3213_1_c1c9b2266ad4a64ef58f8ebc98fd2e35_20231229112922.jpg', tamanhos: [
-    { label: '1L', preco: 32.90 },
-    { label: '5L', preco: 128.80 }
+    { label: '1L', preco: 32.9 },
+    { label: '5L', preco: 128.8 }
   ] },
   { nome: 'Renko HT Nixx Prof Finalizador de Passadoria 1L', marca: 'Renko', categoria: 'Produto profissional', img: 'https://images.tcdn.com.br/img/img_prod/435415/finalizador_de_passadoria_ht_nixx_prof_1l_renko_3325_1_4620f31a714266138220b3ddc66d989c_20231229112833.jpg' },
   // ──────────── START ────────────
@@ -834,13 +834,13 @@ const catalogProducts = [
   ] },
   { nome: 'Urca Lava Roupas em Pó PRO 8kg', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152905/m.jpg' },
   { nome: 'Urca Lava Roupas Líquido', marca: 'Urca', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156345/m.jpg', tamanhos: [
-    { label: '1L', preco: 7.90 },
+    { label: '1L', preco: 7.9 },
     { label: '3L', preco: 20.06 },
     { label: '5L', preco: 30.93 }
   ] },
   { nome: 'Urca Lava Roupas Líquido Coco', marca: 'Urca', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1143617/p.jpg', tamanhos: [
-    { label: '500ml', preco: 7.90 },
-    { label: '3L', preco: 36.10 }
+    { label: '500ml', preco: 7.9 },
+    { label: '3L', preco: 36.1 }
   ] },
   { nome: 'Urca Amaciante Concentrado', marca: 'Urca', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/992052/g.jpg', tamanhos: [
     { label: '500ml', preco: 5.99 },
@@ -852,12 +852,12 @@ const catalogProducts = [
     { label: '5L', preco: 13.03 }
   ] },
   { nome: 'Urca Desinfetante', marca: 'Urca', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141365/m.jpg', tamanhos: [
-    { label: '500ml', preco: 4.90 },
+    { label: '500ml', preco: 4.9 },
     { label: '2L', preco: 15.88 },
     { label: '5L', preco: 34.53 }
   ] },
-  { nome: 'Urca Lava Louças Clear 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1276941/m.jpg', tamanhos: [{ label: '5L', preco: 16.90 }] },
-  { nome: 'Urca Lava Louças Neutro 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145815/g.jpg', tamanhos: [{ label: '5L', preco: 16.90 }] },
+  { nome: 'Urca Lava Louças Clear 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1276941/m.jpg', tamanhos: [{ label: '5L', preco: 16.9 }] },
+  { nome: 'Urca Lava Louças Neutro 5L', marca: 'Urca', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145815/g.jpg', tamanhos: [{ label: '5L', preco: 16.9 }] },
   { nome: 'Urca Multiuso com Álcool 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145154/p.jpg' },
   { nome: 'Urca Multiuso Lavanda 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/987251/m.jpg' },
   { nome: 'Urca Multiuso Hortelã 500ml', marca: 'Urca', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146661/g.jpg' },
@@ -873,7 +873,7 @@ const catalogProducts = [
   ] },
   { nome: 'Urca Tira Manchas', marca: 'Urca', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1143618/p.jpg', tamanhos: [
     { label: '500ml', preco: 4.49 },
-    { label: '1,5L', preco: 11.40 },
+    { label: '1,5L', preco: 11.4 },
     { label: '5L', preco: 31.64 }
   ] },
   { nome: 'Urca Sabão em Pedra Coco', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152904/p.jpg', tamanhos: [
@@ -893,7 +893,7 @@ const catalogProducts = [
   // ──────────── VEJA ────────────
   { nome: 'Veja Multiuso Original', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991559/g.jpg', tamanhos: [
     { label: '500ml', preco: 7.99 },
-    { label: '5L', preco: 56.30 }
+    { label: '5L', preco: 56.3 }
   ] },
   { nome: 'Veja Multiuso Lavanda com Álcool 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985117/m.jpg' },
   { nome: 'Veja Multiuso Campestre 500ml', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985118/m.jpg' },
@@ -928,9 +928,9 @@ const catalogProducts = [
   { nome: 'Ypê Detergente Antibac 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273786/p.jpg' },
   { nome: 'Ypê Detergente Green 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139957/g.jpg' },
   { nome: 'Ypê Detergente Concentrado Antibac 416ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985377/g.jpg' },
-  { nome: 'Ypê Detergente Pro 7L', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1272478/p.jpg', tamanhos: [{ label: '7L', preco: 18.90 }] },
+  { nome: 'Ypê Detergente Pro 7L', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1272478/p.jpg', tamanhos: [{ label: '7L', preco: 18.9 }] },
   { nome: 'Ypê Sabão em Pó Power Act', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279670/p.jpg', tamanhos: [
-    { label: '800g', preco: 8.90 },
+    { label: '800g', preco: 8.9 },
     { label: '1,6kg', preco: 16.02 }
   ] },
   { nome: 'Ypê Sabão em Pó Antibac 800g', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/984439/g.jpg' },
@@ -964,7 +964,7 @@ const catalogProducts = [
   { nome: 'Ypê Multiuso Antibac 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273784/m.jpg' },
   { nome: 'Ypê Multiuso Original 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/969951/p.jpg' },
   { nome: 'Ypê Limpador Perfumado 500ml', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139681/g.jpg' },
-  { nome: 'Ypê Limpador Perfumado Pro 5L', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269298/g.jpg', tamanhos: [{ label: '5L', preco: 22.90 }] },
+  { nome: 'Ypê Limpador Perfumado Pro 5L', marca: 'Ypê', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269298/g.jpg', tamanhos: [{ label: '5L', preco: 22.9 }] },
   { nome: 'Ypê Limpa Vidros 500ml', marca: 'Ypê', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269300/p.jpg' },
   { nome: 'Ypê Tira Manchas em Pó 450g', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/929119/g.jpg' },
   { nome: 'Ypê Tira Manchas Líquido 1L', marca: 'Ypê', categoria: 'Alvejante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/929119/g.jpg' },
@@ -981,49 +981,49 @@ const catalogProducts = [
   { nome: 'Spartan Detergente Neutro Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://images.tcdn.com.br/img/img_prod/435415/detergente_para_lavar_roupas_com_braqueador_optico_brightenfresh_5l_spartan_3145_1_19f32d61ed7cb8fba066a2c30427bd9d.jpg' },
   { nome: 'Spartan Limpador de Pisos Profissional 5L', marca: 'Spartan', categoria: 'Produto profissional', img: 'https://www.lojadoprofissional.com.br/cdn/imagens/produtos/det/cj-24-limpador-desincrustante-de-pisos-5-litros-spartan-98489d056897f19677d5eeffb9ab9db3.jpg' },
   // ──────────── UAU (Ingleza) ────────────
-  { nome: 'Limpador UAU Multiuso Lavanda', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '500ml', preco: 4.12 }, { label: '1L', preco: 7.99 }, { label: '2L', preco: 11.50 }] },
-  { nome: 'Limpador UAU Multiuso Flores Vermelhas e Sedução', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6839.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '1,8L', preco: 11.90 }] },
+  { nome: 'Limpador UAU Multiuso Lavanda', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/992590.jpg', tamanhos: [{ label: '500ml', preco: 4.12 }, { label: '1L', preco: 7.99 }, { label: '2L', preco: 11.5 }] },
+  { nome: 'Limpador UAU Multiuso Flores Vermelhas e Sedução', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6839.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '1,8L', preco: 11.9 }] },
   { nome: 'Limpador UAU Multiuso Flores e Frescor 500ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/990649-31-10-2023-17-06-26-47.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }] },
   { nome: 'Limpador UAU Multiuso Chá Branco 480ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7891242811263-04-02-2026-16-31-03-461.jpg', tamanhos: [{ label: '480ml', preco: 6.99 }] },
   { nome: 'Limpador UAU Multiuso Limão Siciliano 500ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/960858-31-10-2023-17-20-11-930.jpg', tamanhos: [{ label: '500ml', preco: 6.99 }] },
   { nome: 'UAU Neutraliza Odores Multiuso 500ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/970065-31-10-2023-17-10-57-465.jpg', tamanhos: [{ label: '500ml', preco: 4.19 }] },
-  { nome: 'Limpador UAU Desengordurante Limão 500ml', marca: 'UAU', categoria: 'Desengordurante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5983.jpg', tamanhos: [{ label: '500ml', preco: 7.90 }] },
+  { nome: 'Limpador UAU Desengordurante Limão 500ml', marca: 'UAU', categoria: 'Desengordurante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5983.jpg', tamanhos: [{ label: '500ml', preco: 7.9 }] },
   { nome: 'UAU Cloro Ativo 4 em 1 500ml', marca: 'UAU', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/986983-31-10-2023-16-58-58-476.jpg', tamanhos: [{ label: '500ml', preco: 6.29 }] },
-  { nome: 'UAU Banheiro 7 em 1 Gatilho 500ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://uauingleza.com.br/wp-content/uploads/2024/02/Banheiro-7-em-1-gatilho-500mL.webp', tamanhos: [{ label: '500ml', preco: 12.90 }] },
-  { nome: 'UAU Banheiro 7 em 1 Squeeze 500ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://uauingleza.com.br/wp-content/uploads/2024/03/UAU-Banheiro-500ml.webp', tamanhos: [{ label: '500ml', preco: 9.90 }] },
+  { nome: 'UAU Banheiro 7 em 1 Gatilho 500ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://uauingleza.com.br/wp-content/uploads/2024/02/Banheiro-7-em-1-gatilho-500mL.webp', tamanhos: [{ label: '500ml', preco: 12.9 }] },
+  { nome: 'UAU Banheiro 7 em 1 Squeeze 500ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://uauingleza.com.br/wp-content/uploads/2024/03/UAU-Banheiro-500ml.webp', tamanhos: [{ label: '500ml', preco: 9.9 }] },
   { nome: 'Limpa Vidros UAU Blindex Gatilho 500ml', marca: 'UAU', categoria: 'Limpa vidro', img: 'https://uauingleza.com.br/wp-content/uploads/2024/03/UAU-Blindex-Limpa-Vidros-Gatilho-500ml.webp', tamanhos: [{ label: '500ml', preco: 10.23 }] },
-  { nome: 'Limpa Box UAU 200ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/986985-limp-uau-box-200ml.jpg', tamanhos: [{ label: '200ml', preco: 9.90 }] },
-  { nome: 'Limpador UAU Pisos Laminados 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/994434-1.jpg', tamanhos: [{ label: '750ml', preco: 12.90 }] },
-  { nome: 'Limpa Pisos UAU Porcelanato 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/994435.jpg', tamanhos: [{ label: '750ml', preco: 12.90 }] },
-  { nome: 'Limpador UAU Pisos de Madeira 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7390.jpg', tamanhos: [{ label: '750ml', preco: 12.90 }] },
-  { nome: 'Lava Roupas Líquido UAU Active', marca: 'UAU', categoria: 'Lava roupas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/962032-1-22-11-2024-15-00-45-51.jpg', tamanhos: [{ label: '3L', preco: 24.90 }, { label: '5L', preco: 34.90 }] },
-  { nome: 'Amaciante UAU Rosas e Sedução', marca: 'UAU', categoria: 'Amaciante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/959339-1-22-11-2024-16-13-36-134.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }, { label: '2L', preco: 12.90 }] },
+  { nome: 'Limpa Box UAU 200ml', marca: 'UAU', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/986985-limp-uau-box-200ml.jpg', tamanhos: [{ label: '200ml', preco: 9.9 }] },
+  { nome: 'Limpador UAU Pisos Laminados 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/994434-1.jpg', tamanhos: [{ label: '750ml', preco: 12.9 }] },
+  { nome: 'Limpa Pisos UAU Porcelanato 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/994435.jpg', tamanhos: [{ label: '750ml', preco: 12.9 }] },
+  { nome: 'Limpador UAU Pisos de Madeira 750ml', marca: 'UAU', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7390.jpg', tamanhos: [{ label: '750ml', preco: 12.9 }] },
+  { nome: 'Lava Roupas Líquido UAU Active', marca: 'UAU', categoria: 'Lava roupas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/962032-1-22-11-2024-15-00-45-51.jpg', tamanhos: [{ label: '3L', preco: 24.9 }, { label: '5L', preco: 34.9 }] },
+  { nome: 'Amaciante UAU Rosas e Sedução', marca: 'UAU', categoria: 'Amaciante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/959339-1-22-11-2024-16-13-36-134.jpg', tamanhos: [{ label: '500ml', preco: 9.9 }, { label: '2L', preco: 12.9 }] },
   // ──────────── CASTELO (VINAGRE DE LIMPEZA) ────────────
   { nome: 'Vinagre de Álcool Castelo 750ml', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155438-800-auto?v=637516767918600000', tamanhos: [{ label: '750ml', preco: 4.49 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Limpeza', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155508-800-auto?v=637539134473730000', tamanhos: [{ label: '2L', preco: 12.90, img: 'https://t76496.vtexassets.com/arquivos/ids/155508-800-auto?v=637539134473730000' }, { label: '10L', preco: 55.00, img: 'https://t76496.vtexassets.com/arquivos/ids/155509-800-auto?v=637539134482800000' }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Maçã Verde 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155510-800-auto?v=637539134489070000', tamanhos: [{ label: '2L', preco: 13.90 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Citrus 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/156134-800-auto?v=638731539749500000', tamanhos: [{ label: '2L', preco: 13.90 }] },
-  { nome: 'Vinagre de Álcool Castelo 6% Limpeza e Bactericida 5L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155509-800-auto?v=637539134482800000', tamanhos: [{ label: '5L', preco: 24.20 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155508-800-auto?v=637539134473730000', tamanhos: [{ label: '2L', preco: 12.9, img: 'https://t76496.vtexassets.com/arquivos/ids/155508-800-auto?v=637539134473730000' }, { label: '10L', preco: 55.0, img: 'https://t76496.vtexassets.com/arquivos/ids/155509-800-auto?v=637539134482800000' }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Maçã Verde 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155510-800-auto?v=637539134489070000', tamanhos: [{ label: '2L', preco: 13.9 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Citrus 2L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/156134-800-auto?v=638731539749500000', tamanhos: [{ label: '2L', preco: 13.9 }] },
+  { nome: 'Vinagre de Álcool Castelo 6% Limpeza e Bactericida 5L', marca: 'Castelo', categoria: 'Limpador multiuso', img: 'https://t76496.vtexassets.com/arquivos/ids/155509-800-auto?v=637539134482800000', tamanhos: [{ label: '5L', preco: 24.2 }] },
   // ──────────── BRANQUINHO ────────────
-  { nome: 'Branquinho Sabão Querosene 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
-  { nome: 'Branquinho Limpador Multiuso 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
-  { nome: 'Branquinho Limpeza Pesada', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '2L', preco: 6.40, img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg' }, { label: '5L', preco: 18.90, img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg' }] },
-  { nome: 'Branquinho Desengordurante', marca: 'Branquinho', categoria: 'Desengordurante', img: 'https://valescaind.com.br/wp-content/uploads/2021/05/Untitled-1.jpg', tamanhos: [{ label: '1L', preco: 8.90, img: 'https://valescaind.com.br/wp-content/uploads/2021/05/Untitled-1.jpg' }, { label: '2L', preco: 14.90, img: 'https://valescaind.com.br/wp-content/uploads/2021/05/branquinho-2.jpg' }] },
-  { nome: 'Branquinho Sabão Líquido 2L', marca: 'Branquinho', categoria: 'Lava roupas', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '2L', preco: 24.90 }] },
+  { nome: 'Branquinho Sabão Querosene 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.3 }] },
+  { nome: 'Branquinho Limpador Multiuso 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.3 }] },
+  { nome: 'Branquinho Limpeza Pesada', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '2L', preco: 6.4, img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg' }, { label: '5L', preco: 18.9, img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg' }] },
+  { nome: 'Branquinho Desengordurante', marca: 'Branquinho', categoria: 'Desengordurante', img: 'https://valescaind.com.br/wp-content/uploads/2021/05/Untitled-1.jpg', tamanhos: [{ label: '1L', preco: 8.9, img: 'https://valescaind.com.br/wp-content/uploads/2021/05/Untitled-1.jpg' }, { label: '2L', preco: 14.9, img: 'https://valescaind.com.br/wp-content/uploads/2021/05/branquinho-2.jpg' }] },
+  { nome: 'Branquinho Sabão Líquido 2L', marca: 'Branquinho', categoria: 'Lava roupas', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '2L', preco: 24.9 }] },
   // ──────────── PRODUTOS 5L (ECONÔMICOS) ────────────
-  { nome: 'Omo Lava Roupas Líquido Lavagem Perfeita 5L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156232/p.jpg', tamanhos: [{ label: '5L', preco: 63.90 }] },
-  { nome: 'Brilhante Lava Roupas Líquido Limpeza Total 5L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145004/g.jpg', tamanhos: [{ label: '5L', preco: 45.80 }] },
-  { nome: 'Comfort Amaciante Azul 5L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145003/g.jpg', tamanhos: [{ label: '5L', preco: 44.90 }] },
+  { nome: 'Omo Lava Roupas Líquido Lavagem Perfeita 5L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156232/p.jpg', tamanhos: [{ label: '5L', preco: 63.9 }] },
+  { nome: 'Brilhante Lava Roupas Líquido Limpeza Total 5L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145004/g.jpg', tamanhos: [{ label: '5L', preco: 45.8 }] },
+  { nome: 'Comfort Amaciante Azul 5L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145003/g.jpg', tamanhos: [{ label: '5L', preco: 44.9 }] },
   { nome: 'Ypê Amaciante Aconchego Azul 5L', marca: 'Ypê', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270469/g.jpg', tamanhos: [{ label: '5L', preco: 19.99 }] },
   { nome: 'Veja Multiuso Original Pro Line 5L', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283521/g.jpg', tamanhos: [{ label: '5L', preco: 39.55 }] },
   // ──────────── PRODUTOS 7L / 10L / 20L (PROFISSIONAIS - GRANDE VOLUME) ────────────
   { nome: 'Omo Lavagem Perfeita PRO 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1148340/g.jpg', tamanhos: [{ label: '7L', preco: 76.99 }] },
   { nome: 'Omo Perfect White PRO 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151512/m.jpg', tamanhos: [{ label: '7L', preco: 76.99 }] },
-  { nome: 'Omo PRO Lavanderia Concentrado Original 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://tb0932.vtexassets.com/arquivos/ids/174505-800-auto', tamanhos: [{ label: '7L', preco: 152.00 }] },
-  { nome: 'Brilhante Alta Performance PRO 7L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152683/g.jpg', tamanhos: [{ label: '7L', preco: 55.90 }] },
-  { nome: 'Comfort PRO Original 7L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '7L', preco: 57.90 }] },
-  { nome: 'Comfort Profissional Classic 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 45.00 }] },
-  { nome: 'Comfort Lavanderia Concentrado 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 185.00 }] },
+  { nome: 'Omo PRO Lavanderia Concentrado Original 7L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://tb0932.vtexassets.com/arquivos/ids/174505-800-auto', tamanhos: [{ label: '7L', preco: 152.0 }] },
+  { nome: 'Brilhante Alta Performance PRO 7L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152683/g.jpg', tamanhos: [{ label: '7L', preco: 55.9 }] },
+  { nome: 'Comfort PRO Original 7L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '7L', preco: 57.9 }] },
+  { nome: 'Comfort Profissional Classic 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 45.0 }] },
+  { nome: 'Comfort Lavanderia Concentrado 10L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150479/g.jpg', tamanhos: [{ label: '10L', preco: 185.0 }] },
   { nome: 'Comfort Super Concentrado PRO 20L', marca: 'Comfort', categoria: 'Amaciante', img: 'https://tb0932.vtexassets.com/arquivos/ids/169104/Amaciante-Roupas-Perfumadas-20L-105358.png', tamanhos: [{ label: '20L', preco: 796.33 }] },
   // ──────────── PATO ────────────
   { nome: 'Pato Desinfetante Violeta Virt 750ml', marca: 'Pato', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7894650016084-29-01-2026-14-59-30-574.jpg', tamanhos: [{ label: '750ml', preco: 7.99 }] },
@@ -1032,113 +1032,113 @@ const catalogProducts = [
   { nome: 'Pato Pastilha Adesiva Floral', marca: 'Pato', categoria: 'Pedra sanitária', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937403-07-12-2023-15-22-03-769.jpeg', tamanhos: [{ label: 'Refil', preco: 10.49 }] },
   { nome: 'Pato Gel Adesivo Citrus', marca: 'Pato', categoria: 'Pedra sanitária', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7894650009147_1-09-03-2026-10-25-11-184.jpg', tamanhos: [{ label: 'Refil 38g', preco: 9.99 }] },
   // ──────────── LYSOFORM ────────────
-  { nome: 'Lysoform Desinfetante Bruto Original', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/3700-19-02-2024-13-10-19-06.jpg', tamanhos: [{ label: '500ml', preco: 11.90 }, { label: '1L', preco: 18.90 }, { label: '5L', preco: 46.90 }] },
-  { nome: 'Lysoform Desinfetante Uso Geral Lavanda', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/942357-19-02-2024-11-26-52-213.jpg', tamanhos: [{ label: '1L', preco: 12.90 }, { label: '2L', preco: 22.90 }, { label: '5L', preco: 49.90 }] },
-  { nome: 'Lysoform Desinfetante Uso Geral Citrus', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937685-02-03-2023-17-11-03-767.jpg', tamanhos: [{ label: '1L', preco: 12.90 }, { label: '2L', preco: 22.90 }] },
-  { nome: 'Lysoform Desinfetante Uso Geral Suave Odor', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936807-29-09-2022-18-06-38-876.jpg', tamanhos: [{ label: '1L', preco: 12.90 }, { label: '2L', preco: 22.90 }] },
-  { nome: 'Lysoform Desinfetante Uso Geral Original 2L', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936808-29-09-2022-18-01-51-776.jpg', tamanhos: [{ label: '2L', preco: 22.90 }] },
-  { nome: 'Lysoform Desinfetante Aerossol Original 432ml', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937687-21-03-2023-19-01-44-103.jpg', tamanhos: [{ label: '432ml', preco: 24.90 }] },
-  { nome: 'Lysoform Tira Limo Trigga 500ml', marca: 'Lysoform', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/imagem-provisoria-28-04-2026-15-59-34-363.jpeg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  { nome: 'Lysoform Desinfetante Bruto Original', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/3700-19-02-2024-13-10-19-06.jpg', tamanhos: [{ label: '500ml', preco: 11.9 }, { label: '1L', preco: 18.9 }, { label: '5L', preco: 46.9 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Lavanda', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/942357-19-02-2024-11-26-52-213.jpg', tamanhos: [{ label: '1L', preco: 12.9 }, { label: '2L', preco: 22.9 }, { label: '5L', preco: 49.9 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Citrus', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937685-02-03-2023-17-11-03-767.jpg', tamanhos: [{ label: '1L', preco: 12.9 }, { label: '2L', preco: 22.9 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Suave Odor', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936807-29-09-2022-18-06-38-876.jpg', tamanhos: [{ label: '1L', preco: 12.9 }, { label: '2L', preco: 22.9 }] },
+  { nome: 'Lysoform Desinfetante Uso Geral Original 2L', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936808-29-09-2022-18-01-51-776.jpg', tamanhos: [{ label: '2L', preco: 22.9 }] },
+  { nome: 'Lysoform Desinfetante Aerossol Original 432ml', marca: 'Lysoform', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/937687-21-03-2023-19-01-44-103.jpg', tamanhos: [{ label: '432ml', preco: 24.9 }] },
+  { nome: 'Lysoform Tira Limo Trigga 500ml', marca: 'Lysoform', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/imagem-provisoria-28-04-2026-15-59-34-363.jpeg', tamanhos: [{ label: '500ml', preco: 14.9 }] },
   // ──────────── EMBALIXO (SACO DE LIXO) ────────────
-  { nome: 'Embalixo Saco Lixo Resistente 50L 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947132-13-08-2025-14-48-14-423.jpg', tamanhos: [{ label: '50L 20un', preco: 14.90 }] },
-  { nome: 'Embalixo Saco Lixo Alça Bloqueadora de Odores 50L 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/946210-27-05-2025-10-31-12-417.jpg', tamanhos: [{ label: '50L 20un', preco: 16.90 }] },
-  { nome: 'Embalixo Saco Lixo Alça Rolo Preto 100L 15un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/939963-23-05-2023-11-51-53-701.jpg', tamanhos: [{ label: '100L 15un', preco: 18.90 }] },
-  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 50L 50un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6585.jpg', tamanhos: [{ label: '50L 50un', preco: 22.90 }] },
-  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto Oceano 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/942219-25-01-2024-10-02-45-176.jpg', tamanhos: [{ label: '100L 25un', preco: 28.90 }] },
-  { nome: 'Embalixo Saco Lixo Reciclado Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936358-04-11-2022-10-17-21-629.jpg', tamanhos: [{ label: '50L 30un', preco: 17.90 }] },
-  { nome: 'Embalixo Saco Lixo Reforçado Fecha Fácil Azul 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5700.jpg', tamanhos: [{ label: '50L 30un', preco: 19.90 }] },
-  { nome: 'Embalixo Saco Lixo Reforçado Fecha Fácil Azul 100L 15un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5702.jpg', tamanhos: [{ label: '100L 15un', preco: 22.90 }] },
-  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 30L 80un + 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6935.jpg', tamanhos: [{ label: '30L 100un', preco: 26.90 }] },
-  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936353-07-06-2023-14-44-28-404.jpg', tamanhos: [{ label: '50L 30un', preco: 17.90 }] },
-  { nome: 'Embalixo Saco Lixo Alça Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/939962-23-05-2023-11-50-59-160.jpg', tamanhos: [{ label: '50L 30un', preco: 18.90 }] },
-  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 110L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1732.jpg', tamanhos: [{ label: '110L 25un', preco: 32.90 }] },
-  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 50L 80un + 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6934.jpg', tamanhos: [{ label: '50L 100un', preco: 32.90 }] },
-  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 30L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7316.jpg', tamanhos: [{ label: '30L 30un', preco: 12.90 }] },
-  { nome: 'Embalixo Saco Lixo Econômico Rolo Azul 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/9533.jpg', tamanhos: [{ label: '100L 25un', preco: 25.90 }] },
-  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1368.jpg', tamanhos: [{ label: '100L 25un', preco: 25.90 }] },
-  { nome: 'Embalixo Saco Lixo Extra Forte Almofada Preto 110L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/950248.jpg', tamanhos: [{ label: '110L 25un', preco: 38.90 }] },
+  { nome: 'Embalixo Saco Lixo Resistente 50L 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947132-13-08-2025-14-48-14-423.jpg', tamanhos: [{ label: '50L 20un', preco: 14.9 }] },
+  { nome: 'Embalixo Saco Lixo Alça Bloqueadora de Odores 50L 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/946210-27-05-2025-10-31-12-417.jpg', tamanhos: [{ label: '50L 20un', preco: 16.9 }] },
+  { nome: 'Embalixo Saco Lixo Alça Rolo Preto 100L 15un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/939963-23-05-2023-11-51-53-701.jpg', tamanhos: [{ label: '100L 15un', preco: 18.9 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 50L 50un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6585.jpg', tamanhos: [{ label: '50L 50un', preco: 22.9 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto Oceano 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/942219-25-01-2024-10-02-45-176.jpg', tamanhos: [{ label: '100L 25un', preco: 28.9 }] },
+  { nome: 'Embalixo Saco Lixo Reciclado Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936358-04-11-2022-10-17-21-629.jpg', tamanhos: [{ label: '50L 30un', preco: 17.9 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Fecha Fácil Azul 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5700.jpg', tamanhos: [{ label: '50L 30un', preco: 19.9 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Fecha Fácil Azul 100L 15un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/5702.jpg', tamanhos: [{ label: '100L 15un', preco: 22.9 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 30L 80un + 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6935.jpg', tamanhos: [{ label: '30L 100un', preco: 26.9 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936353-07-06-2023-14-44-28-404.jpg', tamanhos: [{ label: '50L 30un', preco: 17.9 }] },
+  { nome: 'Embalixo Saco Lixo Alça Rolo Preto 50L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/939962-23-05-2023-11-50-59-160.jpg', tamanhos: [{ label: '50L 30un', preco: 18.9 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 110L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1732.jpg', tamanhos: [{ label: '110L 25un', preco: 32.9 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 50L 80un + 20un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/6934.jpg', tamanhos: [{ label: '50L 100un', preco: 32.9 }] },
+  { nome: 'Embalixo Saco Lixo Reforçado Rolo Preto 30L 30un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7316.jpg', tamanhos: [{ label: '30L 30un', preco: 12.9 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Azul 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/9533.jpg', tamanhos: [{ label: '100L 25un', preco: 25.9 }] },
+  { nome: 'Embalixo Saco Lixo Econômico Rolo Preto 100L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1368.jpg', tamanhos: [{ label: '100L 25un', preco: 25.9 }] },
+  { nome: 'Embalixo Saco Lixo Extra Forte Almofada Preto 110L 25un', marca: 'Embalixo', categoria: 'Saco de lixo', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/950248.jpg', tamanhos: [{ label: '110L 25un', preco: 38.9 }] },
   // ──────────── TIXAN (Ypê) ────────────
-  { nome: 'Tixan Sabão em Pó Maciez', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/938413-1-11-11-2025-13-14-42-975.jpg', tamanhos: [{ label: '800g', preco: 12.90 }, { label: '2,4kg', preco: 32.90 }] },
-  { nome: 'Tixan Sabão em Pó Primavera', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/935093-1-18-06-2025-17-46-34-632.jpg', tamanhos: [{ label: '800g', preco: 12.90 }, { label: '2,4kg', preco: 32.90 }] },
-  { nome: 'Tixan Tira Manchas Pó Roupas Color 420g', marca: 'Tixan', categoria: 'Tira manchas', img: 'https://phygital-files.mercafacil.com/catalogo/uploads/produto/tira_manchas_em_p_tixan_roupa_colorida_420_g_71cd3e78-be09-4ba1-a2c2-f2eaceea63c6.jpg', tamanhos: [{ label: '420g', preco: 9.90 }] },
+  { nome: 'Tixan Sabão em Pó Maciez', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/938413-1-11-11-2025-13-14-42-975.jpg', tamanhos: [{ label: '800g', preco: 12.9 }, { label: '2,4kg', preco: 32.9 }] },
+  { nome: 'Tixan Sabão em Pó Primavera', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/935093-1-18-06-2025-17-46-34-632.jpg', tamanhos: [{ label: '800g', preco: 12.9 }, { label: '2,4kg', preco: 32.9 }] },
+  { nome: 'Tixan Tira Manchas Pó Roupas Color 420g', marca: 'Tixan', categoria: 'Tira manchas', img: 'https://phygital-files.mercafacil.com/catalogo/uploads/produto/tira_manchas_em_p_tixan_roupa_colorida_420_g_71cd3e78-be09-4ba1-a2c2-f2eaceea63c6.jpg', tamanhos: [{ label: '420g', preco: 9.9 }] },
   // ──────────── VIM ────────────
-  { nome: 'Vim Cloro Gel Floral 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7022.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
-  { nome: 'Vim Cloro Gel Lavanda 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7021.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
-  { nome: 'Vim Cloro Gel Original 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/969210-1-19-09-2024-13-58-44-431.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
-  { nome: 'Vim Desinfetante Original Espuma Poderosa 450ml', marca: 'Vim', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947719-1-05-09-2025-16-45-52-536.jpg', tamanhos: [{ label: '450ml', preco: 13.90 }] },
-  { nome: 'Vim Desinfetante Espuma Poderosa Refil 450ml', marca: 'Vim', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947720-1-05-09-2025-16-53-00-840.jpg', tamanhos: [{ label: 'Refil 450ml', preco: 11.90 }] },
+  { nome: 'Vim Cloro Gel Floral 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7022.jpg', tamanhos: [{ label: '700ml', preco: 11.9 }] },
+  { nome: 'Vim Cloro Gel Lavanda 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7021.jpg', tamanhos: [{ label: '700ml', preco: 11.9 }] },
+  { nome: 'Vim Cloro Gel Original 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/969210-1-19-09-2024-13-58-44-431.jpg', tamanhos: [{ label: '700ml', preco: 11.9 }] },
+  { nome: 'Vim Desinfetante Original Espuma Poderosa 450ml', marca: 'Vim', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947719-1-05-09-2025-16-45-52-536.jpg', tamanhos: [{ label: '450ml', preco: 13.9 }] },
+  { nome: 'Vim Desinfetante Espuma Poderosa Refil 450ml', marca: 'Vim', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947720-1-05-09-2025-16-53-00-840.jpg', tamanhos: [{ label: 'Refil 450ml', preco: 11.9 }] },
   // ──────────── DESTAC ────────────
-  { nome: 'Destac Brilha Móveis Lavanda', marca: 'Destac', categoria: 'Brilha móveis', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/87602-1-08-11-2023-14-27-44-935.jpg', tamanhos: [{ label: '200ml', preco: 6.90 }, { label: '500ml', preco: 12.90 }] },
-  { nome: 'Destac Limpa Piso Laminados Flores e Lavanda 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/904921-1-01-04-2024-19-44-49-213.jpg', tamanhos: [{ label: '750ml', preco: 13.90 }] },
-  { nome: 'Destac Limpa Piso Madeira Lavanda e Vanilla 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/909144-1-01-04-2024-19-42-36-801.jpg', tamanhos: [{ label: '750ml', preco: 13.90 }] },
-  { nome: 'Destac Limpa Piso Porcelanato Lavanda e Alfazema 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/965283-1-03-11-2023-17-16-08-273.jpg', tamanhos: [{ label: '750ml', preco: 13.90 }] },
+  { nome: 'Destac Brilha Móveis Lavanda', marca: 'Destac', categoria: 'Brilha móveis', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/87602-1-08-11-2023-14-27-44-935.jpg', tamanhos: [{ label: '200ml', preco: 6.9 }, { label: '500ml', preco: 12.9 }] },
+  { nome: 'Destac Limpa Piso Laminados Flores e Lavanda 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/904921-1-01-04-2024-19-44-49-213.jpg', tamanhos: [{ label: '750ml', preco: 13.9 }] },
+  { nome: 'Destac Limpa Piso Madeira Lavanda e Vanilla 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/909144-1-01-04-2024-19-42-36-801.jpg', tamanhos: [{ label: '750ml', preco: 13.9 }] },
+  { nome: 'Destac Limpa Piso Porcelanato Lavanda e Alfazema 750ml', marca: 'Destac', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/965283-1-03-11-2023-17-16-08-273.jpg', tamanhos: [{ label: '750ml', preco: 13.9 }] },
   // ──────────── BÚFALO ────────────
   { nome: 'Búfalo Querosene Perfumado Lavanda 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2082.jpg', tamanhos: [{ label: '500ml', preco: 7.49 }] },
-  { nome: 'Búfalo Querosene PVC', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2610.jpg', tamanhos: [{ label: '500ml', preco: 7.49 }, { label: '1L', preco: 13.90 }] },
-  { nome: 'Búfalo Removedor PVC', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4163.jpg', tamanhos: [{ label: '500ml', preco: 7.99 }, { label: '1L', preco: 14.90 }] },
+  { nome: 'Búfalo Querosene PVC', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2610.jpg', tamanhos: [{ label: '500ml', preco: 7.49 }, { label: '1L', preco: 13.9 }] },
+  { nome: 'Búfalo Removedor PVC', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4163.jpg', tamanhos: [{ label: '500ml', preco: 7.99 }, { label: '1L', preco: 14.9 }] },
   { nome: 'Búfalo Removedor Perfumado Jasmim 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/989795.jpg', tamanhos: [{ label: '500ml', preco: 7.99 }] },
   { nome: 'Búfalo Removedor Perfumado Lavanda 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2084.jpg', tamanhos: [{ label: '500ml', preco: 7.99 }] },
   { nome: 'Búfalo Removedor Multiuso Eco 500ml', marca: 'Búfalo', categoria: 'Removedor', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/968939.jpg', tamanhos: [{ label: '500ml', preco: 8.49 }] },
   { nome: 'Búfalo Limpador Perfumado Chá Branco 500ml', marca: 'Búfalo', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947736-08-09-2025-11-19-01-430.jpg', tamanhos: [{ label: '500ml', preco: 8.49 }] },
-  { nome: 'Búfalo Desinfetante Eucalipto', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1150.jpg', tamanhos: [{ label: '2L', preco: 11.90 }, { label: '6L', preco: 28.90 }] },
-  { nome: 'Búfalo Desinfetante Lavanda 2L', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1268.jpg', tamanhos: [{ label: '2L', preco: 11.90 }] },
-  { nome: 'Búfalo Desinfetante Tradicional Pinho 2L', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4838.jpg', tamanhos: [{ label: '2L', preco: 11.90 }] },
-  { nome: 'Búfalo Tira Manchas Pó Multiuso Eco 500g', marca: 'Búfalo', categoria: 'Tira manchas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947737-08-09-2025-11-29-32-737.jpg', tamanhos: [{ label: '500g', preco: 11.90 }] },
+  { nome: 'Búfalo Desinfetante Eucalipto', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1150.jpg', tamanhos: [{ label: '2L', preco: 11.9 }, { label: '6L', preco: 28.9 }] },
+  { nome: 'Búfalo Desinfetante Lavanda 2L', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1268.jpg', tamanhos: [{ label: '2L', preco: 11.9 }] },
+  { nome: 'Búfalo Desinfetante Tradicional Pinho 2L', marca: 'Búfalo', categoria: 'Desinfetante', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4838.jpg', tamanhos: [{ label: '2L', preco: 11.9 }] },
+  { nome: 'Búfalo Tira Manchas Pó Multiuso Eco 500g', marca: 'Búfalo', categoria: 'Tira manchas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947737-08-09-2025-11-29-32-737.jpg', tamanhos: [{ label: '500g', preco: 11.9 }] },
   // ──────────── TUPI ────────────
-  { nome: 'Tupi Álcool Líquido 46% Neutro 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2137.jpg', tamanhos: [{ label: '1L', preco: 9.90 }] },
+  { nome: 'Tupi Álcool Líquido 46% Neutro 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2137.jpg', tamanhos: [{ label: '1L', preco: 9.9 }] },
   { nome: 'Tupi Álcool Líquido 46% Lavanda 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/4207.jpg', tamanhos: [{ label: '1L', preco: 10.49 }] },
   { nome: 'Tupi Álcool com Bicarbonato 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/943021-14-05-2024-10-08-10-314.jpg', tamanhos: [{ label: '1L', preco: 11.49 }] },
   { nome: 'Tupi Álcool com Bicarbonato e Limão 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/944258-01-10-2024-10-51-37-543.jpg', tamanhos: [{ label: '1L', preco: 11.49 }] },
   { nome: 'Tupi Álcool Líquido Zerobac 46% 1L', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936773-10-11-2022-15-57-57-316.jpg', tamanhos: [{ label: '1L', preco: 10.49 }] },
-  { nome: 'Tupi Álcool em Gel 70% 500g', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936801-14-11-2022-16-45-17-798.jpg', tamanhos: [{ label: '500g', preco: 9.90 }] },
-  { nome: 'Tupi Álcool Acendedor Gel 5kg', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2869.jpg', tamanhos: [{ label: '5kg', preco: 35.90 }] },
+  { nome: 'Tupi Álcool em Gel 70% 500g', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/936801-14-11-2022-16-45-17-798.jpg', tamanhos: [{ label: '500g', preco: 9.9 }] },
+  { nome: 'Tupi Álcool Acendedor Gel 5kg', marca: 'Tupi', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/2869.jpg', tamanhos: [{ label: '5kg', preco: 35.9 }] },
   // ──────────── COPERALCOOL ────────────
-  { nome: 'Coperalcool Álcool Tradicional 46% 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/alcool_liquido_1l_classico.jpg', tamanhos: [{ label: '1L', preco: 11.90 }] },
-  { nome: 'Coperalcool Álcool Líquido Chá Branco 46% 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/948188-03-10-2025-12-19-17-763.jpg', tamanhos: [{ label: '1L', preco: 12.90 }] },
-  { nome: 'Coperalcool Álcool Gel 500g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/987052.jpg', tamanhos: [{ label: '500g', preco: 11.90 }] },
-  { nome: 'Coperalcool Álcool Gel Antisséptico Bacfree 400g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000953220-un-27-01-2026-10-45-56-970.jpg', tamanhos: [{ label: '400g', preco: 10.90 }] },
-  { nome: 'Coperalcool Álcool Gel Chá Branco Bacfree 400g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947107-04-08-2025-17-49-42-677.jpg', tamanhos: [{ label: '400g', preco: 11.90 }] },
-  { nome: 'Coperalcool Panos Umedecidos Bacfree 35un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/plu-964934.jpg', tamanhos: [{ label: '35un', preco: 14.90 }, { label: 'Refil 35un', preco: 12.90 }] },
-  { nome: 'Coperalcool Balde Panos Umedecidos Bacfree 150un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/974770.jpg', tamanhos: [{ label: '150un', preco: 49.90 }] },
-  { nome: 'Coperalcool Limpador Perfumado Chá Branco 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000948337-un-15-12-2025-14-27-54-898.jpg', tamanhos: [{ label: '500ml', preco: 9.90 }] },
+  { nome: 'Coperalcool Álcool Tradicional 46% 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/alcool_liquido_1l_classico.jpg', tamanhos: [{ label: '1L', preco: 11.9 }] },
+  { nome: 'Coperalcool Álcool Líquido Chá Branco 46% 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/948188-03-10-2025-12-19-17-763.jpg', tamanhos: [{ label: '1L', preco: 12.9 }] },
+  { nome: 'Coperalcool Álcool Gel 500g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/987052.jpg', tamanhos: [{ label: '500g', preco: 11.9 }] },
+  { nome: 'Coperalcool Álcool Gel Antisséptico Bacfree 400g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000953220-un-27-01-2026-10-45-56-970.jpg', tamanhos: [{ label: '400g', preco: 10.9 }] },
+  { nome: 'Coperalcool Álcool Gel Chá Branco Bacfree 400g', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/947107-04-08-2025-17-49-42-677.jpg', tamanhos: [{ label: '400g', preco: 11.9 }] },
+  { nome: 'Coperalcool Panos Umedecidos Bacfree 35un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/plu-964934.jpg', tamanhos: [{ label: '35un', preco: 14.9 }, { label: 'Refil 35un', preco: 12.9 }] },
+  { nome: 'Coperalcool Balde Panos Umedecidos Bacfree 150un', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/974770.jpg', tamanhos: [{ label: '150un', preco: 49.9 }] },
+  { nome: 'Coperalcool Limpador Perfumado Chá Branco 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/000000000000948337-un-15-12-2025-14-27-54-898.jpg', tamanhos: [{ label: '500ml', preco: 9.9 }] },
   // ──────────── CANDURA ────────────
-  { nome: 'Candura Água Sanitária', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/244676-800-800?v=638660637358230000', tamanhos: [{ label: '2L', preco: 8.49 }, { label: '5L', preco: 18.90 }] },
-  { nome: 'Candura Cloro Gel', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/238712-800-800?v=638514737780530000', tamanhos: [{ label: '1L', preco: 9.49 }, { label: '2L', preco: 16.90 }] },
-  { nome: 'Candura Lava Louças Neutro', marca: 'Candura', categoria: 'Detergente', img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000', tamanhos: [{ label: '500ml', preco: 3.49, img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000' }, { label: '5L', preco: 19.90, img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000' }] },
+  { nome: 'Candura Água Sanitária', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/244676-800-800?v=638660637358230000', tamanhos: [{ label: '2L', preco: 8.49 }, { label: '5L', preco: 18.9 }] },
+  { nome: 'Candura Cloro Gel', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/238712-800-800?v=638514737780530000', tamanhos: [{ label: '1L', preco: 9.49 }, { label: '2L', preco: 16.9 }] },
+  { nome: 'Candura Lava Louças Neutro', marca: 'Candura', categoria: 'Detergente', img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000', tamanhos: [{ label: '500ml', preco: 3.49, img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000' }, { label: '5L', preco: 19.9, img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000' }] },
   { nome: 'Candura Lava Louças Limão', marca: 'Candura', categoria: 'Detergente', img: 'https://coopsp.vtexassets.com/arquivos/ids/247193-800-800?v=638830160060400000', tamanhos: [{ label: '500ml', preco: 3.49 }] },
   { nome: 'Candura Lava Louças Coco', marca: 'Candura', categoria: 'Detergente', img: 'https://images.tcdn.com.br/img/img_prod/739678/90_detergente_candura_500ml_41416_variacao_2520_1_065f52c3f44eb12e5ce660b4075badc0.jpg', tamanhos: [{ label: '500ml', preco: 3.79 }] },
-  { nome: 'Candura Amaciante Concentrado', marca: 'Candura', categoria: 'Amaciante', img: 'https://coopsp.vtexassets.com/arquivos/ids/232753-800-800?v=638252158367800000', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '2L', preco: 14.90 }, { label: '5L', preco: 28.99 }] },
-  { nome: 'Candura Desinfetante Lavanda', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/160270-1000-1000/294063.jpg?v=637210537243300000', tamanhos: [{ label: '2L', preco: 9.90 }, { label: '5L', preco: 19.90 }] },
-  { nome: 'Candura Desinfetante Pinho', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/162752-1000-1000/294250.jpg?v=637210598793000000', tamanhos: [{ label: '2L', preco: 9.90 }] },
+  { nome: 'Candura Amaciante Concentrado', marca: 'Candura', categoria: 'Amaciante', img: 'https://coopsp.vtexassets.com/arquivos/ids/232753-800-800?v=638252158367800000', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '2L', preco: 14.9 }, { label: '5L', preco: 28.99 }] },
+  { nome: 'Candura Desinfetante Lavanda', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/160270-1000-1000/294063.jpg?v=637210537243300000', tamanhos: [{ label: '2L', preco: 9.9 }, { label: '5L', preco: 19.9 }] },
+  { nome: 'Candura Desinfetante Pinho', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/162752-1000-1000/294250.jpg?v=637210598793000000', tamanhos: [{ label: '2L', preco: 9.9 }] },
   { nome: 'Candura Multiuso', marca: 'Candura', categoria: 'Limpador multiuso', img: 'https://coopsp.vtexassets.com/arquivos/ids/247099-800-800?v=638821523008500000', tamanhos: [{ label: '500ml', preco: 5.49 }] },
-  { nome: 'Candura Tira Manchas Sem Cloro', marca: 'Candura', categoria: 'Tira manchas', img: 'https://comper.vteximg.com.br/arquivos/ids/179853-1000-1000/610810-Tira-Manchas-Candura-sem-Cloro-Roupas-Brancas-e-Coloridas-2-Litros.jpg?v=637388200285770000', tamanhos: [{ label: '1L', preco: 12.90 }] },
+  { nome: 'Candura Tira Manchas Sem Cloro', marca: 'Candura', categoria: 'Tira manchas', img: 'https://comper.vteximg.com.br/arquivos/ids/179853-1000-1000/610810-Tira-Manchas-Candura-sem-Cloro-Roupas-Brancas-e-Coloridas-2-Litros.jpg?v=637388200285770000', tamanhos: [{ label: '1L', preco: 12.9 }] },
   // ──────────── LUAR (Luar Mágico) ────────────
-  { nome: 'Luar Álcool Gel Bactericida 70%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/gel_70_500ml_227.gif', tamanhos: [{ label: '500ml', preco: 11.90 }, { label: '1L', preco: 19.90 }] },
-  { nome: 'Luar Álcool Gel Acendedor', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2017/02/mini-alcool-gel-acendedor-300g.png', tamanhos: [{ label: '300g', preco: 6.90 }, { label: '5kg', preco: 39.90 }, { label: '10kg', preco: 69.90 }, { label: '13kg', preco: 89.90 }] },
-  { nome: 'Luar Álcool Líquido Bactericida 70%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/balcao_500ml_227.gif', tamanhos: [{ label: '500ml', preco: 9.90 }, { label: '1L', preco: 16.90 }, { label: '5L', preco: 49.90 }] },
-  { nome: 'Luar Álcool Líquido 96%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/05/ALCOOL-LIQUIDO-96-PROIBIDO-1-LITRO.png', tamanhos: [{ label: '1L', preco: 17.90 }] },
-  { nome: 'Luar Álcool Líquido 46% Tradicional', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 7.90 }, { label: '1L', preco: 13.90 }] },
-  { nome: 'Luar Álcool Líquido 46% Lavanda', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-LAVANDA-500-ML.png', tamanhos: [{ label: '500ml', preco: 8.49 }, { label: '1L', preco: 14.90 }] },
-  { nome: 'Luar Álcool Líquido 46% Eucalipto', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-EUCALIPTO-500-ML.png', tamanhos: [{ label: '500ml', preco: 8.49 }, { label: '1L', preco: 14.90 }] },
+  { nome: 'Luar Álcool Gel Bactericida 70%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/gel_70_500ml_227.gif', tamanhos: [{ label: '500ml', preco: 11.9 }, { label: '1L', preco: 19.9 }] },
+  { nome: 'Luar Álcool Gel Acendedor', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2017/02/mini-alcool-gel-acendedor-300g.png', tamanhos: [{ label: '300g', preco: 6.9 }, { label: '5kg', preco: 39.9 }, { label: '10kg', preco: 69.9 }, { label: '13kg', preco: 89.9 }] },
+  { nome: 'Luar Álcool Líquido Bactericida 70%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/balcao_500ml_227.gif', tamanhos: [{ label: '500ml', preco: 9.9 }, { label: '1L', preco: 16.9 }, { label: '5L', preco: 49.9 }] },
+  { nome: 'Luar Álcool Líquido 96%', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/05/ALCOOL-LIQUIDO-96-PROIBIDO-1-LITRO.png', tamanhos: [{ label: '1L', preco: 17.9 }] },
+  { nome: 'Luar Álcool Líquido 46% Tradicional', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 7.9 }, { label: '1L', preco: 13.9 }] },
+  { nome: 'Luar Álcool Líquido 46% Lavanda', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-LAVANDA-500-ML.png', tamanhos: [{ label: '500ml', preco: 8.49 }, { label: '1L', preco: 14.9 }] },
+  { nome: 'Luar Álcool Líquido 46% Eucalipto', marca: 'Luar', categoria: 'Álcool', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/ALCOOL-LIQUIDO-46%C2%BA-LUAR-EUCALIPTO-500-ML.png', tamanhos: [{ label: '500ml', preco: 8.49 }, { label: '1L', preco: 14.9 }] },
   { nome: 'Luar Multiuso Tradicional 500ml', marca: 'Luar', categoria: 'Limpador multiuso', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/MULTIUSO-TRADICIONAL-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 5.49 }] },
   { nome: 'Luar Multiuso Campestre 500ml', marca: 'Luar', categoria: 'Limpador multiuso', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/MULTIUSO-CAMPESTRE-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 5.49 }] },
   { nome: 'Luar Limpa Vidros 500ml', marca: 'Luar', categoria: 'Limpa vidro', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/LIMPA-VIDROS-LUAR-500ML.png', tamanhos: [{ label: '500ml', preco: 6.49 }] },
   { nome: 'Luar Limpa Limo 500ml', marca: 'Luar', categoria: 'Limpador banheiro', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/LIMPA-LIMO-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 7.49 }] },
-  { nome: 'Luar Limpa Alumínio', marca: 'Luar', categoria: 'Removedor', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/LIMPA-ALUMINIO-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 6.90 }, { label: '5L', preco: 39.90 }] },
-  { nome: 'Luar Removedor Ecológico 1L', marca: 'Luar', categoria: 'Removedor', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/removedor_1L_227.gif', tamanhos: [{ label: '1L', preco: 11.90 }] },
-  { nome: 'Luar Puri Lar', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/purilar_227.gif', tamanhos: [{ label: '500ml', preco: 7.90 }] },
-  { nome: 'Luar Cheirinho Citronela', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_citronela_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
-  { nome: 'Luar Cheirinho Talco', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_talco_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
-  { nome: 'Luar Cheirinho Eucalipto', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_eucalipto_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
-  { nome: 'Luar Cheirinho Lavanda', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_lavanda_227.gif', tamanhos: [{ label: '140ml', preco: 4.90 }] },
+  { nome: 'Luar Limpa Alumínio', marca: 'Luar', categoria: 'Removedor', img: 'https://www.luarmagico.com.br/wp-content/uploads/2016/04/LIMPA-ALUMINIO-LUAR-500-ML.png', tamanhos: [{ label: '500ml', preco: 6.9 }, { label: '5L', preco: 39.9 }] },
+  { nome: 'Luar Removedor Ecológico 1L', marca: 'Luar', categoria: 'Removedor', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/removedor_1L_227.gif', tamanhos: [{ label: '1L', preco: 11.9 }] },
+  { nome: 'Luar Puri Lar', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/purilar_227.gif', tamanhos: [{ label: '500ml', preco: 7.9 }] },
+  { nome: 'Luar Cheirinho Citronela', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_citronela_227.gif', tamanhos: [{ label: '140ml', preco: 4.9 }] },
+  { nome: 'Luar Cheirinho Talco', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_talco_227.gif', tamanhos: [{ label: '140ml', preco: 4.9 }] },
+  { nome: 'Luar Cheirinho Eucalipto', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_eucalipto_227.gif', tamanhos: [{ label: '140ml', preco: 4.9 }] },
+  { nome: 'Luar Cheirinho Lavanda', marca: 'Luar', categoria: 'Aromatizador', img: 'https://www.luarmagico.com.br/wp-content/uploads/2021/12/cheirinho_lavanda_227.gif', tamanhos: [{ label: '140ml', preco: 4.9 }] },
   // ──────────── COPERALCOOL EXTRA (Companhia Nacional de Álcool) ────────────
-  { nome: 'Coperalcool Bacfree Segredos Frescor das Águas Oceano 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_frescor_das_aguas_137_1_20faa80552a4c0d9968a0fa28e34799b.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
-  { nome: 'Coperalcool Bacfree Segredos Energia do Campo Capim-Limão 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_energia_do_campo_131_1_fe4573cdf8426ee6cf5c165e338d18a1.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
-  { nome: 'Coperalcool Bacfree Segredos Refúgio da Mente Lavanda 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_refugio_da_mente_129_1_26f0a4b2d6c3468d607c220bd6910afa.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
-  { nome: 'Coperalcool Bacfree Segredos Bosque do Aconchego Jasmim 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_bosque_do_aconchego_133_1_6d76591ebe6936091690e1ff0271a058.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
-  { nome: 'Coperalcool Bacfree Segredos Jardim da Harmonia Flores Brancas 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_jardim_da_harmonia_135_1_8dd0d800ff069767ee3f9fbb65459d4d.jpg', tamanhos: [{ label: '500ml', preco: 14.90 }] },
+  { nome: 'Coperalcool Bacfree Segredos Frescor das Águas Oceano 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_frescor_das_aguas_137_1_20faa80552a4c0d9968a0fa28e34799b.jpg', tamanhos: [{ label: '500ml', preco: 14.9 }] },
+  { nome: 'Coperalcool Bacfree Segredos Energia do Campo Capim-Limão 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_energia_do_campo_131_1_fe4573cdf8426ee6cf5c165e338d18a1.jpg', tamanhos: [{ label: '500ml', preco: 14.9 }] },
+  { nome: 'Coperalcool Bacfree Segredos Refúgio da Mente Lavanda 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_refugio_da_mente_129_1_26f0a4b2d6c3468d607c220bd6910afa.jpg', tamanhos: [{ label: '500ml', preco: 14.9 }] },
+  { nome: 'Coperalcool Bacfree Segredos Bosque do Aconchego Jasmim 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_bosque_do_aconchego_133_1_6d76591ebe6936091690e1ff0271a058.jpg', tamanhos: [{ label: '500ml', preco: 14.9 }] },
+  { nome: 'Coperalcool Bacfree Segredos Jardim da Harmonia Flores Brancas 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_jardim_da_harmonia_135_1_8dd0d800ff069767ee3f9fbb65459d4d.jpg', tamanhos: [{ label: '500ml', preco: 14.9 }] },
   { nome: 'Coperalcool Bacfree Lavanda Oriental 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_46_inpm_lavanda_oriental_1_1_20251017113953_4c73f6969549.jpg', tamanhos: [{ label: '1L', preco: 14.99 }] },
-  { nome: 'Coperalcool Spray Higienizador de Mãos 60ml', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/spray_higienizador_de_maos_coperalcool_bacfree_60ml_113_1_8380c78f0f6b210309c39b07b121bfd0.jpg', tamanhos: [{ label: '60ml', preco: 7.40 }] },
+  { nome: 'Coperalcool Spray Higienizador de Mãos 60ml', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/spray_higienizador_de_maos_coperalcool_bacfree_60ml_113_1_8380c78f0f6b210309c39b07b121bfd0.jpg', tamanhos: [{ label: '60ml', preco: 7.4 }] },
 ];
 
 // ============ MATRIZ DE MARCAS X CATEGORIAS (gerada automaticamente) ============
