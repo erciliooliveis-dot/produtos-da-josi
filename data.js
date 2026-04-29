@@ -481,10 +481,10 @@ const catalogProducts = [
   { nome: 'Ajax Festa das Flores Mar de Flores 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/986679/p.jpg' },
   { nome: 'Ajax Limpeza Pura Menta e Orquídea 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985128/m.jpg' },
   { nome: 'Ajax Natural Essentials Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://acdn-us.mitiendanube.com/stores/002/328/045/products/d1956749b76710e42b1a6e04fac2ca63-dd0c5ef7d3834e0c8416839226177184-1024-1024.webp' },
-  { nome: 'Ajax Natural Essentials Eucalipto e Citrus 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/970586/m.jpg' },
+  { nome: 'Ajax Natural Essentials Eucalipto e Citrus 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://gbarbosa.vtexassets.com/arquivos/ids/244642-800-auto?v=638367098743930000' },
   { nome: 'Ajax Alternativa ao Cloro Floral 500ml', marca: 'Ajax', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280409/g.jpg' },
   { nome: 'Ajax Desengordurante Cozinha 500ml', marca: 'Ajax', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280512/m.jpg' },
-  { nome: 'Ajax Limpador Banheiro 500ml', marca: 'Ajax', categoria: 'Limpador banheiro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280114/m.jpg' },
+  { nome: 'Ajax Limpador Banheiro 500ml', marca: 'Ajax', categoria: 'Limpador banheiro', img: 'https://coopsp.vtexassets.com/arquivos/ids/234503-800-800?v=638337715727300000' },
   { nome: 'Ajax Limpador Cozinha 500ml', marca: 'Ajax', categoria: 'Limpador cozinha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280412/g.jpg' },
   { nome: 'Ajax Limpa Vidros 500ml', marca: 'Ajax', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280506/g.jpg' },
   // ──────────── ARIEL ────────────
@@ -622,7 +622,7 @@ const catalogProducts = [
     { label: '1L', preco: 26.82 }
   ] },
   { nome: 'Downy Amaciante Concentrado Água Fresca 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270958/p.jpg' },
-  { nome: 'Downy Amaciante Concentrado Brisa Intenso', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139605/p.jpg', tamanhos: [
+  { nome: 'Downy Amaciante Concentrado Brisa Intenso', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139602/g.jpg', tamanhos: [
     { label: '500ml', preco: 14.90 },
     { label: '1L', preco: 26.82 }
   ] },
@@ -1009,7 +1009,7 @@ const catalogProducts = [
   { nome: 'Branquinho Limpador Multiuso 5L', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '5L', preco: 15.30 }] },
   { nome: 'Branquinho Limpeza Pesada', marca: 'Branquinho', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '2L', preco: 6.40, img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg' }, { label: '5L', preco: 18.90, img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg' }] },
   { nome: 'Branquinho Desengordurante', marca: 'Branquinho', categoria: 'Desengordurante', img: 'https://valescaind.com.br/wp-content/uploads/2021/05/Untitled-1.jpg', tamanhos: [{ label: '1L', preco: 8.90, img: 'https://valescaind.com.br/wp-content/uploads/2021/05/Untitled-1.jpg' }, { label: '2L', preco: 14.90, img: 'https://valescaind.com.br/wp-content/uploads/2021/05/branquinho-2.jpg' }] },
-  { nome: 'Branquinho Sabão Líquido 2L', marca: 'Branquinho', categoria: 'Lava roupas', img: 'https://www.atacadaocriativa.com.br/storage/uploads/imagens/produtos/2/404/ae8b4ca1b5623b33f5aa745716f1d882.webp', tamanhos: [{ label: '2L', preco: 24.90 }] },
+  { nome: 'Branquinho Sabão Líquido 2L', marca: 'Branquinho', categoria: 'Lava roupas', img: 'https://images.tcdn.com.br/img/img_prod/739678/limpador_multiuso_branquinho_5lt_mp_39691_1_fa7da032dba6281a0fbae35e9fde1c73.jpg', tamanhos: [{ label: '2L', preco: 24.90 }] },
   // ──────────── PRODUTOS 5L (ECONÔMICOS) ────────────
   { nome: 'Omo Lava Roupas Líquido Lavagem Perfeita 5L', marca: 'Omo', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1156232/p.jpg', tamanhos: [{ label: '5L', preco: 63.90 }] },
   { nome: 'Brilhante Lava Roupas Líquido Limpeza Total 5L', marca: 'Brilhante', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145004/g.jpg', tamanhos: [{ label: '5L', preco: 45.80 }] },
@@ -1060,7 +1060,7 @@ const catalogProducts = [
   // ──────────── TIXAN (Ypê) ────────────
   { nome: 'Tixan Sabão em Pó Maciez', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/938413-1-11-11-2025-13-14-42-975.jpg', tamanhos: [{ label: '800g', preco: 12.90 }, { label: '2,4kg', preco: 32.90 }] },
   { nome: 'Tixan Sabão em Pó Primavera', marca: 'Tixan', categoria: 'Sabão em pó', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/935093-1-18-06-2025-17-46-34-632.jpg', tamanhos: [{ label: '800g', preco: 12.90 }, { label: '2,4kg', preco: 32.90 }] },
-  { nome: 'Tixan Tira Manchas Pó Roupas Color 420g', marca: 'Tixan', categoria: 'Tira manchas', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/23698.jpg', tamanhos: [{ label: '420g', preco: 9.90 }] },
+  { nome: 'Tixan Tira Manchas Pó Roupas Color 420g', marca: 'Tixan', categoria: 'Tira manchas', img: 'https://phygital-files.mercafacil.com/catalogo/uploads/produto/tira_manchas_em_p_tixan_roupa_colorida_420_g_71cd3e78-be09-4ba1-a2c2-f2eaceea63c6.jpg', tamanhos: [{ label: '420g', preco: 9.90 }] },
   // ──────────── VIM ────────────
   { nome: 'Vim Cloro Gel Floral 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7022.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
   { nome: 'Vim Cloro Gel Lavanda 700ml', marca: 'Vim', categoria: 'Limpador banheiro', img: 'https://d3gdr9n5lqb5z7.cloudfront.net/fotos/7021.jpg', tamanhos: [{ label: '700ml', preco: 11.90 }] },
