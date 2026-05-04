@@ -153,8 +153,9 @@ const brandColors = {
   'Búfalo': '424242', 'Tupi': '00796B', 'Coperalcool': '4527A0',
   'Candura': '00ACC1', 'Luar': '5E35B1',
   'Bulnez': '795548', 'Condor': '1565C0', 'Santa Maria': '00897B',
-  'Mileva': 'C2185B', 'Alklin': 'F57C00', 'Brilhus': '7B1FA2',
-  'Plasútil': '388E3C', 'Bonitta': 'FBC02D', "Natu's Fran": '6D4C41'
+  'Mileva': 'C2185B', 'Alklin': 'F57C00', 'Alkin': 'EF6C00', 'Brilhus': '7B1FA2',
+  'Plasútil': '388E3C', 'Bonitta': 'FBC02D', "Natu's Fran": '6D4C41',
+  'Celeste': '0288D1'
 };
 
 // ============ ÍCONES SVG DOS COMBOS ============
@@ -1149,18 +1150,30 @@ const catalogProducts = [
   { nome: 'Coperalcool Bacfree Lavanda Oriental 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_46_inpm_lavanda_oriental_1_1_20251017113953_4c73f6969549.jpg', tamanhos: [{ label: '1L', preco: 14.99 }] },
   { nome: 'Coperalcool Spray Higienizador de Mãos 60ml', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/spray_higienizador_de_maos_coperalcool_bacfree_60ml_113_1_8380c78f0f6b210309c39b07b121bfd0.jpg', tamanhos: [{ label: '60ml', preco: 7.4 }] },
   // ---------------- RODO / VASSOURA / BUCHA ----------------
-  { nome: 'Rodo Plástico Santa Maria 45cm', marca: 'Santa Maria', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269759/g.jpg', tamanhos: [{ label: '45cm', preco: 14.9 }] },
-  { nome: 'Rodo Alklin 40cm', marca: 'Alklin', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280599/g.jpg', tamanhos: [{ label: '40cm', preco: 13.9 }] },
-  { nome: 'Rodo Brilhus com Cabo', marca: 'Brilhus', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/996947/g.jpg', tamanhos: [{ label: 'unidade', preco: 19.9 }] },
-  { nome: 'Rodo de Pia Plasútil', marca: 'Plasútil', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997553/g.jpg', tamanhos: [{ label: 'unidade', preco: 9.9 }] },
-  { nome: 'Vassoura Bulnez sem Cabo', marca: 'Bulnez', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270084/g.jpg', tamanhos: [{ label: 'unidade', preco: 12.9 }] },
-  { nome: 'Vassoura Condor Limpa Piso com Cabo', marca: 'Condor', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1276468/g.jpg', tamanhos: [{ label: 'unidade', preco: 21.9 }] },
-  { nome: 'Vassoura Santa Maria Multiuso sem Cabo', marca: 'Santa Maria', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269758/g.jpg', tamanhos: [{ label: 'unidade', preco: 15.9 }] },
-  { nome: 'Vassoura Mileva Lindoca', marca: 'Mileva', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997548/g.jpg', tamanhos: [{ label: 'unidade', preco: 16.9 }] },
-  { nome: 'Bucha Vegetal Bonitta', marca: 'Bonitta', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150950/g.jpg', tamanhos: [{ label: 'unidade', preco: 4.9 }] },
-  { nome: 'Bucha Vegetal Condor', marca: 'Condor', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1275427/g.jpg', tamanhos: [{ label: 'unidade', preco: 5.5 }] },
+  { nome: 'Rodo Plástico Santa Maria 45cm sem Cabo', marca: 'Santa Maria', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269759/g.jpg', tamanhos: [{ label: '45cm', preco: 13.98 }] },
+  { nome: 'Rodo Alklin 40cm sem Cabo', marca: 'Alklin', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280599/g.jpg', tamanhos: [{ label: '40cm', preco: 12.9 }] },
+  { nome: 'Rodo de Plástico Brilhus com Cabo', marca: 'Brilhus', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/996947/g.jpg', tamanhos: [{ label: 'unidade', preco: 16.9 }] },
+  { nome: 'Rodo Mop Sek+ Brilhus com Cabo', marca: 'Brilhus', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/996950/g.jpg', tamanhos: [{ label: 'unidade', preco: 24.9 }] },
+  { nome: 'Rodo de Pia Plasútil', marca: 'Plasútil', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997553/g.jpg', tamanhos: [{ label: 'unidade', preco: 7.9 }] },
+  { nome: 'Rodo para Pia Plasútil Tear 16cm', marca: 'Plasútil', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139841/g.jpg', tamanhos: [{ label: '16cm', preco: 3.99 }] },
+  { nome: 'Rodo Mop Celeste Fácil', marca: 'Celeste', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142994/g.jpg', tamanhos: [{ label: 'unidade', preco: 22.9 }] },
+  { nome: 'Rodo Mop Celeste Twist', marca: 'Celeste', categoria: 'Rodo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1144052/g.jpg', tamanhos: [{ label: 'unidade', preco: 39.9 }] },
+  { nome: 'Vassoura Bulnez sem Cabo', marca: 'Bulnez', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270084/g.jpg', tamanhos: [{ label: 'unidade', preco: 5.48 }] },
+  { nome: 'Vassoura Condor Limpa Piso com Cabo', marca: 'Condor', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1276468/g.jpg', tamanhos: [{ label: 'unidade', preco: 6.98 }] },
+  { nome: 'Vassoura Santa Maria Multiuso sem Cabo', marca: 'Santa Maria', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269758/g.jpg', tamanhos: [{ label: 'unidade', preco: 10.98 }] },
+  { nome: 'Vassoura Santa Maria Uso Interno sem Cabo', marca: 'Santa Maria', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1269762/g.jpg', tamanhos: [{ label: 'unidade', preco: 13.98 }] },
+  { nome: 'Vassoura Alkin Dentro e Fora com Cabo', marca: 'Alkin', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283857/g.jpg', tamanhos: [{ label: 'unidade', preco: 11.9 }] },
+  { nome: 'Vassoura Mileva Lindoca', marca: 'Mileva', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997548/g.jpg', tamanhos: [{ label: 'unidade', preco: 14.9 }] },
+  { nome: 'Vassoura Mileva Safira', marca: 'Mileva', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1274667/g.jpg', tamanhos: [{ label: 'unidade', preco: 15.9 }] },
+  { nome: 'Vassoura Mileva Girasol', marca: 'Mileva', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997547/g.jpg', tamanhos: [{ label: 'unidade', preco: 14.9 }] },
+  { nome: 'Bucha Vegetal Bonitta', marca: 'Bonitta', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150950/g.jpg', tamanhos: [{ label: 'unidade', preco: 4.5 }] },
+  { nome: 'Bucha Vegetal Condor', marca: 'Condor', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1275427/g.jpg', tamanhos: [{ label: 'unidade', preco: 4.9 }] },
+  { nome: 'Bucha Vegetal para Banho Condor', marca: 'Condor', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997540/g.jpg', tamanhos: [{ label: 'unidade', preco: 6.9 }] },
   { nome: "Bucha Vegetal Natu's Fran Pedaço", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1010747/g.jpg', tamanhos: [{ label: 'unidade', preco: 4.5 }] },
   { nome: "Bucha Vegetal Natu's Fran Pedaço 3un", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146878/g.jpg', tamanhos: [{ label: '3 unidades', preco: 9.9 }] },
+  { nome: "Bucha Vegetal Natu's Fran Redonda", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141041/g.jpg', tamanhos: [{ label: 'unidade', preco: 5.9 }] },
+  { nome: "Bucha Vegetal Natu's Fran Oval", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1010748/g.jpg', tamanhos: [{ label: 'unidade', preco: 5.5 }] },
+  { nome: "Bucha Vegetal Natu's Fran Meia Luva", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1010749/g.jpg', tamanhos: [{ label: 'unidade', preco: 6.9 }] },
 ];
 
 // ============ MATRIZ DE MARCAS X CATEGORIAS (gerada automaticamente) ============
