@@ -155,7 +155,7 @@ const brandColors = {
   'Bulnez': '795548', 'Condor': '1565C0', 'Santa Maria': '00897B',
   'Mileva': 'C2185B', 'Alklin': 'F57C00', 'Alkin': 'EF6C00', 'Brilhus': '7B1FA2',
   'Plasútil': '388E3C', 'Bonitta': 'FBC02D', "Natu's Fran": '6D4C41',
-  'Celeste': '0288D1'
+  'Celeste': '0288D1', 'Esfrebom': '00897B', 'Assolan': 'F44336', 'Lanux': '5D4037'
 };
 
 // ============ ÍCONES SVG DOS COMBOS ============
@@ -1166,14 +1166,14 @@ const catalogProducts = [
   { nome: 'Vassoura Mileva Lindoca', marca: 'Mileva', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997548/g.jpg', tamanhos: [{ label: 'unidade', preco: 14.9 }] },
   { nome: 'Vassoura Mileva Safira', marca: 'Mileva', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1274667/g.jpg', tamanhos: [{ label: 'unidade', preco: 15.9 }] },
   { nome: 'Vassoura Mileva Girasol', marca: 'Mileva', categoria: 'Vassoura', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997547/g.jpg', tamanhos: [{ label: 'unidade', preco: 14.9 }] },
-  { nome: 'Bucha Vegetal Bonitta', marca: 'Bonitta', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1150950/g.jpg', tamanhos: [{ label: 'unidade', preco: 4.5 }] },
-  { nome: 'Bucha Vegetal Condor', marca: 'Condor', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1275427/g.jpg', tamanhos: [{ label: 'unidade', preco: 4.9 }] },
-  { nome: 'Bucha Vegetal para Banho Condor', marca: 'Condor', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/997540/g.jpg', tamanhos: [{ label: 'unidade', preco: 6.9 }] },
-  { nome: "Bucha Vegetal Natu's Fran Pedaço", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1010747/g.jpg', tamanhos: [{ label: 'unidade', preco: 4.5 }] },
-  { nome: "Bucha Vegetal Natu's Fran Pedaço 3un", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1146878/g.jpg', tamanhos: [{ label: '3 unidades', preco: 9.9 }] },
-  { nome: "Bucha Vegetal Natu's Fran Redonda", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141041/g.jpg', tamanhos: [{ label: 'unidade', preco: 5.9 }] },
-  { nome: "Bucha Vegetal Natu's Fran Oval", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1010748/g.jpg', tamanhos: [{ label: 'unidade', preco: 5.5 }] },
-  { nome: "Bucha Vegetal Natu's Fran Meia Luva", marca: "Natu's Fran", categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1010749/g.jpg', tamanhos: [{ label: 'unidade', preco: 6.9 }] },
+  { nome: 'Esponja Multiuso Bombril (amarela/verde)', marca: 'Bombril', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1145746/g.jpg', tamanhos: [{ label: 'unidade', preco: 1.89 }] },
+  { nome: 'Lã de Aço Bombril 45g', marca: 'Bombril', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/971114/g.jpg', tamanhos: [{ label: '45g', preco: 2.65 }] },
+  { nome: 'Esponja Bombril Antiaderente 3 unidades', marca: 'Bombril', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270432/g.jpg', tamanhos: [{ label: '3 unidades', preco: 5.9 }] },
+  { nome: 'Esponja Multiuso Bulnez', marca: 'Bulnez', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270085/g.jpg', tamanhos: [{ label: 'unidade', preco: 0.69 }] },
+  { nome: 'Esponja Multiuso Brilhus 4 unidades', marca: 'Brilhus', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1155278/g.jpg', tamanhos: [{ label: '4 unidades', preco: 3.9 }] },
+  { nome: 'Esponja Multiuso Ypê 4 unidades', marca: 'Ypê', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1275843/g.jpg', tamanhos: [{ label: '4 unidades', preco: 4.79 }] },
+  { nome: 'Esponja Multiuso Esfrebom 4 unidades', marca: 'Esfrebom', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1155273/g.jpg', tamanhos: [{ label: '4 unidades', preco: 5.19 }] },
+  { nome: 'Lã de Aço Assolan 8 unidades 45g', marca: 'Assolan', categoria: 'Bucha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1283531/g.jpg', tamanhos: [{ label: '8 unidades', preco: 6.9 }] },
 ];
 
 // ============ MATRIZ DE MARCAS X CATEGORIAS (gerada automaticamente) ============
