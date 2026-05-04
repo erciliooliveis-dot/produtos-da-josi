@@ -151,7 +151,11 @@ function renderBrands() {
 
 // ============ RENDER CATEGORY CONTROLS ============
 function renderCategoryTabs() {
-  const cats = [...new Set(allProducts.map(p => p.categoria))];
+  const cats = [...new Set(allProducts.map(p => p.categoria))].sort((a, b) => {
+    const da = (typeof catDisplayNames !== 'undefined' && catDisplayNames[a]) || a;
+    const db = (typeof catDisplayNames !== 'undefined' && catDisplayNames[b]) || b;
+    return da.localeCompare(db, 'pt-BR');
+  });
   const container = document.getElementById('categoryTabs');
   container.innerHTML = `
     <label class="catalog-select-label">
@@ -272,7 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
       currentCategory = null;
       currentView = 'all';
       document.getElementById('combosSection').style.display = 'none';
-      if (best) best.style.display = 'none';
       document.getElementById('productsSection').style.display = 'block';
       document.querySelectorAll('.nav-bar .filter-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -364,7 +367,9 @@ function renderProducts() {
   grid.innerHTML = pageProducts.map(p => {
     const color = brandColors[p.marca] || '5B2C8E';
     const icon = catIcons[p.categoria] || '\uD83E\uDDF4';
-    const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]) || realProductImages[p.marca + ':' + p.categoria] || realBrandImages[p.marca] || realCatImages[p.categoria];
+    // Apenas img exata do produto. Sem fallback por marca/categoria (causava
+    // imagens enganosas — ex: produto 500ml mostrando o frasco 5L da mesma marca).
+    const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]);
     const marcaEsc = escapeHtml(p.marca);
     const nomeEsc = escapeHtml(p.nome);
     const catEsc = escapeHtml(p.categoria);
@@ -625,9 +630,6 @@ function renderCart() {
     const prod = allProducts.find(p => p.id === item.id);
     const realImg = (prod && prod.img)
       || (typeof perProductImages !== 'undefined' && perProductImages[item.nome])
-      || (typeof realProductImages !== 'undefined' && realProductImages[item.marca + ':' + item.categoria])
-      || (typeof realBrandImages !== 'undefined' && realBrandImages[item.marca])
-      || (typeof realCatImages !== 'undefined' && realCatImages[item.categoria])
       || null;
     const nomeEsc = escapeHtml(item.nome);
     const marcaEsc = escapeHtml(item.marca);
@@ -865,7 +867,7 @@ function abrirModal(id) {
   if (!p) return;
   const color = brandColors[p.marca] || '5B2C8E';
   const icon = catIcons[p.categoria] || '\uD83E\uDDF4';
-  const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]) || realProductImages[p.marca + ':' + p.categoria] || realBrandImages[p.marca] || realCatImages[p.categoria];
+  const realImg = p.img || (typeof perProductImages !== 'undefined' && perProductImages[p.nome]);
 
   document.getElementById('modalBadge').textContent = p.categoria;
   document.getElementById('modalNome').textContent = p.nome;

@@ -44,7 +44,10 @@ const catIcons = {
   'Álcool': '\uD83E\uDDF4',
   'Removedor': '\uD83E\uDDFD',
   'Tira manchas': '\u2728',
-  'Brilha móveis': '\u2728'
+  'Brilha móveis': '\u2728',
+  'Rodo': '\uD83E\uDDF9',
+  'Vassoura': '\uD83E\uDDF9',
+  'Bucha': '\uD83E\uDDFD'
 };
 
 // Nomes amigáveis das categorias para exibição no menu
@@ -71,7 +74,10 @@ const catDisplayNames = {
   'Álcool': 'Álcool',
   'Removedor': 'Removedor',
   'Tira manchas': 'Tira Manchas',
-  'Brilha móveis': 'Brilha Móveis'
+  'Brilha móveis': 'Brilha Móveis',
+  'Rodo': 'Rodo',
+  'Vassoura': 'Vassoura',
+  'Bucha': 'Bucha'
 };
 
 // ============ IMAGENS POR CATEGORIA ============
@@ -297,7 +303,7 @@ const combos = [
 // ============ PRODUTOS ZUPP (ESPECÍFICOS) ============
 const _base = 'https://www.zuppani.ind.br/static/arquivos/';
 const specificProducts = [
-  { id:9001, nome:'Esponja Dupla Face Zupp',          marca:'Zupp', categoria:'Esponja',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/994760/g.jpg' },
+  { id:9001, nome:'Esponja Dupla Face Zupp',          marca:'Zupp', categoria:'Esponja' },
   { id:9002, nome:'Óleos e Essências Zupp 120ml',     marca:'Zupp', categoria:'Aromatizador',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1148469/g.jpg' },
   { id:9003, nome:'Desinfetante Zupp 500ml',          marca:'Zupp', categoria:'Desinfetante',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145223/g.jpg' },
   { id:9004, nome:'Álcool Limpador Pesado Zupp',      marca:'Zupp', categoria:'Limpador multiuso',   img:'https://atacadaobr.vtexassets.com/arquivos/ids/1158034/g.jpg' },
@@ -308,27 +314,27 @@ const specificProducts = [
   { id:9009, nome:'Detergente Zupp 500ml',            marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004040/g.jpg' },
   { id:9010, nome:'Água Sanitária Zupp 1L',           marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1141960/g.jpg' },
   { id:9011, nome:'Alvejante Zupp 1L',                marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/994757/g.jpg' },
-  { id:9012, nome:'Esponja de Aço Inox Zupp',         marca:'Zupp', categoria:'Esponja',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/994760/g.jpg' },
+  { id:9012, nome:'Esponja de Aço Inox Zupp',         marca:'Zupp', categoria:'Esponja' },
   { id:9013, nome:'Detergente Zupplin 1L',            marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/994761/g.jpg' },
   { id:9014, nome:'Sabão em Barra Zupp 1kg',          marca:'Zupp', categoria:'Sabão em barra',         img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004045/g.jpg' },
   { id:9015, nome:'Limpa Inox Zupp',                  marca:'Zupp', categoria:'Limpador multiuso',   img:'https://atacadaobr.vtexassets.com/arquivos/ids/994760/g.jpg' },
   { id:9016, nome:'Amaciante Zupp 1,8L',              marca:'Zupp', categoria:'Amaciante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1148484/g.jpg' },
   { id:9017, nome:'Lava Louças em Pasta Zupp 500g',   marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004045/g.jpg' },
   { id:9018, nome:'Amaciante Zupp 5L',                marca:'Zupp', categoria:'Amaciante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1148483/g.jpg' },
-  { id:9019, nome:'Detergente Zupplin 5L',            marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/994761/g.jpg' },
+  { id:9019, nome:'Detergente Zupplin 5L',            marca:'Zupp', categoria:'Detergente'          },
   { id:9020, nome:'Água Sanitária Zupp 2L',           marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1142130/g.jpg' },
-  { id:9021, nome:'Esponja Antiaderente Zupp',        marca:'Zupp', categoria:'Esponja',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/994760/g.jpg' },
+  { id:9021, nome:'Esponja Antiaderente Zupp',        marca:'Zupp', categoria:'Esponja' },
   { id:9022, nome:'Limpador Perfumes e Encanto Zupp 1L', marca:'Zupp', categoria:'Limpador multiuso', img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145227/g.jpg' },
   { id:9023, nome:'Lava Louças em Pasta Zupp 200g',   marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004045/g.jpg' },
   { id:9024, nome:'Detergente Zupp 5L',               marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004040/g.jpg' },
   { id:9025, nome:'Desinfetante Zupp 1L',             marca:'Zupp', categoria:'Desinfetante',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145227/g.jpg' },
   { id:9026, nome:'Água Sanitária Zupp 5L',           marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1142738/g.jpg' },
-  { id:9027, nome:'Esponja Lã de Aço Zupp',           marca:'Zupp', categoria:'Esponja',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/994760/g.jpg' },
+  { id:9027, nome:'Esponja Lã de Aço Zupp',           marca:'Zupp', categoria:'Esponja' },
   { id:9028, nome:'Desinfetante Zupp 2L',             marca:'Zupp', categoria:'Desinfetante',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145223/g.jpg' },
 ];
 
 // ============ PREÇOS (atacado + 70%) ============
-const MARGEM = 1.70;
+const MARGEM = 1.28;
 
 const precosBase = {
   "Veja:Limpador multiuso": 11.19, "Veja:Desinfetante": 11.89, "Veja:Limpa vidro": 12.59,
@@ -482,7 +488,7 @@ const catalogProducts = [
   { nome: 'Ajax Limpeza Pura Menta e Orquídea 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985128/m.jpg' },
   { nome: 'Ajax Natural Essentials Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://acdn-us.mitiendanube.com/stores/002/328/045/products/d1956749b76710e42b1a6e04fac2ca63-dd0c5ef7d3834e0c8416839226177184-1024-1024.webp' },
   { nome: 'Ajax Natural Essentials Eucalipto e Citrus 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://gbarbosa.vtexassets.com/arquivos/ids/244642-800-auto?v=638367098743930000' },
-  { nome: 'Ajax Alternativa ao Cloro Floral 500ml', marca: 'Ajax', categoria: 'Desinfetante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280409/g.jpg' },
+  { nome: 'Ajax Alternativa ao Cloro Floral 500ml', marca: 'Ajax', categoria: 'Desinfetante' },
   { nome: 'Ajax Desengordurante Cozinha 500ml', marca: 'Ajax', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280512/m.jpg' },
   { nome: 'Ajax Limpador Banheiro 500ml', marca: 'Ajax', categoria: 'Limpador banheiro', img: 'https://coopsp.vtexassets.com/arquivos/ids/234503-800-800?v=638337715727300000' },
   { nome: 'Ajax Limpador Cozinha 500ml', marca: 'Ajax', categoria: 'Limpador cozinha', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280412/g.jpg' },
@@ -583,7 +589,7 @@ const catalogProducts = [
     { label: '500ml', preco: 12.9 },
     { label: '1L', preco: 23.22 }
   ] },
-  { nome: 'Comfort Concentrado Frescor Intenso', marca: 'Comfort', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1138795/g.jpg', tamanhos: [
+  { nome: 'Comfort Concentrado Frescor Intenso', marca: 'Comfort', categoria: 'Amaciante', tamanhos: [
     { label: '500ml', preco: 12.9 },
     { label: '1L', preco: 23.22 },
     { label: '1,5L', preco: 32.75 }
@@ -612,7 +618,7 @@ const catalogProducts = [
   { nome: 'Diversey Breltak Plus Limpador Alcalino CIP 20L', marca: 'Diversey', categoria: 'Produto profissional', img: 'https://www.dialever.com.br/conteudos/fot_133p.jpg' },
   { nome: 'Diversey Clorocide Desinfetante Hospitalar 5L', marca: 'Diversey', categoria: 'Desinfetante', img: 'https://www.dialever.com.br/conteudos/fot_134p.jpg' },
   // ──────────── DOWNY ────────────
-  { nome: 'Downy Amaciante Concentrado Brisa de Verão 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139602/g.jpg' },
+  { nome: 'Downy Amaciante Concentrado Brisa de Verão 500ml', marca: 'Downy', categoria: 'Amaciante' },
   { nome: 'Downy Amaciante Concentrado Lírios do Campo', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1143933/g.jpg', tamanhos: [
     { label: '500ml', preco: 14.9 },
     { label: '3L', preco: 68.09 }
@@ -622,12 +628,12 @@ const catalogProducts = [
     { label: '1L', preco: 26.82 }
   ] },
   { nome: 'Downy Amaciante Concentrado Água Fresca 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1270958/p.jpg' },
-  { nome: 'Downy Amaciante Concentrado Brisa Intenso', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139602/g.jpg', tamanhos: [
+  { nome: 'Downy Amaciante Concentrado Brisa Intenso', marca: 'Downy', categoria: 'Amaciante', tamanhos: [
     { label: '500ml', preco: 14.9 },
     { label: '1L', preco: 26.82 }
   ] },
   { nome: 'Downy Amaciante Concentrado Brisa Suave 500ml', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1003769/m.jpg' },
-  { nome: 'Downy Amaciante Concentrado Verão Tropical', marca: 'Downy', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139604/g.jpg', tamanhos: [
+  { nome: 'Downy Amaciante Concentrado Verão Tropical', marca: 'Downy', categoria: 'Amaciante', tamanhos: [
     { label: '500ml', preco: 14.9 },
     { label: '1,5L', preco: 37.83 }
   ] },
@@ -646,7 +652,7 @@ const catalogProducts = [
     { label: '500ml', preco: 2.49 },
     { label: '2L', preco: 8.07 }
   ] },
-  { nome: 'Girando Sol Detergente Coco 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1109864/p.jpg' },
+  { nome: 'Girando Sol Detergente Coco 500ml', marca: 'Girando Sol', categoria: 'Detergente' },
   { nome: 'Girando Sol Detergente Maçã 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142482/m.jpg' },
   { nome: 'Girando Sol Detergente Glicerina 500ml', marca: 'Girando Sol', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1142485/p.jpg' },
   { nome: 'Girando Sol Amaciante Concentrado Coco e Baunilha 1L', marca: 'Girando Sol', categoria: 'Amaciante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1099799/g.jpg' },
@@ -787,7 +793,7 @@ const catalogProducts = [
     { label: '5L', preco: 117.06 }
   ] },
   { nome: 'Renko Klyo Limpa Inox 1L', marca: 'Renko', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/klyo_limpa_inox_1l_renko_4744_1_c18ebb07104822708aa781322c3cec1a.jpg' },
-  { nome: 'Renko Klyo Oxy Limpador de Uso Geral', marca: 'Renko', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/435415/limpador_de_uso_geral_a_base_de_peroxido_klyo_oxy_1l_renko_2842_1_fd4db715a201b0a5b8746a5739ad7f92.jpg', tamanhos: [
+  { nome: 'Renko Klyo Oxy Limpador de Uso Geral', marca: 'Renko', categoria: 'Limpador multiuso', tamanhos: [
     { label: '1L', preco: 26.9 },
     { label: '5L', preco: 105.31 }
   ] },
@@ -888,7 +894,7 @@ const catalogProducts = [
   ] },
   { nome: 'Urca Saponáceo em Pasta Cristal', marca: 'Urca', categoria: 'Saponáceo', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1001188/m.jpg' },
   { nome: 'Urca Sabão em Pó Coco', marca: 'Urca', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/977363/p.jpg' },
-  { nome: 'Urca Pedra Sanitária Lavanda', marca: 'Urca', categoria: 'Pedra sanitária', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1152798/p.jpg' },
+  { nome: 'Urca Pedra Sanitária Lavanda', marca: 'Urca', categoria: 'Pedra sanitária' },
   { nome: 'Urca Pedra Sanitária Floral', marca: 'Urca', categoria: 'Pedra sanitária', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1001937/g.jpg' },
   // ──────────── VEJA ────────────
   { nome: 'Veja Multiuso Original', marca: 'Veja', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/991559/g.jpg', tamanhos: [
@@ -927,7 +933,7 @@ const catalogProducts = [
   { nome: 'Ypê Detergente Clear 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1141014/g.jpg' },
   { nome: 'Ypê Detergente Antibac 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1273786/p.jpg' },
   { nome: 'Ypê Detergente Green 500ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1139957/g.jpg' },
-  { nome: 'Ypê Detergente Concentrado Antibac 416ml', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985377/g.jpg' },
+  { nome: 'Ypê Detergente Concentrado Antibac 416ml', marca: 'Ypê', categoria: 'Detergente' },
   { nome: 'Ypê Detergente Pro 7L', marca: 'Ypê', categoria: 'Detergente', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1272478/p.jpg', tamanhos: [{ label: '7L', preco: 18.9 }] },
   { nome: 'Ypê Sabão em Pó Power Act', marca: 'Ypê', categoria: 'Sabão em pó', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1279670/p.jpg', tamanhos: [
     { label: '800g', preco: 8.9 },
@@ -1106,7 +1112,7 @@ const catalogProducts = [
   { nome: 'Candura Cloro Gel', marca: 'Candura', categoria: 'Alvejante', img: 'https://coopsp.vtexassets.com/arquivos/ids/238712-800-800?v=638514737780530000', tamanhos: [{ label: '1L', preco: 9.49 }, { label: '2L', preco: 16.9 }] },
   { nome: 'Candura Lava Louças Neutro', marca: 'Candura', categoria: 'Detergente', img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000', tamanhos: [{ label: '500ml', preco: 3.49, img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000' }, { label: '5L', preco: 19.9, img: 'https://coopsp.vtexassets.com/arquivos/ids/247195-800-800?v=638830160070330000' }] },
   { nome: 'Candura Lava Louças Limão', marca: 'Candura', categoria: 'Detergente', img: 'https://coopsp.vtexassets.com/arquivos/ids/247193-800-800?v=638830160060400000', tamanhos: [{ label: '500ml', preco: 3.49 }] },
-  { nome: 'Candura Lava Louças Coco', marca: 'Candura', categoria: 'Detergente', img: 'https://images.tcdn.com.br/img/img_prod/739678/90_detergente_candura_500ml_41416_variacao_2520_1_065f52c3f44eb12e5ce660b4075badc0.jpg', tamanhos: [{ label: '500ml', preco: 3.79 }] },
+  { nome: 'Candura Lava Louças Coco', marca: 'Candura', categoria: 'Detergente', tamanhos: [{ label: '500ml', preco: 3.79 }] },
   { nome: 'Candura Amaciante Concentrado', marca: 'Candura', categoria: 'Amaciante', img: 'https://coopsp.vtexassets.com/arquivos/ids/232753-800-800?v=638252158367800000', tamanhos: [{ label: '500ml', preco: 6.99 }, { label: '2L', preco: 14.9 }, { label: '5L', preco: 28.99 }] },
   { nome: 'Candura Desinfetante Lavanda', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/160270-1000-1000/294063.jpg?v=637210537243300000', tamanhos: [{ label: '2L', preco: 9.9 }, { label: '5L', preco: 19.9 }] },
   { nome: 'Candura Desinfetante Pinho', marca: 'Candura', categoria: 'Desinfetante', img: 'https://comper.vteximg.com.br/arquivos/ids/162752-1000-1000/294250.jpg?v=637210598793000000', tamanhos: [{ label: '2L', preco: 9.9 }] },
@@ -1139,6 +1145,19 @@ const catalogProducts = [
   { nome: 'Coperalcool Bacfree Segredos Jardim da Harmonia Flores Brancas 500ml', marca: 'Coperalcool', categoria: 'Limpador multiuso', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_segredos_da_natureza_500ml_jardim_da_harmonia_135_1_8dd0d800ff069767ee3f9fbb65459d4d.jpg', tamanhos: [{ label: '500ml', preco: 14.9 }] },
   { nome: 'Coperalcool Bacfree Lavanda Oriental 1L', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/coperalcool_bacfree_46_inpm_lavanda_oriental_1_1_20251017113953_4c73f6969549.jpg', tamanhos: [{ label: '1L', preco: 14.99 }] },
   { nome: 'Coperalcool Spray Higienizador de Mãos 60ml', marca: 'Coperalcool', categoria: 'Álcool', img: 'https://images.tcdn.com.br/img/img_prod/1276830/spray_higienizador_de_maos_coperalcool_bacfree_60ml_113_1_8380c78f0f6b210309c39b07b121bfd0.jpg', tamanhos: [{ label: '60ml', preco: 7.4 }] },
+  // ---------------- RODO / VASSOURA / BUCHA ----------------
+  { nome: 'Rodo Plastico 40cm Bombril', marca: 'Bombril', categoria: 'Rodo', tamanhos: [{ label: '40cm', preco: 14.9 }] },
+  { nome: 'Rodo Plastico 60cm Bombril', marca: 'Bombril', categoria: 'Rodo', tamanhos: [{ label: '60cm', preco: 19.9 }] },
+  { nome: 'Rodo Plastico Profissional 60cm Casa KM', marca: 'Casa KM', categoria: 'Rodo', tamanhos: [{ label: '60cm', preco: 22.9 }] },
+  { nome: 'Rodo Magico Multiuso Casa KM', marca: 'Casa KM', categoria: 'Rodo', tamanhos: [{ label: 'unidade', preco: 17.9 }] },
+  { nome: 'Vassoura Pelo Sintetico Bombril', marca: 'Bombril', categoria: 'Vassoura', tamanhos: [{ label: 'unidade', preco: 18.9 }] },
+  { nome: 'Vassoura Caipira Piaçava Bombril', marca: 'Bombril', categoria: 'Vassoura', tamanhos: [{ label: 'unidade', preco: 21.9 }] },
+  { nome: 'Vassoura Plastica Casa KM', marca: 'Casa KM', categoria: 'Vassoura', tamanhos: [{ label: 'unidade', preco: 16.9 }] },
+  { nome: 'Vassoura Sanitaria Casa KM', marca: 'Casa KM', categoria: 'Vassoura', tamanhos: [{ label: 'unidade', preco: 9.9 }] },
+  { nome: 'Bucha Multiuso Bombril (pacote 3un)', marca: 'Bombril', categoria: 'Bucha', tamanhos: [{ label: '3 unidades', preco: 6.9 }] },
+  { nome: 'Bucha de La de Aco Bombril 8un', marca: 'Bombril', categoria: 'Bucha', tamanhos: [{ label: '8 unidades', preco: 5.9 }] },
+  { nome: 'Bucha Vegetal Natural Casa KM', marca: 'Casa KM', categoria: 'Bucha', tamanhos: [{ label: 'unidade', preco: 4.9 }] },
+  { nome: 'Bucha Dupla Face Antibac Bombril', marca: 'Bombril', categoria: 'Bucha', tamanhos: [{ label: 'unidade', preco: 4.5 }] },
 ];
 
 // ============ MATRIZ DE MARCAS X CATEGORIAS (gerada automaticamente) ============
