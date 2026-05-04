@@ -494,7 +494,7 @@ const catalogProducts = [
   { nome: 'Ajax Alternativa ao Cloro Floral 1,75L', marca: 'Ajax', categoria: 'Desinfetante', img: 'https://zonasul.vtexassets.com/arquivos/ids/3038720-800-auto?v=637792446765070000' },
   { nome: 'Ajax Desengordurante Cozinha 500ml', marca: 'Ajax', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280512/m.jpg' },
   { nome: 'Ajax Limpador Banheiro 500ml', marca: 'Ajax', categoria: 'Limpador banheiro', img: 'https://coopsp.vtexassets.com/arquivos/ids/234503-800-800?v=638337715727300000' },
-  { nome: 'Ajax Limpador Cozinha 500ml', marca: 'Ajax', categoria: 'Limpador cozinha' },
+  { nome: 'Ajax Limpador Cozinha 500ml', marca: 'Ajax', categoria: 'Limpador cozinha', img: 'https://superangeloni.vtexassets.com/arquivos/ids/234357-800-auto?v=638515763732100000' },
   { nome: 'Ajax Limpa Vidros 500ml', marca: 'Ajax', categoria: 'Limpa vidro', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280506/g.jpg' },
   // ──────────── ARIEL ────────────
   { nome: 'Ariel Sabão Líquido Expert Concentrado', marca: 'Ariel', categoria: 'Lava roupas', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1151370/g.jpg', tamanhos: [

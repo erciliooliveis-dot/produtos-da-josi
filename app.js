@@ -145,7 +145,9 @@ function renderBrands() {
   const grid = document.getElementById('brandGrid');
   grid.innerHTML = brands.map(b => {
     const count = allProducts.filter(p => p.marca === b).length;
-    return `<div class="brand-chip animate-on-scroll" onclick="filterByBrand('${b}')">${b}<span class="count">${count} produtos</span></div>`;
+    // Escapa aspas simples para o literal JS dentro de onclick=" "
+    const bJs = b.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    return `<div class="brand-chip animate-on-scroll" onclick="filterByBrand('${bJs}')">${escapeHtml(b)}<span class="count">${count} produtos</span></div>`;
   }).join('');
 }
 
