@@ -307,7 +307,7 @@ const combos = [
 // ============ PRODUTOS ZUPP (ESPECÍFICOS) ============
 const _base = 'https://www.zuppani.ind.br/static/arquivos/';
 const specificProducts = [
-  { id:9001, nome:'Esponja Dupla Face Zupp',          marca:'Zupp', categoria:'Esponja' },
+  { id:9001, nome:'Esponja Dupla Face Zupp',          marca:'Zupp', categoria:'Esponja',          img:'https://www.zuppani.ind.br/static/arquivos/produto-zuppani-esponja-1-552411.png' },
   { id:9002, nome:'Óleos e Essências Zupp 120ml',     marca:'Zupp', categoria:'Aromatizador',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1148469/g.jpg' },
   { id:9003, nome:'Desinfetante Zupp 500ml',          marca:'Zupp', categoria:'Desinfetante',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145223/g.jpg' },
   { id:9004, nome:'Álcool Limpador Pesado Zupp',      marca:'Zupp', categoria:'Limpador multiuso',   img:'https://atacadaobr.vtexassets.com/arquivos/ids/1158034/g.jpg' },
@@ -318,7 +318,7 @@ const specificProducts = [
   { id:9009, nome:'Detergente Zupp 500ml',            marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004040/g.jpg' },
   { id:9010, nome:'Água Sanitária Zupp 1L',           marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1141960/g.jpg' },
   { id:9011, nome:'Alvejante Zupp 1L',                marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/994757/g.jpg' },
-  { id:9012, nome:'Esponja de Aço Inox Zupp',         marca:'Zupp', categoria:'Esponja' },
+  { id:9012, nome:'Esponja de Aço Inox Zupp',         marca:'Zupp', categoria:'Esponja',          img:'https://www.zuppani.ind.br/static/arquivos/esponja-de-aco-final-1-compressed-12671613.jpg' },
   { id:9013, nome:'Detergente Zupplin 1L',            marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/994761/g.jpg' },
   { id:9014, nome:'Sabão em Barra Zupp 1kg',          marca:'Zupp', categoria:'Sabão em barra',         img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004045/g.jpg' },
   { id:9015, nome:'Limpa Inox Zupp',                  marca:'Zupp', categoria:'Limpador multiuso',   img:'https://atacadaobr.vtexassets.com/arquivos/ids/994760/g.jpg' },
@@ -327,13 +327,13 @@ const specificProducts = [
   { id:9018, nome:'Amaciante Zupp 5L',                marca:'Zupp', categoria:'Amaciante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1148483/g.jpg' },
   { id:9019, nome:'Detergente Zupplin 5L',            marca:'Zupp', categoria:'Detergente'          },
   { id:9020, nome:'Água Sanitária Zupp 2L',           marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1142130/g.jpg' },
-  { id:9021, nome:'Esponja Antiaderente Zupp',        marca:'Zupp', categoria:'Esponja' },
+  { id:9021, nome:'Esponja Antiaderente Zupp',        marca:'Zupp', categoria:'Esponja',          img:'https://www.zuppani.ind.br/static/arquivos/produto-zuppani-esponja-antiaderente-3781119.png' },
   { id:9022, nome:'Limpador Perfumes e Encanto Zupp 1L', marca:'Zupp', categoria:'Limpador multiuso', img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145227/g.jpg' },
   { id:9023, nome:'Lava Louças em Pasta Zupp 200g',   marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004045/g.jpg' },
   { id:9024, nome:'Detergente Zupp 5L',               marca:'Zupp', categoria:'Detergente',          img:'https://atacadaobr.vtexassets.com/arquivos/ids/1004040/g.jpg' },
   { id:9025, nome:'Desinfetante Zupp 1L',             marca:'Zupp', categoria:'Desinfetante',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145227/g.jpg' },
   { id:9026, nome:'Água Sanitária Zupp 5L',           marca:'Zupp', categoria:'Alvejante',           img:'https://atacadaobr.vtexassets.com/arquivos/ids/1142738/g.jpg' },
-  { id:9027, nome:'Esponja Lã de Aço Zupp',           marca:'Zupp', categoria:'Esponja' },
+  { id:9027, nome:'Esponja Lã de Aço Zupp',           marca:'Zupp', categoria:'Esponja',          img:'https://www.zuppani.ind.br/static/arquivos/mockup-esponja-la-aco-1131775.png' },
   { id:9028, nome:'Desinfetante Zupp 2L',             marca:'Zupp', categoria:'Desinfetante',        img:'https://atacadaobr.vtexassets.com/arquivos/ids/1145223/g.jpg' },
 ];
 
