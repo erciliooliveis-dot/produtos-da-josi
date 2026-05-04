@@ -491,7 +491,7 @@ const catalogProducts = [
   { nome: 'Ajax Limpeza Pura Menta e Orquídea 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/985128/m.jpg' },
   { nome: 'Ajax Natural Essentials Lavanda 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://acdn-us.mitiendanube.com/stores/002/328/045/products/d1956749b76710e42b1a6e04fac2ca63-dd0c5ef7d3834e0c8416839226177184-1024-1024.webp' },
   { nome: 'Ajax Natural Essentials Eucalipto e Citrus 500ml', marca: 'Ajax', categoria: 'Limpador multiuso', img: 'https://gbarbosa.vtexassets.com/arquivos/ids/244642-800-auto?v=638367098743930000' },
-  { nome: 'Ajax Alternativa ao Cloro Floral 500ml', marca: 'Ajax', categoria: 'Desinfetante' },
+  { nome: 'Ajax Alternativa ao Cloro Floral 1,75L', marca: 'Ajax', categoria: 'Desinfetante', img: 'https://zonasul.vtexassets.com/arquivos/ids/3038720-800-auto?v=637792446765070000' },
   { nome: 'Ajax Desengordurante Cozinha 500ml', marca: 'Ajax', categoria: 'Desengordurante', img: 'https://atacadaobr.vtexassets.com/arquivos/ids/1280512/m.jpg' },
   { nome: 'Ajax Limpador Banheiro 500ml', marca: 'Ajax', categoria: 'Limpador banheiro', img: 'https://coopsp.vtexassets.com/arquivos/ids/234503-800-800?v=638337715727300000' },
   { nome: 'Ajax Limpador Cozinha 500ml', marca: 'Ajax', categoria: 'Limpador cozinha' },
