@@ -141,9 +141,7 @@
       </div>
       <button type="button" class="filter-btn" onclick="setView('combos',this)">Combos</button>
       <button type="button" class="filter-btn" onclick="setView('brands',this)">Por Marca</button>
-    </div>
-    <div class="quick-cats" id="quickCats" role="navigation" aria-label="Atalhos de categorias">
-      <!-- preenchido pelo JS -->
+      <button type="button" class="filter-btn" onclick="setView('categories',this)">Categorias</button>
     </div>
   </header>
 
@@ -252,13 +250,16 @@
       <div class="brand-grid" id="brandGrid"></div>
     </section>
 
+    <!-- CATEGORIES -->
+    <section id="categoriesSection" style="display:none; margin-bottom: 30px;">
+      <h2 class="section-title">Filtrar por <span>Categoria</span></h2>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
     <!-- PRODUCTS -->
     <section id="productsSection">
       <div class="products-header">
         <h2 class="section-title">Catálogo <span id="filterLabel">Completo</span></h2>
-      </div>
-      <div class="catalog-controls" id="categoryTabs">
-        <!-- Dropdown de categoria renderizado pelo JS aqui -->
       </div>
       <p class="results-info" id="resultsInfo"></p>
       <div class="product-grid" id="productGrid"></div>

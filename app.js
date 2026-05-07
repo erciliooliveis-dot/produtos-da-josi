@@ -49,22 +49,20 @@ function init() {
   loadFavoritesFromStorage();
   renderCombos();
   renderBrands();
-  renderCategoryTabs();
-  renderQuickCategories();
+  renderCategories();
   renderProducts();
   updateResultsInfo();
   setupScrollAnimations();
   updateBottomNavBadges();
 }
 
-// Atalhos rápidos de categorias (strip rolável horizontalmente)
-function renderQuickCategories() {
-  const container = document.getElementById('quickCats');
+// Render do grid de categorias (estilo igual ao Por Marca)
+function renderCategories() {
+  const container = document.getElementById('categoryGrid');
   if (!container) return;
-  // ordena categorias por nº de produtos e pega as top
   const counts = {};
   allProducts.forEach(p => { if (p.categoria) counts[p.categoria] = (counts[p.categoria] || 0) + 1; });
-  const top = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  const cats = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
   const icons = {
     'Detergente': '🧴', 'Sabão em pó': '🧺', 'Lava roupas': '👕', 'Amaciante': '🌸',
     'Desinfetante': '🦠', 'Limpador multiuso': '✨', 'Limpa vidro': '🪟',
@@ -75,35 +73,27 @@ function renderQuickCategories() {
     'Rodo': '🧹', 'Vassoura': '🧹', 'Bucha': '🧽', 'Cápsulas de lavar': '💊',
     'Removedor': '🧴', 'Produto profissional': '🧴'
   };
-  container.innerHTML = top.map(c => {
+  container.innerHTML = cats.map(c => {
     const display = (typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c;
     const icon = icons[c] || '🧴';
     const cEsc = escapeHtml(c).replace(/'/g, '&#39;');
-    return `<button type="button" class="quick-cat" onclick="quickFilterCategory('${cEsc}', this)" data-cat="${cEsc}">
-      <span class="quick-cat-ico" aria-hidden="true">${icon}</span>
-      <span class="quick-cat-label">${escapeHtml(display)}</span>
-      <span class="quick-cat-count">${counts[c]}</span>
+    return `<button type="button" class="category-chip" onclick="filterByCategoryView('${cEsc}')" data-cat="${cEsc}">
+      <span class="category-chip-ico" aria-hidden="true">${icon}</span>
+      <span class="category-chip-label">${escapeHtml(display)}</span>
+      <span class="category-chip-count">${counts[c]} produtos</span>
     </button>`;
   }).join('');
 }
 
-function quickFilterCategory(cat, btn) {
-  // Toggle: se já está nessa categoria, limpa
-  if (currentCategory === cat) {
-    currentCategory = null;
-    document.querySelectorAll('.quick-cat').forEach(b => b.classList.remove('active'));
-  } else {
-    currentCategory = cat;
-    document.querySelectorAll('.quick-cat').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
-  }
+function filterByCategoryView(cat) {
+  currentCategory = currentCategory === cat ? null : cat;
+  currentBrand = null;
   showingFavorites = false;
+  currentPage = 1;
   document.getElementById('combosSection').style.display = 'none';
   document.getElementById('brandsSection').style.display = 'none';
+  document.getElementById('categoriesSection').style.display = 'none';
   document.getElementById('productsSection').style.display = 'block';
-  // sincroniza dropdown
-  const dd = document.getElementById('catDropdown');
-  if (dd) dd.value = currentCategory || '';
-  currentPage = 1;
   applyFilters();
   document.getElementById('productsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -450,13 +440,7 @@ function renderProducts() {
           const pr = p.tamanhos ? (p.tamanhos[0].preco * MARGEM).toFixed(2) : getPrecoRevenda(p);
           return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">preco/un</div>` : `<div class="product-price-tag">Consulte preco</div>`;
         })()}
-        <div class="product-actions">
-          <button type="button" class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${nomeEsc} ao carrinho">+ Adicionar ao Carrinho</button>
-          <button type="button" class="btn-fav-card ${favorites.includes(p.id) ? 'active' : ''}" onclick="event.stopPropagation();toggleFavorite(${p.id})" aria-label="Favoritar ${nomeEsc}" aria-pressed="${favorites.includes(p.id)}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            <span class="btn-fav-card-label">${favorites.includes(p.id) ? 'Salvo' : 'Favoritar'}</span>
-          </button>
-        </div>
+        <button type="button" class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${nomeEsc} ao carrinho">+ Adicionar ao Carrinho</button>
       </div>
     </article>`;
   }).join('');
@@ -533,6 +517,7 @@ function setView(view, btn) {
 
   const combosSection = document.getElementById('combosSection');
   const brandsSection = document.getElementById('brandsSection');
+  const categoriesSection = document.getElementById('categoriesSection');
   const productsSection = document.getElementById('productsSection');
 
   if (view === 'all') {
@@ -545,24 +530,33 @@ function setView(view, btn) {
     if (todaTab) todaTab.classList.add('active');
     combosSection.style.display = 'none';
     brandsSection.style.display = 'none';
+    if (categoriesSection) categoriesSection.style.display = 'none';
     productsSection.style.display = 'block';
   } else if (view === 'combos') {
     combosSection.style.display = 'block';
     brandsSection.style.display = 'none';
+    if (categoriesSection) categoriesSection.style.display = 'none';
     productsSection.style.display = 'none';
     combosSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } else if (view === 'brands') {
     combosSection.style.display = 'none';
     brandsSection.style.display = 'block';
+    if (categoriesSection) categoriesSection.style.display = 'none';
     productsSection.style.display = 'block';
+  } else if (view === 'categories') {
+    combosSection.style.display = 'none';
+    brandsSection.style.display = 'none';
+    if (categoriesSection) categoriesSection.style.display = 'block';
+    productsSection.style.display = 'block';
+    if (categoriesSection) categoriesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } else if (view === 'favorites') {
     combosSection.style.display = 'none';
     brandsSection.style.display = 'none';
+    if (categoriesSection) categoriesSection.style.display = 'none';
     productsSection.style.display = 'block';
     showingFavorites = true;
     currentBrand = null;
     currentCategory = null;
-    document.querySelectorAll('.quick-cat').forEach(b => b.classList.remove('active'));
     filteredProducts = allProducts.filter(p => favorites.includes(p.id));
     currentPage = 1;
     document.getElementById('filterLabel').textContent = '— Favoritos';
@@ -735,6 +729,7 @@ function renderCart() {
     const preco = getItemPrice(item);
     const subtotal = preco ? (parseFloat(preco) * item.qty) : 0;
     totalValue += subtotal;
+    const isFav = favorites.includes(item.id);
     return `
     <div class="cart-item-card">
       <div class="cart-item-icon" aria-hidden="true">${imgHtml}</div>
@@ -747,6 +742,10 @@ function renderCart() {
           <button type="button" class="qty-btn" onclick="changeQty('${item.cartKey}',1)" aria-label="Aumentar quantidade">+</button>
         </div>
         ${subtotal > 0 ? `<div style="font-size:12px;color:#D97706;font-weight:700;margin-top:4px">Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}</div>` : ''}
+        <button type="button" class="cart-item-fav ${isFav ? 'active' : ''}" onclick="toggleFavorite(${item.id})" aria-label="${isFav ? 'Remover dos' : 'Salvar nos'} favoritos" aria-pressed="${isFav}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          ${isFav ? 'Salvo nos Favoritos' : 'Salvar nos Favoritos'}
+        </button>
       </div>
       <button type="button" class="cart-item-remove" onclick="removeFromCart('${item.cartKey}')" aria-label="Remover ${nomeEsc}">\uD83D\uDDD1</button>
     </div>`;
@@ -1107,6 +1106,7 @@ function toggleFavorite(id) {
   else favorites.push(id);
   saveFavoritesToStorage();
   renderProducts();
+  renderCart();
   updateBottomNavBadges();
 }
 
