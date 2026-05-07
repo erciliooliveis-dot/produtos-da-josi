@@ -483,7 +483,21 @@ function setView(view, btn) {
     combosSection.style.display = 'none';
     brandsSection.style.display = 'block';
     productsSection.style.display = 'block';
+  } else if (view === 'favorites') {
+    combosSection.style.display = 'none';
+    brandsSection.style.display = 'none';
+    productsSection.style.display = 'block';
+    showingFavorites = true;
+    currentBrand = null;
+    currentCategory = null;
+    filteredProducts = allProducts.filter(p => favorites.includes(p.id));
+    currentPage = 1;
+    document.getElementById('filterLabel').textContent = '— Favoritos';
+    renderProducts();
+    updateResultsInfo();
+    productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+  if (view !== 'favorites') showingFavorites = false;
 }
 
 // ============ RESULTS INFO ============
@@ -491,7 +505,11 @@ function updateResultsInfo() {
   const info = document.getElementById('resultsInfo');
   const label = document.getElementById('filterLabel');
   info.textContent = '';
-  label.textContent = currentBrand ? currentBrand : currentCategory ? (catDisplayNames[currentCategory] || currentCategory) : 'Completo';
+  if (showingFavorites) {
+    label.textContent = '— Favoritos';
+  } else {
+    label.textContent = currentBrand ? currentBrand : currentCategory ? (catDisplayNames[currentCategory] || currentCategory) : 'Completo';
+  }
 }
 
 // ============ CARRINHO COM LOCALSTORAGE ============
@@ -1072,11 +1090,125 @@ function updateBottomNavBadges() {
     favBadge.textContent = favorites.length;
     favBadge.style.display = favorites.length > 0 ? 'block' : 'none';
   }
+  const favTop = document.getElementById('favTopBadge');
+  if (favTop) {
+    favTop.textContent = favorites.length;
+    favTop.hidden = favorites.length === 0;
+  }
 }
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// ============ COOKIE CONSENT (LGPD) ============
+const COOKIE_KEY = 'produtosDaJosi_cookieConsent';
+
+function exibirBannerCookies() {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  banner.hidden = false;
+  banner.classList.add('show');
+}
+
+function esconderBannerCookies() {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  banner.classList.remove('show');
+  setTimeout(() => { banner.hidden = true; }, 300);
+}
+
+function aceitarCookies() {
+  try { localStorage.setItem(COOKIE_KEY, JSON.stringify({ status: 'accepted', date: new Date().toISOString() })); } catch (e) {}
+  esconderBannerCookies();
+}
+
+function rejeitarCookies() {
+  try { localStorage.setItem(COOKIE_KEY, JSON.stringify({ status: 'rejected', date: new Date().toISOString() })); } catch (e) {}
+  esconderBannerCookies();
+}
+
+function reabrirCookies() {
+  try { localStorage.removeItem(COOKIE_KEY); } catch (e) {}
+  exibirBannerCookies();
+}
+
+function checarConsentoCookies() {
+  try {
+    const saved = localStorage.getItem(COOKIE_KEY);
+    if (!saved) exibirBannerCookies();
+  } catch (e) { exibirBannerCookies(); }
+}
+
+// ============ MODAL AJUDA ============
+function abrirAjuda() {
+  const modal = document.getElementById('ajudaModal');
+  if (!modal) return;
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function fecharAjuda() {
+  const modal = document.getElementById('ajudaModal');
+  if (!modal) return;
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+// ============ TAMANHO DE TEXTO (acessibilidade 40+) ============
+const TEXT_SIZE_KEY = 'produtosDaJosi_textSize';
+
+function aplicarTamanhoTexto(level) {
+  document.documentElement.classList.remove('text-size-large', 'text-size-xlarge');
+  if (level === 'large') document.documentElement.classList.add('text-size-large');
+  else if (level === 'xlarge') document.documentElement.classList.add('text-size-xlarge');
+  const btn = document.getElementById('textSizeBtn');
+  if (btn) {
+    const labels = { normal: 'A+', large: 'A++', xlarge: 'A' };
+    const next = level === 'normal' ? 'aumentar' : (level === 'large' ? 'aumentar mais' : 'voltar ao normal');
+    btn.setAttribute('aria-label', `Tamanho do texto: ${level}. Clique para ${next}.`);
+    const span = btn.querySelector('span[aria-hidden]');
+    if (span) span.innerHTML = level === 'xlarge' ? 'A<sub style="font-size:9px">↺</sub>' : (level === 'large' ? 'A<sup>++</sup>' : 'A<sup>+</sup>');
+  }
+}
+
+function toggleTextSize() {
+  let cur = 'normal';
+  try { cur = localStorage.getItem(TEXT_SIZE_KEY) || 'normal'; } catch (e) {}
+  const next = cur === 'normal' ? 'large' : (cur === 'large' ? 'xlarge' : 'normal');
+  try { localStorage.setItem(TEXT_SIZE_KEY, next); } catch (e) {}
+  aplicarTamanhoTexto(next);
+}
+
+function carregarTamanhoTexto() {
+  let cur = 'normal';
+  try { cur = localStorage.getItem(TEXT_SIZE_KEY) || 'normal'; } catch (e) {}
+  aplicarTamanhoTexto(cur);
+}
+
+// ============ INIT POST-DOM ============
+document.addEventListener('DOMContentLoaded', () => {
+  carregarTamanhoTexto();
+  // Atrasa o banner para não competir com a renderização inicial
+  setTimeout(checarConsentoCookies, 800);
+
+  // ESC fecha modal de ajuda
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const ajuda = document.getElementById('ajudaModal');
+    if (ajuda && ajuda.classList.contains('active')) fecharAjuda();
+  });
+
+  // Click fora do modal de ajuda fecha
+  const ajudaModal = document.getElementById('ajudaModal');
+  if (ajudaModal) {
+    ajudaModal.addEventListener('click', (e) => {
+      if (e.target === ajudaModal) fecharAjuda();
+    });
+  }
+});
 
 // ============ START ============
 init();

@@ -135,6 +135,18 @@
       </div>
       <button type="button" class="filter-btn" onclick="setView('combos',this)">Combos</button>
       <button type="button" class="filter-btn" onclick="setView('brands',this)">Por Marca</button>
+      <button type="button" class="filter-btn filter-btn-fav" onclick="setView('favorites',this)" aria-label="Ver meus favoritos">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Favoritos<span class="filter-btn-badge" id="favTopBadge" aria-live="polite" hidden>0</span>
+      </button>
+      <button type="button" class="filter-btn filter-btn-help" onclick="abrirAjuda()" aria-label="Como comprar — guia rápido">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Ajuda
+      </button>
+      <button type="button" class="text-size-toggle" onclick="toggleTextSize()" aria-label="Aumentar tamanho do texto" id="textSizeBtn" title="Aumentar tamanho do texto">
+        <span aria-hidden="true">A<sup>+</sup></span>
+        <span class="visually-hidden">Aumentar texto</span>
+      </button>
     </div>
   </header>
 
@@ -322,11 +334,63 @@
         <p>Sábado: 8h às 13h</p>
         <p>Campinas e Região</p>
       </div>
+      <div class="footer-section">
+        <h4>Institucional</h4>
+        <a href="quem-somos.html">Quem Somos</a>
+        <a href="termos.html">Termos de Uso</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="#" onclick="event.preventDefault();abrirAjuda()">Como Comprar</a>
+      </div>
     </div>
     <div class="footer-bottom">
       <p><span class="brand">Produtos da Josi</span> &copy; <span id="footerYear">2026</span> - Distribuidora de Produtos de Higiene e Limpeza</p>
+      <p style="margin-top:8px;font-size:11px">
+        <a href="termos.html" style="color:rgba(255,255,255,0.5);text-decoration:underline">Termos</a> ·
+        <a href="privacidade.html" style="color:rgba(255,255,255,0.5);text-decoration:underline">Privacidade</a> ·
+        <a href="quem-somos.html" style="color:rgba(255,255,255,0.5);text-decoration:underline">Quem Somos</a> ·
+        <a href="#" onclick="event.preventDefault();reabrirCookies()" style="color:rgba(255,255,255,0.5);text-decoration:underline">Cookies</a>
+      </p>
     </div>
   </footer>
+
+  <!-- ========== COOKIE CONSENT BANNER (LGPD) ========== -->
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-labelledby="cookieBannerTitle" aria-describedby="cookieBannerText" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <strong id="cookieBannerTitle">🍪 Este site usa cookies</strong>
+        <p id="cookieBannerText">Usamos cookies para melhorar sua experiência, lembrar seus favoritos e seu carrinho. Ao continuar navegando, você concorda com nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="cookie-btn-reject" onclick="rejeitarCookies()">Recusar</button>
+        <button type="button" class="cookie-btn-accept" onclick="aceitarCookies()">Aceitar todos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HELP MODAL (Como Comprar) ========== -->
+  <div class="modal-overlay" id="ajudaModal" role="dialog" aria-modal="true" aria-labelledby="ajudaTitulo" aria-hidden="true">
+    <div class="modal-content modal-help" tabindex="-1">
+      <button type="button" class="modal-close" onclick="fecharAjuda()" aria-label="Fechar ajuda">&times;</button>
+      <div class="modal-body">
+        <h2 id="ajudaTitulo" style="font-family:'DM Serif Display',serif;color:var(--roxo-escuro);margin-bottom:8px">Como Comprar</h2>
+        <p style="color:var(--cinza);margin-bottom:18px">É bem fácil! Siga os passos:</p>
+        <ol class="ajuda-steps">
+          <li><strong>1. Escolha seus produtos</strong><br>Toque em <em>Buscar</em> ou role o catálogo. Use <em>Por Marca</em> ou <em>Combos</em> para filtrar.</li>
+          <li><strong>2. Adicione ao carrinho</strong><br>Toque no botão verde de carrinho em cada produto. O coração ❤ salva nos seus Favoritos.</li>
+          <li><strong>3. Revise seu pedido</strong><br>Toque no carrinho no canto superior direito (ou no rodapé) para ver tudo.</li>
+          <li><strong>4. Finalize pelo WhatsApp ou PIX</strong><br>Vamos confirmar valores, prazo de entrega e forma de pagamento direto com você.</li>
+        </ol>
+        <div class="ajuda-contato">
+          <strong>Precisa de ajuda agora?</strong>
+          <a href="https://wa.me/5519953212247" target="_blank" rel="noopener" class="ajuda-whatsapp-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            Falar pelo WhatsApp: (19) 95321-2247
+          </a>
+        </div>
+        <button type="button" class="modal-btn-back" onclick="fecharAjuda()">Entendi, voltar ao catálogo</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ========== WHATSAPP FLOAT ========== -->
   <a href="https://wa.me/5519953212247" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
