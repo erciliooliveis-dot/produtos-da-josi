@@ -50,10 +50,62 @@ function init() {
   renderCombos();
   renderBrands();
   renderCategoryTabs();
+  renderQuickCategories();
   renderProducts();
   updateResultsInfo();
   setupScrollAnimations();
   updateBottomNavBadges();
+}
+
+// Atalhos rápidos de categorias (strip rolável horizontalmente)
+function renderQuickCategories() {
+  const container = document.getElementById('quickCats');
+  if (!container) return;
+  // ordena categorias por nº de produtos e pega as top
+  const counts = {};
+  allProducts.forEach(p => { if (p.categoria) counts[p.categoria] = (counts[p.categoria] || 0) + 1; });
+  const top = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  const icons = {
+    'Detergente': '🧴', 'Sabão em pó': '🧺', 'Lava roupas': '👕', 'Amaciante': '🌸',
+    'Desinfetante': '🦠', 'Limpador multiuso': '✨', 'Limpa vidro': '🪟',
+    'Limpador banheiro': '🚿', 'Limpador cozinha': '🍳', 'Alvejante': '⚪',
+    'Esponja': '🧽', 'Saponáceo': '🥣', 'Aromatizador': '🌺', 'Sabão em barra': '🧼',
+    'Pedra sanitária': '🚽', 'Saco de lixo': '🗑️', 'Álcool': '💧',
+    'Desengordurante': '🍳', 'Tira manchas': '🧴', 'Brilha móveis': '🪑',
+    'Rodo': '🧹', 'Vassoura': '🧹', 'Bucha': '🧽', 'Cápsulas de lavar': '💊',
+    'Removedor': '🧴', 'Produto profissional': '🧴'
+  };
+  container.innerHTML = top.map(c => {
+    const display = (typeof catDisplayNames !== 'undefined' && catDisplayNames[c]) || c;
+    const icon = icons[c] || '🧴';
+    const cEsc = escapeHtml(c).replace(/'/g, '&#39;');
+    return `<button type="button" class="quick-cat" onclick="quickFilterCategory('${cEsc}', this)" data-cat="${cEsc}">
+      <span class="quick-cat-ico" aria-hidden="true">${icon}</span>
+      <span class="quick-cat-label">${escapeHtml(display)}</span>
+      <span class="quick-cat-count">${counts[c]}</span>
+    </button>`;
+  }).join('');
+}
+
+function quickFilterCategory(cat, btn) {
+  // Toggle: se já está nessa categoria, limpa
+  if (currentCategory === cat) {
+    currentCategory = null;
+    document.querySelectorAll('.quick-cat').forEach(b => b.classList.remove('active'));
+  } else {
+    currentCategory = cat;
+    document.querySelectorAll('.quick-cat').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+  }
+  showingFavorites = false;
+  document.getElementById('combosSection').style.display = 'none';
+  document.getElementById('brandsSection').style.display = 'none';
+  document.getElementById('productsSection').style.display = 'block';
+  // sincroniza dropdown
+  const dd = document.getElementById('catDropdown');
+  if (dd) dd.value = currentCategory || '';
+  currentPage = 1;
+  applyFilters();
+  document.getElementById('productsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ============ IMAGEM DO PRODUTO ============
@@ -490,6 +542,7 @@ function setView(view, btn) {
     showingFavorites = true;
     currentBrand = null;
     currentCategory = null;
+    document.querySelectorAll('.quick-cat').forEach(b => b.classList.remove('active'));
     filteredProducts = allProducts.filter(p => favorites.includes(p.id));
     currentPage = 1;
     document.getElementById('filterLabel').textContent = '— Favoritos';
@@ -498,6 +551,8 @@ function setView(view, btn) {
     productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   if (view !== 'favorites') showingFavorites = false;
+  const favBtn = document.getElementById('headerFavBtn');
+  if (favBtn) favBtn.classList.toggle('active', view === 'favorites');
 }
 
 // ============ RESULTS INFO ============

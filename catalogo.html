@@ -123,10 +123,16 @@
           </div>
         </div>
       </div>
-      <button type="button" class="cart-btn" onclick="toggleCart()" id="cartBtn" aria-label="Abrir carrinho de compras">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        <span id="cartCount" aria-live="polite">0</span>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="header-fav-btn" onclick="setView('favorites', null)" id="headerFavBtn" aria-label="Ver meus favoritos">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span id="favTopBadge" class="header-fav-badge" aria-live="polite" hidden>0</span>
+        </button>
+        <button type="button" class="cart-btn" onclick="toggleCart()" id="cartBtn" aria-label="Abrir carrinho de compras">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span id="cartCount" aria-live="polite">0</span>
+        </button>
+      </div>
     </div>
     <div class="nav-bar">
       <div class="search-box">
@@ -135,10 +141,6 @@
       </div>
       <button type="button" class="filter-btn" onclick="setView('combos',this)">Combos</button>
       <button type="button" class="filter-btn" onclick="setView('brands',this)">Por Marca</button>
-      <button type="button" class="filter-btn filter-btn-fav" onclick="setView('favorites',this)" aria-label="Ver meus favoritos">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        Favoritos<span class="filter-btn-badge" id="favTopBadge" aria-live="polite" hidden>0</span>
-      </button>
       <button type="button" class="filter-btn filter-btn-help" onclick="abrirAjuda()" aria-label="Como comprar — guia rápido">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         Ajuda
@@ -147,6 +149,9 @@
         <span aria-hidden="true">A<sup>+</sup></span>
         <span class="visually-hidden">Aumentar texto</span>
       </button>
+    </div>
+    <div class="quick-cats" id="quickCats" role="navigation" aria-label="Atalhos de categorias">
+      <!-- preenchido pelo JS -->
     </div>
   </header>
 
