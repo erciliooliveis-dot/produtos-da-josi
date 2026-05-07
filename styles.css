@@ -1778,6 +1778,8 @@ body > * {
   border: 2px solid #fff;
   line-height: 1;
 }
+/* Garante que [hidden] funciona mesmo com display:flex acima */
+[hidden] { display: none !important; }
 @media (max-width: 768px) {
   .header-actions { right: 12px; gap: 8px; }
   .header-fav-btn { width: 38px; height: 38px; }
@@ -1883,61 +1885,46 @@ body > * {
 /* === FLOATING TOOLS (Ajuda + A+) === */
 .floating-tools {
   position: fixed;
-  left: 16px;
-  bottom: 90px;
+  right: 25px;
+  bottom: 100px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   z-index: 900;
 }
 .float-tool-btn {
-  width: 52px;
-  height: 52px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #fff;
   border: 2px solid var(--roxo-medio);
   color: var(--roxo-escuro);
   font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: 0 4px 14px rgba(124,58,237,0.18);
+  box-shadow: 0 3px 10px rgba(124,58,237,0.18);
 }
 .float-tool-btn:hover {
   background: var(--roxo-medio);
   color: #fff;
-  transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(124,58,237,0.35);
+  transform: scale(1.1);
+  box-shadow: 0 5px 14px rgba(124,58,237,0.35);
 }
-.float-tool-icon {
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 800;
-}
-.float-tool-icon sup { font-size: 10px; }
-.float-tool-label {
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-top: 2px;
-  font-weight: 700;
-}
+.float-tool-icon { font-size: 14px; line-height: 1; }
+.float-tool-icon sup { font-size: 9px; }
+.float-tool-label { display: none; }
 .float-tool-help { color: #2563EB; border-color: #2563EB; }
-.float-tool-help:hover { background: #2563EB; color: #fff; box-shadow: 0 6px 18px rgba(37,99,235,0.35); }
-.float-tool-help .float-tool-icon { font-size: 22px; }
+.float-tool-help:hover { background: #2563EB; color: #fff; box-shadow: 0 5px 14px rgba(37,99,235,0.35); }
+.float-tool-help .float-tool-icon { font-size: 18px; }
 
 @media (max-width: 768px) {
-  .floating-tools { left: 12px; bottom: 75px; gap: 8px; }
-  .float-tool-btn { width: 46px; height: 46px; }
-  .float-tool-icon { font-size: 14px; }
-  .float-tool-help .float-tool-icon { font-size: 19px; }
-  .float-tool-label { font-size: 8px; }
+  .floating-tools { right: 15px; bottom: 145px; }
+  .float-tool-btn { width: 40px; height: 40px; }
 }
 
 /* Tamanho de texto aplicado globalmente */

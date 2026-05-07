@@ -703,7 +703,9 @@ function renderCart() {
   const list = document.getElementById('cartItemsList');
   const footer = document.getElementById('cartFooter');
   const count = cart.reduce((s, x) => s + x.qty, 0);
-  document.getElementById('cartCount').textContent = count;
+  const cc = document.getElementById('cartCount');
+  cc.textContent = count;
+  cc.hidden = count === 0;
 
   if (cart.length === 0) {
     list.innerHTML = '<div class="cart-empty">Seu carrinho est\u00e1 vazio.<br>Adicione produtos para continuar!</div>';
