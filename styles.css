@@ -422,6 +422,9 @@ body > * {
 }
 
 .filter-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
   padding: 8px 18px;
   border-radius: var(--radius-xl);
   border: 1px solid rgba(167,139,250,0.3);
@@ -1469,22 +1472,67 @@ body > * {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.85);
-  border: none;
+  background: #fff;
+  border: 2px solid #FCA5A5;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
   transition: var(--transition);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(220,38,38,0.18);
 }
-.fav-btn svg { width: 16px; height: 16px; stroke: var(--cinza); fill: none; stroke-width: 2; transition: var(--transition); }
-.fav-btn.active svg { fill: var(--vermelho); stroke: var(--vermelho); }
-.fav-btn:hover { transform: scale(1.15); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.fav-btn svg { width: 20px; height: 20px; stroke: #DC2626; fill: none; stroke-width: 2.2; transition: var(--transition); }
+.fav-btn:hover {
+  transform: scale(1.12);
+  border-color: #DC2626;
+  box-shadow: 0 4px 16px rgba(220,38,38,0.3);
+  background: #FEF2F2;
+}
+.fav-btn.active {
+  background: #DC2626;
+  border-color: #DC2626;
+  box-shadow: 0 4px 14px rgba(220,38,38,0.4);
+}
+.fav-btn.active svg { fill: #fff; stroke: #fff; }
+.fav-btn.active:hover { background: #B91C1C; border-color: #B91C1C; }
+@keyframes favPop { 0% { transform: scale(1); } 50% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.fav-btn.active { animation: favPop 0.4s ease; }
+
+/* Botão "Favoritar" textual no modal */
+.modal-btn-fav {
+  width: 100%;
+  padding: 12px 18px;
+  margin-top: 10px;
+  border-radius: var(--radius-full);
+  border: 2px solid #FCA5A5;
+  background: #fff;
+  color: #DC2626;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+.modal-btn-fav:hover {
+  background: #FEF2F2;
+  border-color: #DC2626;
+}
+.modal-btn-fav.active {
+  background: #DC2626;
+  color: #fff;
+  border-color: #DC2626;
+  box-shadow: 0 4px 14px rgba(220,38,38,0.35);
+}
+.modal-btn-fav svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.2; }
+.modal-btn-fav.active svg { fill: #fff; }
 
 /* === ABOUT SECTION === */
 .about-section {

@@ -503,6 +503,23 @@ function goToPage(page) {
 
 // ============ VIEW TOGGLE ============
 function setView(view, btn) {
+  // Saneamento: garante que nenhum modal/drawer deixou o body travado em overflow:hidden
+  const ajudaModal = document.getElementById('ajudaModal');
+  if (ajudaModal && ajudaModal.classList.contains('active')) {
+    ajudaModal.classList.remove('active');
+    ajudaModal.setAttribute('aria-hidden', 'true');
+  }
+  const prodModal = document.getElementById('produtoModal');
+  if (prodModal && prodModal.classList.contains('active')) {
+    prodModal.classList.remove('active', 'open');
+    prodModal.setAttribute('aria-hidden', 'true');
+  }
+  const cartDrawer = document.getElementById('cartDrawer');
+  if (cartDrawer && cartDrawer.classList.contains('open')) {
+    cartDrawer.classList.remove('open', 'active');
+    document.getElementById('cartOverlay')?.classList.remove('open');
+  }
+  document.body.style.overflow = '';
   // Toggle: se ja esta na mesma view, volta pra 'all'
   if (currentView === view && view !== 'all') {
     return setView('all', null);
@@ -1005,6 +1022,20 @@ function abrirModal(id) {
     fecharModal();
   };
 
+  // Botão Favoritar dentro do modal
+  const favBtnModal = document.getElementById('modalFavBtn');
+  const favLabelModal = document.getElementById('modalFavLabel');
+  function syncModalFavState() {
+    const isFav = favorites.includes(id);
+    favBtnModal.classList.toggle('active', isFav);
+    favBtnModal.setAttribute('aria-pressed', isFav ? 'true' : 'false');
+    favLabelModal.textContent = isFav ? 'Salvo nos Favoritos ❤' : 'Salvar nos Favoritos';
+  }
+  syncModalFavState();
+  favBtnModal.onclick = function() {
+    toggleFavorite(id);
+    syncModalFavState();
+  };
 
   const modal = document.getElementById('produtoModal');
   modal.classList.add('open', 'active');
