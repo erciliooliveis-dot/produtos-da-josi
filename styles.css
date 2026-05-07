@@ -1467,40 +1467,55 @@ body > * {
 }
 .sort-controls select:focus { border-color: var(--roxo-medio); box-shadow: 0 0 0 3px rgba(124,58,237,0.1); }
 
-/* === FAVORITES === */
-.fav-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid #FCA5A5;
-  cursor: pointer;
+/* === FAVORITES (botão dentro do card) === */
+.product-actions {
   display: flex;
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 10px;
+}
+.product-actions .btn-add-cart {
+  flex: 1;
+  margin: 0 !important;
+}
+.btn-fav-card {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  gap: 5px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 2px solid #FCA5A5;
+  background: #fff;
+  color: #DC2626;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 2px 10px rgba(220,38,38,0.18);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
-.fav-btn svg { width: 20px; height: 20px; stroke: #DC2626; fill: none; stroke-width: 2.2; transition: var(--transition); }
-.fav-btn:hover {
-  transform: scale(1.12);
-  border-color: #DC2626;
-  box-shadow: 0 4px 16px rgba(220,38,38,0.3);
+.btn-fav-card svg { stroke: currentColor; fill: none; transition: fill 0.2s; }
+.btn-fav-card:hover {
   background: #FEF2F2;
-}
-.fav-btn.active {
-  background: #DC2626;
   border-color: #DC2626;
-  box-shadow: 0 4px 14px rgba(220,38,38,0.4);
+  transform: translateY(-1px);
 }
-.fav-btn.active svg { fill: #fff; stroke: #fff; }
-.fav-btn.active:hover { background: #B91C1C; border-color: #B91C1C; }
-@keyframes favPop { 0% { transform: scale(1); } 50% { transform: scale(1.35); } 100% { transform: scale(1); } }
-.fav-btn.active { animation: favPop 0.4s ease; }
+.btn-fav-card.active {
+  background: #DC2626;
+  color: #fff;
+  border-color: #DC2626;
+  box-shadow: 0 3px 10px rgba(220,38,38,0.35);
+}
+.btn-fav-card.active svg { fill: #fff; stroke: #fff; }
+.btn-fav-card.active:hover { background: #B91C1C; border-color: #B91C1C; }
+@keyframes favPop { 0% { transform: scale(1); } 50% { transform: scale(1.18); } 100% { transform: scale(1); } }
+.btn-fav-card.active { animation: favPop 0.35s ease; }
+@media (max-width: 480px) {
+  .btn-fav-card-label { display: none; }
+  .btn-fav-card { padding: 10px; min-width: 40px; }
+}
 
 /* Botão "Favoritar" textual no modal */
 .modal-btn-fav {
@@ -1891,34 +1906,64 @@ body > * {
   color: #DC2626;
 }
 
-/* === TEXT SIZE TOGGLE (acessibilidade 40+) === */
-.text-size-toggle {
-  width: 38px;
-  height: 38px;
+/* === FLOATING TOOLS (Ajuda + A+) === */
+.floating-tools {
+  position: fixed;
+  left: 16px;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 900;
+}
+.float-tool-btn {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  border: 2px solid var(--roxo-medio);
   background: #fff;
+  border: 2px solid var(--roxo-medio);
   color: var(--roxo-escuro);
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
-  font-size: 15px;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0;
+  text-decoration: none;
   transition: var(--transition);
-  flex-shrink: 0;
-  margin-left: 4px;
+  box-shadow: 0 4px 14px rgba(124,58,237,0.18);
 }
-.text-size-toggle:hover {
+.float-tool-btn:hover {
   background: var(--roxo-medio);
   color: #fff;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(124,58,237,0.35);
 }
-.text-size-toggle sup, .text-size-toggle sub { font-size: 9px; margin-left: 1px; }
+.float-tool-icon {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 800;
+}
+.float-tool-icon sup { font-size: 10px; }
+.float-tool-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+  font-weight: 700;
+}
+.float-tool-help { color: #2563EB; border-color: #2563EB; }
+.float-tool-help:hover { background: #2563EB; color: #fff; box-shadow: 0 6px 18px rgba(37,99,235,0.35); }
+.float-tool-help .float-tool-icon { font-size: 22px; }
 
 @media (max-width: 768px) {
-  .text-size-toggle { width: 32px; height: 32px; font-size: 13px; }
+  .floating-tools { left: 12px; bottom: 75px; gap: 8px; }
+  .float-tool-btn { width: 46px; height: 46px; }
+  .float-tool-icon { font-size: 14px; }
+  .float-tool-help .float-tool-icon { font-size: 19px; }
+  .float-tool-label { font-size: 8px; }
 }
 
 /* Tamanho de texto aplicado globalmente */

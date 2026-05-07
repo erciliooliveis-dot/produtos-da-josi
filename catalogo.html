@@ -141,19 +141,23 @@
       </div>
       <button type="button" class="filter-btn" onclick="setView('combos',this)">Combos</button>
       <button type="button" class="filter-btn" onclick="setView('brands',this)">Por Marca</button>
-      <a href="ajuda.html" class="filter-btn filter-btn-help" aria-label="Como comprar — guia rápido">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        Ajuda
-      </a>
-      <button type="button" class="text-size-toggle" onclick="toggleTextSize()" aria-label="Aumentar tamanho do texto" id="textSizeBtn" title="Aumentar tamanho do texto">
-        <span aria-hidden="true">A<sup>+</sup></span>
-        <span class="visually-hidden">Aumentar texto</span>
-      </button>
     </div>
     <div class="quick-cats" id="quickCats" role="navigation" aria-label="Atalhos de categorias">
       <!-- preenchido pelo JS -->
     </div>
   </header>
+
+  <!-- ========== FLOATING TOOLS (Ajuda + A+) ========== -->
+  <div class="floating-tools" aria-label="Ferramentas de acessibilidade">
+    <button type="button" class="float-tool-btn" onclick="toggleTextSize()" id="textSizeBtn" aria-label="Aumentar tamanho do texto" title="Aumentar tamanho do texto">
+      <span aria-hidden="true" class="float-tool-icon">A<sup>+</sup></span>
+      <span class="float-tool-label">Texto</span>
+    </button>
+    <a href="ajuda.html" class="float-tool-btn float-tool-help" aria-label="Como comprar — guia rápido" title="Como comprar">
+      <span aria-hidden="true" class="float-tool-icon">?</span>
+      <span class="float-tool-label">Ajuda</span>
+    </a>
+  </div>
 
   <!-- ========== MODAL PRODUTO ========== -->
   <div class="modal-overlay" id="produtoModal" role="dialog" aria-modal="true" aria-labelledby="modalNome" aria-hidden="true">

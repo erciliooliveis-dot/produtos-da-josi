@@ -436,9 +436,6 @@ function renderProducts() {
       <div class="product-img" style="background:linear-gradient(135deg, #${color}22, #EDE9FE)">
         ${imgContent}
         <span class="product-badge badge-marca">${marcaEsc}</span>
-        <button type="button" class="fav-btn ${favorites.includes(p.id) ? 'active' : ''}" onclick="event.stopPropagation();toggleFavorite(${p.id})" title="Favoritar" aria-label="Favoritar ${nomeEsc}" aria-pressed="${favorites.includes(p.id)}">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
       </div>
       <div class="product-info">
         <div class="product-name">${nomeEsc}</div>
@@ -453,7 +450,13 @@ function renderProducts() {
           const pr = p.tamanhos ? (p.tamanhos[0].preco * MARGEM).toFixed(2) : getPrecoRevenda(p);
           return pr ? `<div class="product-price">R$ ${pr.replace('.', ',')}</div><div class="product-price-label">preco/un</div>` : `<div class="product-price-tag">Consulte preco</div>`;
         })()}
-        <button type="button" class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${nomeEsc} ao carrinho">+ Adicionar ao Carrinho</button>
+        <div class="product-actions">
+          <button type="button" class="btn-add-cart" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ${nomeEsc} ao carrinho">+ Adicionar ao Carrinho</button>
+          <button type="button" class="btn-fav-card ${favorites.includes(p.id) ? 'active' : ''}" onclick="event.stopPropagation();toggleFavorite(${p.id})" aria-label="Favoritar ${nomeEsc}" aria-pressed="${favorites.includes(p.id)}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="btn-fav-card-label">${favorites.includes(p.id) ? 'Salvo' : 'Favoritar'}</span>
+          </button>
+        </div>
       </div>
     </article>`;
   }).join('');
